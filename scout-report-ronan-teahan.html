@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scouting Report: Ronan Teahan — Touchline Studios</title>
+<meta name="description" content="A full scouting profile on Dundalk FC attacking midfielder Ronan Teahan — background, season data, playing style and development areas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#fbf3e7;
+    --paper-soft:#f5e5cf;
+    --ink:#1c1a17;
+    --ink-soft:#6b5d4d;
+    --accent:#e8720f;
+    --accent-soft:#fbe2c4;
+    --line:rgba(33,31,26,0.10);
+    --max:1180px;
+    --radius:18px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter', -apple-system, sans-serif;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.5;
+  }
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 32px;}
+  .mono{ font-family:'IBM Plex Mono', monospace; }
+  .pill{
+    display:inline-flex; align-items:center;
+    padding:5px 13px; border-radius:99px;
+    background:var(--accent-soft); color:var(--accent);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px; letter-spacing:0.03em; font-weight:500;
+  }
+
+  header{
+    padding:26px 0;
+    position:sticky; top:0;
+    background:rgba(251,243,231,0.86);
+    backdrop-filter:blur(10px);
+    z-index:20;
+  }
+  .nav-row{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; }
+  .logo{ display:flex; align-items:center; gap:9px; font-family:'Manrope', sans-serif; font-weight:800; font-size:18px; letter-spacing:-0.01em; }
+  .logo-mark{ width:30px; height:30px; object-fit:contain; }
+  nav.links{ display:flex; gap:30px; }
+  nav.links a{ font-size:14px; font-weight:500; color:var(--ink-soft); transition:color .2s; }
+  nav.links a:hover{ color:var(--ink); }
+  .nav-cta{
+    background:var(--ink); color:var(--paper);
+    padding:9px 18px; border-radius:99px; font-size:13.5px; font-weight:600;
+    transition:transform .15s ease, background .2s;
+  }
+  .nav-cta:hover{ background:var(--accent); transform:translateY(-1px); }
+
+  /* ---------- Report head ---------- */
+  .report-head{
+    padding:48px 0 0;
+    position:relative;
+    overflow:hidden;
+  }
+  .report-hero{
+    border-radius:24px;
+    padding:44px 40px;
+    color:var(--paper);
+    background:
+      linear-gradient(155deg, rgba(34,28,23,0.88), rgba(23,19,15,0.94)),
+      url('images/ronan-teahan.jpeg');
+    background-size:cover;
+    background-position:center 20%;
+    position:relative;
+  }
+  .report-hero .pill{ background:rgba(255,255,255,0.12); color:#f6c98a; margin-bottom:18px; }
+  .report-hero h1{
+    font-family:'Manrope', sans-serif; font-weight:800;
+    font-size:clamp(32px, 5vw, 52px); letter-spacing:-0.02em;
+    margin:0 0 10px;
+  }
+  .report-hero .position-line{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13.5px; color:#d9d3c4;
+    margin:0 0 28px;
+  }
+  .quick-facts{
+    display:grid;
+    grid-template-columns:repeat(5, 1fr);
+    gap:12px;
+  }
+  .quick-fact{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.14);
+    border-radius:12px;
+    padding:12px 8px;
+    text-align:center;
+  }
+  .quick-fact .qf-label{
+    font-family:'IBM Plex Mono', monospace; font-size:10.5px;
+    color:#c9c2b0; letter-spacing:0.06em; text-transform:uppercase;
+    margin-bottom:6px;
+  }
+  .quick-fact .qf-value{
+    font-family:'Manrope', sans-serif; font-weight:800;
+    font-size:17px; color:var(--paper);
+  }
+
+  /* ---------- Sections ---------- */
+  .report-section{ padding:52px 0; max-width:760px; }
+  .report-section.wide{ max-width:var(--max); }
+  .report-section h2{
+    font-family:'Manrope', sans-serif; font-weight:700;
+    font-size:24px; letter-spacing:-0.005em;
+    margin:0 0 20px;
+    display:flex; align-items:center; gap:12px;
+  }
+  .report-section h2::before{
+    content:"";
+    width:8px; height:8px; border-radius:2px;
+    background:var(--accent);
+    display:inline-block;
+    transform:rotate(45deg);
+  }
+  .report-section p{
+    font-family:'Source Serif 4', serif;
+    font-size:17px; line-height:1.75;
+    color:#2b2823;
+    margin:0 0 20px;
+  }
+  .position-tags{ display:flex; gap:10px; flex-wrap:wrap; margin-top:4px; }
+
+  /* ---------- Stat grids ---------- */
+  .stat-grid{
+    display:grid;
+    grid-template-columns:repeat(5, 1fr);
+    gap:12px;
+    margin-bottom:8px;
+  }
+  .stat-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:18px 14px;
+    text-align:center;
+  }
+  .stat-card .stat-value{
+    font-family:'Manrope', sans-serif; font-weight:800;
+    font-size:24px; color:var(--accent);
+    line-height:1.1; margin-bottom:6px;
+  }
+  .stat-card .stat-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px; color:var(--ink-soft);
+    line-height:1.4;
+  }
+  .stat-headline-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:16px;
+    margin-bottom:32px;
+  }
+  .stat-headline{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:24px;
+    text-align:center;
+  }
+  .stat-headline .stat-value{
+    font-family:'Manrope', sans-serif; font-weight:800;
+    font-size:36px; color:var(--ink);
+  }
+  .stat-headline .stat-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px; color:var(--ink-soft);
+    margin-top:6px;
+  }
+
+  .stat-subhead{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase;
+    color:var(--accent);
+    margin:28px 0 14px;
+  }
+
+  /* ---------- Comparison table ---------- */
+  .compare-table{
+    width:100%;
+    border-collapse:collapse;
+    margin:20px 0 8px;
+    font-family:'Inter', sans-serif;
+    font-size:13.5px;
+  }
+  .compare-table th{
+    text-align:left;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px; text-transform:uppercase; letter-spacing:0.04em;
+    color:var(--ink-soft);
+    padding:10px 12px;
+    border-bottom:1.5px solid var(--ink);
+  }
+  .compare-table td{
+    padding:11px 12px;
+    border-bottom:1px solid var(--line);
+    color:var(--ink);
+  }
+  .compare-table tr.highlight td{
+    background:var(--accent-soft);
+    font-weight:600;
+  }
+  .compare-table td:nth-child(4),
+  .compare-table td:nth-child(5),
+  .compare-table td:nth-child(6),
+  .compare-table th:nth-child(4),
+  .compare-table th:nth-child(5),
+  .compare-table th:nth-child(6){
+    text-align:right;
+    font-family:'IBM Plex Mono', monospace;
+  }
+
+  /* ---------- Impression box ---------- */
+  .impression-box{
+    margin:36px 0 10px;
+    background:var(--ink);
+    color:var(--paper);
+    border-radius:var(--radius);
+    padding:32px 30px;
+  }
+  .impression-box .pill{ background:rgba(255,255,255,0.12); color:#f6c98a; margin-bottom:14px; }
+  .impression-box p{
+    font-family:'Source Serif 4', serif;
+    font-size:17px; line-height:1.7;
+    color:#e8e2d4;
+    margin:0;
+  }
+
+  .report-foot-nav{
+    max-width:760px;
+    padding:20px 0 60px;
+    border-top:1px solid var(--line);
+    margin-top:12px;
+  }
+  .report-foot-nav a{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px; font-weight:500; color:var(--ink-soft);
+    display:inline-flex; align-items:center; gap:8px;
+    transition:color .2s;
+  }
+  .report-foot-nav a:hover{ color:var(--accent); }
+
+  footer{ border-top:1px solid var(--line); padding:34px 0; }
+  .fine-print{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px; line-height:1.7; color:#928d7d;
+    max-width:900px; margin:0 0 22px;
+  }
+  .foot-row{
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;
+    font-size:13px; color:var(--ink-soft);
+  }
+  .foot-links{ display:flex; gap:22px; }
+  .foot-links a:hover{ color:var(--accent); }
+
+  @media (max-width:900px){
+    .quick-facts{ grid-template-columns:repeat(3, 1fr); }
+    .stat-grid{ grid-template-columns:repeat(3, 1fr); }
+    .stat-headline-grid{ grid-template-columns:1fr; }
+    .compare-table{ font-size:12px; }
+  }
+  @media (max-width:600px){
+    nav.links{ display:none; }
+    .quick-facts{ grid-template-columns:repeat(2, 1fr); }
+    .stat-grid{ grid-template-columns:repeat(2, 1fr); }
+    .report-hero{ padding:30px 22px; }
+    .foot-row{ flex-direction:column; align-items:flex-start; }
+    .compare-table{ display:block; overflow-x:auto; white-space:nowrap; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav-row">
+    <a class="logo" href="index.html"><img class="logo-mark" src="logo.png" alt="Touchline Studios"> Touchline Studios</a>
+    <nav class="links">
+      <a href="index.html#latest">Latest</a>
+      <a href="archive.html">Archive</a>
+      <a href="graphics.html">Graphics</a>
+      <a href="index.html#pillars">About</a>
+      <a href="index.html#subscribe">Newsletter</a>
+    </nav>
+    <a class="nav-cta" href="index.html#subscribe">Subscribe</a>
+  </div>
+</header>
+
+<div class="report-head">
+  <div class="wrap">
+    <div class="report-hero">
+      <span class="pill">Scouting Report</span>
+      <h1>Ronan Teahan</h1>
+      <p class="position-line">Dundalk FC · Attacking Midfield / Wide Midfield · 2025/26 season · Data accurate as of 04/08/2026</p>
+      <div class="quick-facts">
+        <div class="quick-fact"><div class="qf-label">Pos</div><div class="qf-value">AM</div></div>
+        <div class="quick-fact"><div class="qf-label">HT</div><div class="qf-value">1.79m</div></div>
+        <div class="quick-fact"><div class="qf-label">Club</div><div class="qf-value">Dundalk</div></div>
+        <div class="quick-fact"><div class="qf-label">Nat</div><div class="qf-value">Ireland</div></div>
+        <div class="quick-fact"><div class="qf-label">Foot</div><div class="qf-value">Left</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="report-section">
+    <h2>Background</h2>
+    <p>Ronan Teahan is a 21-year-old Irish attacking midfielder playing for Dundalk in the League of Ireland Premier Division. A native of Cahersiveen, he began with Iveragh United before joining the Kerry FC academy at under-15 level and progressing through the under-17 and under-19 sides. He became part of Kerry's first senior squad in 2023 and made 107 appearances across all competitions, helping the club reach the 2025 FAI Cup semi-final.</p>
+    <p>His age, senior experience and ability to cover several midfield roles make him an interesting domestic recruitment profile. He is already capable of contributing at Premier Division level, but there are still clear areas in which his game can develop.</p>
+  </div>
+
+  <div class="report-section wide">
+    <h2>Season overview — 2025/26</h2>
+    <div class="stat-headline-grid">
+      <div class="stat-headline"><div class="stat-value">20</div><div class="stat-label">Games Played</div></div>
+      <div class="stat-headline"><div class="stat-value">1,346</div><div class="stat-label">Minutes Played</div></div>
+      <div class="stat-headline"><div class="stat-value">6.93</div><div class="stat-label">Average Rating</div></div>
+    </div>
+
+    <div class="stat-subhead">Attacking</div>
+    <div class="stat-grid">
+      <div class="stat-card"><div class="stat-value">2</div><div class="stat-label">Goals</div></div>
+      <div class="stat-card"><div class="stat-value">1</div><div class="stat-label">Assists</div></div>
+      <div class="stat-card"><div class="stat-value">0.10</div><div class="stat-label">Goals Per Game</div></div>
+      <div class="stat-card"><div class="stat-value">673</div><div class="stat-label">Scoring Frequency (mins)</div></div>
+      <div class="stat-card"><div class="stat-value">1.1</div><div class="stat-label">Shots Per Game</div></div>
+      <div class="stat-card"><div class="stat-value">0.4</div><div class="stat-label">On Target /90</div></div>
+      <div class="stat-card"><div class="stat-value">9%</div><div class="stat-label">Goal Conversion</div></div>
+      <div class="stat-card"><div class="stat-value">1.21</div><div class="stat-label">Key Passes/90</div></div>
+      <div class="stat-card"><div class="stat-value">2.01</div><div class="stat-label">Succ. Dribbles/90</div></div>
+      <div class="stat-card"><div class="stat-value">49%</div><div class="stat-label">Dribble Success %</div></div>
+      <div class="stat-card"><div class="stat-value">21.9</div><div class="stat-label">Accurate Passes/90</div></div>
+      <div class="stat-card"><div class="stat-value">79%</div><div class="stat-label">Pass Accuracy</div></div>
+      <div class="stat-card"><div class="stat-value">0.13</div><div class="stat-label">Long Balls/90</div></div>
+      <div class="stat-card"><div class="stat-value">1.19</div><div class="stat-label">Expected Assists</div></div>
+      <div class="stat-card"><div class="stat-value">0.12</div><div class="stat-label">Accurate Crosses/90</div></div>
+    </div>
+
+    <div class="stat-subhead">Defence</div>
+    <div class="stat-grid">
+      <div class="stat-card"><div class="stat-value">3</div><div class="stat-label">Yellow Cards</div></div>
+      <div class="stat-card"><div class="stat-value">0</div><div class="stat-label">Red Cards</div></div>
+      <div class="stat-card"><div class="stat-value">0.7</div><div class="stat-label">Clearances/90</div></div>
+      <div class="stat-card"><div class="stat-value">0.8</div><div class="stat-label">Dribbled Past/90</div></div>
+      <div class="stat-card"><div class="stat-value">7.36</div><div class="stat-label">Duels Won/90</div></div>
+      <div class="stat-card"><div class="stat-value">37%</div><div class="stat-label">Duels Won %</div></div>
+      <div class="stat-card"><div class="stat-value">1.5</div><div class="stat-label">Aerials Won/90</div></div>
+      <div class="stat-card"><div class="stat-value">3.1</div><div class="stat-label">Ball Recoveries/90</div></div>
+      <div class="stat-card"><div class="stat-value">1.2</div><div class="stat-label">Fouls</div></div>
+      <div class="stat-card"><div class="stat-value">1.4</div><div class="stat-label">Was Fouled</div></div>
+    </div>
+  </div>
+
+  <div class="report-section">
+    <h2>Profile overview</h2>
+    <p>Teahan is a mobile attacking midfielder whose game is built around carrying possession, attacking space and supporting the play ahead of the ball.</p>
+    <p>He is not a conventional number ten who wants every attack played through him. He is more effective when moving onto the ball, receiving on the half-turn or arriving from a slightly deeper position. His heatmap shows involvement across midfield and the attacking line, with his strongest concentration through the left half-space and central attacking areas.</p>
+    <p>His main strengths are his directness, movement and willingness to take responsibility in possession. He can beat the first defender, move attacks forward and arrive inside the penalty area. His two goals have both been headers, which says more about his timing and movement than any great aerial dominance.</p>
+    <p>The weaknesses are in the efficiency of his actions. He completes 49% of his dribbles, wins 42% of his duels and has produced relatively modest creative output. He can move a team forward, but the final pass, shot or decision does not yet arrive consistently enough.</p>
+    <p>Teahan is best viewed as an energetic attacking midfielder with room to become more complete, rather than a finished creative specialist.</p>
+    <div class="position-tags">
+      <span class="pill">Position — Attacking Midfield</span>
+      <span class="pill">Position — Wide Midfield</span>
+    </div>
+  </div>
+
+  <div class="report-section">
+    <h2>In possession</h2>
+    <p>Teahan's first thought is normally to play forward. He receives well enough on the half-turn and looks to carry into the space between the opposition midfield and defence.</p>
+    <p>His dribbling is a genuine part of his game. He completes just over two carries per 90, and he has the balance and acceleration to escape the first challenge. The issue comes after that. He can take one touch too many, run into a second defender or miss the moment for an earlier pass.</p>
+    <p>His passing is tidy without being expansive. A 79% completion rate is respectable for a player operating mostly in the opposition half, but he is not currently a midfielder who changes matches through his range of distribution. Long passing and crossing are not major features of his game.</p>
+    <p>His shooting output remains limited. He has attempted nine efforts from outside the box without scoring, while both goals have come from intelligent movement inside it. He is at his best when arriving into scoring positions rather than trying to manufacture shots from distance.</p>
+  </div>
+
+  <div class="report-section">
+    <h2>Off the ball</h2>
+    <p>Teahan works willingly and offers more defensive involvement than many attacking midfielders.</p>
+    <p>He averages 1.2 tackles, 0.8 interceptions and 3.1 recoveries per game. He also wins possession in the final third 0.5 times per match, showing that he can contribute to an organised press rather than simply waiting for Dundalk to regain the ball.</p>
+    <p>His pressing is most effective when he can step forward and lock onto an opponent. He reacts quickly to loose balls and is alert to second phases, but he is less convincing when asked to defend repeated physical actions in a deeper block.</p>
+    <p>The 42% duel success rate is the concern. His effort is rarely in question, but he does not always turn good positioning into possession won. Improving his strength, timing and body shape in contact would make his defensive contribution far more reliable.</p>
+  </div>
+
+  <div class="report-section wide">
+    <h2>Technical</h2>
+    <p>Teahan's strongest technical quality is his ability to receive and move forward in one action.</p>
+    <p>His first touch is generally positive and gives him the chance to turn away from pressure. He carries comfortably on his left foot and can change direction quickly enough to beat midfield opponents.</p>
+    <p>His short passing supports combinations around the final third, but his creative range remains fairly limited. He produces 1.21 key passes per 90 and has created two big chances. Those are useful numbers, but not yet the output of a primary creator.</p>
+    <p>Crossing is currently a weakness, with only 12% of his attempts finding a teammate. His finishing also needs greater consistency, particularly from outside the penalty area.</p>
+    <p>The biggest technical development area is the final action. The work before it is often good. The pass, cross or shot at the end of it needs to become more dependable.</p>
+
+    <table class="compare-table">
+      <tr><th>Player</th><th>Club</th><th>Position</th><th>Minutes</th><th>Succ. Dribbles</th><th>Per 90</th></tr>
+      <tr class="highlight"><td>Ronan Teahan</td><td>Dundalk</td><td>Attacking Midfield</td><td>1,346</td><td>30</td><td>2.01</td></tr>
+      <tr><td>Harry Vaughan</td><td>Bohemians</td><td>Left Winger</td><td>845</td><td>13</td><td>1.38</td></tr>
+      <tr><td>Archie Meekison</td><td>Sligo Rovers</td><td>Attacking Midfield</td><td>1,223</td><td>17</td><td>1.25</td></tr>
+      <tr><td>Adam Brennan</td><td>Shamrock Rovers</td><td>Left Midfield</td><td>1,345</td><td>17</td><td>1.14</td></tr>
+      <tr><td>Ryan O'Kane</td><td>Sligo Rovers</td><td>Right Winger</td><td>1,127</td><td>14</td><td>1.12</td></tr>
+    </table>
+  </div>
+
+  <div class="report-section wide">
+    <h2>Physical</h2>
+    <p>Teahan has enough acceleration and agility to create separation over short distances. He is not a winger who will repeatedly win matches through raw pace, but he can move away from pressure and carry the ball through midfield.</p>
+    <p>His mobility allows him to cover several areas and remain involved on both sides of the ball. He can press, recover into shape and then support the next attack.</p>
+    <p>Physical confrontation is less convincing. His duel numbers show that stronger opponents can move him away from the ball or stop his carries before he reaches the final third. Additional lower-body strength would help him protect possession and stay balanced through contact.</p>
+    <p>His aerial numbers are modest, but the two headed goals show that he attacks the ball better in the opposition box than he defends it in open play. His timing is the asset rather than his power.</p>
+
+    <table class="compare-table">
+      <tr><th>Player</th><th>Club</th><th>Position</th><th>Minutes</th><th>Duels Won</th><th>Per 90</th></tr>
+      <tr class="highlight"><td>Ronan Teahan</td><td>Dundalk</td><td>Attacking Midfield</td><td>1,346</td><td>110</td><td>7.36</td></tr>
+      <tr><td>Archie Meekison</td><td>Sligo Rovers</td><td>Attacking Midfield</td><td>1,223</td><td>58</td><td>4.27</td></tr>
+      <tr><td>Adam Brennan</td><td>Shamrock Rovers</td><td>Left Midfield</td><td>1,345</td><td>62</td><td>4.15</td></tr>
+      <tr><td>Harry Vaughan</td><td>Bohemians</td><td>Left Winger</td><td>845</td><td>38</td><td>4.05</td></tr>
+      <tr><td>Ryan O'Kane</td><td>Sligo Rovers</td><td>Right Winger</td><td>1,127</td><td>38</td><td>3.03</td></tr>
+    </table>
+  </div>
+
+  <div class="report-section">
+    <h2>Psychological</h2>
+    <p>Teahan's pathway suggests confidence, resilience and a willingness to back himself.</p>
+    <p>He developed through Kerry's academy, became part of the club's first senior team and played more than 100 matches during a difficult period in which results were not always kind. Rather than staying comfortable as an established player at home, he moved to Dundalk and entered a full-time environment for the first time.</p>
+    <p>His performances show a player who does not hide after mistakes. He continues to demand possession and attempts progressive actions even when earlier ones have broken down.</p>
+    <p>The next stage is taking greater control of matches. He has shown that he belongs at this level. He now needs to influence games more consistently rather than appearing in strong moments.</p>
+
+    <div class="impression-box">
+      <span class="pill">Impression of player</span>
+      <p>Ronan Teahan is a progressive attacking midfielder whose main value comes through ball carrying, intelligent movement and work rate. He is already capable of playing regularly at Premier Division level and has the tools to become a strong domestic starter. Improved duel strength, final-third decision-making and creative output will determine whether he progresses beyond that level.</p>
+    </div>
+  </div>
+
+  <div class="report-foot-nav">
+    <a href="index.html#scouting">← Back to Scouting</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <p class="fine-print">© 2026 James Callan / Touchline Sport. All content on this website, including written articles, analysis, graphics and original research, is the intellectual property of James Callan and Touchline Sport unless otherwise stated. No content may be reproduced, republished or redistributed without prior permission.</p>
+    <div class="foot-row">
+      <span>Touchline Studios</span>
+      <div class="foot-links">
+        <a href="https://www.linkedin.com/company/touchline-sports-studio/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.instagram.com/touchline_sports_studio/" target="_blank" rel="noopener">Instagram</a>
+        <a href="#">TikTok</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

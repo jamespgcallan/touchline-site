@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Graphics — Touchline Studios</title>
+<meta name="description" content="Scout report covers, stat graphics and player designs from Touchline Studios.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#fbf3e7;
+    --paper-soft:#f5e5cf;
+    --ink:#1c1a17;
+    --ink-soft:#6b5d4d;
+    --accent:#e8720f;
+    --accent-soft:#fbe2c4;
+    --line:rgba(33,31,26,0.10);
+    --max:1180px;
+    --radius:18px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter', -apple-system, sans-serif;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.5;
+  }
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 32px;}
+  .pill{
+    display:inline-flex; align-items:center;
+    padding:5px 13px; border-radius:99px;
+    background:var(--accent-soft); color:var(--accent);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px; letter-spacing:0.03em; font-weight:500;
+  }
+
+  header{
+    padding:26px 0;
+    position:sticky; top:0;
+    background:rgba(251,243,231,0.86);
+    backdrop-filter:blur(10px);
+    z-index:20;
+  }
+  .nav-row{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; }
+  .logo{ display:flex; align-items:center; gap:9px; font-family:'Manrope', sans-serif; font-weight:800; font-size:18px; letter-spacing:-0.01em; }
+  .logo-mark{ width:30px; height:30px; object-fit:contain; }
+  nav.links{ display:flex; gap:30px; }
+  nav.links a{ font-size:14px; font-weight:500; color:var(--ink-soft); transition:color .2s; }
+  nav.links a:hover{ color:var(--ink); }
+  .nav-cta{
+    background:var(--ink); color:var(--paper);
+    padding:9px 18px; border-radius:99px; font-size:13.5px; font-weight:600;
+    transition:transform .15s ease, background .2s;
+  }
+  .nav-cta:hover{ background:var(--accent); transform:translateY(-1px); }
+
+  .page-hero{ padding:50px 0 20px; }
+  .page-hero .pill{ margin-bottom:18px; }
+  .page-hero h1{
+    font-family:'Manrope', sans-serif; font-weight:800;
+    font-size:clamp(32px, 5vw, 50px); letter-spacing:-0.02em;
+    margin:0 0 14px;
+  }
+  .page-hero p{ color:var(--ink-soft); font-size:16px; max-width:56ch; line-height:1.6; margin:0; }
+
+  .section{ padding:44px 0 80px; }
+
+  .graphics-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:16px;
+  }
+  .graphic-item{
+    display:block;
+    border-radius:14px;
+    overflow:hidden;
+    aspect-ratio:4/5;
+    background:#fff;
+    border:1px solid var(--line);
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .graphic-item:hover{ transform:translateY(-4px); box-shadow:0 14px 30px rgba(33,31,26,0.10); }
+  .graphic-item img{
+    width:100%; height:100%;
+    object-fit:cover; display:block;
+  }
+  @media (max-width:900px){ .graphics-grid{ grid-template-columns:repeat(3, 1fr); } }
+  @media (max-width:600px){ .graphics-grid{ grid-template-columns:repeat(2, 1fr); } }
+
+  footer{ border-top:1px solid var(--line); padding:34px 0; }
+  .fine-print{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px; line-height:1.7; color:#928d7d;
+    max-width:900px; margin:0 0 22px;
+  }
+  .foot-row{
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;
+    font-size:13px; color:var(--ink-soft);
+  }
+  .foot-links{ display:flex; gap:22px; }
+  .foot-links a:hover{ color:var(--accent); }
+
+  @media (max-width:600px){
+    nav.links{ display:none; }
+    .foot-row{ flex-direction:column; align-items:flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav-row">
+    <a class="logo" href="index.html"><img class="logo-mark" src="logo.png" alt="Touchline Studios"> Touchline Studios</a>
+    <nav class="links">
+      <a href="index.html#latest">Latest</a>
+      <a href="archive.html">Archive</a>
+      <a href="graphics.html">Graphics</a>
+      <a href="index.html#pillars">About</a>
+      <a href="index.html#subscribe">Newsletter</a>
+    </nav>
+    <a class="nav-cta" href="index.html#subscribe">Subscribe</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="pill">6 graphics and counting</span>
+    <h1>Graphics</h1>
+    <p>Scout report covers, stat graphics and player designs — made for the eye, not just the read. Click any of them for the full-size version.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="graphics-grid">
+      <a class="graphic-item" href="images/graphics/ronan-coughlan.png" target="_blank" rel="noopener"><img src="images/graphics/ronan-coughlan.png" alt="Ronan Coughlan graphic — Fleetwood Town"></a>
+      <a class="graphic-item" href="images/graphics/devoy.png" target="_blank" rel="noopener"><img src="images/graphics/devoy.png" alt="Devoy graphic — Bohemian FC, He's One Of Our Own"></a>
+      <a class="graphic-item" href="images/graphics/liam-scales.png" target="_blank" rel="noopener"><img src="images/graphics/liam-scales.png" alt="Liam Scales graphic — Celtic, Tipping The Scales"></a>
+      <a class="graphic-item" href="images/graphics/pat-hoban.png" target="_blank" rel="noopener"><img src="images/graphics/pat-hoban.png" alt="Patrick Hoban graphic — Dundalk FC"></a>
+      <a class="graphic-item" href="images/graphics/owen-elding.png" target="_blank" rel="noopener"><img src="images/graphics/owen-elding.png" alt="Owen Elding graphic — Hibernian"></a>
+      <a class="graphic-item" href="images/graphics/katie-mccabe.png" target="_blank" rel="noopener"><img src="images/graphics/katie-mccabe.png" alt="Katie McCabe graphic — Arsenal, The Gunners"></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="fine-print">© 2026 James Callan / Touchline Sport. All content on this website, including written articles, analysis, graphics and original research, is the intellectual property of James Callan and Touchline Sport unless otherwise stated. No content may be reproduced, republished or redistributed without prior permission.</p>
+    <div class="foot-row">
+      <span>Touchline Studios</span>
+      <div class="foot-links">
+        <a href="https://www.linkedin.com/company/touchline-sports-studio/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.instagram.com/touchline_sports_studio/" target="_blank" rel="noopener">Instagram</a>
+        <a href="#">TikTok</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

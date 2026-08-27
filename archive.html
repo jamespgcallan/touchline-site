@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Archive — Touchline Studios</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#fbf3e7;
+    --paper-soft:#f5e5cf;
+    --ink:#1c1a17;
+    --ink-soft:#6b5d4d;
+    --accent:#e8720f;
+    --accent-soft:#fbe2c4;
+    --line:rgba(33,31,26,0.10);
+    --max:1180px;
+    --radius:18px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter', -apple-system, sans-serif;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.5;
+  }
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 32px;}
+  .mono{ font-family:'IBM Plex Mono', monospace; }
+  .pill{
+    display:inline-flex; align-items:center;
+    padding:5px 13px; border-radius:99px;
+    background:var(--accent-soft); color:var(--accent);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px; letter-spacing:0.03em; font-weight:500;
+  }
+
+  header{
+    padding:26px 0;
+    position:sticky; top:0;
+    background:rgba(251,243,231,0.86);
+    backdrop-filter:blur(10px);
+    z-index:20;
+  }
+  .nav-row{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; }
+  .logo{ display:flex; align-items:center; gap:9px; font-family:'Manrope', sans-serif; font-weight:800; font-size:18px; letter-spacing:-0.01em; }
+  .logo-mark{ width:30px; height:30px; object-fit:contain; }
+  nav.links{ display:flex; gap:30px; }
+  nav.links a{ font-size:14px; font-weight:500; color:var(--ink-soft); transition:color .2s; }
+  nav.links a:hover{ color:var(--ink); }
+  .nav-cta{
+    background:var(--ink); color:var(--paper);
+    padding:9px 18px; border-radius:99px; font-size:13.5px; font-weight:600;
+    transition:transform .15s ease, background .2s;
+  }
+  .nav-cta:hover{ background:var(--accent); transform:translateY(-1px); }
+
+  .page-hero{ padding:50px 0 20px; }
+  .page-hero .pill{ margin-bottom:18px; }
+  .page-hero h1{
+    font-family:'Manrope', sans-serif; font-weight:800;
+    font-size:clamp(32px, 5vw, 50px); letter-spacing:-0.02em;
+    margin:0 0 14px;
+  }
+  .page-hero p{ color:var(--ink-soft); font-size:16px; max-width:56ch; line-height:1.6; margin:0; }
+
+  .cat-nav{ display:flex; gap:10px; flex-wrap:wrap; margin:34px 0 0; }
+  .cat-link{
+    padding:9px 18px; border-radius:99px; border:1px solid var(--line);
+    font-size:13.5px; font-weight:600; color:var(--ink-soft);
+    transition:border-color .2s, color .2s, background .2s;
+  }
+  .cat-link:hover{ border-color:var(--accent); color:var(--ink); background:var(--accent-soft); }
+
+  .section{ padding:56px 0; }
+  .category-block{ margin-bottom:24px; border-bottom:1px solid var(--line); }
+  .category-block:last-child{ margin-bottom:0; }
+  .category-head{
+    display:flex; align-items:center; justify-content:space-between; gap:14px;
+    padding:18px 4px;
+    cursor:pointer;
+    user-select:none;
+  }
+  .category-head-left{ display:flex; align-items:center; gap:14px; }
+  .category-title{ font-family:'Manrope', sans-serif; font-weight:700; font-size:24px; letter-spacing:-0.005em; }
+  .category-count{ font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:#928d7d; }
+  .chevron{
+    width:11px; height:11px;
+    border-right:2px solid var(--ink-soft);
+    border-bottom:2px solid var(--ink-soft);
+    transform:rotate(45deg);
+    transition:transform .25s ease;
+    flex-shrink:0;
+    margin-right:6px;
+  }
+  .category-block.open .chevron{ transform:rotate(-135deg); }
+  .cat-desc{ color:var(--ink-soft); font-size:14px; margin:0 0 22px; padding:0 4px 16px; }
+
+  .cat-panel{
+    display:grid;
+    grid-template-rows:0fr;
+    transition:grid-template-rows .3s ease;
+  }
+  .category-block.open .cat-panel{ grid-template-rows:1fr; }
+  .cat-panel-inner{ overflow:hidden; }
+
+  .arch-list{ list-style:none; margin:0; padding:0 0 26px; }
+  .arch-item{ border-bottom:1px solid var(--line); }
+  .arch-item a{
+    display:flex; align-items:center; justify-content:space-between; gap:16px;
+    padding:15px 4px;
+    transition:color .15s ease, padding-left .15s ease;
+  }
+  .arch-item a:hover{ color:var(--accent); padding-left:8px; }
+  .arch-title{ font-size:15px; font-weight:500; }
+  .arch-arrow{ font-size:14px; color:#a89f8c; flex-shrink:0; opacity:0; transition:opacity .15s ease; }
+  .arch-item a:hover .arch-arrow{ opacity:1; color:var(--accent); }
+
+  footer{ border-top:1px solid var(--line); padding:34px 0; }
+  .fine-print{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px; line-height:1.7; color:#928d7d;
+    max-width:900px; margin:0 0 22px;
+  }
+  .foot-row{
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;
+    font-size:13px; color:var(--ink-soft);
+  }
+  .foot-links{ display:flex; gap:22px; }
+  .foot-links a:hover{ color:var(--accent); }
+
+  @media (max-width:600px){
+    nav.links{ display:none; }
+    .arch-title{ font-size:14px; }
+    .foot-row{ flex-direction:column; align-items:flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav-row">
+    <a class="logo" href="index.html"><img class="logo-mark" src="logo.png" alt="Touchline Studios"> Touchline Studios</a>
+    <nav class="links">
+      <a href="index.html#latest">Latest</a>
+      <a href="graphics.html">Graphics</a>
+      <a href="index.html#pillars">About</a>
+      <a href="index.html#subscribe">Newsletter</a>
+    </nav>
+    <a class="nav-cta" href="index.html#subscribe">Subscribe</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="pill">133 pieces and counting</span>
+    <h1>The full archive</h1>
+    <p>Every piece published so far, organised the same way as the rest of the site. These currently link out to the original posts — as pieces get moved over properly, they'll open right here instead.</p>
+    <div class="cat-nav">
+      <a class="cat-link" href="#irish">Irish</a>
+      <a class="cat-link" href="#world">World</a>
+      <a class="cat-link" href="#everything-else">Everything Else</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+
+  <div class="wrap category-block" id="irish">
+    <div class="category-head" onclick="toggleCat(this)">
+      <div class="category-head-left"><span class="chevron"></span><h3 class="category-title">Irish</h3></div>
+      <span class="category-count">60 pieces</span>
+    </div>
+    <div class="cat-panel"><div class="cat-panel-inner">
+    <p class="cat-desc">League of Ireland, grassroots clubs, and the game as it's lived at home.</p>
+    <ul class="arch-list">
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/the-state-of-ireland-football-hope?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">The State of Ireland Football Hope</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/the-local-lads-who-saved-a-town?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">The Local Lads Who Saved a Town</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/the-infrastructure-problem-how-stadiums?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">The Infrastructure Problem How Stadiums</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/the-university-team-taking-on-the?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">The University Team Taking on the</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/the-third-tier-isnt-expansion-its?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">The Third Tier Isnt Expansion its</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/the-forgotten-boxing-day-derbies?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">The Forgotten Boxing Day Derbies</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/new-shirts-old-hope-why-christmas?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">New Shirts Old Hope Why Christmas</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/the-league-of-ireland-isnt-seasonal?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">The League of Ireland Isnt Seasonal</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/why-so-many-irish-fans-follow-english?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Why So Many Irish Fans Follow English</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/where-the-league-of-ireland-really?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Where the League of Ireland Really</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/ollie-byrne-the-shelbourne-chairman?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Ollie Byrne the Shelbourne Chairman</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/mikey-johnston-and-the-transfer-that?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Mikey Johnston and the Transfer That</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/european-football-the-league-of-irelands?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">European Football the League of Irelands</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/the-gospel-according-to-the-terrace?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">The Gospel According to the Terrace</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/when-cork-city-went-to-china-the?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">When Cork City Went to China the</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/border-boys-how-football-shaped-irelands?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Border Boys How Football Shaped Irelands</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/jimmy-hasty-the-man-who-bent-football?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Jimmy Hasty the Man Who Bent Football</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/the-irishman-who-built-atletico-madrid?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">The Irishman Who Built Atletico Madrid</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/faith-beneath-the-floodlights?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Faith Beneath the Floodlights</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/respect-isnt-worn-on-a-sleeve-why?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Respect Isnt Worn on a Sleeve Why</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/the-strangest-spell-in-football-filippo?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">The Strangest Spell in Football Filippo</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/from-doubts-to-dynasty-bradleys-rovers?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">From Doubts to Dynasty Bradleys Rovers</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/the-night-athlone-stopped-the-slide?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">The Night Athlone Stopped the Slide</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/league-of-ireland-wages-fees-and?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">League of Ireland Wages Fees and</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/the-ni-football-fund-is-no-longer?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">The Ni Football Fund is No Longer</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/dundalk-fc-100-years-in-the-league?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Dundalk Fc 100 Years in the League</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/when-limerick-hosted-real-madrid?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">When Limerick Hosted Real Madrid</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/why-bohemians-fc-feel-bigger-than?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Why Bohemians Fc Feel Bigger Than</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/cork-city-fc-and-the-volatility-of?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Cork City Fc and the Volatility of</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/why-dont-more-loi-games-make-it-onto?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Why Dont More Loi Games Make It Onto</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/how-the-fai-lost-control-of-itself?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">How the Fai Lost Control of Itself</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/minutes-over-millions?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Minutes Over Millions</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/homecoming-or-soft-landing?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Homecoming or Soft Landing</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/brexit-changed-irish-football?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Brexit Changed Irish Football</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/dundalks-impressive-premier-division?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Dundalks Impressive Premier Division</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/how-one-season-changes-all?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">How One Season Changes All</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/irsih-football-is-still-too-britain?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Irsih Football is Still Too Britain</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/cork-city-after-osullivan?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Cork City After Osullivan</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/why-irish-clubs-underuse-their-own?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Why Irish Clubs Underuse Their Own</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/derry-citys-mcclean-return?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Derry Citys Mcclean Return</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/st-patricks-day-kits-are-missing?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">St Patricks Day Kits are Missing</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/devoy-on-the-cusp-of-a-call-up?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Devoy on the Cusp of a Call Up</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/loi-pitch-crisis-exposed?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Loi Pitch Crisis Exposed</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/drogheda-flares-and-the-fallout-the?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Drogheda Flares and the Fallout the</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/bohemians-the-club-where-culture?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Bohemians the Club Where Culture</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/drogheda-united-the-algorithm-and?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Drogheda United the Algorithm and</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/rovers-win-dublin-dery-the-sign-of?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Rovers Win Dublin Dery the Sign of</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/is-this-irelands-first-global-football?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Is This Irelands First Global Football</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/the-derry-city-bbc-deal?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">The Derry City Bbc Deal</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/the-class-of-26?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">The Class of 26</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/the-league-of-second-chances?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">The League of Second Chances</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/the-brexit-generation-comes-of-age?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">The Brexit Generation Comes of Age</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/keeping-it-loi?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Keeping It Loi</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/for-club-or-county?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">For Club or County</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/have-shelbourne-and-sligo-rovers?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Have Shelbourne and Sligo Rovers</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/changing-tides-in-cobh?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Changing Tides in Cobh</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/from-big-jack-to-big-gaps-the-irish?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">From Big Jack to Big Gaps the Irish</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/why-irish-football-needs-a-football?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Why Irish Football Needs a Football</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/shamrock-rovers-ii-and-the-league?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Shamrock Rovers Ii and the League</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/shamrock-rovers-recruitment-model?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Shamrock Rovers Recruitment Model</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+    </ul>
+    </div></div>
+  </div>
+
+  <div class="wrap category-block" id="world">
+    <div class="category-head" onclick="toggleCat(this)">
+      <div class="category-head-left"><span class="chevron"></span><h3 class="category-title">World</h3></div>
+      <span class="category-count">45 pieces</span>
+    </div>
+    <div class="cat-panel"><div class="cat-panel-inner">
+    <p class="cat-desc">Boardrooms, badges, and clubs abroad worth paying attention to.</p>
+    <ul class="arch-list">
+        <li class="arch-item">
+          <a href="aldershot-town-complete-rebuild.html">
+            <span class="arch-title">Aldershot Town's Complete Rebuild</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/oneill-rodgers-and-celtics-eternal?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Oneill Rodgers and Celtics Eternal</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/dundalks-cycle-of-revival-and-risk?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Dundalks Cycle of Revival and Risk</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/the-club-that-refused-to-die-palermos?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">The Club That Refused to Die Palermos</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/the-death-of-joga-bonito?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">The Death of Joga Bonito</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/leicester-2016-ten-years-on-how-footballs?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Leicester 2016 Ten Years on How Footballs</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/why-celtic-debates-are-really-about?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Why Celtic Debates are Really About</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/union-saint-gilloise-and-the-cost?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Union Saint Gilloise and the Cost</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/fc-barcelona-and-why-greatness-delays?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Fc Barcelona and Why Greatness Delays</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/fc-girondins-de-bordeaux-when-legacy?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Fc Girondins De Bordeaux When Legacy</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/parma-calcio-when-patronage-replaces?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Parma Calcio When Patronage Replaces</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/juve-got-mail?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Juve Got Mail</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/ferry-days-and-step-5-dreams?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Ferry Days and Step 5 Dreams</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/anti-football-getafes-jose-bordalas?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Anti Football Getafes Jose Bordalas</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/why-hashtag-chose-relegation?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Why Hashtag Chose Relegation</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/clubs-are-not-cargo-the-whitecaps?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Clubs are Not Cargo the Whitecaps</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/brightons-80m-bet-on-the-future-of?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Brightons 80m Bet on the Future of</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/footballs-first-female-head-coach?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Footballs First Female Head Coach</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/fck-off-lafc-zurichs-ownership-issues?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Fck Off Lafc Zurichs Ownership Issues</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/ajax-the-house-that-total-football?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Ajax the House That Total Football</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/southamptons-spygate-the-marginal?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Southamptons Spygate the Marginal</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/benfica-selling-the-future?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Benfica Selling the Future</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/arsenal-and-football-deja-vu?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Arsenal and Football Deja Vu</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/the-48-team-gamble-why-fifa-expanded?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">The 48 Team Gamble Why Fifa Expanded</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/the-rise-and-fall-of-juventus-how?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">The Rise and Fall of Juventus How</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/how-aston-villa-rebuilt-a-giant-from?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">How Aston Villa Rebuilt a Giant From</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/why-are-curacao-so-dutch-the-world?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Why are Curacao So Dutch the World</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/the-cape-verde-revolution-and-their?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">The Cape Verde Revolution and Their</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/sevilla-have-a-case-of-the-monchis?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Sevilla Have a Case of the Monchis</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/how-barcelonas-iconic-unicef-sponsorship?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">How Barcelonas Iconic Unicef Sponsorship</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/the-world-cup-is-open-to-everyone?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">The World Cup is Open to Everyone</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/the-gunners-long-shot?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">The Gunners Long Shot</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/atletico-madrid-rebel-without-a-cause?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Atletico Madrid Rebel Without a Cause</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/italys-azzurri-identity-crisis?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Italys Azzurri Identity Crisis</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/tottenham-hotspur-to-dare-is-to-drift?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Tottenham Hotspur to Dare is to Drift</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/kaizer-chief-i-predict-a-rebuild?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Kaizer Chief I Predict a Rebuild</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/how-a-glasgow-traffic-cone-became?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">How a Glasgow Traffic Cone Became</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/west-ham-ironing-out-east-london?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">West Ham Ironing Out East London</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/why-football-still-cannot-escape?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Why Football Still Cannot Escape</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/schalke-redemption?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Schalke Redemption</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/wrexhams-33-million-question-is-the?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Wrexhams 33 Million Question is the</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/what-happened-to-chinese-football?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">What Happened to Chinese Football</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/london-city-lionesses-the-lion-the?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">London City Lionesses the Lion the</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/real-madrids-buy-back-business?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Real Madrids Buy Back Business</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/blue-is-the-colour-strasbourg-pay?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Blue is the Colour Strasbourg Pay</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+    </ul>
+    </div></div>
+  </div>
+
+  <div class="wrap category-block" id="everything-else">
+    <div class="category-head" onclick="toggleCat(this)">
+      <div class="category-head-left"><span class="chevron"></span><h3 class="category-title">Everything Else</h3></div>
+      <span class="category-count">29 pieces</span>
+    </div>
+    <div class="cat-panel"><div class="cat-panel-inner">
+    <p class="cat-desc">Culture, kits, and the odd tangent that doesn't fit neatly elsewhere.</p>
+    <ul class="arch-list">
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/blokecore-how-a-retro-football-aesthetic?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Blokecore How a Retro Football Aesthetic</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/match-attax-fifa-and-the-lost-art?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Match Attax Fifa and the Lost Art</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/why-possession-is-overrated-again?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Why Possession is Overrated Again</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/you-didnt-discover-bands-fifa-did?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">You Didnt Discover Bands Fifa Did</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/when-football-used-to-come-before?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">When Football Used to Come Before</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/the-beauty-of-the-imperfect-footballer?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">The Beauty of the Imperfect Footballer</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/the-merch-that-missed?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">The Merch That Missed</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/match-programmes-and-the-lost-language?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Match Programmes and the Lost Language</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/beyond-the-derbies-you-know-footballs?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Beyond the Derbies You Know Footballs</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/from-juventus-to-cardiff-how-football?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">From Juventus to Cardiff How Football</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/before-data-departments-footballs?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Before Data Departments Footballs</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/the-stadio-olimpicos-fascist-forecourt?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">The Stadio Olimpicos Fascist Forecourt</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/a-night-in-rome-evan-ferguson-daniele?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">A Night in Rome Evan Ferguson Daniele</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/we-all-had-a-wonderkid-before-he?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">We All Had a Wonderkid Before He</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/the-shirt-that-made-me-fall-in-love?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">The Shirt That Made Me Fall in Love</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/the-lost-sponsors-when-football-shirts?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">The Lost Sponsors When Football Shirts</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/followers-vs-faithful-what-hashtag?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Followers vs Faithful What Hashtag</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/will-griggs-on-fire-wigans-top-25?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Will Griggs on Fire Wigans Top 25</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/short-term-ism-in-football?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Short Term Ism in Football</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/croke-park-wants-a-european-final?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Croke Park Wants a European Final</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/should-we-trust-the-process?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Should We Trust the Process</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/the-golden-age-of-football-ads-when?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">The Golden Age of Football Ads When</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/banned-shirts-lasting-legacy?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Banned Shirts Lasting Legacy</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/the-politics-in-the-stands?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">The Politics in the Stands</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/the-football-shirt-has-replaced-the?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">The Football Shirt Has Replaced the</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/the-new-full-back-inverted-hybrid?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">The New Full Back Inverted Hybrid</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/keepy-uppies-the-vietnam-way?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">Keepy Uppies the Vietnam Way</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/the-real-life-ted-lasso?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">The Real Life Ted Lasso</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+        <li class="arch-item">
+          <a href="https://jamescallan3.substack.com/p/from-umbro-to-adidas-how-footballs?r=6ftpsa" target="_blank" rel="noopener">
+            <span class="arch-title">From Umbro to Adidas How Footballs</span>
+            <span class="arch-arrow">→</span>
+          </a>
+        </li>
+    </ul>
+    </div></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="fine-print">© 2026 James Callan / Touchline Sport. All content on this website, including written articles, analysis, graphics and original research, is the intellectual property of James Callan and Touchline Sport unless otherwise stated. No content may be reproduced, republished or redistributed without prior permission.</p>
+    <div class="foot-row">
+      <span>Touchline Studios</span>
+      <div class="foot-links">
+        <a href="https://www.linkedin.com/company/touchline-sports-studio/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.instagram.com/touchline_sports_studio/" target="_blank" rel="noopener">Instagram</a>
+        <a href="#">TikTok</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleCat(headEl){
+    var block = headEl.closest('.category-block');
+    block.classList.toggle('open');
+  }
+
+  // Open the section matching the URL hash on load (e.g. archive.html#world),
+  // and keep it working if the hash changes while already on the page.
+  function openFromHash(){
+    var id = window.location.hash.replace('#','');
+    var target = id ? document.getElementById(id) : null;
+    if (target && target.classList.contains('category-block')){
+      target.classList.add('open');
+      setTimeout(function(){ target.scrollIntoView({behavior:'smooth', block:'start'}); }, 50);
+    } else {
+      // default: open the first section (Irish) so the page isn't empty on load
+      var first = document.querySelector('.category-block');
+      if (first) first.classList.add('open');
+    }
+  }
+  openFromHash();
+  window.addEventListener('hashchange', openFromHash);
+</script>
+</body>
+</html>
