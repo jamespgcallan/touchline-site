@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scouting Report: Ben McCormack — Touchline Studios</title>
+<meta name="description" content="A full scouting profile on Bray Wanderers attacking midfielder Ben McCormack — background, season data, playing style and development areas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#fbf3e7;
+    --paper-soft:#f5e5cf;
+    --ink:#1c1a17;
+    --ink-soft:#6b5d4d;
+    --accent:#e8720f;
+    --accent-soft:#fbe2c4;
+    --line:rgba(33,31,26,0.10);
+    --max:1180px;
+    --radius:18px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter', -apple-system, sans-serif;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.5;
+  }
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 32px;}
+  .mono{ font-family:'IBM Plex Mono', monospace; }
+  .pill{
+    display:inline-flex; align-items:center;
+    padding:5px 13px; border-radius:99px;
+    background:var(--accent-soft); color:var(--accent);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px; letter-spacing:0.03em; font-weight:500;
+  }
+
+  header{
+    padding:26px 0;
+    position:sticky; top:0;
+    background:rgba(251,243,231,0.86);
+    backdrop-filter:blur(10px);
+    z-index:20;
+  }
+  .nav-row{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; }
+  .logo{ display:flex; align-items:center; gap:9px; font-family:'Manrope', sans-serif; font-weight:800; font-size:18px; letter-spacing:-0.01em; }
+  .logo-mark{ width:30px; height:30px; object-fit:contain; }
+  nav.links{ display:flex; gap:30px; }
+  nav.links a{ font-size:14px; font-weight:500; color:var(--ink-soft); transition:color .2s; }
+  nav.links a:hover{ color:var(--ink); }
+  .nav-cta{
+    background:var(--ink); color:var(--paper);
+    padding:9px 18px; border-radius:99px; font-size:13.5px; font-weight:600;
+    transition:transform .15s ease, background .2s;
+  }
+  .nav-cta:hover{ background:var(--accent); transform:translateY(-1px); }
+
+  /* ---------- Report head ---------- */
+  .report-head{
+    padding:48px 0 0;
+    position:relative;
+    overflow:hidden;
+  }
+  .report-hero{
+    border-radius:24px;
+    padding:44px 40px;
+    color:var(--paper);
+    background:
+      linear-gradient(155deg, rgba(34,28,23,0.88), rgba(23,19,15,0.94)),
+      url('images/ronan-teahan.jpeg');
+    background-size:cover;
+    background-position:center 20%;
+    position:relative;
+  }
+  .report-hero .pill{ background:rgba(255,255,255,0.12); color:#f6c98a; margin-bottom:18px; }
+  .report-hero h1{
+    font-family:'Manrope', sans-serif; font-weight:800;
+    font-size:clamp(32px, 5vw, 52px); letter-spacing:-0.02em;
+    margin:0 0 10px;
+  }
+  .report-hero .position-line{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13.5px; color:#d9d3c4;
+    margin:0 0 28px;
+  }
+  .quick-facts{
+    display:grid;
+    grid-template-columns:repeat(5, 1fr);
+    gap:12px;
+  }
+  .quick-fact{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.14);
+    border-radius:12px;
+    padding:12px 8px;
+    text-align:center;
+  }
+  .quick-fact .qf-label{
+    font-family:'IBM Plex Mono', monospace; font-size:10.5px;
+    color:#c9c2b0; letter-spacing:0.06em; text-transform:uppercase;
+    margin-bottom:6px;
+  }
+  .quick-fact .qf-value{
+    font-family:'Manrope', sans-serif; font-weight:800;
+    font-size:17px; color:var(--paper);
+  }
+
+  /* ---------- Sections ---------- */
+  .report-section{ padding:52px 0; max-width:760px; }
+  .report-section.wide{ max-width:var(--max); }
+  .report-section h2{
+    font-family:'Manrope', sans-serif; font-weight:700;
+    font-size:24px; letter-spacing:-0.005em;
+    margin:0 0 20px;
+    display:flex; align-items:center; gap:12px;
+  }
+  .report-section h2::before{
+    content:"";
+    width:8px; height:8px; border-radius:2px;
+    background:var(--accent);
+    display:inline-block;
+    transform:rotate(45deg);
+  }
+  .report-section p{
+    font-family:'Source Serif 4', serif;
+    font-size:17px; line-height:1.75;
+    color:#2b2823;
+    margin:0 0 20px;
+  }
+  .position-tags{ display:flex; gap:10px; flex-wrap:wrap; margin-top:4px; }
+
+  /* ---------- Stat grids ---------- */
+  .stat-grid{
+    display:grid;
+    grid-template-columns:repeat(5, 1fr);
+    gap:12px;
+    margin-bottom:8px;
+  }
+  .stat-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:18px 14px;
+    text-align:center;
+  }
+  .stat-card .stat-value{
+    font-family:'Manrope', sans-serif; font-weight:800;
+    font-size:24px; color:var(--accent);
+    line-height:1.1; margin-bottom:6px;
+  }
+  .stat-card .stat-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px; color:var(--ink-soft);
+    line-height:1.4;
+  }
+  .stat-headline-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:16px;
+    margin-bottom:32px;
+  }
+  .stat-headline{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:24px;
+    text-align:center;
+  }
+  .stat-headline .stat-value{
+    font-family:'Manrope', sans-serif; font-weight:800;
+    font-size:36px; color:var(--ink);
+  }
+  .stat-headline .stat-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px; color:var(--ink-soft);
+    margin-top:6px;
+  }
+
+  .stat-subhead{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase;
+    color:var(--accent);
+    margin:28px 0 14px;
+  }
+
+  /* ---------- Comparison table ---------- */
+  .compare-table{
+    width:100%;
+    border-collapse:collapse;
+    margin:20px 0 8px;
+    font-family:'Inter', sans-serif;
+    font-size:13.5px;
+  }
+  .compare-table th{
+    text-align:left;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px; text-transform:uppercase; letter-spacing:0.04em;
+    color:var(--ink-soft);
+    padding:10px 12px;
+    border-bottom:1.5px solid var(--ink);
+  }
+  .compare-table td{
+    padding:11px 12px;
+    border-bottom:1px solid var(--line);
+    color:var(--ink);
+  }
+  .compare-table tr.highlight td{
+    background:var(--accent-soft);
+    font-weight:600;
+  }
+  .compare-table td:nth-child(4),
+  .compare-table td:nth-child(5),
+  .compare-table td:nth-child(6),
+  .compare-table th:nth-child(4),
+  .compare-table th:nth-child(5),
+  .compare-table th:nth-child(6){
+    text-align:right;
+    font-family:'IBM Plex Mono', monospace;
+  }
+
+  /* ---------- Impression box ---------- */
+  .impression-box{
+    margin:36px 0 10px;
+    background:var(--ink);
+    color:var(--paper);
+    border-radius:var(--radius);
+    padding:32px 30px;
+  }
+  .impression-box .pill{ background:rgba(255,255,255,0.12); color:#f6c98a; margin-bottom:14px; }
+  .impression-box p{
+    font-family:'Source Serif 4', serif;
+    font-size:17px; line-height:1.7;
+    color:#e8e2d4;
+    margin:0;
+  }
+
+  .report-foot-nav{
+    max-width:760px;
+    padding:20px 0 60px;
+    border-top:1px solid var(--line);
+    margin-top:12px;
+  }
+  .report-foot-nav a{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px; font-weight:500; color:var(--ink-soft);
+    display:inline-flex; align-items:center; gap:8px;
+    transition:color .2s;
+  }
+  .report-foot-nav a:hover{ color:var(--accent); }
+
+  footer{ border-top:1px solid var(--line); padding:34px 0; }
+  .fine-print{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px; line-height:1.7; color:#928d7d;
+    max-width:900px; margin:0 0 22px;
+  }
+  .foot-row{
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;
+    font-size:13px; color:var(--ink-soft);
+  }
+  .foot-links{ display:flex; gap:22px; }
+  .foot-links a:hover{ color:var(--accent); }
+
+  @media (max-width:900px){
+    .quick-facts{ grid-template-columns:repeat(3, 1fr); }
+    .stat-grid{ grid-template-columns:repeat(3, 1fr); }
+    .stat-headline-grid{ grid-template-columns:1fr; }
+    .compare-table{ font-size:12px; }
+  }
+  @media (max-width:600px){
+    nav.links{ display:none; }
+    .quick-facts{ grid-template-columns:repeat(2, 1fr); }
+    .stat-grid{ grid-template-columns:repeat(2, 1fr); }
+    .report-hero{ padding:30px 22px; }
+    .foot-row{ flex-direction:column; align-items:flex-start; }
+    .compare-table{ display:block; overflow-x:auto; white-space:nowrap; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav-row">
+    <a class="logo" href="index.html"><img class="logo-mark" src="logo.png" alt="Touchline Studios"> Touchline Studios</a>
+    <nav class="links">
+      <a href="index.html#latest">Latest</a>
+      <a href="archive.html">Archive</a>
+      <a href="scouting.html">Scouting</a>
+      <a href="graphics.html">Graphics</a>
+      <a href="index.html#pillars">About</a>
+      <a href="index.html#subscribe">Newsletter</a>
+    </nav>
+    <a class="nav-cta" href="index.html#subscribe">Subscribe</a>
+  </div>
+</header>
+
+<div class="report-head">
+  <div class="wrap">
+    <div class="report-hero" style="background: linear-gradient(155deg, rgba(34,28,23,0.88), rgba(23,19,15,0.94)), url('images/ben-mccormack.jpg'); background-size:cover; background-position:center 20%;">
+      <span class="pill">Scouting Report</span>
+      <h1>Ben McCormack</h1>
+      <p class="position-line">Bray Wanderers · Central / Attacking Midfield · 2025/26 season · Data accurate as of 26/05/2026</p>
+      <div class="quick-facts">
+        <div class="quick-fact"><div class="qf-label">Pos</div><div class="qf-value">CM</div></div>
+        <div class="quick-fact"><div class="qf-label">HT</div><div class="qf-value">1.80m</div></div>
+        <div class="quick-fact"><div class="qf-label">Club</div><div class="qf-value">Bray</div></div>
+        <div class="quick-fact"><div class="qf-label">Nat</div><div class="qf-value">Ireland</div></div>
+        <div class="quick-fact"><div class="qf-label">Foot</div><div class="qf-value">Right</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="report-section">
+    <h2>Background</h2>
+    <p>Ben McCormack is an Irish attacking midfielder currently playing for Bray Wanderers. A former St Patrick's Athletic academy player, he broke into senior football at Richmond Park, was part of the 2021 FAI Cup-winning squad, and has also represented Ireland at U15, U16, U17 and U19 level. After spells with Waterford and Wexford, he joined Bray in February 2026 and has quickly become one of the standout attacking midfielders in the First Division.</p>
+  </div>
+
+  <div class="report-section wide">
+    <h2>Season overview — 2025/26</h2>
+    <div class="stat-headline-grid">
+      <div class="stat-headline"><div class="stat-value">16</div><div class="stat-label">Games Played</div></div>
+      <div class="stat-headline"><div class="stat-value">1,168</div><div class="stat-label">Minutes Played</div></div>
+      <div class="stat-headline"><div class="stat-value">7.59</div><div class="stat-label">Average Rating</div></div>
+    </div>
+
+    <div class="stat-subhead">Attacking</div>
+    <div class="stat-grid">
+      <div class="stat-card"><div class="stat-value">7</div><div class="stat-label">Goals</div></div>
+      <div class="stat-card"><div class="stat-value">2</div><div class="stat-label">Assists</div></div>
+      <div class="stat-card"><div class="stat-value">0.40</div><div class="stat-label">Goals Per Game</div></div>
+      <div class="stat-card"><div class="stat-value">167</div><div class="stat-label">Scoring Frequency (mins)</div></div>
+      <div class="stat-card"><div class="stat-value">2.1</div><div class="stat-label">Shots Per Game</div></div>
+      <div class="stat-card"><div class="stat-value">0.7</div><div class="stat-label">On Target Per Game</div></div>
+      <div class="stat-card"><div class="stat-value">21%</div><div class="stat-label">Goal Conversion</div></div>
+      <div class="stat-card"><div class="stat-value">1.9</div><div class="stat-label">Key Passes/90</div></div>
+      <div class="stat-card"><div class="stat-value">1.9</div><div class="stat-label">Succ. Dribbles/90</div></div>
+      <div class="stat-card"><div class="stat-value">67%</div><div class="stat-label">Dribble Success %</div></div>
+      <div class="stat-card"><div class="stat-value">24.4</div><div class="stat-label">Accurate Passes/90</div></div>
+      <div class="stat-card"><div class="stat-value">73%</div><div class="stat-label">Pass Accuracy</div></div>
+      <div class="stat-card"><div class="stat-value">2.6</div><div class="stat-label">Long Balls/90</div></div>
+      <div class="stat-card"><div class="stat-value">29%</div><div class="stat-label">Accurate Crosses/90</div></div>
+    </div>
+
+    <div class="stat-subhead">Defence</div>
+    <div class="stat-grid">
+      <div class="stat-card"><div class="stat-value">3</div><div class="stat-label">Yellow Cards</div></div>
+      <div class="stat-card"><div class="stat-value">0</div><div class="stat-label">Red Cards</div></div>
+      <div class="stat-card"><div class="stat-value">0.3</div><div class="stat-label">Clearances/90</div></div>
+      <div class="stat-card"><div class="stat-value">0.9</div><div class="stat-label">Dribbled Past/90</div></div>
+      <div class="stat-card"><div class="stat-value">8.1</div><div class="stat-label">Duels Won/90</div></div>
+      <div class="stat-card"><div class="stat-value">47%</div><div class="stat-label">Duels Won %</div></div>
+      <div class="stat-card"><div class="stat-value">0.3</div><div class="stat-label">Aerials Won/90</div></div>
+      <div class="stat-card"><div class="stat-value">5.6</div><div class="stat-label">Ball Recoveries/90</div></div>
+    </div>
+  </div>
+
+  <div class="report-section">
+    <h2>Profile overview</h2>
+    <p>McCormack profiles as a productive attacking midfielder who can also operate deeper as an advanced central midfielder. His strongest value this season has come in the final third, where he has combined end product with creative output. Seven goals and two assists from midfield across 1,168 minutes is strong First Division production, especially alongside 1.9 key passes and 1.9 successful dribbles per game.</p>
+    <p>His profile is not built around aerial dominance or heavy defensive contact. Instead, he offers technical security, ball carrying, combination play and a strong ability to arrive in scoring areas. His heatmap suggests involvement across central and attacking midfield zones, with influence between the lines and around the edge of the box.</p>
+    <div class="position-tags">
+      <span class="pill">Position — Center Midfield</span>
+      <span class="pill">Position — Attacking Midfield</span>
+    </div>
+  </div>
+
+  <div class="report-section">
+    <h2>In possession</h2>
+    <p>McCormack is an effective attacking midfielder in possession. He provides direct goal threat, carries the ball well and has enough passing range to connect attacks. His 73% pass accuracy is not elite, but that must be viewed through the role he plays. Creative midfielders often attempt riskier passes in congested areas, and his 1.9 key passes per game shows he is regularly trying to create high-value moments.</p>
+    <p>His dribbling numbers are particularly encouraging. Completing 1.9 successful dribbles per game at a 67% success rate shows he can beat opponents and progress attacks individually. He is not just a safe passer; he is willing to receive under pressure, shift away from contact and drive Bray into dangerous zones.</p>
+    <p>The main technical concern is consistency of execution. His crossing accuracy sits at 29%, and while he offers useful long passing at 2.6 per game, the 46% accuracy shows there is room to sharpen longer distribution. Still, for a First Division attacking midfielder, his mix of goals, chance creation and ball carrying is very strong.</p>
+  </div>
+
+  <div class="report-section">
+    <h2>Off the ball</h2>
+    <p>Off the ball, McCormack shows good attacking instincts. His seven goals from midfield indicate strong timing when arriving into advanced areas. He does not profile as a penalty-box striker, but he has a good sense for finding pockets and taking shots from central areas.</p>
+    <p>Defensively, his 5.6 ball recoveries per game is a positive indicator. He contributes to regains and is not a passenger out of possession. However, his defensive profile is more about positioning and recovering second balls than dominant tackling or duelling. His 47% duel success and 17% aerial success show that physical contests are not his biggest strength.</p>
+    <p>He can contribute in a pressing structure, especially as a higher midfielder closing lanes and reacting to loose balls, but he should ideally be protected by stronger defensive midfielders behind him.</p>
+  </div>
+
+  <div class="report-section wide">
+    <h2>Technical</h2>
+    <p>McCormack's technical profile is one of his main strengths. He is comfortable receiving in central areas, can carry through pressure and has a clear creative output. His 1.9 key passes per game and two assists show he can create chances, while his seven goals show he is not just a facilitator.</p>
+    <p>His first touch and close control allow him to operate in tight spaces. The successful dribble rate is a strong marker of his ability to escape pressure and progress the ball. He also has enough shooting confidence to be a regular threat from midfield, with 2.1 shots per game and a 21% goal conversion rate.</p>
+    <p>Technical development focus should be on improving pass security without reducing his risk-taking, increasing crossing efficiency, and becoming more consistent with final-ball selection.</p>
+
+    <table class="compare-table">
+      <tr><th>Player</th><th>Club</th><th>Minutes</th><th>Goals</th><th>Goals/90</th></tr>
+      <tr class="highlight"><td>Ben McCormack</td><td>Bray Wanderers</td><td>1,168</td><td>7</td><td>0.54</td></tr>
+      <tr><td>Dylan McGlade</td><td>Cobh Ramblers</td><td>527</td><td>8</td><td>1.37</td></tr>
+      <tr><td>Hugh Smith</td><td>UCD</td><td>850</td><td>6</td><td>0.64</td></tr>
+      <tr><td>Mikie Rowe</td><td>Wexford</td><td>729</td><td>6</td><td>0.74</td></tr>
+      <tr><td>Cillian Tollett</td><td>Athlone Town</td><td>558</td><td>5</td><td>0.81</td></tr>
+      <tr><td>Jason Oyenuga</td><td>Treaty United</td><td>519</td><td>4</td><td>0.69</td></tr>
+      <tr><td>Aaron Doran</td><td>Longford Town</td><td>586</td><td>4</td><td>0.61</td></tr>
+      <tr><td>Daniel Ring</td><td>Bray Wanderers</td><td>566</td><td>3</td><td>0.48</td></tr>
+      <tr><td>Richard Ferizaj</td><td>Bray Wanderers</td><td>558</td><td>3</td><td>0.48</td></tr>
+      <tr><td>Tyreik Sammy</td><td>Bray Wanderers</td><td>1,127</td><td>3</td><td>0.24</td></tr>
+    </table>
+  </div>
+
+  <div class="report-section wide">
+    <h2>Physical</h2>
+    <p>McCormack has a useful athletic base for an attacking midfielder. At 180cm, he has decent size, but he is not dominant in aerial duels.</p>
+    <p>His 17% aerial success is a clear weakness and means he is unlikely to add major value defending set-pieces or competing for direct balls. His mobility and agility appear more valuable than his raw strength.</p>
+    <p>The dribbling output suggests he can shift direction quickly and carry the ball under pressure. He is also durable enough to start consistently, with 16 starts from 16 appearances and an average of 73 minutes per game.</p>
+    <p>Physically, he looks best suited to a technical, possession-and-transition role rather than a high-contact midfield battle.</p>
+
+    <table class="compare-table">
+      <tr><th>Player</th><th>Club</th><th>Division</th><th>Minutes</th><th>Key Passes/90</th></tr>
+      <tr><td>Harry Wood</td><td>Shelbourne</td><td>Premier Division</td><td>1,524</td><td>2.36</td></tr>
+      <tr><td>Dawson Devoy</td><td>Bohemians</td><td>Premier Division</td><td>1,620</td><td>2.11</td></tr>
+      <tr class="highlight"><td>Ben McCormack</td><td>Bray Wanderers</td><td>First Division</td><td>1,168</td><td>1.9</td></tr>
+      <tr><td>Will Fitzgerald</td><td>Sligo Rovers</td><td>Premier Division</td><td>1,620</td><td>1.78</td></tr>
+      <tr><td>Ross Tierney</td><td>Bohemians</td><td>Premier Division</td><td>1,534</td><td>1.76</td></tr>
+      <tr><td>Barry Baggley</td><td>Waterford</td><td>Premier Division</td><td>1,522</td><td>1.71</td></tr>
+    </table>
+  </div>
+
+  <div class="report-section">
+    <h2>Psychological</h2>
+    <p>McCormack's career path suggests resilience and maturity. After early promise at St Pat's, he moved through Waterford and Wexford before taking a strong opportunity at Bray. His immediate production this season points to a player with confidence, hunger and a point to prove.</p>
+    <p>Winning First Division Player of the Month for March reflects the level of impact he has made since joining Bray. His ability to step into a new environment and become a key attacking contributor quickly is a positive psychological marker.</p>
+    <p>He appears to play with confidence in possession, takes responsibility in the final third and has not been shy about becoming a decisive player.</p>
+
+    <div class="impression-box">
+      <span class="pill">Impression of player</span>
+      <p>McCormack is one of the First Division's standout attacking midfielders this season. He offers goals, creativity and ball-carrying from central areas, with clear value as a No.10 or advanced No.8. His aerial and defensive duel profile are weaknesses, but his attacking production, technical quality and current form make him a strong League of Ireland performer with potential to step back into a higher-level environment if consistency holds.</p>
+    </div>
+  </div>
+
+  <div class="report-foot-nav">
+    <a href="index.html#scouting">← Back to Scouting</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <p class="fine-print">© 2026 James Callan / Touchline Sport. All content on this website, including written articles, analysis, graphics and original research, is the intellectual property of James Callan and Touchline Sport unless otherwise stated. No content may be reproduced, republished or redistributed without prior permission.</p>
+    <div class="foot-row">
+      <span>Touchline Studios</span>
+      <div class="foot-links">
+        <a href="https://www.linkedin.com/company/touchline-sports-studio/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.instagram.com/touchline_sports_studio/" target="_blank" rel="noopener">Instagram</a>
+        <a href="#">TikTok</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

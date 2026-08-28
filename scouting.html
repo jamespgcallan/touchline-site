@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Graphics — Touchline Studios</title>
-<meta name="description" content="Scout report covers, stat graphics and player designs from Touchline Studios.">
+<title>Scouting Reports — Touchline Studios</title>
+<meta name="description" content="Full scouting profiles on League of Ireland players — background, season data, playing style and development areas.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -69,28 +69,47 @@
   .page-hero p{ color:var(--ink-soft); font-size:16px; max-width:56ch; line-height:1.6; margin:0; }
 
   .section{ padding:44px 0 80px; }
-
-  .graphics-grid{
+  .grid{
     display:grid;
-    grid-template-columns:repeat(4, 1fr);
-    gap:16px;
+    grid-template-columns:repeat(3, 1fr);
+    gap:26px;
   }
-  .graphic-item{
-    display:block;
-    border-radius:14px;
-    overflow:hidden;
-    aspect-ratio:4/5;
+  .card{
     background:#fff;
+    border-radius:var(--radius);
+    padding:0 0 22px;
+    overflow:hidden;
+    box-shadow:0 1px 2px rgba(33,31,26,0.04);
     border:1px solid var(--line);
     transition:transform .2s ease, box-shadow .2s ease;
+    display:block;
   }
-  .graphic-item:hover{ transform:translateY(-4px); box-shadow:0 14px 30px rgba(33,31,26,0.10); }
-  .graphic-item img{
-    width:100%; height:100%;
-    object-fit:cover; display:block;
+  .card:hover{ transform:translateY(-4px); box-shadow:0 14px 30px rgba(33,31,26,0.10); }
+  .card-art{
+    aspect-ratio:16/10;
+    background-size:cover;
+    background-position:center 20%;
   }
-  @media (max-width:900px){ .graphics-grid{ grid-template-columns:repeat(3, 1fr); } }
-  @media (max-width:600px){ .graphics-grid{ grid-template-columns:repeat(2, 1fr); } }
+  .card-body{ padding:22px 22px 0; }
+  .card .pill{ margin-bottom:14px; }
+  .card h3{
+    font-family:'Manrope', sans-serif;
+    font-weight:700;
+    font-size:18.5px;
+    line-height:1.28;
+    margin:0 0 10px;
+    letter-spacing:-0.005em;
+  }
+  .card p{
+    font-size:13.8px; color:var(--ink-soft);
+    line-height:1.6; margin:0 0 16px;
+  }
+  .card .meta{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px; color:#928d7d;
+    display:flex; gap:10px; align-items:center;
+  }
+  .card .meta .dot{ width:3px; height:3px; border-radius:50%; background:#928d7d; }
 
   footer{ border-top:1px solid var(--line); padding:34px 0; }
   .fine-print{
@@ -105,8 +124,10 @@
   .foot-links{ display:flex; gap:22px; }
   .foot-links a:hover{ color:var(--accent); }
 
+  @media (max-width:900px){ .grid{ grid-template-columns:1fr 1fr; } }
   @media (max-width:600px){
     nav.links{ display:none; }
+    .grid{ grid-template-columns:1fr; }
     .foot-row{ flex-direction:column; align-items:flex-start; }
   }
 </style>
@@ -119,7 +140,6 @@
     <nav class="links">
       <a href="index.html#latest">Latest</a>
       <a href="archive.html">Archive</a>
-      <a href="scouting.html">Scouting</a>
       <a href="graphics.html">Graphics</a>
       <a href="index.html#pillars">About</a>
       <a href="index.html#subscribe">Newsletter</a>
@@ -130,21 +150,60 @@
 
 <section class="page-hero">
   <div class="wrap">
-    <span class="pill">6 graphics and counting</span>
-    <h1>Graphics</h1>
-    <p>Scout report covers, stat graphics and player designs — made for the eye, not just the read. Click any of them for the full-size version.</p>
+    <span class="pill">5 reports and counting</span>
+    <h1>Scouting Reports</h1>
+    <p>Full profiles on players worth watching — background, season data, playing style, and where each one still has room to grow.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
-    <div class="graphics-grid">
-      <a class="graphic-item" href="images/graphics/ronan-coughlan.png" target="_blank" rel="noopener"><img src="images/graphics/ronan-coughlan.png" alt="Ronan Coughlan graphic — Fleetwood Town"></a>
-      <a class="graphic-item" href="images/graphics/devoy.png" target="_blank" rel="noopener"><img src="images/graphics/devoy.png" alt="Devoy graphic — Bohemian FC, He's One Of Our Own"></a>
-      <a class="graphic-item" href="images/graphics/liam-scales.png" target="_blank" rel="noopener"><img src="images/graphics/liam-scales.png" alt="Liam Scales graphic — Celtic, Tipping The Scales"></a>
-      <a class="graphic-item" href="images/graphics/pat-hoban.png" target="_blank" rel="noopener"><img src="images/graphics/pat-hoban.png" alt="Patrick Hoban graphic — Dundalk FC"></a>
-      <a class="graphic-item" href="images/graphics/owen-elding.png" target="_blank" rel="noopener"><img src="images/graphics/owen-elding.png" alt="Owen Elding graphic — Hibernian"></a>
-      <a class="graphic-item" href="images/graphics/katie-mccabe.png" target="_blank" rel="noopener"><img src="images/graphics/katie-mccabe.png" alt="Katie McCabe graphic — Arsenal, The Gunners"></a>
+    <div class="grid">
+      <a class="card" href="scout-report-ronan-teahan.html">
+        <div class="card-art" style="background-image:url('images/ronan-teahan.jpeg');"></div>
+        <div class="card-body">
+          <span class="pill">AM · Dundalk</span>
+          <h3>Ronan Teahan</h3>
+          <p>A 21-year-old Dundalk attacking midfielder whose ball carrying and movement can open games up, but whose final-third output still has room to grow.</p>
+          <div class="meta"><span>Accurate as of 04/08/2026</span></div>
+        </div>
+      </a>
+      <a class="card" href="scout-report-gareth-mcelroy.html">
+        <div class="card-art" style="background-image:url('images/gareth-mcelroy.jpg');"></div>
+        <div class="card-body">
+          <span class="pill">CB · Sligo Rovers</span>
+          <h3>Gareth McElroy</h3>
+          <p>A 21-year-old Sligo centre-back already dominating aerially and defending his box at Premier Division level, with plenty still to develop on the ball.</p>
+          <div class="meta"><span>Accurate as of 11/06/2026</span></div>
+        </div>
+      </a>
+      <a class="card" href="scout-report-adam-brennan.html">
+        <div class="card-art" style="background-image:url('images/adam-brennan.jpg');"></div>
+        <div class="card-body">
+          <span class="pill">LW · Shamrock Rovers</span>
+          <h3>Adam Brennan</h3>
+          <p>A technically sharp Shamrock Rovers attacker whose movement and intelligence between the lines make him one of Ireland's more interesting young prospects.</p>
+          <div class="meta"><span>Accurate as of 11/06/2026</span></div>
+        </div>
+      </a>
+      <a class="card" href="scout-report-cian-doyle.html">
+        <div class="card-art" style="background-image:url('images/cian-doyle.jpg');"></div>
+        <div class="card-body">
+          <span class="pill">CM · Bray Wanderers</span>
+          <h3>Cian Doyle</h3>
+          <p>A 21-year-old Bray midfielder whose positioning, ball recovery and defensive awareness stand out, with progression in possession still the obvious next step.</p>
+          <div class="meta"><span>Accurate as of 11/06/2026</span></div>
+        </div>
+      </a>
+      <a class="card" href="scout-report-ben-mccormack.html">
+        <div class="card-art" style="background-image:url('images/ben-mccormack.jpg');"></div>
+        <div class="card-body">
+          <span class="pill">CM · Bray Wanderers</span>
+          <h3>Ben McCormack</h3>
+          <p>A productive Bray attacking midfielder combining goals, chance creation and ball carrying, with the numbers to suggest he is ready for another step.</p>
+          <div class="meta"><span>Accurate as of 26/05/2026</span></div>
+        </div>
+      </a>
     </div>
   </div>
 </section>

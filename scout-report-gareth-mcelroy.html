@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scouting Report: Gareth McElroy — Touchline Studios</title>
+<meta name="description" content="A full scouting profile on Sligo Rovers centre-back Gareth McElroy — background, season data, playing style and development areas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#fbf3e7;
+    --paper-soft:#f5e5cf;
+    --ink:#1c1a17;
+    --ink-soft:#6b5d4d;
+    --accent:#e8720f;
+    --accent-soft:#fbe2c4;
+    --line:rgba(33,31,26,0.10);
+    --max:1180px;
+    --radius:18px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter', -apple-system, sans-serif;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.5;
+  }
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 32px;}
+  .mono{ font-family:'IBM Plex Mono', monospace; }
+  .pill{
+    display:inline-flex; align-items:center;
+    padding:5px 13px; border-radius:99px;
+    background:var(--accent-soft); color:var(--accent);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px; letter-spacing:0.03em; font-weight:500;
+  }
+
+  header{
+    padding:26px 0;
+    position:sticky; top:0;
+    background:rgba(251,243,231,0.86);
+    backdrop-filter:blur(10px);
+    z-index:20;
+  }
+  .nav-row{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; }
+  .logo{ display:flex; align-items:center; gap:9px; font-family:'Manrope', sans-serif; font-weight:800; font-size:18px; letter-spacing:-0.01em; }
+  .logo-mark{ width:30px; height:30px; object-fit:contain; }
+  nav.links{ display:flex; gap:30px; }
+  nav.links a{ font-size:14px; font-weight:500; color:var(--ink-soft); transition:color .2s; }
+  nav.links a:hover{ color:var(--ink); }
+  .nav-cta{
+    background:var(--ink); color:var(--paper);
+    padding:9px 18px; border-radius:99px; font-size:13.5px; font-weight:600;
+    transition:transform .15s ease, background .2s;
+  }
+  .nav-cta:hover{ background:var(--accent); transform:translateY(-1px); }
+
+  /* ---------- Report head ---------- */
+  .report-head{
+    padding:48px 0 0;
+    position:relative;
+    overflow:hidden;
+  }
+  .report-hero{
+    border-radius:24px;
+    padding:44px 40px;
+    color:var(--paper);
+    background:
+      linear-gradient(155deg, rgba(34,28,23,0.88), rgba(23,19,15,0.94)),
+      url('images/ronan-teahan.jpeg');
+    background-size:cover;
+    background-position:center 20%;
+    position:relative;
+  }
+  .report-hero .pill{ background:rgba(255,255,255,0.12); color:#f6c98a; margin-bottom:18px; }
+  .report-hero h1{
+    font-family:'Manrope', sans-serif; font-weight:800;
+    font-size:clamp(32px, 5vw, 52px); letter-spacing:-0.02em;
+    margin:0 0 10px;
+  }
+  .report-hero .position-line{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13.5px; color:#d9d3c4;
+    margin:0 0 28px;
+  }
+  .quick-facts{
+    display:grid;
+    grid-template-columns:repeat(5, 1fr);
+    gap:12px;
+  }
+  .quick-fact{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.14);
+    border-radius:12px;
+    padding:12px 8px;
+    text-align:center;
+  }
+  .quick-fact .qf-label{
+    font-family:'IBM Plex Mono', monospace; font-size:10.5px;
+    color:#c9c2b0; letter-spacing:0.06em; text-transform:uppercase;
+    margin-bottom:6px;
+  }
+  .quick-fact .qf-value{
+    font-family:'Manrope', sans-serif; font-weight:800;
+    font-size:17px; color:var(--paper);
+  }
+
+  /* ---------- Sections ---------- */
+  .report-section{ padding:52px 0; max-width:760px; }
+  .report-section.wide{ max-width:var(--max); }
+  .report-section h2{
+    font-family:'Manrope', sans-serif; font-weight:700;
+    font-size:24px; letter-spacing:-0.005em;
+    margin:0 0 20px;
+    display:flex; align-items:center; gap:12px;
+  }
+  .report-section h2::before{
+    content:"";
+    width:8px; height:8px; border-radius:2px;
+    background:var(--accent);
+    display:inline-block;
+    transform:rotate(45deg);
+  }
+  .report-section p{
+    font-family:'Source Serif 4', serif;
+    font-size:17px; line-height:1.75;
+    color:#2b2823;
+    margin:0 0 20px;
+  }
+  .position-tags{ display:flex; gap:10px; flex-wrap:wrap; margin-top:4px; }
+
+  /* ---------- Stat grids ---------- */
+  .stat-grid{
+    display:grid;
+    grid-template-columns:repeat(5, 1fr);
+    gap:12px;
+    margin-bottom:8px;
+  }
+  .stat-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:18px 14px;
+    text-align:center;
+  }
+  .stat-card .stat-value{
+    font-family:'Manrope', sans-serif; font-weight:800;
+    font-size:24px; color:var(--accent);
+    line-height:1.1; margin-bottom:6px;
+  }
+  .stat-card .stat-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px; color:var(--ink-soft);
+    line-height:1.4;
+  }
+  .stat-headline-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:16px;
+    margin-bottom:32px;
+  }
+  .stat-headline{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:24px;
+    text-align:center;
+  }
+  .stat-headline .stat-value{
+    font-family:'Manrope', sans-serif; font-weight:800;
+    font-size:36px; color:var(--ink);
+  }
+  .stat-headline .stat-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px; color:var(--ink-soft);
+    margin-top:6px;
+  }
+
+  .stat-subhead{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase;
+    color:var(--accent);
+    margin:28px 0 14px;
+  }
+
+  /* ---------- Comparison table ---------- */
+  .compare-table{
+    width:100%;
+    border-collapse:collapse;
+    margin:20px 0 8px;
+    font-family:'Inter', sans-serif;
+    font-size:13.5px;
+  }
+  .compare-table th{
+    text-align:left;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px; text-transform:uppercase; letter-spacing:0.04em;
+    color:var(--ink-soft);
+    padding:10px 12px;
+    border-bottom:1.5px solid var(--ink);
+  }
+  .compare-table td{
+    padding:11px 12px;
+    border-bottom:1px solid var(--line);
+    color:var(--ink);
+  }
+  .compare-table tr.highlight td{
+    background:var(--accent-soft);
+    font-weight:600;
+  }
+  .compare-table td:nth-child(4),
+  .compare-table td:nth-child(5),
+  .compare-table td:nth-child(6),
+  .compare-table th:nth-child(4),
+  .compare-table th:nth-child(5),
+  .compare-table th:nth-child(6){
+    text-align:right;
+    font-family:'IBM Plex Mono', monospace;
+  }
+
+  /* ---------- Impression box ---------- */
+  .impression-box{
+    margin:36px 0 10px;
+    background:var(--ink);
+    color:var(--paper);
+    border-radius:var(--radius);
+    padding:32px 30px;
+  }
+  .impression-box .pill{ background:rgba(255,255,255,0.12); color:#f6c98a; margin-bottom:14px; }
+  .impression-box p{
+    font-family:'Source Serif 4', serif;
+    font-size:17px; line-height:1.7;
+    color:#e8e2d4;
+    margin:0;
+  }
+
+  .report-foot-nav{
+    max-width:760px;
+    padding:20px 0 60px;
+    border-top:1px solid var(--line);
+    margin-top:12px;
+  }
+  .report-foot-nav a{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px; font-weight:500; color:var(--ink-soft);
+    display:inline-flex; align-items:center; gap:8px;
+    transition:color .2s;
+  }
+  .report-foot-nav a:hover{ color:var(--accent); }
+
+  footer{ border-top:1px solid var(--line); padding:34px 0; }
+  .fine-print{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px; line-height:1.7; color:#928d7d;
+    max-width:900px; margin:0 0 22px;
+  }
+  .foot-row{
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;
+    font-size:13px; color:var(--ink-soft);
+  }
+  .foot-links{ display:flex; gap:22px; }
+  .foot-links a:hover{ color:var(--accent); }
+
+  @media (max-width:900px){
+    .quick-facts{ grid-template-columns:repeat(3, 1fr); }
+    .stat-grid{ grid-template-columns:repeat(3, 1fr); }
+    .stat-headline-grid{ grid-template-columns:1fr; }
+    .compare-table{ font-size:12px; }
+  }
+  @media (max-width:1100px){
+    .compare-table{ display:block; overflow-x:auto; white-space:nowrap; }
+  }
+  @media (max-width:600px){
+    nav.links{ display:none; }
+    .quick-facts{ grid-template-columns:repeat(2, 1fr); }
+    .stat-grid{ grid-template-columns:repeat(2, 1fr); }
+    .report-hero{ padding:30px 22px; }
+    .foot-row{ flex-direction:column; align-items:flex-start; }
+    .compare-table{ display:block; overflow-x:auto; white-space:nowrap; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav-row">
+    <a class="logo" href="index.html"><img class="logo-mark" src="logo.png" alt="Touchline Studios"> Touchline Studios</a>
+    <nav class="links">
+      <a href="index.html#latest">Latest</a>
+      <a href="archive.html">Archive</a>
+      <a href="scouting.html">Scouting</a>
+      <a href="graphics.html">Graphics</a>
+      <a href="index.html#pillars">About</a>
+      <a href="index.html#subscribe">Newsletter</a>
+    </nav>
+    <a class="nav-cta" href="index.html#subscribe">Subscribe</a>
+  </div>
+</header>
+
+<div class="report-head">
+  <div class="wrap">
+    <div class="report-hero" style="background: linear-gradient(155deg, rgba(34,28,23,0.88), rgba(23,19,15,0.94)), url('images/gareth-mcelroy.jpg'); background-size:cover; background-position:center 20%;">
+      <span class="pill">Scouting Report</span>
+      <h1>Gareth McElroy</h1>
+      <p class="position-line">Sligo Rovers · Centre Back · 2025/26 season · Data accurate as of 11/06/2026</p>
+      <div class="quick-facts">
+        <div class="quick-fact"><div class="qf-label">Pos</div><div class="qf-value">CB</div></div>
+        <div class="quick-fact"><div class="qf-label">HT</div><div class="qf-value">1.95m</div></div>
+        <div class="quick-fact"><div class="qf-label">Club</div><div class="qf-value">Sligo</div></div>
+        <div class="quick-fact"><div class="qf-label">Nat</div><div class="qf-value">Ireland</div></div>
+        <div class="quick-fact"><div class="qf-label">Foot</div><div class="qf-value">Right</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="report-section">
+    <h2>Background</h2>
+    <p>Gareth McElroy is a 21-year-old centre-back who has emerged as one of the most physically dominant young defenders in the League of Ireland Premier Division during the 2026 season. A product of the Sligo Rovers pathway, McElroy has gone from academy prospect to established senior defender within a difficult but developmentally valuable environment at The Showgrounds.</p>
+    <p>The 2026 campaign has been his breakthrough as a consistent Premier Division starter. He has recorded 18 league appearances, 15 starts, 1,416 minutes and an average rating of 6.91. His performances have increasingly reflected a defender becoming more comfortable with the physical and tactical demands of senior football.</p>
+    <p>What makes McElroy particularly interesting is the clarity of his profile. He already possesses several elite defensive traits for domestic level football, particularly in aerial dominance and defensive activity, while still having obvious developmental upside in possession and progression play.</p>
+    <p>Sligo's decision to extend his contract until 2028 reflects that belief internally.</p>
+  </div>
+
+  <div class="report-section wide">
+    <h2>Season overview — 2025/26</h2>
+    <div class="stat-headline-grid">
+      <div class="stat-headline"><div class="stat-value">18</div><div class="stat-label">Games Played</div></div>
+      <div class="stat-headline"><div class="stat-value">1,416</div><div class="stat-label">Minutes Played</div></div>
+      <div class="stat-headline"><div class="stat-value">6.91</div><div class="stat-label">Average Rating</div></div>
+    </div>
+
+    <div class="stat-subhead">Attacking</div>
+    <div class="stat-grid">
+      <div class="stat-card"><div class="stat-value">56.9</div><div class="stat-label">Touches/90</div></div>
+      <div class="stat-card"><div class="stat-value">72.8%</div><div class="stat-label">Pass Accuracy</div></div>
+      <div class="stat-card"><div class="stat-value">0.06</div><div class="stat-label">Key Passes/90</div></div>
+      <div class="stat-card"><div class="stat-value">N/A</div><div class="stat-label">Succ. Dribbles/90</div></div>
+      <div class="stat-card"><div class="stat-value">N/A</div><div class="stat-label">Dribble Success %</div></div>
+    </div>
+
+    <div class="stat-subhead">Defence</div>
+    <div class="stat-grid">
+      <div class="stat-card"><div class="stat-value">1.78</div><div class="stat-label">Tackles/90</div></div>
+      <div class="stat-card"><div class="stat-value">1.02</div><div class="stat-label">Interceptions/90</div></div>
+      <div class="stat-card"><div class="stat-value">8.45</div><div class="stat-label">Clearances/90</div></div>
+      <div class="stat-card"><div class="stat-value">1.91</div><div class="stat-label">Blocks/90</div></div>
+      <div class="stat-card"><div class="stat-value">6.48</div><div class="stat-label">Duels Won/90</div></div>
+      <div class="stat-card"><div class="stat-value">68.5%</div><div class="stat-label">Duels Won %</div></div>
+      <div class="stat-card"><div class="stat-value">4.32</div><div class="stat-label">Aerials Won/90</div></div>
+      <div class="stat-card"><div class="stat-value">3.62</div><div class="stat-label">Ball Recoveries/90</div></div>
+    </div>
+  </div>
+
+  <div class="report-section">
+    <h2>Profile overview</h2>
+    <p>McElroy profiles as an aggressive, physically dominant defensive centre-back whose game is built around aerial security, box defending and repeated defensive interventions. His statistical profile is heavily skewed toward defensive output rather than possession influence, which makes his identity extremely clear already.</p>
+    <p>His percentile profile ranks him in the 92nd percentile for aerial duels won and the 98th percentile for defensive contributions compared to other centre-backs. Those are standout numbers for a 21-year-old defender playing in a mid-table Premier Division environment.</p>
+    <p>His game currently revolves around winning first contact, clearing danger, defending crosses and surviving sustained pressure. He is constantly involved. His 207 defensive contributions, 133 clearances and 30 blocked shots show a centre-back repeatedly defending his own penalty area.</p>
+    <p>There is also attacking upside from set pieces. Six of his seven shots this season have been headers, with four coming from corners.</p>
+    <div class="position-tags">
+      <span class="pill">Position — Left Centre Back</span>
+      <span class="pill">Position — Left Back</span>
+      <span class="pill">Position — Centre Of Back 3</span>
+    </div>
+  </div>
+
+  <div class="report-section">
+    <h2>In possession</h2>
+    <p>In possession, McElroy is currently functional rather than expansive. His 72.8% pass completion and 43.8% long-ball accuracy suggest a defender capable of basic circulation and occasional progression, but not yet a dominant distributor.</p>
+    <p>He generally plays within himself. His decision-making on the ball is conservative, often prioritising safety and territory over risk. That fits Sligo's game-state reality this season, where defenders are frequently asked to survive pressure rather than orchestrate attacks.</p>
+    <p>The most encouraging technical indicator is his long-ball accuracy. At 43.8%, it is already noticeably stronger than several other young domestic centre-backs. He can switch play and release pressure when given time.</p>
+    <p>His next technical jump is composure under pressure. When pressed aggressively, he can still rush clearances or default too quickly to direct play rather than stepping through the first line.</p>
+  </div>
+
+  <div class="report-section">
+    <h2>Off the ball</h2>
+    <p>Off the ball is where McElroy already looks like a genuine Premier Division-level defender.</p>
+    <p>His defensive workload is enormous. Across 1,416 minutes, he has produced 207 defensive contributions, 133 clearances, 30 blocked shots, 28 tackles and 16 interceptions. That level of activity reflects both his individual defensive instincts and Sligo's tactical environment.</p>
+    <p>His aerial profile is particularly impressive. Winning 68 aerial duels at a 73.1% success rate places him among the stronger aerial defenders in the division statistically.</p>
+    <p>He is comfortable defending deep and repeatedly attacking deliveries into the box. His size allows him to dominate against direct forwards, while his willingness to block shots and clear danger reflects strong commitment levels defensively.</p>
+    <p>The next stage is anticipation. At times, he can become reactive instead of proactive, especially against quicker movement around him. Improved scanning and earlier positioning could reduce how often he is forced into emergency defending.</p>
+  </div>
+
+  <div class="report-section wide">
+    <h2>Technical</h2>
+    <p>Technically, McElroy's strongest qualities are defensive technique rather than creative possession play.</p>
+    <p>His heading technique is a major asset. Both defensively and attacking set pieces, he consistently wins first contact because of timing, body shape and aggression rather than simply height alone. His six headed shots this season underline that attacking threat.</p>
+    <p>His tackling is controlled for a young centre-back. Despite his physical style, he has only conceded one penalty and been dribbled past six times across the season.</p>
+    <p>His passing remains the biggest technical growth area. While the long-ball numbers are encouraging, he still lacks the disguised progression passing or line-breaking calmness associated with elite possession defenders.</p>
+    <p>Right now, his technical game is built around reliability and defensive execution rather than tempo control.</p>
+
+    <table class="compare-table">
+      <tr><th>Player</th><th>Club</th><th>Minutes</th><th>Pass Accuracy</th><th>Successful Passes</th><th>Accurate Long Balls %</th><th>Chances Created</th><th>xA</th><th>Successful Dribble %</th></tr>
+      <tr class="highlight"><td>Gareth McElroy</td><td>Sligo Rovers</td><td>1,416</td><td>72.80%</td><td>465</td><td>43.80%</td><td>1</td><td>0.31</td><td>—</td></tr>
+      <tr><td>Joe Redmond</td><td>St Patrick's Athletic</td><td>1,619</td><td>78.10%</td><td>789</td><td>48.10%</td><td>16</td><td>1.05</td><td>80.00%</td></tr>
+      <tr><td>Sam Todd</td><td>Bohemians</td><td>1,407</td><td>83.60%</td><td>822</td><td>0.417</td><td>1</td><td>0.4</td><td>62.50%</td></tr>
+      <tr><td>Seán Hoare</td><td>St Patrick's Athletic</td><td>918</td><td>84.40%</td><td>566</td><td>56.90%</td><td>3</td><td>0.41</td><td>33.30%</td></tr>
+      <tr><td>Andrew Quinn</td><td>Drogheda United</td><td>1,349</td><td>66.10%</td><td>248</td><td>26.20%</td><td>3</td><td>1.06</td><td>62.50%</td></tr>
+      <tr><td>Killian Brouder</td><td>Galway United</td><td>1,426</td><td>59.70%</td><td>227</td><td>31.50%</td><td>5</td><td>0.33</td><td>50.00%</td></tr>
+    </table>
+  </div>
+
+  <div class="report-section wide">
+    <h2>Physical</h2>
+    <p>Physically, McElroy already possesses standout domestic-level attributes.</p>
+    <p>At 1.95m, he is naturally imposing, but what separates him from purely tall defenders is his willingness to engage physically. He actively attacks aerial situations, embraces contact and competes aggressively in defensive duels.</p>
+    <p>His duel success rate of 68.5% and aerial success rate of 73.1% are elite indicators for a young League of Ireland centre-back.</p>
+    <p>He also appears durable. His 1,416 minutes and 18 appearances show a player capable of handling consistent senior football exposure across a physically demanding league.</p>
+    <p>The main physical improvement area is recovery agility. Against mobile forwards pulling into wider spaces, he can occasionally look slightly rigid turning and accelerating over short distances.</p>
+
+    <table class="compare-table">
+      <tr><th>Player</th><th>Club</th><th>Minutes</th><th>Duels Won %</th><th>Aerial Duels Won %</th><th>Clearances</th><th>Tackles</th><th>Blocks</th><th>Recoveries</th><th>Defensive Contributions</th></tr>
+      <tr class="highlight"><td>Gareth McElroy</td><td>Sligo Rovers</td><td>1,416</td><td>68.50%</td><td>73.10%</td><td>133</td><td>28</td><td>30</td><td>57</td><td>207</td></tr>
+      <tr><td>Joe Redmond</td><td>St Patrick's Athletic</td><td>1,619</td><td>61.30%</td><td>65.40%</td><td>125</td><td>32</td><td>11</td><td>86</td><td>197</td></tr>
+      <tr><td>Sam Todd</td><td>Bohemians</td><td>1,407</td><td>68.30%</td><td>72.70%</td><td>89</td><td>28</td><td>16</td><td>65</td><td>141</td></tr>
+      <tr><td>Seán Hoare</td><td>St Patrick's Athletic</td><td>918</td><td>66.70%</td><td>67.80%</td><td>88</td><td>17</td><td>8</td><td>52</td><td>127</td></tr>
+      <tr><td>Andrew Quinn</td><td>Drogheda United</td><td>1,349</td><td>65.80%</td><td>66.20%</td><td>76</td><td>14</td><td>9</td><td>41</td><td>116</td></tr>
+      <tr><td>Killian Brouder</td><td>Galway United</td><td>1,426</td><td>60.60%</td><td>63.10%</td><td>145</td><td>16</td><td>14</td><td>36</td><td>186</td></tr>
+    </table>
+  </div>
+
+  <div class="report-section">
+    <h2>Psychological</h2>
+    <p>McElroy's mentality profile appears strong.</p>
+    <p>Young centre-backs are often judged harshly because mistakes are highly visible, yet he has handled significant defensive responsibility throughout the season without appearing overwhelmed. Sligo have spent long periods defending in matches, which means McElroy is regularly exposed to repeated actions and difficult moments.</p>
+    <p>The important detail is that he continues engaging. His defensive activity never drops, and his recent run of performances against Shamrock Rovers, Shelbourne, Dundalk and Waterford included several strong ratings above 7.0.</p>
+    <p>He also appears coachable. His profile suggests incremental improvement rather than volatility, which is often a positive sign in young defenders.</p>
+    <p>Four yellow cards across the season is acceptable given the volume of defensive actions he performs.</p>
+
+    <div class="impression-box">
+      <span class="pill">Impression of player</span>
+      <p>Gareth McElroy is a physically dominant young centre-back with elite aerial ability, strong defensive instincts and clear Premier Division potential. His biggest strengths are box defending, aggression and consistency in duels. The next step is improving composure and progression in possession to become a more complete modern defender.</p>
+    </div>
+  </div>
+
+  <div class="report-foot-nav">
+    <a href="index.html#scouting">← Back to Scouting</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <p class="fine-print">© 2026 James Callan / Touchline Sport. All content on this website, including written articles, analysis, graphics and original research, is the intellectual property of James Callan and Touchline Sport unless otherwise stated. No content may be reproduced, republished or redistributed without prior permission.</p>
+    <div class="foot-row">
+      <span>Touchline Studios</span>
+      <div class="foot-links">
+        <a href="https://www.linkedin.com/company/touchline-sports-studio/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.instagram.com/touchline_sports_studio/" target="_blank" rel="noopener">Instagram</a>
+        <a href="#">TikTok</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

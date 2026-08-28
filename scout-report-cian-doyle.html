@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scouting Report: Cian Doyle — Touchline Studios</title>
+<meta name="description" content="A full scouting profile on Bray Wanderers central midfielder Cian Doyle — background, season data, playing style and development areas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#fbf3e7;
+    --paper-soft:#f5e5cf;
+    --ink:#1c1a17;
+    --ink-soft:#6b5d4d;
+    --accent:#e8720f;
+    --accent-soft:#fbe2c4;
+    --line:rgba(33,31,26,0.10);
+    --max:1180px;
+    --radius:18px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter', -apple-system, sans-serif;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.5;
+  }
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 32px;}
+  .mono{ font-family:'IBM Plex Mono', monospace; }
+  .pill{
+    display:inline-flex; align-items:center;
+    padding:5px 13px; border-radius:99px;
+    background:var(--accent-soft); color:var(--accent);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px; letter-spacing:0.03em; font-weight:500;
+  }
+
+  header{
+    padding:26px 0;
+    position:sticky; top:0;
+    background:rgba(251,243,231,0.86);
+    backdrop-filter:blur(10px);
+    z-index:20;
+  }
+  .nav-row{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; }
+  .logo{ display:flex; align-items:center; gap:9px; font-family:'Manrope', sans-serif; font-weight:800; font-size:18px; letter-spacing:-0.01em; }
+  .logo-mark{ width:30px; height:30px; object-fit:contain; }
+  nav.links{ display:flex; gap:30px; }
+  nav.links a{ font-size:14px; font-weight:500; color:var(--ink-soft); transition:color .2s; }
+  nav.links a:hover{ color:var(--ink); }
+  .nav-cta{
+    background:var(--ink); color:var(--paper);
+    padding:9px 18px; border-radius:99px; font-size:13.5px; font-weight:600;
+    transition:transform .15s ease, background .2s;
+  }
+  .nav-cta:hover{ background:var(--accent); transform:translateY(-1px); }
+
+  /* ---------- Report head ---------- */
+  .report-head{
+    padding:48px 0 0;
+    position:relative;
+    overflow:hidden;
+  }
+  .report-hero{
+    border-radius:24px;
+    padding:44px 40px;
+    color:var(--paper);
+    background:
+      linear-gradient(155deg, rgba(34,28,23,0.88), rgba(23,19,15,0.94)),
+      url('images/ronan-teahan.jpeg');
+    background-size:cover;
+    background-position:center 20%;
+    position:relative;
+  }
+  .report-hero .pill{ background:rgba(255,255,255,0.12); color:#f6c98a; margin-bottom:18px; }
+  .report-hero h1{
+    font-family:'Manrope', sans-serif; font-weight:800;
+    font-size:clamp(32px, 5vw, 52px); letter-spacing:-0.02em;
+    margin:0 0 10px;
+  }
+  .report-hero .position-line{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13.5px; color:#d9d3c4;
+    margin:0 0 28px;
+  }
+  .quick-facts{
+    display:grid;
+    grid-template-columns:repeat(5, 1fr);
+    gap:12px;
+  }
+  .quick-fact{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.14);
+    border-radius:12px;
+    padding:12px 8px;
+    text-align:center;
+  }
+  .quick-fact .qf-label{
+    font-family:'IBM Plex Mono', monospace; font-size:10.5px;
+    color:#c9c2b0; letter-spacing:0.06em; text-transform:uppercase;
+    margin-bottom:6px;
+  }
+  .quick-fact .qf-value{
+    font-family:'Manrope', sans-serif; font-weight:800;
+    font-size:17px; color:var(--paper);
+  }
+
+  /* ---------- Sections ---------- */
+  .report-section{ padding:52px 0; max-width:760px; }
+  .report-section.wide{ max-width:var(--max); }
+  .report-section h2{
+    font-family:'Manrope', sans-serif; font-weight:700;
+    font-size:24px; letter-spacing:-0.005em;
+    margin:0 0 20px;
+    display:flex; align-items:center; gap:12px;
+  }
+  .report-section h2::before{
+    content:"";
+    width:8px; height:8px; border-radius:2px;
+    background:var(--accent);
+    display:inline-block;
+    transform:rotate(45deg);
+  }
+  .report-section p{
+    font-family:'Source Serif 4', serif;
+    font-size:17px; line-height:1.75;
+    color:#2b2823;
+    margin:0 0 20px;
+  }
+  .position-tags{ display:flex; gap:10px; flex-wrap:wrap; margin-top:4px; }
+
+  /* ---------- Stat grids ---------- */
+  .stat-grid{
+    display:grid;
+    grid-template-columns:repeat(5, 1fr);
+    gap:12px;
+    margin-bottom:8px;
+  }
+  .stat-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:18px 14px;
+    text-align:center;
+  }
+  .stat-card .stat-value{
+    font-family:'Manrope', sans-serif; font-weight:800;
+    font-size:24px; color:var(--accent);
+    line-height:1.1; margin-bottom:6px;
+  }
+  .stat-card .stat-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px; color:var(--ink-soft);
+    line-height:1.4;
+  }
+  .stat-headline-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:16px;
+    margin-bottom:32px;
+  }
+  .stat-headline{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:24px;
+    text-align:center;
+  }
+  .stat-headline .stat-value{
+    font-family:'Manrope', sans-serif; font-weight:800;
+    font-size:36px; color:var(--ink);
+  }
+  .stat-headline .stat-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px; color:var(--ink-soft);
+    margin-top:6px;
+  }
+
+  .stat-subhead{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase;
+    color:var(--accent);
+    margin:28px 0 14px;
+  }
+
+  /* ---------- Comparison table ---------- */
+  .compare-table{
+    width:100%;
+    border-collapse:collapse;
+    margin:20px 0 8px;
+    font-family:'Inter', sans-serif;
+    font-size:13.5px;
+  }
+  .compare-table th{
+    text-align:left;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px; text-transform:uppercase; letter-spacing:0.04em;
+    color:var(--ink-soft);
+    padding:10px 12px;
+    border-bottom:1.5px solid var(--ink);
+  }
+  .compare-table td{
+    padding:11px 12px;
+    border-bottom:1px solid var(--line);
+    color:var(--ink);
+  }
+  .compare-table tr.highlight td{
+    background:var(--accent-soft);
+    font-weight:600;
+  }
+  .compare-table td:nth-child(4),
+  .compare-table td:nth-child(5),
+  .compare-table td:nth-child(6),
+  .compare-table th:nth-child(4),
+  .compare-table th:nth-child(5),
+  .compare-table th:nth-child(6){
+    text-align:right;
+    font-family:'IBM Plex Mono', monospace;
+  }
+
+  /* ---------- Impression box ---------- */
+  .impression-box{
+    margin:36px 0 10px;
+    background:var(--ink);
+    color:var(--paper);
+    border-radius:var(--radius);
+    padding:32px 30px;
+  }
+  .impression-box .pill{ background:rgba(255,255,255,0.12); color:#f6c98a; margin-bottom:14px; }
+  .impression-box p{
+    font-family:'Source Serif 4', serif;
+    font-size:17px; line-height:1.7;
+    color:#e8e2d4;
+    margin:0;
+  }
+
+  .report-foot-nav{
+    max-width:760px;
+    padding:20px 0 60px;
+    border-top:1px solid var(--line);
+    margin-top:12px;
+  }
+  .report-foot-nav a{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px; font-weight:500; color:var(--ink-soft);
+    display:inline-flex; align-items:center; gap:8px;
+    transition:color .2s;
+  }
+  .report-foot-nav a:hover{ color:var(--accent); }
+
+  footer{ border-top:1px solid var(--line); padding:34px 0; }
+  .fine-print{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px; line-height:1.7; color:#928d7d;
+    max-width:900px; margin:0 0 22px;
+  }
+  .foot-row{
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;
+    font-size:13px; color:var(--ink-soft);
+  }
+  .foot-links{ display:flex; gap:22px; }
+  .foot-links a:hover{ color:var(--accent); }
+
+  @media (max-width:900px){
+    .quick-facts{ grid-template-columns:repeat(3, 1fr); }
+    .stat-grid{ grid-template-columns:repeat(3, 1fr); }
+    .stat-headline-grid{ grid-template-columns:1fr; }
+    .compare-table{ font-size:12px; }
+  }
+  @media (max-width:600px){
+    nav.links{ display:none; }
+    .quick-facts{ grid-template-columns:repeat(2, 1fr); }
+    .stat-grid{ grid-template-columns:repeat(2, 1fr); }
+    .report-hero{ padding:30px 22px; }
+    .foot-row{ flex-direction:column; align-items:flex-start; }
+    .compare-table{ display:block; overflow-x:auto; white-space:nowrap; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav-row">
+    <a class="logo" href="index.html"><img class="logo-mark" src="logo.png" alt="Touchline Studios"> Touchline Studios</a>
+    <nav class="links">
+      <a href="index.html#latest">Latest</a>
+      <a href="archive.html">Archive</a>
+      <a href="scouting.html">Scouting</a>
+      <a href="graphics.html">Graphics</a>
+      <a href="index.html#pillars">About</a>
+      <a href="index.html#subscribe">Newsletter</a>
+    </nav>
+    <a class="nav-cta" href="index.html#subscribe">Subscribe</a>
+  </div>
+</header>
+
+<div class="report-head">
+  <div class="wrap">
+    <div class="report-hero" style="background: linear-gradient(155deg, rgba(34,28,23,0.88), rgba(23,19,15,0.94)), url('images/cian-doyle.jpg'); background-size:cover; background-position:center 20%;">
+      <span class="pill">Scouting Report</span>
+      <h1>Cian Doyle</h1>
+      <p class="position-line">Bray Wanderers · Central / Defensive Midfield · 2025/26 season · Data accurate as of 11/06/2026</p>
+      <div class="quick-facts">
+        <div class="quick-fact"><div class="qf-label">Pos</div><div class="qf-value">CM</div></div>
+        <div class="quick-fact"><div class="qf-label">HT</div><div class="qf-value">1.78m</div></div>
+        <div class="quick-fact"><div class="qf-label">Club</div><div class="qf-value">Bray</div></div>
+        <div class="quick-fact"><div class="qf-label">Nat</div><div class="qf-value">Ireland</div></div>
+        <div class="quick-fact"><div class="qf-label">Foot</div><div class="qf-value">Right</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="report-section">
+    <h2>Background</h2>
+    <p>Cian Doyle is a 21-year-old Irish central midfielder currently playing for Bray Wanderers in the League of Ireland First Division. A product of Shelbourne's academy system, Doyle progressed through the club's underage structure before making the move to Bray Wanderers ahead of the 2025 season.</p>
+    <p>Operating primarily as a central midfielder but also capable of functioning in a deeper midfield role, Doyle has established himself as a regular starter in Bray's midfield unit, starting all 16 league appearances and averaging 88 minutes per game during the current campaign.</p>
+    <p>His profile is unusual for a young midfielder. Rather than standing out through attacking production, he derives value through positioning, ball recovery, defensive activity and game management. The combination of age, availability and defensive output makes him an interesting recruitment profile for clubs seeking a developmental midfielder capable of operating within structured systems.</p>
+  </div>
+
+  <div class="report-section wide">
+    <h2>Season overview — 2025/26</h2>
+    <div class="stat-headline-grid">
+      <div class="stat-headline"><div class="stat-value">16</div><div class="stat-label">Games Played</div></div>
+      <div class="stat-headline"><div class="stat-value">1,407</div><div class="stat-label">Minutes Played</div></div>
+      <div class="stat-headline"><div class="stat-value">7.21</div><div class="stat-label">Average Rating</div></div>
+    </div>
+
+    <div class="stat-subhead">Attacking</div>
+    <div class="stat-grid">
+      <div class="stat-card"><div class="stat-value">1</div><div class="stat-label">Goals</div></div>
+      <div class="stat-card"><div class="stat-value">0</div><div class="stat-label">Assists</div></div>
+      <div class="stat-card"><div class="stat-value">0.06</div><div class="stat-label">Goals Per Game</div></div>
+      <div class="stat-card"><div class="stat-value">1,407</div><div class="stat-label">Scoring Frequency (mins)</div></div>
+      <div class="stat-card"><div class="stat-value">1.3</div><div class="stat-label">Shots Per Game</div></div>
+      <div class="stat-card"><div class="stat-value">0.4</div><div class="stat-label">On Target/90</div></div>
+      <div class="stat-card"><div class="stat-value">5%</div><div class="stat-label">Goal Conversion</div></div>
+      <div class="stat-card"><div class="stat-value">0.4</div><div class="stat-label">Key Passes/90</div></div>
+      <div class="stat-card"><div class="stat-value">0.8</div><div class="stat-label">Succ. Dribbles/90</div></div>
+      <div class="stat-card"><div class="stat-value">93%</div><div class="stat-label">Dribble Success %</div></div>
+      <div class="stat-card"><div class="stat-value">32.4</div><div class="stat-label">Accurate Passes/90</div></div>
+      <div class="stat-card"><div class="stat-value">70%</div><div class="stat-label">Pass Accuracy</div></div>
+      <div class="stat-card"><div class="stat-value">4.5</div><div class="stat-label">Long Balls/90</div></div>
+      <div class="stat-card"><div class="stat-value">48%</div><div class="stat-label">Long Ball Accuracy</div></div>
+      <div class="stat-card"><div class="stat-value">55%</div><div class="stat-label">Accurate Crosses/90</div></div>
+    </div>
+
+    <div class="stat-subhead">Defence</div>
+    <div class="stat-grid">
+      <div class="stat-card"><div class="stat-value">10</div><div class="stat-label">Yellow Cards</div></div>
+      <div class="stat-card"><div class="stat-value">0</div><div class="stat-label">Red Cards</div></div>
+      <div class="stat-card"><div class="stat-value">2.3</div><div class="stat-label">Clearances/90</div></div>
+      <div class="stat-card"><div class="stat-value">2.7</div><div class="stat-label">Dribbled Past/90</div></div>
+      <div class="stat-card"><div class="stat-value">9.3</div><div class="stat-label">Duels Won/90</div></div>
+      <div class="stat-card"><div class="stat-value">38%</div><div class="stat-label">Duels Won %</div></div>
+      <div class="stat-card"><div class="stat-value">2.9</div><div class="stat-label">Aerials Won/90</div></div>
+      <div class="stat-card"><div class="stat-value">14.8</div><div class="stat-label">Ball Recoveries/90</div></div>
+      <div class="stat-card"><div class="stat-value">2.1</div><div class="stat-label">Fouls</div></div>
+      <div class="stat-card"><div class="stat-value">1.6</div><div class="stat-label">Was Fouled</div></div>
+    </div>
+  </div>
+
+  <div class="report-section">
+    <h2>Profile overview</h2>
+    <p>Doyle profiles as a defensive-minded central midfielder whose game is built around positioning, anticipation and ball recovery.</p>
+    <p>His statistical profile is heavily weighted towards defensive involvement rather than creative influence. The standout number is 14.8 ball recoveries per game, suggesting a player who consistently reads situations well, arrives in useful positions and contributes heavily during transitions.</p>
+    <p>His game currently revolves around collecting second balls, protecting central spaces and supporting defensive phases. He is constantly involved. His recovery volume, aerial contribution and duel involvement point towards a midfielder comfortable operating in congested areas and undertaking significant off-ball responsibility.</p>
+    <p>In possession, he remains functional rather than expansive. His passing profile is relatively conservative and his creative output remains limited. While he demonstrates good ball security when dribbling, he does not currently dictate games through progression or chance creation.</p>
+    <p>The profile is clear. Doyle's strongest qualities are defensive awareness, work rate and positioning. The primary weaknesses are discipline, passing consistency and attacking influence.</p>
+    <div class="position-tags">
+      <span class="pill">Position — Center Midfield</span>
+      <span class="pill">Position — Defensive Midfield</span>
+    </div>
+  </div>
+
+  <div class="report-section">
+    <h2>In possession</h2>
+    <p>In possession, Doyle is currently a functional rather than expansive midfielder.</p>
+    <p>His first instinct is generally to maintain possession and support circulation rather than force progression. He receives comfortably in central areas and is capable of moving the ball efficiently over short and medium distances.</p>
+    <p>His dribbling profile is particularly interesting. While he attempts relatively few take-ons, his 93% success rate suggests a player who chooses moments carefully and rarely loses control when carrying possession. His passing profile remains mixed. While he completes a respectable volume of passes, his 70% completion rate and modest creative output indicate there is still significant room for improvement in distribution.</p>
+    <p>The next technical jump is becoming more progressive. Increasing his ability to break lines through passing and contribute more consistently in attacking phases would significantly increase his value.</p>
+  </div>
+
+  <div class="report-section">
+    <h2>Off the ball</h2>
+    <p>Off the ball is where Doyle currently looks most effective.</p>
+    <p>His defensive workload is substantial. The standout figure of 14.8 ball recoveries per game reflects a midfielder who consistently influences matches through positioning, anticipation and defensive awareness.</p>
+    <p>He appears comfortable defending central areas and regularly contributes to regaining possession. His aerial involvement is also notable for a midfielder, winning 2.9 aerial duels per game at a 53% success rate.</p>
+    <p>His willingness to compete is clear, but discipline remains a concern. Ten yellow cards in 16 appearances is a significant figure and suggests he can occasionally become over-aggressive or arrive late into challenges.</p>
+    <p>The next stage of development is improving defensive decision-making. Better timing and game management would allow him to maintain his defensive output while reducing unnecessary disciplinary issues.</p>
+  </div>
+
+  <div class="report-section wide">
+    <h2>Technical</h2>
+    <p>Technically, Doyle's strongest qualities are his ball security, first touch and ability to operate within compact spaces.</p>
+    <p>He receives cleanly and generally looks comfortable when collecting possession in central areas. His dribbling success rate reflects a player capable of protecting the ball and escaping pressure when required.</p>
+    <p>His passing remains the biggest technical growth area. While he possesses adequate range, his overall execution can be inconsistent and he currently lacks the progressive passing profile associated with higher-level possession midfielders.</p>
+    <p>Crossing and final-third delivery are not major components of his game at present, while his attacking output remains relatively limited.</p>
+    <p>Right now, his technical game is built around reliability and retention rather than creativity and progression.</p>
+
+    <table class="compare-table">
+      <tr><th>Player</th><th>Club</th><th>Role</th><th>Minutes Played</th><th>Ball Recoveries Per Game</th></tr>
+      <tr class="highlight"><td>Cian Doyle</td><td>Bray Wanderers</td><td>DM / CM</td><td>1,407</td><td>14.8</td></tr>
+      <tr><td>Greg Bolger</td><td>Cork City</td><td>No.6 / Ball-winning CM</td><td>1,257</td><td>11.8</td></tr>
+      <tr><td>Aaron Bolger</td><td>Galway United</td><td>No.6 / Deep CM</td><td>1,423</td><td>5.3</td></tr>
+      <tr><td>Adam McDonnell</td><td>Bohemians</td><td>CM</td><td>718</td><td>1.7</td></tr>
+      <tr><td>Dawson Devoy</td><td>Bohemians</td><td>CM</td><td>1,710</td><td>6.9</td></tr>
+      <tr><td>Matthew Healy</td><td>Shamrock Rovers</td><td>CM / Defensive 8</td><td>1,557</td><td>6</td></tr>
+    </table>
+  </div>
+
+  <div class="report-section wide">
+    <h2>Physical</h2>
+    <p>Doyle's physical profile is built around endurance, mobility and work rate rather than physical dominance.</p>
+    <p>He has shown the durability required to start every league match and consistently complete high minute volumes despite the demands of senior football.</p>
+    <p>His movement allows him to cover significant ground and remain involved throughout matches. He appears comfortable operating across large areas of midfield and repeatedly engaging in defensive actions.</p>
+    <p>The main limitation is physical confrontation. While he competes willingly, his duel success rate highlights difficulties against stronger opponents in direct contests.</p>
+    <p>Further physical development should improve his ability to handle Premier Division intensity while maintaining his current defensive output.</p>
+
+    <table class="compare-table">
+      <tr><th>Player</th><th>Club</th><th>Role</th><th>Minutes Played</th><th>Duels Won Per Game</th><th>Pass Accuracy</th></tr>
+      <tr class="highlight"><td>Cian Doyle</td><td>Bray Wanderers</td><td>DM / CM</td><td>1,407</td><td>9.3</td><td>70%</td></tr>
+      <tr><td>Greg Bolger</td><td>Cork City</td><td>No.6 / Ball-winning CM</td><td>1,257</td><td>6</td><td>74%</td></tr>
+      <tr><td>Aaron Bolger</td><td>Galway United</td><td>No.6 / Deep CM</td><td>1,423</td><td>5.4</td><td>70%</td></tr>
+      <tr><td>Adam McDonnell</td><td>Bohemians</td><td>CM</td><td>718</td><td>2.2</td><td>88%</td></tr>
+      <tr><td>Dawson Devoy</td><td>Bohemians</td><td>CM</td><td>1,710</td><td>4.9</td><td>88%</td></tr>
+      <tr><td>Matthew Healy</td><td>Shamrock Rovers</td><td>CM / Defensive 8</td><td>1,557</td><td>4.4</td><td>89%</td></tr>
+    </table>
+  </div>
+
+  <div class="report-section">
+    <h2>Psychological</h2>
+    <p>Doyle's pathway suggests a player with strong resilience and coachability.</p>
+    <p>Breaking into senior football before establishing himself as a regular starter at Bray Wanderers reflects a willingness to adapt and continue developing. His consistent availability and minute accumulation point towards professionalism and trust from coaching staff.</p>
+    <p>There is evidence of responsibility within his game. He accepts defensive duties and remains heavily involved throughout matches rather than avoiding difficult work.</p>
+    <p>The primary concern is discipline. While his competitiveness is a positive trait, learning when to engage and when to manage situations more effectively will be important for long-term progression.</p>
+    <p>Overall, he appears to possess the mentality required to continue developing within a professional environment.</p>
+
+    <div class="impression-box">
+      <span class="pill">Impression of player</span>
+      <p>Cian Doyle is a defensive-minded central midfielder whose strongest qualities are positioning, ball recovery and work rate. He currently projects as a strong First Division starter with Premier Division potential. Improving passing consistency, discipline and decision-making in possession will determine his ceiling. A developmental number six with clear defensive value and room for growth.</p>
+    </div>
+  </div>
+
+  <div class="report-foot-nav">
+    <a href="index.html#scouting">← Back to Scouting</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <p class="fine-print">© 2026 James Callan / Touchline Sport. All content on this website, including written articles, analysis, graphics and original research, is the intellectual property of James Callan and Touchline Sport unless otherwise stated. No content may be reproduced, republished or redistributed without prior permission.</p>
+    <div class="foot-row">
+      <span>Touchline Studios</span>
+      <div class="foot-links">
+        <a href="https://www.linkedin.com/company/touchline-sports-studio/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.instagram.com/touchline_sports_studio/" target="_blank" rel="noopener">Instagram</a>
+        <a href="#">TikTok</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
