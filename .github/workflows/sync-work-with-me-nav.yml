@@ -24,33 +24,77 @@ jobs:
           from pathlib import Path
 
           work_link = '<a href="work-with-me.html">Work With Me</a>'
-          mobile_script = '<script src="mobile-nav.js" defer></script>'
-          changed = []
+          marker = '<!-- TOUCHLINE_MOBILE_NAV -->'
+          mobile = r'''<!-- TOUCHLINE_MOBILE_NAV -->
+<script>
+(function(){
+  function initTouchlineMobileNav(){
+    var header=document.querySelector('header');
+    if(!header || header.querySelector('.mobile-menu-btn')) return;
+    var navRow=header.querySelector('.nav-row');
+    var desktopNav=header.querySelector('nav');
+    var subscribe=header.querySelector('.nav-cta');
+    if(!navRow || !desktopNav) return;
 
+    var style=document.createElement('style');
+    style.textContent=".mobile-menu-btn,.mobile-menu-panel{display:none}@media(max-width:600px){header{position:sticky;top:0;overflow:visible}.nav-row{flex-wrap:nowrap!important;position:relative}header nav:not(.mobile-menu-panel){display:none!important}header .nav-cta{display:none!important}.mobile-menu-btn{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(33,31,26,.12);background:#fff;color:#1c1a17;border-radius:999px;padding:9px 14px;font:600 13px Inter,sans-serif;cursor:pointer;margin-left:auto}.mobile-menu-icon{width:16px;height:12px;display:flex;flex-direction:column;justify-content:space-between}.mobile-menu-icon span{display:block;height:2px;border-radius:2px;background:currentColor}.mobile-menu-panel{position:absolute;display:none!important;top:calc(100% + 14px);left:0;right:0;background:#fbf3e7;border:1px solid rgba(33,31,26,.10);border-radius:16px;padding:10px;box-shadow:0 18px 40px rgba(33,31,26,.14);z-index:9999}.mobile-menu-panel.open{display:block!important}.mobile-menu-panel a{display:block;padding:13px 14px;border-radius:10px;font:600 14px Inter,sans-serif;color:#1c1a17}.mobile-menu-panel a:hover,.mobile-menu-panel a:focus{background:#f5e5cf;outline:none}.mobile-menu-panel .mobile-subscribe{margin-top:6px;background:#1c1a17;color:#fbf3e7;text-align:center}body.mobile-menu-open{overflow:hidden}}";
+    document.head.appendChild(style);
+
+    var button=document.createElement('button');
+    button.className='mobile-menu-btn';
+    button.type='button';
+    button.setAttribute('aria-expanded','false');
+    button.setAttribute('aria-label','Open site menu');
+    button.innerHTML='<span class="mobile-menu-icon" aria-hidden="true"><span></span><span></span><span></span></span><span>Menu</span>';
+
+    var panel=document.createElement('nav');
+    panel.className='mobile-menu-panel';
+    panel.setAttribute('aria-label','Mobile navigation');
+    desktopNav.querySelectorAll('a').forEach(function(link){panel.appendChild(link.cloneNode(true));});
+    if(subscribe){var sub=subscribe.cloneNode(true);sub.classList.remove('nav-cta');sub.classList.add('mobile-subscribe');panel.appendChild(sub);}
+
+    if(subscribe) navRow.insertBefore(button,subscribe); else navRow.appendChild(button);
+    navRow.appendChild(panel);
+
+    function closeMenu(){button.setAttribute('aria-expanded','false');panel.classList.remove('open');document.body.classList.remove('mobile-menu-open');}
+    button.addEventListener('click',function(e){e.stopPropagation();var isOpen=button.getAttribute('aria-expanded')==='true';if(isOpen){closeMenu();}else{button.setAttribute('aria-expanded','true');panel.classList.add('open');document.body.classList.add('mobile-menu-open');}});
+    panel.addEventListener('click',function(e){if(e.target.closest('a')) closeMenu();});
+    document.addEventListener('click',function(e){if(!header.contains(e.target)) closeMenu();});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape') closeMenu();});
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initTouchlineMobileNav); else initTouchlineMobileNav();
+})();
+</script>'''
+
+          changed=[]
           for path in Path('.').rglob('*.html'):
-              text = path.read_text(encoding='utf-8')
-              updated = text
+              text=path.read_text(encoding='utf-8')
+              updated=text
 
               if 'work-with-me.html' not in updated:
-                  replacements = [
-                      ('<a href="index.html#pillars">About</a>', work_link + '\n      <a href="index.html#pillars">About</a>'),
-                      ('<a href="#pillars">About</a>', work_link + '\n      <a href="#pillars">About</a>'),
-                      ('<a href="index.html#subscribe">Newsletter</a>', work_link + '\n      <a href="index.html#subscribe">Newsletter</a>'),
-                      ('<a href="#subscribe">Newsletter</a>', work_link + '\n      <a href="#subscribe">Newsletter</a>'),
+                  replacements=[
+                      ('<a href="index.html#pillars">About</a>',work_link+'\n      <a href="index.html#pillars">About</a>'),
+                      ('<a href="#pillars">About</a>',work_link+'\n      <a href="#pillars">About</a>'),
+                      ('<a href="index.html#subscribe">Newsletter</a>',work_link+'\n      <a href="index.html#subscribe">Newsletter</a>'),
+                      ('<a href="#subscribe">Newsletter</a>',work_link+'\n      <a href="#subscribe">Newsletter</a>'),
                   ]
-                  for old, new in replacements:
+                  for old,new in replacements:
                       if old in updated:
-                          updated = updated.replace(old, new, 1)
+                          updated=updated.replace(old,new,1)
                           break
 
-              if 'mobile-nav.js' not in updated and '</body>' in updated:
-                  updated = updated.replace('</body>', mobile_script + '\n</body>', 1)
+              # Remove the broken external-loader version if present.
+              updated=updated.replace('<script src="mobile-nav.js" defer></script>\n','')
+              updated=updated.replace('<script src="mobile-nav.js" defer></script>','')
 
-              if updated != text:
-                  path.write_text(updated, encoding='utf-8')
+              if marker not in updated and '</body>' in updated:
+                  updated=updated.replace('</body>',mobile+'\n</body>',1)
+
+              if updated!=text:
+                  path.write_text(updated,encoding='utf-8')
                   changed.append(str(path))
 
-          print('Updated:', ', '.join(changed) if changed else 'none')
+          print('Updated:',', '.join(changed) if changed else 'none')
           PY
 
       - name: Commit navigation updates
@@ -63,5 +107,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -- '*.html'
-          git commit -m "Add mobile menu to all site pages"
+          git commit -m "Fix mobile navigation on all pages"
           git push
