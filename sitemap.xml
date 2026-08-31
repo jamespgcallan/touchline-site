@@ -38,9 +38,15 @@
   </url>
   <url>
     <loc>https://touchlinesport.net/scouting.html</loc>
-    <lastmod>2026-08-28</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://touchlinesport.net/scout-report-shamrock-rovers.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://touchlinesport.net/scout-report-ronan-teahan.html</loc>
