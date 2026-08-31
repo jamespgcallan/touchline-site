@@ -1,0 +1,31 @@
+name: Mobile nav sync
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Update site pages
+        run: python scripts/sync_mobile_nav.py
+      - name: Commit updates
+        run: |
+          if git diff --quiet -- '*.html'; then
+            echo "No HTML changes needed"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- '*.html'
+          git commit -m "Load mobile navigation on all pages"
+          git push
