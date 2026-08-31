@@ -30,661 +30,73 @@
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:'Inter', -apple-system, sans-serif;
-    -webkit-font-smoothing:antialiased;
-    line-height:1.5;
-  }
-  a{color:inherit; text-decoration:none;}
-  .wrap{max-width:var(--max); margin:0 auto; padding:0 32px;}
-  .display{ font-family:'Manrope', sans-serif; }
-  .mono{ font-family:'IBM Plex Mono', monospace; }
-  .pill{
-    display:inline-flex;
-    align-items:center;
-    padding:5px 13px;
-    border-radius:99px;
-    background:var(--accent-soft);
-    color:var(--accent);
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11.5px;
-    letter-spacing:0.03em;
-    font-weight:500;
-  }
-
-  /* soft organic glow — the recurring signature element */
-  .glow{
-    position:absolute;
-    border-radius:50%;
-    filter:blur(60px);
-    opacity:0.55;
-    pointer-events:none;
-    z-index:0;
-  }
-
-  /* ---------- Nav ---------- */
-  header{
-    padding:26px 0;
-    position:sticky; top:0;
-    background:rgba(250,247,241,0.86);
-    backdrop-filter:blur(10px);
-    z-index:20;
-    border-bottom:1px solid transparent;
-  }
-  .nav-row{
-    display:flex; justify-content:space-between; align-items:center;
-    flex-wrap:wrap; gap:14px;
-  }
-  .logo{
-    display:flex; align-items:center; gap:9px;
-    font-family:'Manrope', sans-serif;
-    font-weight:800;
-    font-size:18px;
-    letter-spacing:-0.01em;
-  }
-  .logo-mark{
-    width:30px; height:30px;
-    object-fit:contain;
-  }
-  nav.links{ display:flex; gap:30px; }
-  nav.links a{
-    font-size:14px; font-weight:500; color:var(--ink-soft);
-    transition:color .2s;
-  }
-  nav.links a:hover{ color:var(--ink); }
-  .nav-cta{
-    background:var(--ink); color:var(--paper);
-    padding:9px 18px; border-radius:99px;
-    font-size:13.5px; font-weight:600;
-    transition:transform .15s ease, background .2s;
-    display:inline-block;
-  }
-  .nav-cta:hover{ background:var(--accent); transform:translateY(-1px); }
-
-  /* ---------- Hero ---------- */
-  .hero{
-    position:relative;
-    overflow:hidden;
-    padding:64px 0 88px;
-  }
-  .hero .glow{
-    width:520px; height:520px;
-    background:radial-gradient(circle, #f6c98a 0%, transparent 70%);
-    top:-220px; right:-140px;
-  }
-  .hero-inner{ position:relative; z-index:1; max-width:760px; }
-  .hero .pill{ margin-bottom:22px; }
-  h1.hero-title{
-    font-family:'Manrope', sans-serif;
-    font-weight:800;
-    font-size:clamp(38px, 5.4vw, 62px);
-    line-height:1.05;
-    letter-spacing:-0.02em;
-    margin:0 0 22px;
-  }
-  h1.hero-title em{
-    font-style:normal;
-    color:var(--accent);
-  }
-  .hero-sub{
-    font-size:17.5px;
-    color:var(--ink-soft);
-    max-width:52ch;
-    margin:0 0 32px;
-    line-height:1.65;
-  }
-  .hero-actions{ display:flex; gap:14px; flex-wrap:wrap; align-items:center; }
-  .btn-primary{
-    background:var(--ink); color:var(--paper);
-    padding:14px 26px; border-radius:99px;
-    font-weight:600; font-size:14.5px;
-    display:inline-flex; align-items:center; gap:8px;
-    transition:background .2s, transform .15s;
-  }
-  .btn-primary:hover{ background:var(--accent); transform:translateY(-1px); }
-  .btn-ghost{
-    padding:14px 22px; border-radius:99px;
-    font-weight:600; font-size:14.5px;
-    border:1px solid var(--line);
-    transition:border-color .2s, background .2s;
-  }
-  .btn-ghost:hover{ border-color:var(--accent); background:var(--accent-soft); }
-
-  /* ---------- Featured strip ---------- */
-  .featured{
-    position:relative; z-index:1;
-    margin-top:56px;
-    background:var(--ink);
-    border-radius:24px;
-    padding:44px 44px;
-    color:var(--paper);
-    display:grid;
-    grid-template-columns:1.1fr 0.9fr;
-    gap:40px;
-    align-items:center;
-  }
-  .featured-art{
-    aspect-ratio:4/3;
-    border-radius:16px;
-    background:
-      radial-gradient(circle at 30% 30%, #e8720f 0%, transparent 55%),
-      radial-gradient(circle at 75% 70%, #f2a33f 0%, transparent 45%),
-      linear-gradient(155deg, #2a211a, #1a1613);
-  }
-  .featured .pill{ background:rgba(255,255,255,0.12); color:#cfe0c4; margin-bottom:16px; }
-  .featured h2{
-    font-family:'Manrope', sans-serif;
-    font-weight:700;
-    font-size:clamp(24px,3vw,32px);
-    line-height:1.15;
-    margin:0 0 14px;
-  }
-  .featured p{ color:#c9c5b8; font-size:15px; line-height:1.6; margin:0 0 20px; max-width:44ch; }
-  .featured .read{
-    font-size:13.5px; font-weight:600; color:var(--paper);
-    display:inline-flex; align-items:center; gap:8px;
-  }
-  .featured .read svg{ transition:transform .2s; }
-  .featured .read:hover svg{ transform:translateX(3px); }
-
-  /* ---------- Post grid ---------- */
-  .section{ padding:80px 0; }
-  .section-head{
-    display:flex; justify-content:space-between; align-items:flex-end;
-    margin-bottom:38px; flex-wrap:wrap; gap:16px;
-  }
-  .section-title{
-    font-family:'Manrope', sans-serif;
-    font-weight:800;
-    font-size:clamp(26px,3vw,34px);
-    letter-spacing:-0.01em;
-  }
-  .section-note{ color:var(--ink-soft); font-size:14.5px; max-width:36ch; }
-
-  .cat-nav{
-    display:flex; gap:10px; flex-wrap:wrap;
-    margin-bottom:60px;
-  }
-  .cat-link{
-    padding:9px 18px;
-    border-radius:99px;
-    border:1px solid var(--line);
-    font-size:13.5px; font-weight:600;
-    color:var(--ink-soft);
-    transition:border-color .2s, color .2s, background .2s;
-  }
-  .cat-link:hover{ border-color:var(--accent); color:var(--ink); background:var(--accent-soft); }
-
-  .category-block{ margin-bottom:66px; }
-  .category-block:last-child{ margin-bottom:0; }
-  .category-head{
-    display:flex; align-items:baseline; justify-content:space-between;
-    gap:14px; margin-bottom:24px;
-    padding-bottom:14px;
-    border-bottom:1px solid var(--line);
-  }
-  .category-title{
-    font-family:'Manrope', sans-serif;
-    font-weight:700;
-    font-size:21px;
-    letter-spacing:-0.005em;
-  }
-  .category-count{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11.5px;
-    color:#928d7d;
-  }
-  .view-all{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11.5px;
-    color:var(--accent);
-    font-weight:500;
-    transition:opacity .15s;
-  }
-  .view-all:hover{ opacity:0.7; }
-  .empty-state{
-    border:1.5px dashed var(--line);
-    border-radius:var(--radius);
-    padding:40px 32px;
-    text-align:center;
-    background:#fff;
-  }
-  .empty-state p{
-    margin:0 auto;
-    max-width:46ch;
-    font-size:14.5px;
-    color:var(--ink-soft);
-    line-height:1.65;
-  }
-  .empty-state .pill{ margin-bottom:14px; }
-
-  .graphics-grid{
-    display:grid;
-    grid-template-columns:repeat(4, 1fr);
-    gap:16px;
-  }
-  .graphic-item{
-    display:block;
-    border-radius:14px;
-    overflow:hidden;
-    aspect-ratio:4/5;
-    background:#fff;
-    border:1px solid var(--line);
-    transition:transform .2s ease, box-shadow .2s ease;
-  }
-  .graphic-item:hover{ transform:translateY(-4px); box-shadow:0 14px 30px rgba(33,31,26,0.10); }
-  .graphic-item img{
-    width:100%; height:100%;
-    object-fit:cover; display:block;
-  }
-  @media (max-width:900px){ .graphics-grid{ grid-template-columns:repeat(3, 1fr); } }
-  @media (max-width:600px){ .graphics-grid{ grid-template-columns:repeat(2, 1fr); } }
-
-  .grid{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:26px;
-  }
-  .card{
-    background:#fff;
-    border-radius:var(--radius);
-    padding:0 0 22px;
-    overflow:hidden;
-    box-shadow:0 1px 2px rgba(33,31,26,0.04);
-    border:1px solid var(--line);
-    transition:transform .2s ease, box-shadow .2s ease;
-    display:block;
-  }
-  .card:hover{ transform:translateY(-4px); box-shadow:0 14px 30px rgba(33,31,26,0.10); }
-  .card-art{
-    aspect-ratio:16/10;
-    background:linear-gradient(135deg, var(--art-a,#e8dfc4), var(--art-b,#c3d2b3));
-  }
-  .card-body{ padding:22px 22px 0; }
-  .card .pill{ margin-bottom:14px; }
-  .card h3{
-    font-family:'Manrope', sans-serif;
-    font-weight:700;
-    font-size:18.5px;
-    line-height:1.28;
-    margin:0 0 10px;
-    letter-spacing:-0.005em;
-  }
-  .card p{
-    font-size:13.8px; color:var(--ink-soft);
-    line-height:1.6; margin:0 0 16px;
-  }
-  .card .meta{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11px; color:#928d7d;
-    display:flex; gap:10px; align-items:center;
-  }
-  .card .meta .dot{ width:3px; height:3px; border-radius:50%; background:#928d7d; }
-
-  /* ---------- Pillars ---------- */
-  .pillars{ background:var(--paper-soft); padding:80px 0; }
-  .pillars-grid{
-    display:grid; grid-template-columns:repeat(4, 1fr); gap:30px;
-    margin-top:40px;
-  }
-  .pillar-num{
-    width:38px; height:38px; border-radius:11px;
-    background:#fff; border:1px solid var(--line);
-    display:flex; align-items:center; justify-content:center;
-    font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--accent);
-    margin-bottom:16px;
-  }
-  .pillar h4{
-    font-family:'Manrope', sans-serif; font-weight:700; font-size:16.5px;
-    margin:0 0 8px;
-  }
-  .pillar p{ font-size:13.6px; color:var(--ink-soft); line-height:1.6; margin:0; }
-
-  /* ---------- Subscribe ---------- */
-  .subscribe{ padding:90px 0; text-align:center; position:relative; overflow:hidden;}
-  .subscribe .glow{
-    width:600px; height:400px; left:50%; transform:translateX(-50%);
-    top:-80px;
-    background:radial-gradient(ellipse, #f6c98a 0%, transparent 70%);
-  }
-  .subscribe-inner{ position:relative; z-index:1; }
-  .subscribe h2{
-    font-family:'Manrope', sans-serif; font-weight:800;
-    font-size:clamp(30px,4vw,44px); letter-spacing:-0.02em;
-    margin:0 0 14px;
-  }
-  .subscribe p{
-    max-width:44ch; margin:0 auto 30px; color:var(--ink-soft); font-size:15.5px;
-  }
-  .sub-form{
-    display:flex; justify-content:center; gap:10px;
-    max-width:420px; margin:0 auto; flex-wrap:wrap;
-  }
-  .sub-form input{
-    flex:1; min-width:200px;
-    border:1px solid var(--line); border-radius:99px;
-    padding:14px 20px; font-family:'Inter', sans-serif; font-size:14px;
-    background:#fff; outline:none;
-  }
-  .sub-form input:focus{ border-color:var(--accent); }
-  .sub-form button{
-    border:none; background:var(--ink); color:var(--paper);
-    border-radius:99px; padding:14px 24px;
-    font-weight:600; font-size:14px; cursor:pointer;
-    transition:background .2s;
-  }
-  .sub-form button:hover{ background:var(--accent); }
-
-  .substack-embed{
-    max-width:480px; margin:0 auto;
-  }
-  .substack-embed iframe{ display:block; }
-
-  /* ---------- Footer ---------- */
-  footer{ border-top:1px solid var(--line); padding:34px 0; }
-  .fine-print{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11px; line-height:1.7; color:#928d7d;
-    max-width:900px; margin:0 0 22px;
-  }
-  .foot-row{
-    display:flex; justify-content:space-between; align-items:center;
-    flex-wrap:wrap; gap:14px;
-    font-size:13px; color:var(--ink-soft);
-  }
-  .foot-links{ display:flex; gap:22px; }
-  .foot-links a:hover{ color:var(--accent); }
-
-  @media (max-width: 900px){
-    .featured{ grid-template-columns:1fr; padding:30px; }
-    .grid{ grid-template-columns:1fr 1fr; }
-    .pillars-grid{ grid-template-columns:1fr 1fr; }
-  }
-  @media (max-width: 600px){
-    nav.links{ display:none; }
-    .grid{ grid-template-columns:1fr; }
-    .pillars-grid{ grid-template-columns:1fr; }
-    .featured{ padding:24px; }
-  }
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Inter',-apple-system,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 32px;}
+  .display{font-family:'Manrope',sans-serif;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  .pill{display:inline-flex;align-items:center;padding:5px 13px;border-radius:99px;background:var(--accent-soft);color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:0.03em;font-weight:500;}
+  .glow{position:absolute;border-radius:50%;filter:blur(60px);opacity:0.55;pointer-events:none;z-index:0;}
+  header{padding:26px 0;position:sticky;top:0;background:rgba(250,247,241,0.86);backdrop-filter:blur(10px);z-index:20;border-bottom:1px solid transparent;}
+  .nav-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;}
+  .logo{display:flex;align-items:center;gap:9px;font-family:'Manrope',sans-serif;font-weight:800;font-size:18px;letter-spacing:-0.01em;}
+  .logo-mark{width:30px;height:30px;object-fit:contain;}
+  nav.links{display:flex;gap:30px;}
+  nav.links a{font-size:14px;font-weight:500;color:var(--ink-soft);transition:color .2s;}
+  nav.links a:hover{color:var(--ink);}
+  .nav-cta{background:var(--ink);color:var(--paper);padding:9px 18px;border-radius:99px;font-size:13.5px;font-weight:600;transition:transform .15s ease,background .2s;display:inline-block;}
+  .nav-cta:hover{background:var(--accent);transform:translateY(-1px);}
+  .hero{position:relative;overflow:hidden;padding:64px 0 88px;}
+  .hero .glow{width:520px;height:520px;background:radial-gradient(circle,#f6c98a 0%,transparent 70%);top:-220px;right:-140px;}
+  .hero-inner{position:relative;z-index:1;max-width:760px;}
+  .hero .pill{margin-bottom:22px;}
+  h1.hero-title{font-family:'Manrope',sans-serif;font-weight:800;font-size:clamp(38px,5.4vw,62px);line-height:1.05;letter-spacing:-0.02em;margin:0 0 22px;}
+  h1.hero-title em{font-style:normal;color:var(--accent);}
+  .hero-sub{font-size:17.5px;color:var(--ink-soft);max-width:52ch;margin:0 0 32px;line-height:1.65;}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
+  .btn-primary{background:var(--ink);color:var(--paper);padding:14px 26px;border-radius:99px;font-weight:600;font-size:14.5px;display:inline-flex;align-items:center;gap:8px;transition:background .2s,transform .15s;}
+  .btn-primary:hover{background:var(--accent);transform:translateY(-1px);}
+  .btn-ghost{padding:14px 22px;border-radius:99px;font-weight:600;font-size:14.5px;border:1px solid var(--line);transition:border-color .2s,background .2s;}
+  .btn-ghost:hover{border-color:var(--accent);background:var(--accent-soft);}
+  .featured{position:relative;z-index:1;margin-top:56px;background:var(--ink);border-radius:24px;padding:44px 44px;color:var(--paper);display:grid;grid-template-columns:1.1fr 0.9fr;gap:40px;align-items:center;}
+  .featured-art{aspect-ratio:4/3;border-radius:16px;background:radial-gradient(circle at 30% 30%,#e8720f 0%,transparent 55%),radial-gradient(circle at 75% 70%,#f2a33f 0%,transparent 45%),linear-gradient(155deg,#2a211a,#1a1613);}
+  .featured .pill{background:rgba(255,255,255,0.12);color:#cfe0c4;margin-bottom:16px;}
+  .featured h2{font-family:'Manrope',sans-serif;font-weight:700;font-size:clamp(24px,3vw,32px);line-height:1.15;margin:0 0 14px;}
+  .featured p{color:#c9c5b8;font-size:15px;line-height:1.6;margin:0 0 20px;max-width:44ch;}
+  .featured .read{font-size:13.5px;font-weight:600;color:var(--paper);display:inline-flex;align-items:center;gap:8px;}
+  .featured .read svg{transition:transform .2s;}.featured .read:hover svg{transform:translateX(3px);}
+  .section{padding:80px 0;}
+  .section-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:38px;flex-wrap:wrap;gap:16px;}
+  .section-title{font-family:'Manrope',sans-serif;font-weight:800;font-size:clamp(26px,3vw,34px);letter-spacing:-0.01em;}
+  .section-note{color:var(--ink-soft);font-size:14.5px;max-width:36ch;}
+  .cat-nav{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:60px;}
+  .cat-link{padding:9px 18px;border-radius:99px;border:1px solid var(--line);font-size:13.5px;font-weight:600;color:var(--ink-soft);transition:border-color .2s,color .2s,background .2s;}
+  .cat-link:hover{border-color:var(--accent);color:var(--ink);background:var(--accent-soft);}
+  .category-block{margin-bottom:66px;}.category-block:last-child{margin-bottom:0;}
+  .category-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:24px;padding-bottom:14px;border-bottom:1px solid var(--line);}
+  .category-title{font-family:'Manrope',sans-serif;font-weight:700;font-size:21px;letter-spacing:-0.005em;}
+  .view-all{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--accent);font-weight:500;transition:opacity .15s;}.view-all:hover{opacity:.7;}
+  .graphics-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}.graphic-item{display:block;border-radius:14px;overflow:hidden;aspect-ratio:4/5;background:#fff;border:1px solid var(--line);transition:transform .2s ease,box-shadow .2s ease;}.graphic-item:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(33,31,26,.10);}.graphic-item img{width:100%;height:100%;object-fit:cover;display:block;}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}.card{background:#fff;border-radius:var(--radius);padding:0 0 22px;overflow:hidden;box-shadow:0 1px 2px rgba(33,31,26,.04);border:1px solid var(--line);transition:transform .2s ease,box-shadow .2s ease;display:block;}.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(33,31,26,.10);}.card-art{aspect-ratio:16/10;background:linear-gradient(135deg,var(--art-a,#e8dfc4),var(--art-b,#c3d2b3));}.card-body{padding:22px 22px 0;}.card .pill{margin-bottom:14px;}.card h3{font-family:'Manrope',sans-serif;font-weight:700;font-size:18.5px;line-height:1.28;margin:0 0 10px;letter-spacing:-.005em;}.card p{font-size:13.8px;color:var(--ink-soft);line-height:1.6;margin:0 0 16px;}.card .meta{font-family:'IBM Plex Mono',monospace;font-size:11px;color:#928d7d;display:flex;gap:10px;align-items:center;}.card .meta .dot{width:3px;height:3px;border-radius:50%;background:#928d7d;}
+  .pillars{background:var(--paper-soft);padding:80px 0;}.pillars-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin-top:40px;}.pillar-num{width:38px;height:38px;border-radius:11px;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent);margin-bottom:16px;}.pillar h4{font-family:'Manrope',sans-serif;font-weight:700;font-size:16.5px;margin:0 0 8px;}.pillar p{font-size:13.6px;color:var(--ink-soft);line-height:1.6;margin:0;}
+  .subscribe{padding:90px 0;text-align:center;position:relative;overflow:hidden;}.subscribe .glow{width:600px;height:400px;left:50%;transform:translateX(-50%);top:-80px;background:radial-gradient(ellipse,#f6c98a 0%,transparent 70%);}.subscribe-inner{position:relative;z-index:1;}.subscribe h2{font-family:'Manrope',sans-serif;font-weight:800;font-size:clamp(30px,4vw,44px);letter-spacing:-.02em;margin:0 0 14px;}.subscribe p{max-width:44ch;margin:0 auto 30px;color:var(--ink-soft);font-size:15.5px;}.sub-form{display:flex;justify-content:center;gap:10px;max-width:420px;margin:0 auto;flex-wrap:wrap;}.sub-form input{flex:1;min-width:200px;border:1px solid var(--line);border-radius:99px;padding:14px 20px;font-family:'Inter',sans-serif;font-size:14px;background:#fff;outline:none;}.sub-form input:focus{border-color:var(--accent);}.sub-form button{border:none;background:var(--ink);color:var(--paper);border-radius:99px;padding:14px 24px;font-weight:600;font-size:14px;cursor:pointer;transition:background .2s;}.sub-form button:hover{background:var(--accent);}
+  footer{border-top:1px solid var(--line);padding:34px 0;}.fine-print{font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.7;color:#928d7d;max-width:900px;margin:0 0 22px;}.foot-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--ink-soft);}.foot-links{display:flex;gap:22px;}.foot-links a:hover{color:var(--accent);}
+  @media(max-width:900px){.featured{grid-template-columns:1fr;padding:30px;}.grid{grid-template-columns:1fr 1fr;}.pillars-grid{grid-template-columns:1fr 1fr;}.graphics-grid{grid-template-columns:repeat(3,1fr);}}
+  @media(max-width:600px){nav.links{display:none;}.grid{grid-template-columns:1fr;}.pillars-grid{grid-template-columns:1fr;}.featured{padding:24px;}.graphics-grid{grid-template-columns:repeat(2,1fr);}}
 </style>
 </head>
 <body>
-
-<header>
-  <div class="wrap nav-row">
-    <div class="logo"><img class="logo-mark" src="logo.png" alt="Touchline Studios"> Touchline Studios</div>
-    <nav class="links">
-      <a href="#latest">Latest</a>
-      <a href="archive.html">Archive</a>
-      <a href="scouting.html">Scouting</a>
-      <a href="graphics.html">Graphics</a>
-      <a href="#pillars">About</a>
-      <a href="#subscribe">Newsletter</a>
-    </nav>
-    <a class="nav-cta" href="#subscribe">Subscribe</a>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="glow"></div>
-  <div class="wrap hero-inner">
-    <span class="pill">Football, from Ireland and beyond</span>
-    <h1 class="hero-title">Where <em>culture</em> meets structure.</h1>
-    <p class="hero-sub">A football-first look at how clubs actually grow — the boardroom decisions, the grassroots rebuilds, and the fans who make any of it worth doing. Written by James Callan.</p>
-    <div class="hero-actions">
-      <a class="btn-primary" href="aldershot-town-complete-rebuild.html">Read the latest →</a>
-      <a class="btn-ghost" href="#subscribe">Get new pieces</a>
-    </div>
-  </div>
-
-  <div class="wrap">
-    <div class="featured">
-      <div>
-        <span class="pill">Latest · World</span>
-        <h2>Aldershot Town's Complete Rebuild</h2>
-        <p>Most clubs call five or six new players a rebuild. Scott Davies arrived at Aldershot Town and found himself replacing practically everyone except the ground keeper.</p>
-        <a class="read" href="aldershot-town-complete-rebuild.html">Read the piece <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-      </div>
-      <div class="featured-art" style="background-image:url('images/aldershot-town.webp'); background-size:cover; background-position:center;"></div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="latest">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="section-title display">Latest pieces</div>
-      <div class="section-note">Culture, governance, and the game as it's actually lived.</div>
-    </div>
-    <div class="cat-nav">
-      <a class="cat-link" href="#irish">Irish</a>
-      <a class="cat-link" href="#world">World</a>
-      <a class="cat-link" href="#scouting">Scouting</a>
-      <a class="cat-link" href="#everything-else">Everything Else</a>
-    </div>
-  </div>
-
-  <div class="wrap category-block" id="irish">
-    <div class="category-head">
-      <h3 class="category-title">Irish</h3>
-      <a class="view-all" href="archive.html#irish">60 pieces · View all →</a>
-    </div>
-    <div class="grid">
-      <a class="card" href="https://jamescallan3.substack.com/p/brexit-changed-irish-football" target="_blank" rel="noopener">
-        <div class="card-art" style="background-image:url('images/brexit-irish-football.webp'); background-size:cover; background-position:center;"></div>
-        <div class="card-body">
-          <span class="pill">Ireland</span>
-          <h3>Brexit Changed Irish Football</h3>
-          <p>How post-Brexit rules quietly reshaped player pathways, increased the value of League of Ireland minutes, and handed Irish football an opportunity it did not plan for.</p>
-          <div class="meta"><span>Apr 2026</span><span class="dot"></span><span>5 min read</span></div>
-        </div>
-      </a>
-      <a class="card" href="https://jamescallan3.substack.com/p/dundalks-impressive-premier-division" target="_blank" rel="noopener">
-        <div class="card-art" style="background-image:url('images/dundalk-return.webp'); background-size:cover; background-position:center;"></div>
-        <div class="card-body">
-          <span class="pill">Ireland</span>
-          <h3>Dundalk's Impressive Premier Division Return</h3>
-          <p>Dundalk's strong start is becoming a case for continuity, smart recruitment and resisting the usual promoted team panic.</p>
-          <div class="meta"><span>Apr 2026</span><span class="dot"></span><span>4 min read</span></div>
-        </div>
-      </a>
-    </div>
-  </div>
-
-  <div class="wrap category-block" id="world">
-    <div class="category-head">
-      <h3 class="category-title">World</h3>
-      <a class="view-all" href="archive.html#world">45 pieces · View all →</a>
-    </div>
-    <div class="grid">
-      <a class="card" href="https://jamescallan3.substack.com/p/short-term-ism-in-football" target="_blank" rel="noopener">
-        <div class="card-art" style="background-image:url('images/short-termism.webp'); background-size:cover; background-position:center;"></div>
-        <div class="card-body">
-          <span class="pill">Governance</span>
-          <h3>Short-Term-ism In Football</h3>
-          <p>Why modern football keeps rewarding short-term decisions, from managerial churn to reactive spending, and how smarter contracts and boardroom incentives could finally force clubs to think beyond the now.</p>
-          <div class="meta"><span>Apr 2026</span><span class="dot"></span><span>7 min read</span></div>
-        </div>
-      </a>
-      <a class="card" href="https://jamescallan3.substack.com/p/the-rise-and-fall-of-juventus-how" target="_blank" rel="noopener">
-        <div class="card-art" style="background-image:url('images/juventus.webp'); background-size:cover; background-position:center;"></div>
-        <div class="card-body">
-          <span class="pill">Finance</span>
-          <h3>The Rise And Fall Of Juventus</h3>
-          <p>Juventus spent a decade building Italy's most powerful football machine. Then success convinced them they could stop being the club that built it.</p>
-          <div class="meta"><span>Jun 2026</span><span class="dot"></span><span>6 min read</span></div>
-        </div>
-      </a>
-    </div>
-  </div>
-
-  <div class="wrap category-block" id="scouting">
-    <div class="category-head">
-      <h3 class="category-title">Scouting</h3>
-      <a class="view-all" href="scouting.html">5 reports · View all →</a>
-    </div>
-    <div class="grid">
-      <a class="card" href="scout-report-ronan-teahan.html">
-        <div class="card-art" style="background-image:url('images/ronan-teahan.jpeg'); background-size:cover; background-position:center 25%;"></div>
-        <div class="card-body">
-          <span class="pill">AM · Dundalk</span>
-          <h3>Ronan Teahan</h3>
-          <p>A 21-year-old Dundalk attacking midfielder whose ball carrying and movement can open games up, but whose final-third output still has room to grow.</p>
-          <div class="meta"><span>Accurate as of 04/08/2026</span></div>
-        </div>
-      </a>
-      <a class="card" href="scout-report-gareth-mcelroy.html">
-        <div class="card-art" style="background-image:url('images/gareth-mcelroy.jpg'); background-size:cover; background-position:center 20%;"></div>
-        <div class="card-body">
-          <span class="pill">CB · Sligo Rovers</span>
-          <h3>Gareth McElroy</h3>
-          <p>A 21-year-old Sligo centre-back already dominating aerially and defending his box at Premier Division level, with plenty still to develop on the ball.</p>
-          <div class="meta"><span>Accurate as of 11/06/2026</span></div>
-        </div>
-      </a>
-      <a class="card" href="scout-report-adam-brennan.html">
-        <div class="card-art" style="background-image:url('images/adam-brennan.jpg'); background-size:cover; background-position:center 20%;"></div>
-        <div class="card-body">
-          <span class="pill">LW · Shamrock Rovers</span>
-          <h3>Adam Brennan</h3>
-          <p>A technically sharp Shamrock Rovers attacker whose movement and intelligence between the lines make him one of Ireland's more interesting young prospects.</p>
-          <div class="meta"><span>Accurate as of 11/06/2026</span></div>
-        </div>
-      </a>
-    </div>
-  </div>
-
-  <div class="wrap category-block" id="everything-else">
-    <div class="category-head">
-      <h3 class="category-title">Everything Else</h3>
-      <a class="view-all" href="archive.html#everything-else">29 pieces · View all →</a>
-    </div>
-    <div class="grid">
-      <a class="card" href="https://jamescallan3.substack.com/p/why-are-curacao-so-dutch-the-world" target="_blank" rel="noopener">
-        <div class="card-art" style="background-image:url('images/curacao.webp'); background-size:cover; background-position:center;"></div>
-        <div class="card-body">
-          <span class="pill">Culture</span>
-          <h3>Why Are Curaçao So Dutch?</h3>
-          <p>Curaçao's first World Cup qualification is not really a football story. It is a story about migration, identity and what happens when a nation becomes a diaspora.</p>
-          <div class="meta"><span>2026</span><span class="dot"></span><span>6 min read</span></div>
-        </div>
-      </a>
-      <a class="card" href="https://jamescallan3.substack.com/p/the-death-of-joga-bonito" target="_blank" rel="noopener">
-        <div class="card-art" style="background-image:url('images/joga-bonito.webp'); background-size:cover; background-position:center;"></div>
-        <div class="card-body">
-          <span class="pill">Culture</span>
-          <h3>The Death Of Joga Bonito</h3>
-          <p>How pressing systems, analytics and global capital reshaped Brazilian flair, and why Neymar may be its final standard bearer.</p>
-          <div class="meta"><span>Feb 2026</span><span class="dot"></span><span>8 min read</span></div>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section class="pillars" id="pillars">
-  <div class="wrap">
-    <div class="section-title display">What we cover</div>
-    <div class="pillars-grid">
-      <div class="pillar">
-        <div class="pillar-num">01</div>
-        <h4>Culture</h4>
-        <p>The stories, identity and people that make a football club feel like more than 90 minutes on a Saturday.</p>
-      </div>
-      <div class="pillar">
-        <div class="pillar-num">02</div>
-        <h4>Structure</h4>
-        <p>Who owns clubs, how they spend, how they recruit and the decisions behind where they go next.</p>
-      </div>
-      <div class="pillar">
-        <div class="pillar-num">03</div>
-        <h4>Scouting</h4>
-        <p>Players, recruitment and pathways worth keeping an eye on, from League of Ireland academies to further afield.</p>
-      </div>
-      <div class="pillar">
-        <div class="pillar-num">04</div>
-        <h4>Ireland</h4>
-        <p>Irish football comes first. The League of Ireland, grassroots game and the stories shaping football here.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="graphics">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="section-title display">Graphics</div>
-      <a class="view-all" href="graphics.html">40 graphics · View all →</a>
-    </div>
-    <div class="graphics-grid">
-      <a class="graphic-item" href="images/graphics/liam-scales.png" target="_blank" rel="noopener"><img src="images/graphics/liam-scales.png" alt="Liam Scales graphic — Celtic, Tipping The Scales"></a>
-      <a class="graphic-item" href="images/graphics/cork-champions-2026.png" target="_blank" rel="noopener"><img src="images/graphics/cork-champions-2026.png" alt="Cork City graphic — First Division Champions 2026"></a>
-      <a class="graphic-item" href="images/graphics/owen-elding.png" target="_blank" rel="noopener"><img src="images/graphics/owen-elding.png" alt="Owen Elding graphic — Hibernian"></a>
-      <a class="graphic-item" href="images/graphics/devoy.png" target="_blank" rel="noopener"><img src="images/graphics/devoy.png" alt="Devoy graphic — Bohemian FC, He's One Of Our Own"></a>
-    </div>
-  </div>
-</section>
-
-<section class="subscribe" id="subscribe">
-  <div class="glow"></div>
-  <div class="wrap subscribe-inner">
-    <h2 class="display">No noise. Just football.</h2>
-    <p>Two or three pieces a week — culture, structure, and the odd Irish club doing something worth paying attention to.</p>
-    <form class="sub-form" id="subscribeForm">
-      <input type="email" name="email" id="subscribeEmail" placeholder="your@email.com" required>
-      <button type="submit">Subscribe</button>
-    </form>
-    <p id="subscribeNote" style="font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); margin-top:14px;"></p>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <p class="fine-print">© 2026 James Callan / Touchline Sport. All content on this website, including written articles, analysis, graphics and original research, is the intellectual property of James Callan and Touchline Sport unless otherwise stated. No content may be reproduced, republished or redistributed without prior permission.</p>
-    <div class="foot-row">
-      <span>Touchline Studios</span>
-      <div class="foot-links">
-        <a href="https://www.linkedin.com/company/touchline-sports-studio/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://www.instagram.com/touchline_sports_studio/" target="_blank" rel="noopener">Instagram</a>
-        <a href="#">TikTok</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<script>
-  document.getElementById('subscribeForm').addEventListener('submit', function(e){
-    e.preventDefault();
-    var form = this;
-    var button = form.querySelector('button');
-    var note = document.getElementById('subscribeNote');
-    var email = document.getElementById('subscribeEmail').value;
-    button.textContent = 'Sending…';
-    button.disabled = true;
-
-    fetch('https://formsubmit.co/ajax/jamespgcallan@gmail.com', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({
-        email: email,
-        _subject: 'New Touchline Studios subscriber'
-      })
-    })
-    .then(function(res){ return res.json(); })
-    .then(function(){
-      button.textContent = 'Subscribed ✓';
-      form.querySelector('input').value = '';
-      note.textContent = '';
-    })
-    .catch(function(){
-      button.textContent = 'Subscribe';
-      button.disabled = false;
-      note.textContent = "Something went wrong — try again, or email james directly.";
-    });
-  });
-</script>
+<header><div class="wrap nav-row"><div class="logo"><img class="logo-mark" src="logo.png" alt="Touchline Studios"> Touchline Studios</div><nav class="links"><a href="#latest">Latest</a><a href="archive.html">Archive</a><a href="scouting.html">Scouting</a><a href="graphics.html">Graphics</a><a href="#pillars">About</a><a href="#subscribe">Newsletter</a></nav><a class="nav-cta" href="#subscribe">Subscribe</a></div></header>
+<section class="hero"><div class="glow"></div><div class="wrap hero-inner"><span class="pill">Football, from Ireland and beyond</span><h1 class="hero-title">Where <em>culture</em> meets structure.</h1><p class="hero-sub">A football-first look at how clubs actually grow — the boardroom decisions, the grassroots rebuilds, and the fans who make any of it worth doing. Written by James Callan.</p><div class="hero-actions"><a class="btn-primary" href="grow-your-own-loi-academies.html">Read the latest →</a><a class="btn-ghost" href="#subscribe">Get new pieces</a></div></div><div class="wrap"><div class="featured"><div><span class="pill">Latest · Ireland</span><h2>Grow Your Own: Why LOI Clubs Must Back The Academy</h2><p>The League of Ireland is finally making serious money from young players. If that’s where the game is heading, why aren’t more clubs spending now to produce the next Mason Melia?</p><a class="read" href="grow-your-own-loi-academies.html">Read the piece <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></div><div class="featured-art" style="background-image:url('https://substackcdn.com/image/fetch/$s_!EWu1!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6281a6bf-e4cd-409a-968a-862b1cf1f4a9_2560x1340.jpeg');background-size:cover;background-position:center;"></div></div></div></section>
+<section class="section" id="latest"><div class="wrap"><div class="section-head"><div class="section-title display">Latest pieces</div><div class="section-note">Culture, governance, and the game as it's actually lived.</div></div><div class="cat-nav"><a class="cat-link" href="#irish">Irish</a><a class="cat-link" href="#world">World</a><a class="cat-link" href="#scouting">Scouting</a><a class="cat-link" href="#everything-else">Everything Else</a></div></div>
+<div class="wrap category-block" id="irish"><div class="category-head"><h3 class="category-title">Irish</h3><a class="view-all" href="archive.html#irish">61 pieces · View all →</a></div><div class="grid"><a class="card" href="https://jamescallan3.substack.com/p/brexit-changed-irish-football" target="_blank" rel="noopener"><div class="card-art" style="background-image:url('images/brexit-irish-football.webp');background-size:cover;background-position:center;"></div><div class="card-body"><span class="pill">Ireland</span><h3>Brexit Changed Irish Football</h3><p>How post-Brexit rules quietly reshaped player pathways, increased the value of League of Ireland minutes, and handed Irish football an opportunity it did not plan for.</p><div class="meta"><span>Apr 2026</span><span class="dot"></span><span>5 min read</span></div></div></a><a class="card" href="https://jamescallan3.substack.com/p/dundalks-impressive-premier-division" target="_blank" rel="noopener"><div class="card-art" style="background-image:url('images/dundalk-return.webp');background-size:cover;background-position:center;"></div><div class="card-body"><span class="pill">Ireland</span><h3>Dundalk's Impressive Premier Division Return</h3><p>Dundalk's strong start is becoming a case for continuity, smart recruitment and resisting the usual promoted team panic.</p><div class="meta"><span>Apr 2026</span><span class="dot"></span><span>4 min read</span></div></div></a></div></div>
+<div class="wrap category-block" id="world"><div class="category-head"><h3 class="category-title">World</h3><a class="view-all" href="archive.html#world">45 pieces · View all →</a></div><div class="grid"><a class="card" href="aldershot-town-complete-rebuild.html"><div class="card-art" style="background-image:url('images/aldershot-town.webp');background-size:cover;background-position:center;"></div><div class="card-body"><span class="pill">World</span><h3>Aldershot Town's Complete Rebuild</h3><p>Most clubs call five or six new players a rebuild. Scott Davies arrived at Aldershot Town and found himself replacing practically everyone except the ground keeper.</p><div class="meta"><span>27 Aug 2026</span><span class="dot"></span><span>7 min read</span></div></div></a><a class="card" href="https://jamescallan3.substack.com/p/short-term-ism-in-football" target="_blank" rel="noopener"><div class="card-art" style="background-image:url('images/short-termism.webp');background-size:cover;background-position:center;"></div><div class="card-body"><span class="pill">Governance</span><h3>Short-Term-ism In Football</h3><p>Why modern football keeps rewarding short-term decisions, from managerial churn to reactive spending, and how smarter contracts and boardroom incentives could finally force clubs to think beyond the now.</p><div class="meta"><span>Apr 2026</span><span class="dot"></span><span>7 min read</span></div></div></a><a class="card" href="https://jamescallan3.substack.com/p/the-rise-and-fall-of-juventus-how" target="_blank" rel="noopener"><div class="card-art" style="background-image:url('images/juventus.webp');background-size:cover;background-position:center;"></div><div class="card-body"><span class="pill">Finance</span><h3>The Rise And Fall Of Juventus</h3><p>Juventus spent a decade building Italy's most powerful football machine. Then success convinced them they could stop being the club that built it.</p><div class="meta"><span>Jun 2026</span><span class="dot"></span><span>6 min read</span></div></div></a></div></div>
+<div class="wrap category-block" id="scouting"><div class="category-head"><h3 class="category-title">Scouting</h3><a class="view-all" href="scouting.html">5 reports · View all →</a></div><div class="grid"><a class="card" href="scout-report-ronan-teahan.html"><div class="card-art" style="background-image:url('images/ronan-teahan.jpeg');background-size:cover;background-position:center 25%;"></div><div class="card-body"><span class="pill">AM · Dundalk</span><h3>Ronan Teahan</h3><p>A 21-year-old Dundalk attacking midfielder whose ball carrying and movement can open games up, but whose final-third output still has room to grow.</p><div class="meta"><span>Accurate as of 04/08/2026</span></div></div></a><a class="card" href="scout-report-gareth-mcelroy.html"><div class="card-art" style="background-image:url('images/gareth-mcelroy.jpg');background-size:cover;background-position:center 20%;"></div><div class="card-body"><span class="pill">CB · Sligo Rovers</span><h3>Gareth McElroy</h3><p>A 21-year-old Sligo centre-back already dominating aerially and defending his box at Premier Division level, with plenty still to develop on the ball.</p><div class="meta"><span>Accurate as of 11/06/2026</span></div></div></a><a class="card" href="scout-report-adam-brennan.html"><div class="card-art" style="background-image:url('images/adam-brennan.jpg');background-size:cover;background-position:center 20%;"></div><div class="card-body"><span class="pill">LW · Shamrock Rovers</span><h3>Adam Brennan</h3><p>A technically sharp Shamrock Rovers attacker whose movement and intelligence between the lines make him one of Ireland's more interesting young prospects.</p><div class="meta"><span>Accurate as of 11/06/2026</span></div></div></a></div></div>
+<div class="wrap category-block" id="everything-else"><div class="category-head"><h3 class="category-title">Everything Else</h3><a class="view-all" href="archive.html#everything-else">29 pieces · View all →</a></div><div class="grid"><a class="card" href="https://jamescallan3.substack.com/p/why-are-curacao-so-dutch-the-world" target="_blank" rel="noopener"><div class="card-art" style="background-image:url('images/curacao.webp');background-size:cover;background-position:center;"></div><div class="card-body"><span class="pill">Culture</span><h3>Why Are Curaçao So Dutch?</h3><p>Curaçao's first World Cup qualification is not really a football story. It is a story about migration, identity and what happens when a nation becomes a diaspora.</p><div class="meta"><span>2026</span><span class="dot"></span><span>6 min read</span></div></div></a><a class="card" href="https://jamescallan3.substack.com/p/the-death-of-joga-bonito" target="_blank" rel="noopener"><div class="card-art" style="background-image:url('images/joga-bonito.webp');background-size:cover;background-position:center;"></div><div class="card-body"><span class="pill">Culture</span><h3>The Death Of Joga Bonito</h3><p>How pressing systems, analytics and global capital reshaped Brazilian flair, and why Neymar may be its final standard bearer.</p><div class="meta"><span>Feb 2026</span><span class="dot"></span><span>8 min read</span></div></div></a></div></div></section>
+<section class="pillars" id="pillars"><div class="wrap"><div class="section-title display">What we cover</div><div class="pillars-grid"><div class="pillar"><div class="pillar-num">01</div><h4>Culture</h4><p>The stories, identity and people that make a football club feel like more than 90 minutes on a Saturday.</p></div><div class="pillar"><div class="pillar-num">02</div><h4>Structure</h4><p>Who owns clubs, how they spend, how they recruit and the decisions behind where they go next.</p></div><div class="pillar"><div class="pillar-num">03</div><h4>Scouting</h4><p>Players, recruitment and pathways worth keeping an eye on, from League of Ireland academies to further afield.</p></div><div class="pillar"><div class="pillar-num">04</div><h4>Ireland</h4><p>Irish football comes first. The League of Ireland, grassroots game and the stories shaping football here.</p></div></div></div></section>
+<section class="section" id="graphics"><div class="wrap"><div class="section-head"><div class="section-title display">Graphics</div><a class="view-all" href="graphics.html">40 graphics · View all →</a></div><div class="graphics-grid"><a class="graphic-item" href="images/graphics/liam-scales.png" target="_blank" rel="noopener"><img src="images/graphics/liam-scales.png" alt="Liam Scales graphic — Celtic, Tipping The Scales"></a><a class="graphic-item" href="images/graphics/cork-champions-2026.png" target="_blank" rel="noopener"><img src="images/graphics/cork-champions-2026.png" alt="Cork City graphic — First Division Champions 2026"></a><a class="graphic-item" href="images/graphics/owen-elding.png" target="_blank" rel="noopener"><img src="images/graphics/owen-elding.png" alt="Owen Elding graphic — Hibernian"></a><a class="graphic-item" href="images/graphics/devoy.png" target="_blank" rel="noopener"><img src="images/graphics/devoy.png" alt="Devoy graphic — Bohemian FC, He's One Of Our Own"></a></div></div></section>
+<section class="subscribe" id="subscribe"><div class="glow"></div><div class="wrap subscribe-inner"><h2 class="display">No noise. Just football.</h2><p>Two or three pieces a week — culture, structure, and the odd Irish club doing something worth paying attention to.</p><form class="sub-form" id="subscribeForm"><input type="email" name="email" id="subscribeEmail" placeholder="your@email.com" required><button type="submit">Subscribe</button></form><p id="subscribeNote" style="font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); margin-top:14px;"></p></div></section>
+<footer><div class="wrap"><p class="fine-print">© 2026 James Callan / Touchline Sport. All content on this website, including written articles, analysis, graphics and original research, is the intellectual property of James Callan and Touchline Sport unless otherwise stated. No content may be reproduced, republished or redistributed without prior permission.</p><div class="foot-row"><span>Touchline Studios</span><div class="foot-links"><a href="https://www.linkedin.com/company/touchline-sports-studio/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.instagram.com/touchline_sports_studio/" target="_blank" rel="noopener">Instagram</a><a href="#">TikTok</a></div></div></div></footer>
+<script>document.getElementById('subscribeForm').addEventListener('submit',function(e){e.preventDefault();var form=this;var button=form.querySelector('button');var note=document.getElementById('subscribeNote');var email=document.getElementById('subscribeEmail').value;button.textContent='Sending…';button.disabled=true;fetch('https://formsubmit.co/ajax/jamespgcallan@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({email:email,_subject:'New Touchline Studios subscriber'})}).then(function(res){return res.json();}).then(function(){button.textContent='Subscribed ✓';form.querySelector('input').value='';note.textContent='';}).catch(function(){button.textContent='Subscribe';button.disabled=false;note.textContent="Something went wrong — try again, or email james directly.";});});</script>
 </body>
 </html>
