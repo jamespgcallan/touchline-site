@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('header');
   const navRow = header?.querySelector('.nav-row');
-  const desktopNav = header?.querySelector('nav');
+  const desktopNav = header?.querySelector('nav.links') || header?.querySelector('nav');
   const subscribe = header?.querySelector('.nav-cta');
   if (!header || !navRow || !desktopNav) return;
 
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     @media(max-width:600px){
       header{position:sticky;top:0;overflow:visible}
       .nav-row{flex-wrap:nowrap!important;position:relative}
-      header nav{display:none!important}
+      header nav.links{display:none!important}
       header .nav-cta{display:none!important}
       .mobile-menu-btn{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(33,31,26,.12);background:#fff;color:#1c1a17;border-radius:999px;padding:9px 14px;font:600 13px 'Inter',sans-serif;cursor:pointer;margin-left:auto}
       .mobile-menu-icon{width:16px;height:12px;display:flex;flex-direction:column;justify-content:space-between}
@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
       .mobile-menu-btn[aria-expanded='true'] .mobile-menu-icon span:nth-child(1){transform:translateY(5px) rotate(45deg)}
       .mobile-menu-btn[aria-expanded='true'] .mobile-menu-icon span:nth-child(2){opacity:0}
       .mobile-menu-btn[aria-expanded='true'] .mobile-menu-icon span:nth-child(3){transform:translateY(-5px) rotate(-45deg)}
-      .mobile-menu-panel{position:absolute;display:none;top:calc(100% + 14px);left:0;right:0;background:#fbf3e7;border:1px solid rgba(33,31,26,.10);border-radius:16px;padding:10px;box-shadow:0 18px 40px rgba(33,31,26,.14);z-index:999}
-      .mobile-menu-panel.open{display:block}
+      .mobile-menu-panel{position:absolute;display:none;top:calc(100% + 14px);left:0;right:0;background:#fbf3e7;border:1px solid rgba(33,31,26,.10);border-radius:16px;padding:10px;box-shadow:0 18px 40px rgba(33,31,26,.14);z-index:9999}
+      .mobile-menu-panel.open{display:block!important}
       .mobile-menu-panel a{display:block;padding:13px 14px;border-radius:10px;font:600 14px 'Inter',sans-serif;color:#1c1a17}
       .mobile-menu-panel a:hover,.mobile-menu-panel a:focus{background:#f5e5cf;outline:none}
       .mobile-menu-panel .mobile-subscribe{margin-top:6px;background:#1c1a17;color:#fbf3e7;text-align:center}
