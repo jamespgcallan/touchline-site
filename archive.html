@@ -120,12 +120,16 @@
   .arch-list{ list-style:none; margin:0; padding:0 0 26px; }
   .arch-item{ border-bottom:1px solid var(--line); }
   .arch-item a{
-    display:flex; align-items:center; justify-content:space-between; gap:16px;
-    padding:15px 4px;
+    display:grid; grid-template-columns:minmax(0,1fr) auto; gap:8px 22px;
+    padding:18px 4px;
     transition:color .15s ease, padding-left .15s ease;
   }
   .arch-item a:hover{ color:var(--accent); padding-left:8px; }
-  .arch-title{ font-size:15px; font-weight:500; }
+  .arch-copy{ min-width:0; }
+  .arch-title{ display:block; font-family:'Manrope',sans-serif; font-size:15px; font-weight:700; line-height:1.35; }
+  .arch-description{ display:block; color:var(--ink-soft); font-size:13.5px; line-height:1.5; margin-top:5px; max-width:78ch; }
+  .arch-meta{ display:flex; align-items:center; gap:14px; align-self:start; padding-top:2px; }
+  .arch-date{ font-family:'IBM Plex Mono',monospace; font-size:11px; color:#928d7d; white-space:nowrap; }
   .arch-arrow{ font-size:14px; color:#a89f8c; flex-shrink:0; opacity:0; transition:opacity .15s ease; }
   .arch-item a:hover .arch-arrow{ opacity:1; color:var(--accent); }
 
@@ -144,7 +148,10 @@
 
   @media (max-width:600px){
     nav.links{ display:none; }
+    .arch-item a{ grid-template-columns:1fr; gap:10px; }
     .arch-title{ font-size:14px; }
+    .arch-meta{ justify-content:space-between; }
+    .arch-arrow{ opacity:1; }
     .foot-row{ flex-direction:column; align-items:flex-start; }
   }
 </style>
@@ -190,362 +197,722 @@
     <ul class="arch-list">
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/the-state-of-ireland-football-hope?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">The State of Ireland Football Hope</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">The State of Ireland Football: Hope, Hangover or Holding Pattern?</span>
+              
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">12 Oct 2025</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/the-local-lads-who-saved-a-town?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">The Local Lads Who Saved a Town</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">The Local Lads Who Saved a Town</span>
+              <span class="arch-description">Oriel nights, local hearts, and a club reborn</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">23 Oct 2025</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/the-infrastructure-problem-how-stadiums?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">The Infrastructure Problem How Stadiums</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">The Infrastructure Problem: How Stadiums Hold the League Back</span>
+              <span class="arch-description">The League is Rising. The Stadiums Aren’t.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">26 Oct 2025</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/the-university-team-taking-on-the?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">The University Team Taking on the</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">The University Team Taking on the</span>
+              
+            </span>
+            <span class="arch-meta">
+              
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/the-third-tier-isnt-expansion-its?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">The Third Tier Isnt Expansion its</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">The Third Tier Isnt Expansion its</span>
+              
+            </span>
+            <span class="arch-meta">
+              
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/the-forgotten-boxing-day-derbies?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">The Forgotten Boxing Day Derbies</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">The Forgotten Boxing Day Derbies of Ireland</span>
+              
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">26 Dec 2025</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/new-shirts-old-hope-why-christmas?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">New Shirts Old Hope Why Christmas</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">New Shirts, Old Hope: Why Christmas Is the League of Ireland’s Most Important Marketing Week</span>
+              <span class="arch-description">How kits became the League of Ireland’s loudest form of belief</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">22 Dec 2025</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/the-league-of-ireland-isnt-seasonal?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">The League of Ireland Isnt Seasonal</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">The League of Ireland Isnt Seasonal</span>
+              
+            </span>
+            <span class="arch-meta">
+              
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/why-so-many-irish-fans-follow-english?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Why So Many Irish Fans Follow English</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Why So Many Irish Fans Follow English Clubs Instead of Their Local League</span>
+              <span class="arch-description">How television, culture and decades of underinvestment shaped Ireland’s unique football identity.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">17 Dec 2025</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/where-the-league-of-ireland-really?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Where the League of Ireland Really</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Where the League of Ireland Really Stands in World Football</span>
+              <span class="arch-description">A small league with a big punch: Ireland’s place in world football</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">15 Dec 2025</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/ollie-byrne-the-shelbourne-chairman?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Ollie Byrne the Shelbourne Chairman</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Ollie Byrne the Shelbourne Chairman</span>
+              
+            </span>
+            <span class="arch-meta">
+              
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/mikey-johnston-and-the-transfer-that?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Mikey Johnston and the Transfer That</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Mikey Johnston and the Transfer That</span>
+              
+            </span>
+            <span class="arch-meta">
+              
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/european-football-the-league-of-irelands?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">European Football the League of Irelands</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">European Football the League of Irelands</span>
+              
+            </span>
+            <span class="arch-meta">
+              
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/the-gospel-according-to-the-terrace?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">The Gospel According to the Terrace</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">The Gospel According to the Terrace</span>
+              
+            </span>
+            <span class="arch-meta">
+              
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/when-cork-city-went-to-china-the?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">When Cork City Went to China the</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">When Cork City Went to China the</span>
+              
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">3 Dec 2025</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/border-boys-how-football-shaped-irelands?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Border Boys How Football Shaped Irelands</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Border Boys How Football Shaped Irelands</span>
+              
+            </span>
+            <span class="arch-meta">
+              
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/jimmy-hasty-the-man-who-bent-football?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Jimmy Hasty the Man Who Bent Football</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Jimmy Hasty: Dundalk's One Armed Striker Superstar</span>
+              <span class="arch-description">How a one-armed striker rewrote what was possible and left a legacy that still refuses to fade</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">28 Nov 2025</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/the-irishman-who-built-atletico-madrid?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">The Irishman Who Built Atletico Madrid</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">The Irishman Who Built Atlético Madrid: The Forgotten Legacy of Patrick O’Connell</span>
+              <span class="arch-description">The Irishman who shaped Spanish football and slipped through history’s cracks</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">26 Nov 2025</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/faith-beneath-the-floodlights?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Faith Beneath the Floodlights</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Faith Beneath the Floodlights</span>
+              <span class="arch-description">Relegations, reformations and revivals: how Irish clubs keep finding life after collapse.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">24 Nov 2025</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/respect-isnt-worn-on-a-sleeve-why?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Respect Isnt Worn on a Sleeve Why</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Respect Isnt Worn on a Sleeve Why</span>
+              
+            </span>
+            <span class="arch-meta">
+              
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/the-strangest-spell-in-football-filippo?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">The Strangest Spell in Football Filippo</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">The Strangest Spell in Football Filippo</span>
+              
+            </span>
+            <span class="arch-meta">
+              
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/from-doubts-to-dynasty-bradleys-rovers?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">From Doubts to Dynasty Bradleys Rovers</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">From Doubts to Dynasty Bradleys Rovers</span>
+              
+            </span>
+            <span class="arch-meta">
+              
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/the-night-athlone-stopped-the-slide?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">The Night Athlone Stopped the Slide</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">The Night Athlone Stopped The Slide</span>
+              <span class="arch-description">How structural reset, smart recruitment and a club-wide rise turned a 22-game winless run into an opening-night statement</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">23 Feb 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/league-of-ireland-wages-fees-and?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">League of Ireland Wages Fees and</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">League Of Ireland Wages, Fees and Europe: What Breaks First?</span>
+              <span class="arch-description">As costs climb faster than recurring revenue, Irish clubs face a defining question: are they building sustainable growth, or quietly budgeting for July money that may never arrive?</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">16 Feb 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/the-ni-football-fund-is-no-longer?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">The Ni Football Fund is No Longer</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">The NI Football Fund is no longer a facilities debate. It is a legal test of how football is governed.</span>
+              <span class="arch-description">Court action has recast the Northern Ireland Football Fund as a public law issue of process, fairness and trust. Once litigation begins, how decisions were made matters more than outcomes</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">9 Feb 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/dundalk-fc-100-years-in-the-league?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Dundalk Fc 100 Years in the League</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Dundalk FC: 100 Years in the League of Ireland</span>
+              <span class="arch-description">A living timeline of the moments that changed everything</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">2 Feb 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/when-limerick-hosted-real-madrid?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">When Limerick Hosted Real Madrid</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">When Limerick Hosted Real Madrid</span>
+              <span class="arch-description">The night the European giants came to the Green Isle and met Irish football on its own terms</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">30 Jan 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/why-bohemians-fc-feel-bigger-than?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Why Bohemians Fc Feel Bigger Than</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Why Bohemians Are the Most Important Club in Irish Football Without Being the Biggest</span>
+              <span class="arch-description">What the Aviva record crowd, the Kneecap jersey and Dalymount’s limits reveal about Irish football’s real ceiling</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">19 Jan 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/cork-city-fc-and-the-volatility-of?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Cork City Fc and the Volatility of</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Cork City FC and the volatility of mass support</span>
+              <span class="arch-description">What it reveals: how scale magnifies both recovery and collapse</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">12 Jan 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/why-dont-more-loi-games-make-it-onto?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Why Dont More Loi Games Make It Onto</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Why Don’t More LOI Games Make It Onto Irish TV, And What Is The Real Future Of LOITV?</span>
+              <span class="arch-description">The League of Ireland is booming in the stands. So why is it still invisible on television?</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">5 Jan 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/how-the-fai-lost-control-of-itself?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">How the Fai Lost Control of Itself</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">How the FAI Lost Control of Itself</span>
+              <span class="arch-description">Power, oversight and the long institutional hangover of the Delaney era</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">31 Dec 2025</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/minutes-over-millions?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Minutes Over Millions</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Minutes Over Millions</span>
+              <span class="arch-description">Why Smart Clubs Now Value Playing Time More Than Transfer Fees</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">8 May 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/homecoming-or-soft-landing?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Homecoming or Soft Landing</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Big Names Are Coming Home But What Does It Really Mean?</span>
+              <span class="arch-description">McClean is home. Duffy could follow. Is this real progress for the League of Ireland, or just where big careers come to slow down?</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">4 May 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/brexit-changed-irish-football?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Brexit Changed Irish Football</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Brexit Changed Irish Football</span>
+              <span class="arch-description">How post-Brexit rules quietly reshaped player pathways, increased the value of League of Ireland minutes, and handed Irish football an opportunity it did not plan for</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">27 Apr 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/dundalks-impressive-premier-division?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Dundalks Impressive Premier Division</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Dundalk's Impressive Premier Division Return</span>
+              <span class="arch-description">Dundalk’s strong start is becoming a case for continuity, smart recruitment and resisting the usual promoted team panic.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">13 Apr 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/how-one-season-changes-all?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">How One Season Changes All</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">How One Season Changes All</span>
+              <span class="arch-description">Why Every LOI Club Is One Good Season Away From Changing Its Future</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">7 Apr 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/irsih-football-is-still-too-britain?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Irsih Football is Still Too Britain</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Irsih Football is Still Too Britain</span>
+              
+            </span>
+            <span class="arch-meta">
+              
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/cork-city-after-osullivan?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Cork City After Osullivan</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Cork City After O’Sullivan</span>
+              <span class="arch-description">Cork City’s brightest young talent has moved to Preston North End. His exit asks a bigger question about the club</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">31 Mar 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/why-irish-clubs-underuse-their-own?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Why Irish Clubs Underuse Their Own</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Why Irish Clubs Underuse Their Own</span>
+              <span class="arch-description">Bohemians, Rovers And The Branding Gap In Irish Football</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">24 Mar 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/derry-citys-mcclean-return?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Derry Citys Mcclean Return</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Derry Citys Mcclean Return</span>
+              
+            </span>
+            <span class="arch-meta">
+              
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/st-patricks-day-kits-are-missing?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">St Patricks Day Kits are Missing</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">St Patricks Day Kits are Missing</span>
+              
+            </span>
+            <span class="arch-meta">
+              
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/devoy-on-the-cusp-of-a-call-up?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Devoy on the Cusp of a Call Up</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Devoy on the Cusp of a Call Up</span>
+              <span class="arch-description">Shamrock Rovers were second best for long stretches at Dalymount. Then the game became exactly the type Stephen Bradley’s sides almost always find a way to survive</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">27 May 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/loi-pitch-crisis-exposed?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Loi Pitch Crisis Exposed</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">LOI Pitch Crisis Exposed</span>
+              <span class="arch-description">Three Dublin fixtures lost in two weeks. This is not just bad weather. It is a structural issue the League of Ireland can no longer ignore.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">10 Mar 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/drogheda-flares-and-the-fallout-the?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Drogheda Flares and the Fallout the</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Drogheda, Flares And The Fallout The LOI Cannot Ignore</span>
+              <span class="arch-description">After a child was injured at Oriel Park and record sanctions hit Drogheda United, Irish football faces a hard question about safety, proportional punishment, and protecting the league’s growth.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">3 Mar 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/bohemians-the-club-where-culture?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Bohemians the Club Where Culture</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Bohemians: The club where culture meets meaning</span>
+              <span class="arch-description">How Bohemian Football Club turned fan ownership, culture and belonging into one of modern football’s smartest survival strategies</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">13 May 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/drogheda-united-the-algorithm-and?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Drogheda United the Algorithm and</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Drogheda United: The Algorithm And The Underdog</span>
+              <span class="arch-description">Sport For Business AI prank. Drogheda United’s AI academy project is not really about technology. It is about what smaller football clubs must become to survive modern football.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">20 May 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/rovers-win-dublin-dery-the-sign-of?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Rovers Win Dublin Dery the Sign of</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Rovers Win Dublin Dery the Sign of</span>
+              
+            </span>
+            <span class="arch-meta">
+              
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/is-this-irelands-first-global-football?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Is This Irelands First Global Football</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Is This Ireland's First Global Football Generation?</span>
+              <span class="arch-description">From Finn Harps to Benfica and Shamrock Rovers to Hoffenheim, Ireland's first U17 World Cup squad reveals a football system that may finally know what it wants to be.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">8 Jun 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/the-derry-city-bbc-deal?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">The Derry City Bbc Deal</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">The Derry City BBC Deal</span>
+              <span class="arch-description">Why A New BBC NI Partnership Reveals The League Of Ireland’s Growing Importance Beyond Its Traditional Audience</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">15 Jun 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/the-class-of-26?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">The Class of 26</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">The Class Of ’26</span>
+              <span class="arch-description">How universities are becoming part of Irish football’s answer to the 18-to-23 development gap.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">22 Jun 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/the-league-of-second-chances?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">The League of Second Chances</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">The League Of Second Chances</span>
+              <span class="arch-description">How Irish Football Turned Rejection Into One Of Its Greatest Strengths</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">29 Jun 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/the-brexit-generation-comes-of-age?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">The Brexit Generation Comes of Age</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">The Brexit Generation Comes Of Age</span>
+              <span class="arch-description">Irish teenagers can no longer disappear into English academies at 16. That delay is reshaping development, value and responsibility across Irish football.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">6 Jul 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/keeping-it-loi?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Keeping It Loi</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Keeping It LOI</span>
+              <span class="arch-description">Why Irish football's refusal to become a product may have accidentally become its biggest advantage.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">13 Jul 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/for-club-or-county?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">For Club or County</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">For Club Or County</span>
+              <span class="arch-description">How The GAA And Football Continue To Share Ireland's Best Athletes</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">22 Jul 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/have-shelbourne-and-sligo-rovers?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Have Shelbourne and Sligo Rovers</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Have Shelbourne And Sligo Rovers Found Irish Football's New Infrastructure Playbook?</span>
+              <span class="arch-description">The Shelbourne and Sligo Rovers projects reveal a new reality about how stadiums get funded.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">27 Jul 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/changing-tides-in-cobh?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Changing Tides in Cobh</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Changing Tides In Cobh</span>
+              <span class="arch-description">Football ownership, local identity and the challenge of protecting community clubs in a global game.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">3 Aug 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/from-big-jack-to-big-gaps-the-irish?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">From Big Jack to Big Gaps the Irish</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">From Big Jack to Big Gaps: The Irish National Team Dilemma</span>
+              <span class="arch-description">Ireland has not reached a major tournament since 2016. The manager and players get the blame, but the real explanation leads back to the clubs expected to produce them.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">10 Aug 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/why-irish-football-needs-a-football?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Why Irish Football Needs a Football</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Why Irish Football Needs A Football Education System</span>
+              <span class="arch-description">Irish football keeps asking how to give young players more coaching, better education and longer to develop. One answer has been sitting in front of us for years.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">14 Aug 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/shamrock-rovers-ii-and-the-league?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Shamrock Rovers Ii and the League</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Shamrock Rovers II and the League They Couldn’t Win</span>
+              <span class="arch-description">Rovers wanted somewhere to develop young players. The other nine clubs wanted a league where everybody could actually get promoted. Six years later, Irish football is having the same argument again.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">17 Aug 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/shamrock-rovers-recruitment-model?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Shamrock Rovers Recruitment Model</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Untitled</span>
+              
+            </span>
+            <span class="arch-meta">
+              
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
     </ul>
@@ -562,272 +929,542 @@
     <ul class="arch-list">
         <li class="arch-item">
           <a href="aldershot-town-complete-rebuild.html">
-            <span class="arch-title">Aldershot Town's Complete Rebuild</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Aldershot Town's Complete Rebuild: 21 Signings, 25 Departures</span>
+              <span class="arch-description">Most clubs call five or six new players a rebuild. Scott Davies arrived at Aldershot Town and found himself replacing practically everyone except the ground keeper.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">27 Aug 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/oneill-rodgers-and-celtics-eternal?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Oneill Rodgers and Celtics Eternal</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Oneill Rodgers and Celtics Eternal</span>
+              
+            </span>
+            <span class="arch-meta">
+              
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/dundalks-cycle-of-revival-and-risk?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Dundalks Cycle of Revival and Risk</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Dundalks Cycle of Revival and Risk</span>
+              
+            </span>
+            <span class="arch-meta">
+              
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/the-club-that-refused-to-die-palermos?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">The Club That Refused to Die Palermos</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">The Club That Refused to Die: Palermo’s Pink Renaissance</span>
+              <span class="arch-description">In a city that has been burned, rebuilt and reborn, the pink never fades.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">12 Nov 2025</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/the-death-of-joga-bonito?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">The Death of Joga Bonito</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">The Death Of Joga Bonito</span>
+              <span class="arch-description">How pressing systems, analytics and global capital reshaped Brazilian flair and why Neymar may be its final standard bearer</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">26 Feb 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/leicester-2016-ten-years-on-how-footballs?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Leicester 2016 Ten Years on How Footballs</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Leicester 2016, Ten Years On: How Football’s Greatest Fairytale Was Really Built</span>
+              <span class="arch-description">A decade after Leicester City shocked the Premier League, the story still isn’t about magic. It’s about alignment.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">18 Feb 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/why-celtic-debates-are-really-about?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Why Celtic Debates are Really About</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Why Celtic Debates are Really About</span>
+              
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">29 Apr 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/union-saint-gilloise-and-the-cost?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Union Saint Gilloise and the Cost</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Union Saint-Gilloise and the cost of arriving early</span>
+              <span class="arch-description">What happens when your model works faster than your infrastructure?</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">4 Feb 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/fc-barcelona-and-why-greatness-delays?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Fc Barcelona and Why Greatness Delays</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">FC Barcelona and why greatness delays accountability</span>
+              <span class="arch-description">How success buys time for bad decisions</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">28 Jan 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/fc-girondins-de-bordeaux-when-legacy?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Fc Girondins De Bordeaux When Legacy</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">FC Girondins de Bordeaux: when legacy can’t survive leverage</span>
+              <span class="arch-description">How financialisation, fixed costs and ownership churn hollowed out one of France’s great provincial clubs</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">21 Jan 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/parma-calcio-when-patronage-replaces?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Parma Calcio When Patronage Replaces</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">How Parma Built One of Europe’s Greatest Teams and Lost It All</span>
+              <span class="arch-description">A case study in success without sustainability</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">14 Jan 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/juve-got-mail?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Juve Got Mail</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Juve Got Mail</span>
+              
+            </span>
+            <span class="arch-meta">
+              
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/ferry-days-and-step-5-dreams?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Ferry Days and Step 5 Dreams</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Ferry Days And Step 5 Dreams</span>
+              <span class="arch-description">How FC Isle of Man joined the English pyramid to escape isolation, build a pathway, and turn geography into identity</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">6 Mar 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/anti-football-getafes-jose-bordalas?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Anti Football Getafes Jose Bordalas</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Anti Football? Getafe’s José Bordalás And The Case For Winning Ugly</span>
+              <span class="arch-description">Getafe became one of La Liga’s most hated teams by refusing to play on anyone else’s terms. The funny part is that it worked.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">19 Mar 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/why-hashtag-chose-relegation?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Why Hashtag Chose Relegation</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Why Hashtag Chose Relegation</span>
+              <span class="arch-description">A viral football club has asked to go down a division. It sounds ridiculous on the surface, but it might be one of the smartest long term decisions we have seen in modern football.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">22 Apr 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/clubs-are-not-cargo-the-whitecaps?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Clubs are Not Cargo the Whitecaps</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Clubs are Not Cargo the Whitecaps</span>
+              
+            </span>
+            <span class="arch-meta">
+              
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/brightons-80m-bet-on-the-future-of?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Brightons 80m Bet on the Future of</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Brighton’s £80m Bet On The Future Of Women’s Football</span>
+              <span class="arch-description">A purpose-built stadium is more than infrastructure. It is a strategic play for control, growth and long-term advantage in a rapidly evolving women’s game.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">6 May 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/footballs-first-female-head-coach?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Footballs First Female Head Coach</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Footballs First Female Head Coach</span>
+              <span class="arch-description">Marie-Louise Eta’s appointment is a milestone, but the deeper story is about a club that has spent decades defining itself against football’s norms.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">15 Apr 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/fck-off-lafc-zurichs-ownership-issues?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Fck Off Lafc Zurichs Ownership Issues</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">“F*ck Off LAFC.”: Zurich’s Ownership Issues</span>
+              <span class="arch-description">Grasshopper Zürich, LAFC and the modern football battle between institutional identity and networked ownership</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">15 May 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/ajax-the-house-that-total-football?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Ajax the House That Total Football</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Ajax: The House That Total Football Built</span>
+              <span class="arch-description">Ajax once taught Europe how football should think. Their recent decline reveals what happens when identity struggles to survive modern football’s acceleration.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">18 May 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/southamptons-spygate-the-marginal?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Southamptons Spygate the Marginal</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Southampton’s “Spygate”: The Marginal Gain And The Moral Line</span>
+              <span class="arch-description">Southampton’s “Spygate” punishment revealed how modern football’s obsession with marginal gains is testing the limits of governance, ethics and competitive intelligence.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">22 May 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/benfica-selling-the-future?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Benfica Selling the Future</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Benfica: Selling The Future</span>
+              <span class="arch-description">How Benfica transformed from a people’s club into one of football’s smartest talent export systems without entirely losing the soul that built it</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">25 May 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/arsenal-and-football-deja-vu?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Arsenal and Football Deja Vu</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Arsenal &amp; Football Déjà Vu</span>
+              <span class="arch-description">Twenty years after Arsenal scored first and lost their only Champions League final, history appeared to rhyme again. Football's strangest stories are rarely accidents.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">2 Jun 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/the-48-team-gamble-why-fifa-expanded?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">The 48 Team Gamble Why Fifa Expanded</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Untitled</span>
+              
+            </span>
+            <span class="arch-meta">
+              
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/the-rise-and-fall-of-juventus-how?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">The Rise and Fall of Juventus How</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">The Rise And Fall Of Juventus: How Italy's Football Empire Lost Its Way</span>
+              <span class="arch-description">Juventus spent a decade building Italy's most powerful football machine. Then success convinced them they could stop being the club that built it.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">5 Jun 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/how-aston-villa-rebuilt-a-giant-from?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">How Aston Villa Rebuilt a Giant From</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">How Aston Villa Rebuilt A Giant: From Relegation To European Cup</span>
+              <span class="arch-description">The Ownership, Recruitment And Leadership Decisions That Turned A Sleeping Giant Back Into A European Force</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">10 Jun 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/why-are-curacao-so-dutch-the-world?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Why are Curacao So Dutch the World</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Why Are Curaçao So Dutch? The World Cup Team Built Across An Ocean</span>
+              <span class="arch-description">Curaçao’s first World Cup qualification is not really a football story. It is a story about migration, identity and what happens when a nation becomes a diaspora.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">12 Jun 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/the-cape-verde-revolution-and-their?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">The Cape Verde Revolution and Their</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">The Cape Verde Revolution &amp; Their LinkedIn Centre Back</span>
+              <span class="arch-description">Cape Verde’s draw with Spain was not just a World Cup miracle. It was proof that small nations can turn diaspora, identity and smart recruitment into serious football infrastructure.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">16 Jun 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/sevilla-have-a-case-of-the-monchis?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Sevilla Have a Case of the Monchis</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Sevilla Have A Case Of The Monchi's</span>
+              <span class="arch-description">Sevilla built a football empire on recruitment, succession and smart selling. The challenge now is proving the empire can outlive its founder.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">17 Jun 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/how-barcelonas-iconic-unicef-sponsorship?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">How Barcelonas Iconic Unicef Sponsorship</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Why Barcelona Put UNICEF On Their Shirt Instead Of A Sponsor</span>
+              <span class="arch-description">How Football’s Most Famous Charity Partnership Became One Of The Smartest Brand Decisions In Sporting History</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">19 Jun 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/the-world-cup-is-open-to-everyone?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">The World Cup is Open to Everyone</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">The World Cup Is Open To Everyone.... If You Can Afford It.</span>
+              <span class="arch-description">FIFA has expanded the World Cup to more countries than ever before. For many supporters, attending it has never felt further away.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">24 Jun 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/the-gunners-long-shot?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">The Gunners Long Shot</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">The Gunners Long Shot</span>
+              
+            </span>
+            <span class="arch-meta">
+              
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/atletico-madrid-rebel-without-a-cause?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Atletico Madrid Rebel Without a Cause</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Atlético Madrid: Rebel Without A Cause</span>
+              <span class="arch-description">Built on suffering, defiance and being Madrid's alternative, Atlético now face a different challenge: living with success.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">1 Jul 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/italys-azzurri-identity-crisis?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Italys Azzurri Identity Crisis</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Italy's Azzurri Identity Crisis</span>
+              <span class="arch-description">The story of how Italy went from world champions to watching three consecutive World Cups from home.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">3 Jul 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/tottenham-hotspur-to-dare-is-to-drift?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Tottenham Hotspur to Dare is to Drift</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Tottenham Hotspur to Dare is to Drift</span>
+              
+            </span>
+            <span class="arch-meta">
+              
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/kaizer-chief-i-predict-a-rebuild?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Kaizer Chief I Predict a Rebuild</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Kaizer Chief: I Predict A Rebuild</span>
+              <span class="arch-description">For more than 50 years Kaizer Chiefs set the standard in South African football. Today the club tries to modernise without becoming something else</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">10 Jul 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/how-a-glasgow-traffic-cone-became?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">How a Glasgow Traffic Cone Became</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">How A Glasgow Traffic Cone Became Scotland’s Biggest World Cup Export</span>
+              <span class="arch-description">Scotland Came To America For Football. It Left America Talking About Traffic Cones.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">15 Jul 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/west-ham-ironing-out-east-london?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">West Ham Ironing Out East London</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">West Ham: Ironing Out East London</span>
+              <span class="arch-description">Did West Ham move up the football pyramid, or move away from the East London that made them?</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">17 Jul 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/why-football-still-cannot-escape?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Why Football Still Cannot Escape</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">The Death Of Joga Bonito</span>
+              <span class="arch-description">Ready for more?</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">26 Feb 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/schalke-redemption?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Schalke Redemption</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Schalke Redemption</span>
+              <span class="arch-description">Why Schalke's greatest strengths became some of their biggest obstacles during football's most expensive rebuild.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">29 Jul 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/wrexhams-33-million-question-is-the?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Wrexhams 33 Million Question is the</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Wrexham's £33 Million Question: Is The Hollywood Model Actually Sustainable?</span>
+              <span class="arch-description">Wrexham built football's most successful growth story. Can it survive Championship economics?</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">31 Jul 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/what-happened-to-chinese-football?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">What Happened to Chinese Football</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">What Happened To Chinese Football?</span>
+              <span class="arch-description">Once football’s wildest spending project, the Chinese Super League is now trying to become something slower, smaller and more real.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">5 Aug 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/london-city-lionesses-the-lion-the?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">London City Lionesses the Lion the</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">London City Lionesses: The Lion, The Richer and The Wardrobe</span>
+              <span class="arch-description">Seven years ago they didn’t exist. Now Alexia Putellas, Mary Earps, Mapi León and Kadidiatou Diani are heading to Bromley. So where on earth have London City Lionesses come from?</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">12 Aug 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/real-madrids-buy-back-business?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Real Madrids Buy Back Business</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Real Madrid’s Buy-Back Business</span>
+              <span class="arch-description">Nico Paz has already earned Real Madrid around €66 million without coming back to play another game for them. At Madrid, selling an academy player rarely means completely letting him go.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">19 Aug 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/blue-is-the-colour-strasbourg-pay?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Blue is the Colour Strasbourg Pay</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Blue Is the Colour, Strasbourg Pay the Price</span>
+              <span class="arch-description">When Chelsea Call, Strasbourg Lose Someone</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">26 Aug 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
     </ul>
@@ -844,176 +1481,350 @@
     <ul class="arch-list">
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/blokecore-how-a-retro-football-aesthetic?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Blokecore How a Retro Football Aesthetic</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Blokecore: How a Retro Football Aesthetic Took Over Fashion</span>
+              
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">6 Oct 2025</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/match-attax-fifa-and-the-lost-art?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Match Attax Fifa and the Lost Art</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Match Attax, FIFA and the Lost Art of Knowing Every Squad Number</span>
+              <span class="arch-description">A nostalgic look at how Match Attax cards and old FIFA games taught a generation of fans to love football, one squad number at a time.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">10 Oct 2025</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/why-possession-is-overrated-again?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Why Possession is Overrated Again</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Why Possession is Overrated Again</span>
+              
+            </span>
+            <span class="arch-meta">
+              
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/you-didnt-discover-bands-fifa-did?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">You Didnt Discover Bands Fifa Did</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">You Didn’t Discover Bands, FIFA Did</span>
+              <span class="arch-description">How FIFA soundtracks shaped a generation’s taste in music and football</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">31 Oct 2025</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/when-football-used-to-come-before?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">When Football Used to Come Before</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">When Football Used to Come Before</span>
+              
+            </span>
+            <span class="arch-meta">
+              
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/the-beauty-of-the-imperfect-footballer?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">The Beauty of the Imperfect Footballer</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">The Beauty of the Imperfect Footballer</span>
+              <span class="arch-description">Why the game’s most imperfect players are often the ones we love most</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">21 Nov 2025</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/the-merch-that-missed?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">The Merch That Missed</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">The Merch That Missed</span>
+              <span class="arch-description">Proof that even bad merch can become part of who we are.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">14 Nov 2025</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/match-programmes-and-the-lost-language?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Match Programmes and the Lost Language</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Match Programmes and the Lost Language of the Game</span>
+              <span class="arch-description">The soul of football, bound and stapled</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">7 Nov 2025</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/beyond-the-derbies-you-know-footballs?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Beyond the Derbies You Know Footballs</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Beyond the Derbies You Know: Football’s Hidden Rivalries That Mean Everything</span>
+              <span class="arch-description">From Montevideo to Dalymount, some rivalries don’t make global TV, but they make whole cities tremble.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">5 Nov 2025</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/from-juventus-to-cardiff-how-football?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">From Juventus to Cardiff How Football</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">From Juventus to Cardiff: How Football Rebrands Become Power Struggles</span>
+              <span class="arch-description">Rebrands fail when clubs forget one thing: supporters are not a market segment</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">20 Feb 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/before-data-departments-footballs?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Before Data Departments Footballs</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Before Data Departments, Football’s Greatest Managers Were Already Running Systems</span>
+              <span class="arch-description">Sacchi, Bielsa, Ferguson and Wenger built repeatable methods long before analysis became institutionalised.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">13 Feb 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/the-stadio-olimpicos-fascist-forecourt?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">The Stadio Olimpicos Fascist Forecourt</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">The Stadio Olimpico’s Fascist forecourt</span>
+              <span class="arch-description">Walking to Roma vs Stuttgart at the Stadio Olimpico reveals the Fascist architecture of the Foro Italico, from the Mussolini obelisk to the Stadio dei Marmi statues.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">6 Feb 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/a-night-in-rome-evan-ferguson-daniele?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">A Night in Rome Evan Ferguson Daniele</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">A Night in Rome Evan Ferguson Daniele</span>
+              
+            </span>
+            <span class="arch-meta">
+              
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/we-all-had-a-wonderkid-before-he?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">We All Had a Wonderkid Before He</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">We All Had a Wonderkid Before He Was Cool</span>
+              <span class="arch-description">The ones who made us believe we could spot greatness before the world caught up</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">23 Jan 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/the-shirt-that-made-me-fall-in-love?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">The Shirt That Made Me Fall in Love</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">The Shirt That Made Me Fall in Love with Football</span>
+              <span class="arch-description">The fabric of memory, stitched in white and blue.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">16 Jan 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/the-lost-sponsors-when-football-shirts?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">The Lost Sponsors When Football Shirts</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">The Lost Sponsors: When football shirts meant something more</span>
+              <span class="arch-description">Some sponsors didn’t just advertise the club. They became part of it.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">9 Jan 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/followers-vs-faithful-what-hashtag?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Followers vs Faithful What Hashtag</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Followers vs Faithful: What Hashtag United Tells Us About Irish Football’s Future</span>
+              <span class="arch-description">What a YouTube club from Essex reveals about how Ireland sees its own game.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">7 Jan 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/will-griggs-on-fire-wigans-top-25?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Will Griggs on Fire Wigans Top 25</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Will Grigg’s On Fire: Wigan’s Top 25 Ballon D’Or Finisher</span>
+              <span class="arch-description">A viral chant, zero minutes at Euro 2016, and a top-25 finish in UEFA’s Best Player in Europe vote.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">1 May 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/short-term-ism-in-football?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Short Term Ism in Football</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Short Term-ism In Football</span>
+              <span class="arch-description">Why modern football keeps rewarding short-term decisions, from managerial churn to reactive spending, and how smarter contracts &amp; boardroom incentives could finally force clubs to think beyond the now</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">24 Apr 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/croke-park-wants-a-european-final?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Croke Park Wants a European Final</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Croke Park Wants A European Final. Irish Football Should Ask What It Gets Back</span>
+              <span class="arch-description">Ireland’s biggest stadium is positioning itself for football’s biggest nights, but after decades of distance, this is less about celebration and more about what meaningful cooperation looks like</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">20 Apr 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/should-we-trust-the-process?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Should We Trust the Process</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Should We Trust the Process</span>
+              
+            </span>
+            <span class="arch-meta">
+              
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/the-golden-age-of-football-ads-when?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">The Golden Age of Football Ads When</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">The Golden Age of Football Ads: When Commercials Made You Believe</span>
+              <span class="arch-description">How 2000s football ads made every playground feel like a World Cup final</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">9 Apr 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/banned-shirts-lasting-legacy?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Banned Shirts Lasting Legacy</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Banned Shirts Lasting Legacy</span>
+              
+            </span>
+            <span class="arch-meta">
+              
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/the-politics-in-the-stands?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">The Politics in the Stands</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">The Politics In The Stands</span>
+              <span class="arch-description">From Dalymount to Gaza, football continues to reflect the world supporters carry through the turnstiles</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">11 May 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/the-football-shirt-has-replaced-the?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">The Football Shirt Has Replaced the</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">The Football Shirt Has Replaced The Band T-Shirt</span>
+              <span class="arch-description">How football kits became the defining cultural uniform of a generation, and what that transformation reveals about identity, belonging and the modern football economy</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">21 May 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/the-new-full-back-inverted-hybrid?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">The New Full Back Inverted Hybrid</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">The New Full Back: Inverted, Hybrid, Confused?</span>
+              <span class="arch-description">Inverted, hybrid, inside or wide, the modern full back has become football’s tactical compromise for a game that now demands control everywhere</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">29 May 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/keepy-uppies-the-vietnam-way?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">Keepy Uppies the Vietnam Way</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">Keepy-Uppies…. The Vietnam Way</span>
+              <span class="arch-description">What playing đá cầu on the Hà Giang Loop taught me about Vietnam, football and the simple joy of keeping something off the ground.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">24 Jul 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/the-real-life-ted-lasso?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">The Real Life Ted Lasso</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">The Real Life Ted Lasso</span>
+              <span class="arch-description">Ted Lasso came back to Richmond with a television budget but has Richmond got a real life Ted Lasso?</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">7 Aug 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
         <li class="arch-item">
           <a href="https://jamescallan3.substack.com/p/from-umbro-to-adidas-how-footballs?r=6ftpsa" target="_blank" rel="noopener">
-            <span class="arch-title">From Umbro to Adidas How Footballs</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-copy">
+              <span class="arch-title">From Umbro to Adidas: How Football’s Kit Market Lost Its Variety</span>
+              <span class="arch-description">Football still has plenty of kit manufacturers. It’s when you get to the shirts everybody wants that the same few logos keep appearing.</span>
+            </span>
+            <span class="arch-meta">
+              <time class="arch-date">21 Aug 2026</time>
+              <span class="arch-arrow">→</span>
+            </span>
           </a>
         </li>
     </ul>
