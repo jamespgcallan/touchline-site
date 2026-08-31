@@ -1,0 +1,65 @@
+name: Sync Work With Me navigation
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-nav:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Add Work With Me to every HTML navigation
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          link = '<a href="work-with-me.html">Work With Me</a>'
+          changed = []
+
+          for path in Path('.').rglob('*.html'):
+              text = path.read_text(encoding='utf-8')
+              if 'work-with-me.html' in text:
+                  continue
+
+              replacements = [
+                  ('<a href="index.html#pillars">About</a>', link + '\n      <a href="index.html#pillars">About</a>'),
+                  ('<a href="#pillars">About</a>', link + '\n      <a href="#pillars">About</a>'),
+                  ('<a href="index.html#subscribe">Newsletter</a>', link + '\n      <a href="index.html#subscribe">Newsletter</a>'),
+                  ('<a href="#subscribe">Newsletter</a>', link + '\n      <a href="#subscribe">Newsletter</a>'),
+              ]
+
+              updated = text
+              for old, new in replacements:
+                  if old in updated:
+                      updated = updated.replace(old, new, 1)
+                      break
+
+              if updated != text:
+                  path.write_text(updated, encoding='utf-8')
+                  changed.append(str(path))
+
+          print('Updated:', ', '.join(changed) if changed else 'none')
+          PY
+
+      - name: Commit navigation updates
+        shell: bash
+        run: |
+          if git diff --quiet -- '*.html'; then
+            echo "Navigation already consistent."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- '*.html'
+          git commit -m "Add Work With Me to all page navigation"
+          git push
