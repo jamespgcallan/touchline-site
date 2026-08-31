@@ -1,0 +1,37 @@
+name: Fix Shamrock Rovers homepage image
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/fix-homepage-rovers-image.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix-image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Update homepage card image
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('index.html')
+          text = path.read_text(encoding='utf-8')
+          old = "background-image:url('images/shamrock-rovers-scout-report.jpg');background-size:cover;background-position:center 38%;"
+          new = "background-image:url('https://images.shamrockrovers.ie/cdn-cgi/image/width=1200,format=auto,quality=78,fit=scale-down/https://images.shamrockrovers.ie/672322937_1492846892854966_1968928217780514328_n.webp');background-size:cover;background-position:center 38%;"
+          if old not in text:
+              raise SystemExit('Expected homepage Shamrock Rovers image reference not found')
+          path.write_text(text.replace(old, new, 1), encoding='utf-8')
+          PY
+      - name: Commit fix
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "Use hosted Shamrock Rovers image on homepage"
+          git push
