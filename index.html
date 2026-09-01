@@ -100,6 +100,7 @@
 <script>document.getElementById('subscribeForm').addEventListener('submit',function(e){e.preventDefault();var form=this;var button=form.querySelector('button');var note=document.getElementById('subscribeNote');var email=document.getElementById('subscribeEmail').value;button.textContent='Sending…';button.disabled=true;fetch('https://formsubmit.co/ajax/jamespgcallan@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({email:email,_subject:'New Touchline Studios subscriber'})}).then(function(res){return res.json();}).then(function(){button.textContent='Subscribed ✓';form.querySelector('input').value='';note.textContent='';}).catch(function(){button.textContent='Subscribe';button.disabled=false;note.textContent="Something went wrong — try again, or email james directly.";});});</script>
 
 
+
 <script src="mobile-nav.js"></script>
 </body>
 </html>
