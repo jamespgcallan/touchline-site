@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const worldCount = document.querySelector('#world .view-all');
-    if (worldCount) worldCount.textContent = '46 pieces · View all →';
+    if (worldCount) worldCount.textContent = '45 pieces · View all →';
   }
 
   /* Archive: total, World count, and a new Azerbaijan dropdown at the top of World. */
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const world = document.querySelector('#world');
     const worldCount = world?.querySelector('.category-count');
-    if (worldCount) worldCount.textContent = '46 pieces';
+    if (worldCount) worldCount.textContent = '45 pieces';
 
     const countryList = world?.querySelector('.country-list');
     if (countryList && !Array.from(countryList.querySelectorAll('.country-title')).some(el => el.textContent.trim() === 'Azerbaijan')) {
