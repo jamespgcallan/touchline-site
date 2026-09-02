@@ -241,6 +241,14 @@
     .article-body p, .article-body blockquote{ font-size:16.5px; }
     .foot-row{ flex-direction:column; align-items:flex-start; }
   }
+
+  .share-row{display:flex;align-items:center}
+  .share-row-top{justify-content:flex-end;margin-top:16px}
+  .share-row-bottom{justify-content:flex-start;margin:20px 0 8px}
+  .share-button{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:9px 14px;border:1px solid var(--line);border-radius:99px;background:transparent;color:var(--ink-soft);font-family:'Inter',sans-serif;font-size:13px;font-weight:600;cursor:pointer;transition:color .2s,background .2s,border-color .2s,transform .15s}
+  .share-button:hover{color:var(--accent);background:var(--accent-soft);border-color:rgba(232,114,15,.25);transform:translateY(-1px)}
+  .share-button:focus-visible{outline:3px solid rgba(232,114,15,.28);outline-offset:2px}
+  .share-button svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 </style>
 </head>
 <body>
@@ -273,6 +281,7 @@
       <span class="dot"></span>
       <span>7 min read</span>
     </div>
+<div class="share-row share-row-top"><button class="share-button" type="button" data-share-button aria-label="Share this article" title="Share this article"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0-12 4 4m-4-4L8 7M5 12v7h14v-7"></path></svg><span>Share</span></button></div>
   </div>
 
   <div class="wrap">
@@ -357,6 +366,7 @@
       <p>If this one landed, the newsletter's where the rest of it lives — two or three pieces a week, no noise.</p>
       <a class="btn-primary" href="index.html#subscribe">Subscribe</a>
     </div>
+<div class="share-row share-row-bottom"><button class="share-button" type="button" data-share-button aria-label="Share this article" title="Share this article"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0-12 4 4m-4-4L8 7M5 12v7h14v-7"></path></svg><span>Share</span></button></div>
   </div>
 
   <div class="wrap article-foot-nav">
@@ -397,6 +407,6 @@
 
 
 
-<script src="mobile-nav.js"></script>
+<script src="article-share.js"></script>\n<script src="mobile-nav.js"></script>
 </body>
 </html>
