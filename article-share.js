@@ -8,8 +8,8 @@
   var cleanUrl = canonical ? canonical.href : window.location.href;
   var shareUrl = new URL(cleanUrl, window.location.href);
 
-  // A versioned share URL makes social platforms rebuild stale or failed cards.
-  shareUrl.searchParams.set('share', '20260902');
+  // Keep this value aligned with the article's og:url when deliberately refreshing a failed social-card cache.
+  shareUrl.searchParams.set('share', 'card2');
 
   var shareData = {
     title: articleTitle,
