@@ -9,7 +9,7 @@
   var shareUrl = new URL(cleanUrl, window.location.href);
 
   // Keep this value aligned with the article's og:url when deliberately refreshing a failed social-card cache.
-  shareUrl.searchParams.set('share', 'card2');
+  shareUrl.searchParams.set('share', 'card3');
 
   var shareData = {
     title: articleTitle,
