@@ -3,13 +3,18 @@
   if (!buttons.length) return;
 
   var canonical = document.querySelector('link[rel="canonical"]');
-  var description = document.querySelector('meta[name="description"]');
-  var title = document.querySelector('h1');
+  var titleElement = document.querySelector('h1');
+  var articleTitle = titleElement ? titleElement.textContent.trim() : document.title;
+  var cleanUrl = canonical ? canonical.href : window.location.href;
+  var shareUrl = new URL(cleanUrl, window.location.href);
+
+  // A versioned share URL makes social platforms rebuild stale or failed cards.
+  shareUrl.searchParams.set('share', '20260902');
 
   var shareData = {
-    title: title ? title.textContent.trim() : document.title,
-    text: description ? description.content : '',
-    url: canonical ? canonical.href : window.location.href
+    title: articleTitle,
+    text: articleTitle,
+    url: shareUrl.href
   };
 
   function showCopied() {
