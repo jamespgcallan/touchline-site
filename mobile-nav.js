@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const slug = 'who-are-sabah-fk.html';
   const title = 'Who Are Sabah FK? Meet Manchester United’s Champions League Wildcard';
   const subtitle = 'They were founded in 2017, have already dethroned Qarabağ and scored more goals than anyone in Champions League qualifying. Now Old Trafford is next.';
-  const image = 'https://sabahfc.az/static/dist/img/sabahfc_meta.png';
+  const image = 'https://touchlinesport.net/images/sabah-fk-social.png';
 
   /* Homepage latest panel. The displaced latest article becomes a normal Irish card. */
   const featured = document.querySelector('.featured');
