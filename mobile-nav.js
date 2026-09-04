@@ -94,30 +94,39 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-/* Latest Touchline piece: Sabah FK — keep homepage/archive in sync without changing page structure. */
+/* Keep the latest pieces visible on the homepage and archive without changing the large page files. */
 document.addEventListener('DOMContentLoaded', () => {
-  const slug = 'who-are-sabah-fk.html';
-  const title = 'Who Are Sabah FK? Meet Manchester United’s Champions League Wildcard';
-  const subtitle = 'They were founded in 2017, have already dethroned Qarabağ and scored more goals than anyone in Champions League qualifying. Now Old Trafford is next.';
-  const image = 'https://touchlinesport.net/images/sabah-fk-social.png';
+  const latest = {
+    slug: 'football-needs-more-boredom.html',
+    title: 'Football Needs More Boredom',
+    subtitle: 'Why the modern game is addicted to instant reaction, hot takes and permanent crisis',
+    image: 'https://substackcdn.com/image/fetch/$s_!DHUZ!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdb76246a-add9-4b94-b77f-492453ae4636_1200x650.png'
+  };
 
-  /* Homepage latest panel. The displaced latest article becomes a normal Irish card. */
+  const sabah = {
+    slug: 'who-are-sabah-fk.html',
+    title: 'Who Are Sabah FK? Meet Manchester United’s Champions League Wildcard',
+    subtitle: 'They were founded in 2017, have already dethroned Qarabağ and scored more goals than anyone in Champions League qualifying. Now Old Trafford is next.',
+    image: 'https://touchlinesport.net/images/sabah-fk-social.png'
+  };
+
+  /* Homepage latest panel. Grow Your Own remains in Ireland; Sabah moves into the World grid. */
   const featured = document.querySelector('.featured');
   if (featured) {
     const latestButton = document.querySelector('.hero-actions .btn-primary');
-    if (latestButton) latestButton.href = slug;
+    if (latestButton) latestButton.href = latest.slug;
 
     const pill = featured.querySelector('.pill');
     const heading = featured.querySelector('h2');
     const dek = featured.querySelector('p');
     const read = featured.querySelector('.read');
     const art = featured.querySelector('.featured-art');
-    if (pill) pill.textContent = 'Latest · World';
-    if (heading) heading.textContent = title;
-    if (dek) dek.textContent = subtitle;
-    if (read) read.href = slug;
+    if (pill) pill.textContent = 'Latest · Everything Else';
+    if (heading) heading.textContent = latest.title;
+    if (dek) dek.textContent = latest.subtitle;
+    if (read) read.href = latest.slug;
     if (art) {
-      art.style.backgroundImage = `url('${image}')`;
+      art.style.backgroundImage = `url('${latest.image}')`;
       art.style.backgroundSize = 'cover';
       art.style.backgroundPosition = 'center';
     }
@@ -131,14 +140,25 @@ document.addEventListener('DOMContentLoaded', () => {
       irishGrid.prepend(card);
     }
 
+    const worldGrid = document.querySelector('#world .grid');
+    if (worldGrid && !worldGrid.querySelector(`[href="${sabah.slug}"]`)) {
+      const card = document.createElement('a');
+      card.className = 'card';
+      card.href = sabah.slug;
+      card.innerHTML = `<div class="card-art" style="background-image:url('${sabah.image}');background-size:cover;background-position:center;"></div><div class="card-body"><span class="pill">World</span><h3>${sabah.title}</h3><p>${sabah.subtitle}</p><div class="meta"><span>2 Sep 2026</span><span class="dot"></span><span>8 min read</span></div></div>`;
+      worldGrid.prepend(card);
+    }
+
     const worldCount = document.querySelector('#world .view-all');
     if (worldCount) worldCount.textContent = '45 pieces · View all →';
+    const everythingCount = document.querySelector('#everything-else .view-all');
+    if (everythingCount) everythingCount.textContent = '30 pieces · View all →';
   }
 
-  /* Archive: total, World count, and a new Azerbaijan dropdown at the top of World. */
-  if (document.body.querySelector('.page-hero') && document.querySelector('#world .cat-panel')) {
+  /* Archive: preserve Sabah, then add Football Needs More Boredom at the top of Everything Else. */
+  if (document.body.querySelector('.page-hero')) {
     const heroPill = document.querySelector('.page-hero .pill');
-    if (heroPill) heroPill.textContent = '134 pieces and counting';
+    if (heroPill) heroPill.textContent = '135 pieces and counting';
 
     const world = document.querySelector('#world');
     const worldCount = world?.querySelector('.category-count');
@@ -148,8 +168,19 @@ document.addEventListener('DOMContentLoaded', () => {
     if (countryList && !Array.from(countryList.querySelectorAll('.country-title')).some(el => el.textContent.trim() === 'Azerbaijan')) {
       const block = document.createElement('div');
       block.className = 'country-block';
-      block.innerHTML = `<div class="country-head" onclick="toggleCountry(this)" role="button" tabindex="0" aria-expanded="false"><div class="country-head-left"><span class="country-chevron"></span><h4 class="country-title">Azerbaijan</h4></div><span class="country-count">1 piece</span></div><div class="country-panel"><div class="country-panel-inner"><ul class="arch-list"><li class="arch-item"><a href="${slug}"><span class="arch-copy"><span class="arch-title">${title}</span><span class="arch-description">${subtitle}</span></span><span class="arch-meta"><time class="arch-date" datetime="2026-09-02">2 Sep 2026</time><span class="arch-arrow">→</span></span></a></li></ul></div></div>`;
+      block.innerHTML = `<div class="country-head" onclick="toggleCountry(this)" role="button" tabindex="0" aria-expanded="false"><div class="country-head-left"><span class="country-chevron"></span><h4 class="country-title">Azerbaijan</h4></div><span class="country-count">1 piece</span></div><div class="country-panel"><div class="country-panel-inner"><ul class="arch-list"><li class="arch-item"><a href="${sabah.slug}"><span class="arch-copy"><span class="arch-title">${sabah.title}</span><span class="arch-description">${sabah.subtitle}</span></span><span class="arch-meta"><time class="arch-date" datetime="2026-09-02">2 Sep 2026</time><span class="arch-arrow">→</span></span></a></li></ul></div></div>`;
       countryList.prepend(block);
+    }
+
+    const everything = document.querySelector('#everything-else');
+    const everythingCount = everything?.querySelector('.category-count');
+    if (everythingCount) everythingCount.textContent = '30 pieces';
+    const everythingList = everything?.querySelector('.arch-list');
+    if (everythingList && !everythingList.querySelector(`[href="${latest.slug}"]`)) {
+      const item = document.createElement('li');
+      item.className = 'arch-item';
+      item.innerHTML = `<a href="${latest.slug}"><span class="arch-copy"><span class="arch-title">${latest.title}</span><span class="arch-description">${latest.subtitle}</span></span><span class="arch-meta"><time class="arch-date" datetime="2026-09-04">4 Sep 2026</time><span class="arch-arrow">→</span></span></a>`;
+      everythingList.prepend(item);
     }
   }
 });
