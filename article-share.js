@@ -3,13 +3,17 @@
   if (!buttons.length) return;
 
   var canonical = document.querySelector('link[rel="canonical"]');
+  var ogUrl = document.querySelector('meta[property="og:url"]');
   var titleElement = document.querySelector('h1');
   var articleTitle = titleElement ? titleElement.textContent.trim() : document.title;
-  var cleanUrl = canonical ? canonical.href : window.location.href;
+  var cleanUrl = ogUrl && ogUrl.content ? ogUrl.content : (canonical ? canonical.href : window.location.href);
   var shareUrl = new URL(cleanUrl, window.location.href);
 
-  // Keep this value aligned with the article's og:url when deliberately refreshing a failed social-card cache.
-  shareUrl.searchParams.set('share', 'card3');
+  // If an article has its own cache-busting social URL, preserve it.
+  // Otherwise use the current default social-card refresh value.
+  if (!shareUrl.searchParams.has('share')) {
+    shareUrl.searchParams.set('share', 'card3');
+  }
 
   var shareData = {
     title: articleTitle,
