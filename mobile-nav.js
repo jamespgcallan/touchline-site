@@ -94,9 +94,16 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-/* Keep the latest pieces visible on the homepage and archive without changing the large page files. */
+/* Keep the newest pieces visible on the homepage and archive without changing the large page files. */
 document.addEventListener('DOMContentLoaded', () => {
   const latest = {
+    slug: 'braywatch-the-seaside-club-bringing-young-talent-back-to-life.html',
+    title: 'Braywatch: The Seaside Club Bringing Young Talent Back to Life',
+    subtitle: 'Bray were once a proper Premier Division nuisance. Their route back now runs through teenagers, second chances and a ground where young players are trusted early.',
+    image: 'https://substackcdn.com/image/fetch/$s_!sfb2!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0986f26f-1e43-45a1-ae3a-edfe182908ad_2000x1047.jpeg'
+  };
+
+  const previousLatest = {
     slug: 'football-needs-more-boredom.html',
     title: 'Football Needs More Boredom',
     subtitle: 'Why the modern game is addicted to instant reaction, hot takes and permanent crisis',
@@ -110,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
     image: 'https://touchlinesport.net/images/sabah-fk-social.png'
   };
 
-  /* Homepage latest panel. Grow Your Own remains in Ireland; Sabah moves into the World grid. */
+  /* Homepage: Braywatch becomes featured; previous featured pieces return to their category grids. */
   const featured = document.querySelector('.featured');
   if (featured) {
     const latestButton = document.querySelector('.hero-actions .btn-primary');
@@ -121,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dek = featured.querySelector('p');
     const read = featured.querySelector('.read');
     const art = featured.querySelector('.featured-art');
-    if (pill) pill.textContent = 'Latest · Everything Else';
+    if (pill) pill.textContent = 'Latest · Ireland';
     if (heading) heading.textContent = latest.title;
     if (dek) dek.textContent = latest.subtitle;
     if (read) read.href = latest.slug;
@@ -136,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const card = document.createElement('a');
       card.className = 'card';
       card.href = 'grow-your-own-loi-academies.html';
-      card.innerHTML = `<div class="card-art" style="background-image:url('https://substackcdn.com/image/fetch/$s_!EWu1!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6281a6bf-e4cd-409a-968a-862b1cf1f4a9_2560x1340.jpeg');background-size:cover;background-position:center;"></div><div class="card-body"><span class="pill">Ireland</span><h3>Grow Your Own: Why LOI Clubs Must Back The Academy</h3><p>The League of Ireland is finally making serious money from young players. If that’s where the game is heading, why aren’t more clubs spending now to produce the next Mason Melia?</p><div class="meta"><span>31 Aug 2026</span><span class="dot"></span><span>7 min read</span></div></div>`;
+      card.innerHTML = `<div class="card-art" style="background-image:url('https://substackcdn.com/image/fetch/$s_!EWu1!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6281a6bf-e4cd-409a-968a-862b1cf1f4a9_2560x1340.jpeg');background-size:cover;background-position:center;"></div><div class="card-body"><span class="pill">Ireland</span><h3>Grow Your Own: Why LOI Clubs Must Back The Academy</h3><p>The League of Ireland is finally making serious money from young players. If that’s where the game is heading, why aren’t more clubs spending now to produce the next Mason Melia?</p><div class="meta"><span>31 Aug 2026</span><span class="dot"></span><span>8 min read</span></div></div>`;
       irishGrid.prepend(card);
     }
 
@@ -149,21 +156,42 @@ document.addEventListener('DOMContentLoaded', () => {
       worldGrid.prepend(card);
     }
 
+    const everythingGrid = document.querySelector('#everything-else .grid');
+    if (everythingGrid && !everythingGrid.querySelector(`[href="${previousLatest.slug}"]`)) {
+      const card = document.createElement('a');
+      card.className = 'card';
+      card.href = previousLatest.slug;
+      card.innerHTML = `<div class="card-art" style="background-image:url('${previousLatest.image}');background-size:cover;background-position:center;"></div><div class="card-body"><span class="pill">Everything Else</span><h3>${previousLatest.title}</h3><p>${previousLatest.subtitle}</p><div class="meta"><span>4 Sep 2026</span><span class="dot"></span><span>7 min read</span></div></div>`;
+      everythingGrid.prepend(card);
+    }
+
+    const irishCount = document.querySelector('#irish .view-all');
+    if (irishCount) irishCount.textContent = '62 pieces · View all →';
     const worldCount = document.querySelector('#world .view-all');
     if (worldCount) worldCount.textContent = '45 pieces · View all →';
     const everythingCount = document.querySelector('#everything-else .view-all');
-    if (everythingCount) everythingCount.textContent = '30 pieces · View all →';
+    if (everythingCount) everythingCount.textContent = '29 pieces · View all →';
   }
 
-  /* Archive: preserve Sabah, then add Football Needs More Boredom at the top of Everything Else. */
+  /* Archive: Braywatch tops Irish, Sabah remains under Azerbaijan, and Football Needs More Boredom tops Everything Else. */
   if (document.body.querySelector('.page-hero')) {
     const heroPill = document.querySelector('.page-hero .pill');
-    if (heroPill) heroPill.textContent = '135 pieces and counting';
+    if (heroPill) heroPill.textContent = '136 pieces and counting';
+
+    const irish = document.querySelector('#irish');
+    const irishCount = irish?.querySelector('.category-count');
+    if (irishCount) irishCount.textContent = '62 pieces';
+    const irishList = irish?.querySelector('.arch-list');
+    if (irishList && !irishList.querySelector(`[href="${latest.slug}"]`)) {
+      const item = document.createElement('li');
+      item.className = 'arch-item';
+      item.innerHTML = `<a href="${latest.slug}"><span class="arch-copy"><span class="arch-title">${latest.title}</span><span class="arch-description">${latest.subtitle}</span></span><span class="arch-meta"><time class="arch-date" datetime="2026-09-07">7 Sep 2026</time><span class="arch-arrow">→</span></span></a>`;
+      irishList.prepend(item);
+    }
 
     const world = document.querySelector('#world');
     const worldCount = world?.querySelector('.category-count');
     if (worldCount) worldCount.textContent = '45 pieces';
-
     const countryList = world?.querySelector('.country-list');
     if (countryList && !Array.from(countryList.querySelectorAll('.country-title')).some(el => el.textContent.trim() === 'Azerbaijan')) {
       const block = document.createElement('div');
@@ -174,12 +202,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const everything = document.querySelector('#everything-else');
     const everythingCount = everything?.querySelector('.category-count');
-    if (everythingCount) everythingCount.textContent = '30 pieces';
+    if (everythingCount) everythingCount.textContent = '29 pieces';
     const everythingList = everything?.querySelector('.arch-list');
-    if (everythingList && !everythingList.querySelector(`[href="${latest.slug}"]`)) {
+    if (everythingList && !everythingList.querySelector(`[href="${previousLatest.slug}"]`)) {
       const item = document.createElement('li');
       item.className = 'arch-item';
-      item.innerHTML = `<a href="${latest.slug}"><span class="arch-copy"><span class="arch-title">${latest.title}</span><span class="arch-description">${latest.subtitle}</span></span><span class="arch-meta"><time class="arch-date" datetime="2026-09-04">4 Sep 2026</time><span class="arch-arrow">→</span></span></a>`;
+      item.innerHTML = `<a href="${previousLatest.slug}"><span class="arch-copy"><span class="arch-title">${previousLatest.title}</span><span class="arch-description">${previousLatest.subtitle}</span></span><span class="arch-meta"><time class="arch-date" datetime="2026-09-04">4 Sep 2026</time><span class="arch-arrow">→</span></span></a>`;
       everythingList.prepend(item);
     }
   }
