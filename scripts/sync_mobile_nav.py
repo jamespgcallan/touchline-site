@@ -1,8 +1,9 @@
 from pathlib import Path
+import re
 
 WORK_LINK = '<a href="work-with-me.html">Work With Me</a>'
 TACTICS_LINK = '<a href="touchline-tactics.html">Touchline Tactics</a>'
-SCRIPT_TAG = '<script src="mobile-nav.js"></script>'
+SCRIPT_TAG = '<script src="mobile-nav.js?v=20260909-2"></script>'
 
 changed = []
 for path in Path('.').glob('*.html'):
@@ -30,8 +31,7 @@ for path in Path('.').glob('*.html'):
                 break
 
     # Ensure exactly one mobile nav script is loaded at the end of every page.
-    updated = updated.replace('<script src="mobile-nav.js" defer></script>', '')
-    updated = updated.replace('<script src="mobile-nav.js"></script>', '')
+    updated = re.sub(r'<script src="mobile-nav\.js(?:\?[^\"]*)?"(?: defer)?></script>', '', updated)
     if '</body>' in updated:
         updated = updated.replace('</body>', SCRIPT_TAG + '\n</body>', 1)
 
