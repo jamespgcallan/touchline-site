@@ -19,11 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
       .mobile-menu-btn[aria-expanded='true'] .mobile-menu-icon span:nth-child(1){transform:translateY(5px) rotate(45deg)}
       .mobile-menu-btn[aria-expanded='true'] .mobile-menu-icon span:nth-child(2){opacity:0}
       .mobile-menu-btn[aria-expanded='true'] .mobile-menu-icon span:nth-child(3){transform:translateY(-5px) rotate(-45deg)}
-      .mobile-menu-panel{position:absolute;display:none;top:calc(100% + 14px);left:0;right:0;background:#fbf3e7;border:1px solid rgba(33,31,26,.10);border-radius:16px;padding:10px;box-shadow:0 18px 40px rgba(33,31,26,.14);z-index:9999}
-      .mobile-menu-panel.open{display:block!important}
-      .mobile-menu-panel a{display:block;padding:13px 14px;border-radius:10px;font:600 14px 'Inter',sans-serif;color:#1c1a17}
+      body.mobile-menu-open::before{content:"";position:fixed;inset:0;background:rgba(28,26,23,.28);backdrop-filter:blur(3px);z-index:19}
+      .mobile-menu-panel{position:absolute;display:none;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px;top:calc(100% + 10px);left:0;right:0;max-height:calc(100vh - 105px);overflow-y:auto;background:#fbf3e7;border:1px solid rgba(33,31,26,.10);border-radius:16px;padding:8px;box-shadow:0 18px 40px rgba(33,31,26,.18);z-index:9999}
+      .mobile-menu-panel.open{display:grid!important}
+      .mobile-menu-panel a{display:flex;align-items:center;min-height:44px;padding:9px 11px;border-radius:10px;font:600 13px 'Inter',sans-serif;color:#1c1a17}
       .mobile-menu-panel a:hover,.mobile-menu-panel a:focus{background:#f5e5cf;outline:none}
-      .mobile-menu-panel .mobile-subscribe{margin-top:6px;background:#1c1a17;color:#fbf3e7;text-align:center}
+      .mobile-menu-panel .mobile-subscribe{grid-column:1/-1;justify-content:center;margin-top:4px;background:#1c1a17;color:#fbf3e7;text-align:center}
       .mobile-menu-panel .mobile-subscribe:hover,.mobile-menu-panel .mobile-subscribe:focus{background:#e8720f;color:#1c1a17}
       body.mobile-menu-open{overflow:hidden}
     }
