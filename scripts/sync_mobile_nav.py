@@ -3,7 +3,7 @@ import re
 
 WORK_LINK = '<a href="work-with-me.html">Work With Me</a>'
 TACTICS_LINK = '<a href="touchline-tactics.html">Touchline Tactics</a>'
-SCRIPT_TAG = '<script src="mobile-nav.js?v=20260909-2"></script>'
+SCRIPT_TAG = '<script src="mobile-nav.js?v=20260910-tidy"></script>'
 
 changed = []
 for path in Path('.').glob('*.html'):
