@@ -37,6 +37,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           sleep 20
+          git reset --hard HEAD
           git pull --rebase origin main
           cat .image-parts/ryan/part* | base64 -d > images/ryan-sheridan-st-pats-shamrock-rovers.webp
           python - <<'PY'
