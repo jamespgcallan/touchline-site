@@ -16,6 +16,8 @@ jobs:
       - uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Standardise site brand and search name
+        run: python scripts/sync_site_brand.py
       - name: Standardise navigation
         run: python scripts/sync_mobile_nav.py
       - name: Update Google News SEO
@@ -29,5 +31,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -- '*.html' '*.xml'
-          git commit -m "Sync site navigation and Google News SEO"
+          git commit -m "Sync Touchline Sport brand, navigation and Google News SEO"
           git push
