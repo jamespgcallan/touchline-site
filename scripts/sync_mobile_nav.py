@@ -1,36 +1,48 @@
 from pathlib import Path
 import re
 
-WORK_LINK = '<a href="work-with-me.html">Work With Me</a>'
-TACTICS_LINK = '<a href="touchline-tactics.html">Touchline Tactics</a>'
-SCRIPT_TAG = '<script src="mobile-nav.js?v=20260910-tidy"></script>'
+# Keep the visible desktop navigation deliberately small. Secondary sections are
+# exposed through the shared More menu in mobile-nav.js and through page content.
+CANONICAL_NAV = (
+    '<nav class="links" aria-label="Primary navigation">'
+    '<a href="index.html#latest">Latest</a>'
+    '<a href="league-of-ireland-analysis.html">Irish Football</a>'
+    '<a href="touchline-tactics.html">Tactics</a>'
+    '<a href="archive.html">Archive</a>'
+    '<a href="about.html">About</a>'
+    '</nav>'
+)
+SCRIPT_TAG = '<script src="mobile-nav.js?v=20260912-clean"></script>'
 
 changed = []
 for path in Path('.').glob('*.html'):
     text = path.read_text(encoding='utf-8')
     updated = text
 
-    if 'touchline-tactics.html' not in updated:
-        for old, new in [
-            ('<a href="scouting.html">Scouting</a>', '<a href="scouting.html">Scouting</a>\n      ' + TACTICS_LINK),
-            ('<a href="graphics.html">Graphics</a>', TACTICS_LINK + '\n      <a href="graphics.html">Graphics</a>'),
-        ]:
-            if old in updated:
-                updated = updated.replace(old, new, 1)
-                break
+    # Standardise only the nav inside the page header, leaving any article or
+    # footer navigation untouched.
+    header_match = re.search(r'<header\b[^>]*>.*?</header>', updated, flags=re.S | re.I)
+    if header_match:
+        header = header_match.group(0)
+        new_header = re.sub(
+            r'<nav(?:\s+class="links")?[^>]*>.*?</nav>',
+            CANONICAL_NAV,
+            header,
+            count=1,
+            flags=re.S | re.I,
+        )
+        updated = updated[:header_match.start()] + new_header + updated[header_match.end():]
 
-    if 'work-with-me.html' not in updated:
-        for old, new in [
-            ('<a href="index.html#pillars">About</a>', WORK_LINK + '\n      <a href="index.html#pillars">About</a>'),
-            ('<a href="#pillars">About</a>', WORK_LINK + '\n      <a href="#pillars">About</a>'),
-            ('<a href="index.html#subscribe">Newsletter</a>', WORK_LINK + '\n      <a href="index.html#subscribe">Newsletter</a>'),
-            ('<a href="#subscribe">Newsletter</a>', WORK_LINK + '\n      <a href="#subscribe">Newsletter</a>'),
-        ]:
-            if old in updated:
-                updated = updated.replace(old, new, 1)
-                break
+    # Ensure every page has the same Subscribe CTA wording and target.
+    updated = re.sub(
+        r'<a\s+class="nav-cta"[^>]*>.*?</a>',
+        '<a class="nav-cta" href="index.html#subscribe">Subscribe</a>',
+        updated,
+        count=1,
+        flags=re.S | re.I,
+    )
 
-    # Ensure exactly one mobile nav script is loaded at the end of every page.
+    # Ensure exactly one shared navigation script is loaded at the end of every page.
     updated = re.sub(r'<script src="mobile-nav\.js(?:\?[^\"]*)?"(?: defer)?></script>', '', updated)
     if '</body>' in updated:
         updated = updated.replace('</body>', SCRIPT_TAG + '\n</body>', 1)
@@ -39,4 +51,4 @@ for path in Path('.').glob('*.html'):
         path.write_text(updated, encoding='utf-8')
         changed.append(str(path))
 
-print('Updated:', ', '.join(changed) if changed else 'none')
+print('Updated navigation:', ', '.join(changed) if changed else 'none')
