@@ -1,0 +1,48 @@
+name: Use supplied Ryan Sheridan image URL
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/use-sheridan-image-url.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  replace:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Point Sheridan image references to supplied URL
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          sleep 12
+          git pull --rebase origin main
+          python - <<'PY'
+          from pathlib import Path
+
+          old_abs = 'https://touchlinesport.net/images/ryan-sheridan-st-pats-shamrock-rovers.webp'
+          old_rel = 'images/ryan-sheridan-st-pats-shamrock-rovers.webp'
+          new = 'https://kommodo.ai/i/GBJ0bzsgInyLzrwsQGX8'
+          changed = []
+
+          for path in Path('.').glob('*.html'):
+              text = path.read_text(encoding='utf-8')
+              updated = text.replace(old_abs, new).replace(old_rel, new)
+              if updated != text:
+                  path.write_text(updated, encoding='utf-8')
+                  changed.append(str(path))
+
+          print('Updated:', ', '.join(changed) if changed else 'none')
+          PY
+          git rm .github/workflows/use-sheridan-image-url.yml
+          git add -- '*.html'
+          git commit -m "Use supplied Ryan Sheridan image URL"
+          git pull --rebase origin main
+          git push
