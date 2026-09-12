@@ -42,7 +42,7 @@ def update_newsarticle_schema(path: Path):
                 node['publisher'] = {
                     '@type': 'Organization',
                     '@id': ORG_ID,
-                    'name': 'Touchline Studios',
+                    'name': 'Touchline Sport',
                     'url': BASE_URL,
                     'logo': {
                         '@type': 'ImageObject',
@@ -142,7 +142,7 @@ for item in articles:
         f'    <loc>{escape(item["loc"])}</loc>',
         '    <news:news>',
         '      <news:publication>',
-        '        <news:name>Touchline Studios</news:name>',
+        '        <news:name>Touchline Sport</news:name>',
         '        <news:language>en</news:language>',
         '      </news:publication>',
         f'      <news:publication_date>{item["published_date"]}</news:publication_date>',
