@@ -3,7 +3,6 @@ import json
 import re
 
 SITE_NAME = 'Touchline Sport'
-ALT_SITE_NAME = 'Touchline Studios'
 BASE_URL = 'https://touchlinesport.net/'
 
 # Compact titles make the main site sections easier for Google and readers to understand.
@@ -33,34 +32,47 @@ for path in Path('.').glob('*.html'):
     if path.name in PAGE_TITLES:
         text = re.sub(r'<title>.*?</title>', f'<title>{PAGE_TITLES[path.name]}</title>', text, count=1, flags=re.S | re.I)
 
-    # Keep page-level Open Graph / X titles tidy on the homepage.
     if path.name == 'index.html':
         text = re.sub(r'<meta property="og:title" content="[^"]*">', f'<meta property="og:title" content="{SITE_NAME}">', text, count=1)
         text = re.sub(r'<meta name="twitter:title" content="[^"]*">', f'<meta name="twitter:title" content="{SITE_NAME}">', text, count=1)
         text = re.sub(r'<meta property="og:site_name" content="[^"]*">', f'<meta property="og:site_name" content="{SITE_NAME}">', text, count=1)
 
-        # Make the Organization node match the preferred public name while retaining the old brand as an alternate.
-        scripts = re.findall(r'(<script\s+type=["\']application/ld\+json["\']\s*>)(.*?)(</script>)', text, re.S | re.I)
-        for full_open, raw, full_close in scripts:
+        # Make the Organization and WebSite nodes use only the current public brand.
+        scripts = list(re.finditer(r'(<script\s+type=["\']application/ld\+json["\']\s*>)(.*?)(</script>)', text, re.S | re.I))
+        replacements = []
+        saw_website = False
+        for match in scripts:
+            raw = match.group(2)
             try:
                 data = json.loads(raw.strip())
             except Exception:
                 continue
-            if isinstance(data, dict) and data.get('@type') == 'Organization':
+            if not isinstance(data, dict):
+                continue
+            schema_type = data.get('@type')
+            if schema_type == 'Organization':
                 data['name'] = SITE_NAME
-                data['alternateName'] = ALT_SITE_NAME
-                replacement = full_open + '\n' + json.dumps(data, ensure_ascii=False, indent=2) + '\n' + full_close
-                text = text.replace(full_open + raw + full_close, replacement, 1)
-                break
+                data.pop('alternateName', None)
+            elif schema_type == 'WebSite':
+                saw_website = True
+                data['name'] = SITE_NAME
+                data['alternateName'] = ['Touchline', 'touchlinesport.net']
+                data['url'] = BASE_URL
+            else:
+                continue
+            replacement = match.group(1) + '\n' + json.dumps(data, ensure_ascii=False, indent=2) + '\n' + match.group(3)
+            replacements.append((match.start(), match.end(), replacement))
 
-        # Google says WebSite structured data on the domain homepage is the strongest explicit site-name signal.
-        if '"@type": "WebSite"' not in text and '"@type":"WebSite"' not in text:
+        for start, end, replacement in reversed(replacements):
+            text = text[:start] + replacement + text[end:]
+
+        if not saw_website:
             website_schema = '''<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "Touchline Sport",
-  "alternateName": ["Touchline", "Touchline Studios", "touchlinesport.net"],
+  "alternateName": ["Touchline", "touchlinesport.net"],
   "url": "https://touchlinesport.net/"
 }
 </script>

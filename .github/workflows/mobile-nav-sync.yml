@@ -20,6 +20,8 @@ jobs:
         run: python scripts/sync_site_brand.py
       - name: Standardise navigation
         run: python scripts/sync_mobile_nav.py
+      - name: Strengthen search hierarchy and sitelink signals
+        run: python scripts/sync_search_hierarchy.py
       - name: Update Google News SEO
         run: python scripts/sync_news_seo.py
       - name: Commit updates
@@ -31,5 +33,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -- '*.html' '*.xml'
-          git commit -m "Sync Touchline Sport brand, navigation and Google News SEO"
+          git commit -m "Sync Touchline Sport search hierarchy, navigation and news SEO"
           git push

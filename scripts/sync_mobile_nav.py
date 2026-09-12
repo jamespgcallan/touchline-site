@@ -1,13 +1,13 @@
 from pathlib import Path
 import re
 
-# Keep the visible desktop navigation deliberately small. Secondary sections are
-# exposed through the shared More menu in mobile-nav.js and through page content.
+# Keep the visible desktop navigation deliberately small while making the main
+# section names consistent with the labels we want Google to understand.
 CANONICAL_NAV = (
     '<nav class="links" aria-label="Primary navigation">'
     '<a href="index.html#latest">Latest</a>'
     '<a href="league-of-ireland-analysis.html">Irish Football</a>'
-    '<a href="touchline-tactics.html">Tactics</a>'
+    '<a href="touchline-tactics.html">Touchline Tactics</a>'
     '<a href="archive.html">Archive</a>'
     '<a href="about.html">About</a>'
     '</nav>'
@@ -19,7 +19,7 @@ for path in Path('.').glob('*.html'):
     text = path.read_text(encoding='utf-8')
     updated = text
 
-    # Standardise only the nav inside the page header, leaving any article or
+    # Standardise only the nav inside the page header, leaving article and
     # footer navigation untouched.
     header_match = re.search(r'<header\b[^>]*>.*?</header>', updated, flags=re.S | re.I)
     if header_match:
