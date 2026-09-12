@@ -1,0 +1,186 @@
+name: Publish Ryan Sheridan news feature
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/publish-ryan-sheridan-news.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Allow site-wide sync to finish first
+        run: |
+          sleep 25
+          git pull --rebase origin main
+
+      - name: Update homepage, Irish Football, archive and sitemap
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          slug = 'st-patricks-athletic-shamrock-rovers-ryan-sheridan.html'
+          image = 'images/ryan-sheridan-st-pats-shamrock-rovers.webp'
+          title = 'St Patrick’s Athletic 2-0 Shamrock Rovers: Ryan Sheridan Shines at 17'
+          subtitle = 'Stephen Kenny’s side cut the Premier Division gap to three points as Sheridan impressed on his first league start.'
+
+          # Homepage: make the new news feature the latest article, surface it first in Irish,
+          # update the Irish count and use the article image for homepage social previews.
+          index = Path('index.html')
+          text = index.read_text(encoding='utf-8')
+          text = text.replace('https://touchlinesport.net/images/cesc-fabregas-como-header.webp', f'https://touchlinesport.net/{image}')
+          text = text.replace(
+              '<a class="btn-primary" href="inside-cesc-fabregas-como-game-model.html">Read the latest →</a>',
+              f'<a class="btn-primary" href="{slug}">Read the latest →</a>',
+              1,
+          )
+
+          feature_start = text.find('<div class="wrap"><div class="featured">')
+          if feature_start == -1:
+              raise SystemExit('Homepage featured block start not found')
+          feature_end = text.find('</section>', feature_start)
+          if feature_end == -1:
+              raise SystemExit('Homepage featured block end not found')
+          new_feature = (
+              '<div class="wrap"><div class="featured"><div>'
+              '<span class="pill">Latest · Irish Football</span>'
+              f'<h2>{title}</h2>'
+              f'<p>{subtitle}</p>'
+              f'<a class="read" href="{slug}">Read the piece '
+              '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">'
+              '<path d="M5 12h14M13 5l7 7-7 7"/></svg></a></div>'
+              f'<div class="featured-art" style="background-image:url(\'{image}\');background-size:cover;background-repeat:no-repeat;background-position:center;"></div>'
+              '</div></div>'
+          )
+          text = text[:feature_start] + new_feature + text[feature_end:]
+
+          irish_marker = (
+              '<div class="wrap category-block" id="irish"><div class="category-head">'
+              '<h3 class="category-title">Irish</h3><a class="view-all" href="archive.html#irish">'
+              '61 pieces · View all →</a></div><div class="grid">'
+          )
+          if irish_marker not in text:
+              # Be tolerant if the count has already been incremented by another edit.
+              irish_marker = irish_marker.replace('61 pieces', '62 pieces')
+          if irish_marker not in text:
+              raise SystemExit('Homepage Irish section marker not found')
+          new_irish_marker = irish_marker.replace('61 pieces', '62 pieces')
+          home_card = (
+              f'<a class="card" href="{slug}"><div class="card-art" style="background-image:url(\'{image}\');'
+              'background-size:cover;background-position:center;"></div><div class="card-body">'
+              '<span class="pill">Ireland</span>'
+              f'<h3>{title}</h3><p>{subtitle}</p>'
+              '<div class="meta"><span>12 Sep 2026</span><span class="dot"></span><span>4 min read</span></div>'
+              '</div></a>'
+          )
+          if f'href="{slug}"' not in text[text.find('id="irish"'):text.find('id="world"')]:
+              new_irish_marker += home_card
+          text = text.replace(irish_marker, new_irish_marker, 1)
+          index.write_text(text, encoding='utf-8')
+
+          # Irish Football category page: put the new story first and use its image in OG metadata.
+          loi = Path('league-of-ireland-analysis.html')
+          text = loi.read_text(encoding='utf-8')
+          text = text.replace('https://touchlinesport.net/images/braywatch-carlisle-grounds.jpeg', f'https://touchlinesport.net/{image}', 1)
+          grid_marker = '<h2>Featured analysis</h2><div class="grid">'
+          if grid_marker not in text:
+              raise SystemExit('Irish Football featured grid not found')
+          loi_card = (
+              f'<a class="card" href="{slug}"><div class="art" style="background-image:url(\'{image}\')"></div>'
+              '<div class="body"><small>Premier Division</small>'
+              f'<h2>{title}</h2><p>{subtitle}</p></div></a>'
+          )
+          if f'href="{slug}"' not in text:
+              text = text.replace(grid_marker, grid_marker + loi_card, 1)
+          loi.write_text(text, encoding='utf-8')
+
+          # Archive: update total, Irish count and insert the story newest-first.
+          archive = Path('archive.html')
+          text = archive.read_text(encoding='utf-8')
+          text = text.replace('134 pieces and counting', '135 pieces and counting', 1)
+          irish_start = text.find('id="irish"')
+          if irish_start == -1:
+              raise SystemExit('Archive Irish section not found')
+          count_pos = text.find('<span class="category-count">61 pieces</span>', irish_start)
+          if count_pos != -1:
+              text = text[:count_pos] + '<span class="category-count">62 pieces</span>' + text[count_pos + len('<span class="category-count">61 pieces</span>'):]
+          ul_pos = text.find('<ul class="arch-list">', irish_start)
+          if ul_pos == -1:
+              raise SystemExit('Archive Irish list not found')
+          insert_at = ul_pos + len('<ul class="arch-list">')
+          archive_item = (
+              '<li class="arch-item">\n'
+              f'          <a href="{slug}">\n'
+              '            <span class="arch-copy">\n'
+              f'              <span class="arch-title">{title}</span>\n'
+              f'              <span class="arch-description">{subtitle}</span>\n'
+              '            </span>\n'
+              '            <span class="arch-meta">\n'
+              '              <time class="arch-date" datetime="2026-09-12">12 Sep 2026</time>\n'
+              '              <span class="arch-arrow">→</span>\n'
+              '            </span>\n'
+              '          </a>\n'
+              '        </li>\n'
+          )
+          if f'href="{slug}"' not in text[irish_start:]:
+              text = text[:insert_at] + archive_item + text[insert_at:]
+          archive.write_text(text, encoding='utf-8')
+
+          # Normal sitemap: update changed surfaces and add the permanent article URL.
+          sitemap = Path('sitemap.xml')
+          text = sitemap.read_text(encoding='utf-8')
+          text = text.replace(
+              '<url><loc>https://touchlinesport.net/league-of-ireland-analysis.html</loc><lastmod>2026-09-10</lastmod>',
+              '<url><loc>https://touchlinesport.net/league-of-ireland-analysis.html</loc><lastmod>2026-09-12</lastmod>',
+              1,
+          )
+          text = text.replace(
+              '<url><loc>https://touchlinesport.net/archive.html</loc><lastmod>2026-09-07</lastmod>',
+              '<url><loc>https://touchlinesport.net/archive.html</loc><lastmod>2026-09-12</lastmod>',
+              1,
+          )
+          article_url = f'https://touchlinesport.net/{slug}'
+          if article_url not in text:
+              entry = f'  <url><loc>{article_url}</loc><lastmod>2026-09-12</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>\n'
+              text = text.replace('</urlset>', entry + '</urlset>', 1)
+          sitemap.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Run site navigation and Google News SEO sync
+        run: |
+          python scripts/sync_mobile_nav.py
+          python scripts/sync_news_seo.py
+
+      - name: Validate publication
+        run: |
+          test -f st-patricks-athletic-shamrock-rovers-ryan-sheridan.html
+          test -f images/ryan-sheridan-st-pats-shamrock-rovers.webp
+          grep -q 'st-patricks-athletic-shamrock-rovers-ryan-sheridan.html' index.html
+          grep -q 'st-patricks-athletic-shamrock-rovers-ryan-sheridan.html' league-of-ireland-analysis.html
+          grep -q 'st-patricks-athletic-shamrock-rovers-ryan-sheridan.html' archive.html
+          grep -q 'st-patricks-athletic-shamrock-rovers-ryan-sheridan.html' sitemap.xml
+          grep -q 'st-patricks-athletic-shamrock-rovers-ryan-sheridan.html' news-sitemap.xml
+          grep -q 'max-image-preview:large' st-patricks-athletic-shamrock-rovers-ryan-sheridan.html
+          grep -q 'NewsArticle' st-patricks-athletic-shamrock-rovers-ryan-sheridan.html
+
+      - name: Commit publication surfaces
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/publish-ryan-sheridan-news.yml
+          git add index.html league-of-ireland-analysis.html archive.html sitemap.xml news-sitemap.xml st-patricks-athletic-shamrock-rovers-ryan-sheridan.html
+          if git diff --cached --quiet; then
+            echo "No site changes needed"
+            exit 0
+          fi
+          git commit -m "Publish Ryan Sheridan news feature [skip ci]"
+          git push
