@@ -8,6 +8,7 @@ BASE_URL = 'https://touchlinesport.net/'
 # Compact titles make the main site sections easier for Google and readers to understand.
 PAGE_TITLES = {
     'index.html': 'Touchline Sport',
+    'latest-news.html': 'Latest Football News & Analysis | Touchline Sport',
     'archive.html': 'Archive | Touchline Sport',
     'league-of-ireland-analysis.html': 'Irish Football | Touchline Sport',
     'touchline-tactics.html': 'Touchline Tactics | Touchline Sport',

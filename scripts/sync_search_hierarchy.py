@@ -6,6 +6,13 @@ import re
 BASE_URL = 'https://touchlinesport.net/'
 
 SECTION_SPECS = {
+    'latest-news.html': {
+        'label': 'Latest News',
+        'title': 'Latest Football News & Analysis | Touchline Sport',
+        'h1': 'Latest News & Analysis',
+        'description': 'The latest football news and analysis from Touchline Sport, with League of Ireland reporting, tactics, club strategy, recruitment and football business.',
+        'schema_type': 'CollectionPage',
+    },
     'league-of-ireland-analysis.html': {
         'label': 'Irish Football',
         'title': 'Irish Football | Touchline Sport',
@@ -60,7 +67,7 @@ LINK_NAMES = {
 }
 
 NON_ARTICLE_PAGES = {
-    'index.html', 'archive.html', 'league-of-ireland-analysis.html', 'touchline-tactics.html',
+    'index.html', 'latest-news.html', 'archive.html', 'league-of-ireland-analysis.html', 'touchline-tactics.html',
     'football-club-strategy.html', 'scouting.html', 'graphics.html', 'about.html',
     'james-callan.html', 'editorial-policy.html', 'contact.html', 'work-with-me.html',
 }
@@ -69,12 +76,14 @@ EXPLORE_BLOCK = '''<!-- TL_EXPLORE_START -->
 <nav aria-label="Explore Touchline Sport" style="max-width:1180px;margin:0 auto 26px;padding:0 32px;">
   <div style="font-family:Manrope,Arial,sans-serif;font-weight:800;font-size:15px;margin-bottom:12px;color:inherit;">Explore Touchline Sport</div>
   <div style="display:flex;flex-wrap:wrap;gap:10px 18px;font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.5;">
+    <a href="latest-news.html">Latest News</a>
     <a href="league-of-ireland-analysis.html">Irish Football</a>
     <a href="touchline-tactics.html">Touchline Tactics</a>
     <a href="football-club-strategy.html">Football Club Strategy</a>
     <a href="scouting.html">Scouting Reports</a>
     <a href="archive.html">Archive</a>
     <a href="about.html">About</a>
+    <a href="feed.xml">RSS</a>
   </div>
 </nav>
 <!-- TL_EXPLORE_END -->'''
@@ -142,6 +151,7 @@ def category_for(filename):
     if filename in {'inside-cesc-fabregas-como-game-model.html'}:
         return 'Touchline Tactics', 'touchline-tactics.html'
     if filename in {
+        'fai-shamrock-rovers-noonan-transfer-investigation.html',
         'st-patricks-athletic-shamrock-rovers-ryan-sheridan.html',
         'grow-your-own-loi-academies.html',
         'braywatch-the-seaside-club-bringing-young-talent-back-to-life.html',
@@ -183,12 +193,12 @@ for path in Path('.').glob('*.html'):
     original = text
     filename = path.name
 
-    # Normalise simple links to the six main sections so Google sees the same labels everywhere.
+    # Normalise simple links to the priority sections so Google sees the same labels everywhere.
     for href, label in LINK_NAMES.items():
         pattern = rf'(<a\b[^>]*href=["\'](?:\./)?{re.escape(href)}["\'][^>]*>)([^<>]*)(</a>)'
         text = re.sub(pattern, lambda m: m.group(1) + label + m.group(3), text, flags=re.I)
 
-    # Make the six priority section pages structurally consistent.
+    # Make the priority section pages structurally consistent.
     if filename in SECTION_SPECS:
         spec = SECTION_SPECS[filename]
         text = re.sub(r'<title>.*?</title>', f'<title>{spec["title"]}</title>', text, count=1, flags=re.S | re.I)

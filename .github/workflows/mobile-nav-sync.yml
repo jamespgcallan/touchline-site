@@ -17,6 +17,8 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
+      - name: Rebuild publication discovery surfaces
+        run: python scripts/sync_publication_discovery.py
       - name: Standardise site brand and search name
         run: python scripts/sync_site_brand.py
       - name: Standardise navigation
@@ -36,5 +38,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -- '*.html' '*.xml'
-          git commit -m "Sync Touchline Sport search discovery and news SEO"
+          git commit -m "Sync Touchline Sport publication discovery and news SEO"
           git push
