@@ -2,17 +2,17 @@ from pathlib import Path
 import re
 
 # Keep the visible desktop navigation deliberately small while making the main
-# section names consistent with the labels we want Google to understand.
+# section names consistent with the labels we want Google and readers to understand.
 CANONICAL_NAV = (
     '<nav class="links" aria-label="Primary navigation">'
-    '<a href="index.html#latest">Latest</a>'
+    '<a href="latest-news.html">Latest</a>'
     '<a href="league-of-ireland-analysis.html">Irish Football</a>'
     '<a href="touchline-tactics.html">Touchline Tactics</a>'
     '<a href="archive.html">Archive</a>'
     '<a href="about.html">About</a>'
     '</nav>'
 )
-SCRIPT_TAG = '<script src="mobile-nav.js?v=20260912-clean"></script>'
+SCRIPT_TAG = '<script src="mobile-nav.js?v=20260913-discovery"></script>'
 
 changed = []
 for path in Path('.').glob('*.html'):
