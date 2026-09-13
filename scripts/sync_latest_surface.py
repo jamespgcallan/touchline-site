@@ -35,6 +35,7 @@ img_match = re.search(r'<img src="([^"]+)"', block, flags=re.I)
 section_match = re.search(r'<div class="story-kicker">(.*?)</div>', block, flags=re.S | re.I)
 title_match = re.search(r'<h2><a href="[^"]+">(.*?)</a></h2>', block, flags=re.S | re.I)
 desc_match = re.search(r'<p>(.*?)</p>', block, flags=re.S | re.I)
+meta_match = re.search(r'<div class="story-meta">(.*?)</div>', block, flags=re.S | re.I)
 
 if not all([href_match, section_match, title_match, desc_match]):
     raise SystemExit('Could not parse latest story details')
@@ -44,6 +45,7 @@ image = html.unescape(img_match.group(1)) if img_match else ''
 section = clean(section_match.group(1))
 title = clean(title_match.group(1))
 description = clean(desc_match.group(1))
+meta = clean(meta_match.group(1)) if meta_match else ''
 
 if latest != original_latest:
     LATEST_PATH.write_text(latest, encoding='utf-8')
@@ -83,6 +85,34 @@ index, replacements = re.subn(
 
 if replacements == 0:
     raise SystemExit('Could not update homepage featured story')
+
+# If the newest story is Irish, keep the first card in the homepage Irish grid current too.
+if 'ireland' in section.lower():
+    card_meta = meta.split(' · ', 1)
+    date_text = card_meta[0] if card_meta else ''
+    read_text = card_meta[1] if len(card_meta) > 1 else ''
+    image_style = (
+        f"background-image:url('{html.escape(image, quote=True)}');background-size:cover;background-position:center;"
+        if image else ''
+    )
+    meta_bits = f'<span>{html.escape(date_text)}</span>'
+    if read_text:
+        meta_bits += f'<span class="dot"></span><span>{html.escape(read_text)}</span>'
+    newest_irish_card = (
+        f'<a class="card" href="{html.escape(href, quote=True)}">'
+        f'<div class="card-art" style="{image_style}"></div>'
+        '<div class="card-body"><span class="pill">Ireland</span>'
+        f'<h3>{html.escape(title)}</h3>'
+        f'<p>{html.escape(description)}</p>'
+        f'<div class="meta">{meta_bits}</div></div></a>'
+    )
+    index = re.sub(
+        r'(<div class="wrap category-block" id="irish">.*?<div class="grid">)<a class="card".*?</a>',
+        lambda m: m.group(1) + newest_irish_card,
+        index,
+        count=1,
+        flags=re.S | re.I,
+    )
 
 if image:
     escaped_image = html.escape(image, quote=True)
