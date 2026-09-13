@@ -16,6 +16,8 @@ jobs:
       - uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Publish FAI Noonan investigation surfaces
+        run: python scripts/publish_fai_noonan.py
       - name: Standardise site brand and search name
         run: python scripts/sync_site_brand.py
       - name: Standardise navigation
@@ -32,6 +34,6 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- '*.html' '*.xml'
-          git commit -m "Sync Touchline Sport search hierarchy, navigation and news SEO"
+          git add -A
+          git commit -m "Publish FAI Noonan investigation across Touchline Sport"
           git push
