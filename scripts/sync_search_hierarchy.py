@@ -155,7 +155,7 @@ def category_for(filename):
         'st-patricks-athletic-shamrock-rovers-ryan-sheridan.html',
         'grow-your-own-loi-academies.html',
         'braywatch-the-seaside-club-bringing-young-talent-back-to-life.html',
-    } or 'loi' in filename:
+    } or 'loi' in filename or 'ireland' in filename:
         return 'Irish Football', 'league-of-ireland-analysis.html'
     if filename in {'chelsea-transfer-machine-2026.html', 'aldershot-town-complete-rebuild.html'}:
         return 'Football Club Strategy', 'football-club-strategy.html'
