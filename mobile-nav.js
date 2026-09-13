@@ -45,9 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
   panel.setAttribute('aria-label', 'Mobile navigation');
 
   const mobileLinks = [
-    ['Latest', 'index.html#latest'],
+    ['Latest', 'latest-news.html'],
     ['Irish Football', 'league-of-ireland-analysis.html'],
-    ['Tactics', 'touchline-tactics.html'],
+    ['Touchline Tactics', 'touchline-tactics.html'],
     ['Club Strategy', 'football-club-strategy.html'],
     ['Scouting', 'scouting.html'],
     ['Archive', 'archive.html'],
