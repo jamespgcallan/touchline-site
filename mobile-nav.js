@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ['Archive', 'archive.html'],
     ['Graphics', 'graphics.html'],
     ['About James', 'james-callan.html'],
-    ['Work With Me', 'work-with-me.html']
+    ['Work With Us', 'work-with-me.html']
   ];
 
   mobileLinks.forEach(([label, href]) => {
