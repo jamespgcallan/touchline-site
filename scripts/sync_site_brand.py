@@ -6,6 +6,8 @@ SITE_NAME = 'Touchline Sport'
 BASE_URL = 'https://touchlinesport.net/'
 
 # Compact titles make the main site sections easier for Google and readers to understand.
+# Touchline Sport remains the publication/search name. Touchline Studios may appear in
+# commercial copy, so do not globally replace every occurrence of that phrase.
 PAGE_TITLES = {
     'index.html': 'Touchline Sport',
     'latest-news.html': 'Latest Football News & Analysis | Touchline Sport',
@@ -27,8 +29,20 @@ for path in Path('.').glob('*.html'):
     text = path.read_text(encoding='utf-8')
     original = text
 
-    # Use the public site name consistently in visible site chrome and metadata.
-    text = text.replace('Touchline Studios', SITE_NAME)
+    # Keep the visible masthead/publication chrome on Touchline Sport without
+    # erasing intentional Touchline Studios references in commercial sections.
+    header_match = re.search(r'<header\b[^>]*>.*?</header>', text, flags=re.S | re.I)
+    if header_match:
+        header = header_match.group(0).replace('Touchline Studios', SITE_NAME)
+        text = text[:header_match.start()] + header + text[header_match.end():]
+
+    # Search/social site-name signals should always identify the publication as Touchline Sport.
+    text = re.sub(
+        r'<meta property="og:site_name" content="[^"]*">',
+        f'<meta property="og:site_name" content="{SITE_NAME}">',
+        text,
+        flags=re.I,
+    )
 
     if path.name in PAGE_TITLES:
         text = re.sub(r'<title>.*?</title>', f'<title>{PAGE_TITLES[path.name]}</title>', text, count=1, flags=re.S | re.I)
@@ -36,9 +50,8 @@ for path in Path('.').glob('*.html'):
     if path.name == 'index.html':
         text = re.sub(r'<meta property="og:title" content="[^"]*">', f'<meta property="og:title" content="{SITE_NAME}">', text, count=1)
         text = re.sub(r'<meta name="twitter:title" content="[^"]*">', f'<meta name="twitter:title" content="{SITE_NAME}">', text, count=1)
-        text = re.sub(r'<meta property="og:site_name" content="[^"]*">', f'<meta property="og:site_name" content="{SITE_NAME}">', text, count=1)
 
-        # Make the Organization and WebSite nodes use only the current public brand.
+        # Make the Organization and WebSite nodes use only the publication/search brand.
         scripts = list(re.finditer(r'(<script\s+type=["\']application/ld\+json["\']\s*>)(.*?)(</script>)', text, re.S | re.I))
         replacements = []
         saw_website = False
