@@ -1,8 +1,6 @@
-name: Sync site navigation links
+name: Sync site navigation links (manual fallback)
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -10,7 +8,6 @@ permissions:
 
 jobs:
   sync-nav:
-    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -29,18 +26,6 @@ jobs:
           for path in Path('.').glob('*.html'):
               text = path.read_text(encoding='utf-8')
               updated = text.replace('<a href="work-with-me.html">Work With Me</a>', work_link)
-
-              if 'work-with-me.html' not in updated:
-                  for old, new in [
-                      ('<a href="index.html#pillars">About</a>', work_link + '\n      <a href="index.html#pillars">About</a>'),
-                      ('<a href="#pillars">About</a>', work_link + '\n      <a href="#pillars">About</a>'),
-                      ('<a href="index.html#subscribe">Newsletter</a>', work_link + '\n      <a href="index.html#subscribe">Newsletter</a>'),
-                      ('<a href="#subscribe">Newsletter</a>', work_link + '\n      <a href="#subscribe">Newsletter</a>'),
-                  ]:
-                      if old in updated:
-                          updated = updated.replace(old, new, 1)
-                          break
-
               if updated != text:
                   path.write_text(updated, encoding='utf-8')
                   changed.append(str(path))
