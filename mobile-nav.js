@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ['Scouting', 'scouting.html'],
     ['Archive', 'archive.html'],
     ['Graphics', 'graphics.html'],
+    ['About Touchline', 'about.html'],
     ['About James', 'james-callan.html'],
     ['Work With Us', 'work-with-me.html']
   ];
