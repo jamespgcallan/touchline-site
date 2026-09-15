@@ -27,6 +27,8 @@ jobs:
         run: python scripts/sync_mobile_nav.py
       - name: Strengthen search hierarchy and sitelink signals
         run: python scripts/sync_search_hierarchy.py
+      - name: Apply Touchline Studios positioning
+        run: python scripts/sync_touchline_studios.py
       - name: Update Google News SEO
         run: python scripts/sync_news_seo.py
       - name: Rebuild canonical sitemap
