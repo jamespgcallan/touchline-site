@@ -29,19 +29,36 @@ jobs:
         run: python scripts/sync_search_hierarchy.py
       - name: Apply Touchline Studios positioning
         run: python scripts/sync_touchline_studios.py
-      - name: Preserve homepage Studios wording
+      - name: Preserve commercial Studios wording
         shell: bash
         run: |
           python - <<'PY'
           from pathlib import Path
-          path = Path('index.html')
-          text = path.read_text(encoding='utf-8')
+
+          homepage = Path('index.html')
+          text = homepage.read_text(encoding='utf-8')
           text = text.replace('Touchline Sport also works within it.', 'Touchline Studios also works within it.')
           text = text.replace(
               '<a class="studios-note" href="about.html">About</a>',
               '<a class="studios-note" href="about.html">How the media and studio sides fit together</a>'
           )
-          path.write_text(text, encoding='utf-8')
+          homepage.write_text(text, encoding='utf-8')
+
+          about = Path('about.html')
+          text = about.read_text(encoding='utf-8')
+          text = text.replace(
+              'Independent football journalism from Touchline Sport, alongside PR, communications and strategy work through Touchline Sport.',
+              'Independent football journalism from Touchline Sport, alongside PR, communications and strategy work through Touchline Studios.'
+          )
+          about.write_text(text, encoding='utf-8')
+
+          james = Path('james-callan.html')
+          text = james.read_text(encoding='utf-8')
+          text = text.replace(
+              'Irish football writer and communications strategist, and founder of Touchline Sport and Touchline Sport.',
+              'Irish football writer and communications strategist, and founder of Touchline Sport and Touchline Studios.'
+          )
+          james.write_text(text, encoding='utf-8')
           PY
       - name: Update Google News SEO
         run: python scripts/sync_news_seo.py
