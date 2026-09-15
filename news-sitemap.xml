@@ -55,15 +55,4 @@
       <news:title>FAI Opens Investigation Into Shamrock Rovers Over Noonan Transfers</news:title>
     </news:news>
   </url>
-  <url>
-    <loc>https://touchlinesport.net/st-patricks-athletic-shamrock-rovers-ryan-sheridan.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Touchline Sport</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-12</news:publication_date>
-      <news:title>St Patrick’s Athletic 2-0 Shamrock Rovers: Ryan Sheridan Shines at 17</news:title>
-    </news:news>
-  </url>
 </urlset>
