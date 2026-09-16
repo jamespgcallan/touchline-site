@@ -60,7 +60,6 @@ if not LATEST_PATH.exists() or not INDEX_PATH.exists():
 latest = LATEST_PATH.read_text(encoding='utf-8')
 original_latest = latest
 
-# Keep RSS available to feed readers and aggregators, but do not make it a prominent reader CTA.
 latest = re.sub(
     r'<div class="hero-actions">\s*<a href="feed\.xml">Follow the RSS feed</a>\s*(<a href="archive\.html">.*?</a>)\s*</div>',
     r'<div class="hero-actions">\1</div>',
@@ -104,7 +103,6 @@ if latest != original_latest:
 index = INDEX_PATH.read_text(encoding='utf-8')
 original_index = index
 
-# The homepage's "Read the latest" button must always point at the newest published article.
 index = re.sub(
     r'<a class="btn-primary" href="[^"]+">Read the latest →</a>',
     f'<a class="btn-primary" href="{escaped(href)}">Read the latest →</a>',
@@ -188,6 +186,49 @@ if is_irish_story:
             irish_page = irish_page[:grid_match.start()] + new_grid + irish_page[grid_match.end():]
         if irish_page != original_irish_page:
             IRISH_PATH.write_text(irish_page, encoding='utf-8')
+
+# One-off World placement for the Newcastle feature. This block is removed after the publishing sync has run.
+if href == 'newcastle-united-pif-transfer-spending.html' and ARCHIVE_PATH.exists():
+    archive = ARCHIVE_PATH.read_text(encoding='utf-8')
+    original_archive = archive
+    world_start = archive.find('<div class="wrap category-block" id="world">')
+    world_end = archive.find('<div class="wrap category-block" id="everything-else">', world_start)
+    world_count = None
+    if world_start >= 0 and world_end >= 0:
+        world_block = archive[world_start:world_end]
+        existed = f'href="{href}"' in world_block
+        world_block = re.sub(rf'<li class="arch-item">\s*<a href="{re.escape(href)}">.*?</li>\s*', '', world_block, flags=re.S | re.I)
+        england_title = '<h4 class="country-title">England/UK</h4>'
+        england_pos = world_block.find(england_title)
+        if england_pos >= 0:
+            country_start = world_block.rfind('<div class="country-block', 0, england_pos)
+            country_end = world_block.find('<div class="country-block', england_pos + len(england_title))
+            if country_end < 0:
+                country_end = len(world_block)
+            country_block = world_block[country_start:country_end]
+            marker = '<ul class="arch-list">'
+            country_block = country_block.replace(marker, marker + archive_item(href, title, description, date_label, date_iso), 1)
+            england_count = len(re.findall(r'<li class="arch-item">', country_block))
+            country_block = re.sub(r'<span class="country-count">\d+ pieces</span>', f'<span class="country-count">{england_count} pieces</span>', country_block, count=1)
+            world_block = world_block[:country_start] + country_block + world_block[country_end:]
+        world_count = len(re.findall(r'<li class="arch-item">', world_block))
+        world_block = re.sub(r'<span class="category-count">\d+ pieces</span>', f'<span class="category-count">{world_count} pieces</span>', world_block, count=1)
+        archive = archive[:world_start] + world_block + archive[world_end:]
+        if not existed:
+            archive = re.sub(r'<span class="pill">(\d+) pieces and counting</span>', lambda m: f'<span class="pill">{int(m.group(1)) + 1} pieces and counting</span>', archive, count=1)
+    if archive != original_archive:
+        ARCHIVE_PATH.write_text(archive, encoding='utf-8')
+
+    world_home = re.search(r'(<div class="wrap category-block" id="world">.*?<div class="grid">)(.*?)(</div></div>\s*<div class="wrap category-block" id="scouting">)', index, flags=re.S | re.I)
+    if world_home:
+        cards = re.findall(r'<a class="card".*?</a>', world_home.group(2), flags=re.S | re.I)
+        cards = [card for card in cards if f'href="{href}"' not in card]
+        head = world_home.group(1)
+        if world_count is not None:
+            head = re.sub(r'\d+ pieces · View all →', f'{world_count} pieces · View all →', head, count=1)
+        world_card = latest_home_card(href, image, title, description, date_label, read_time).replace('<span class="pill">Ireland</span>', '<span class="pill">World</span>')
+        new_grid = head + world_card + ''.join(cards[:2]) + world_home.group(3)
+        index = index[:world_home.start()] + new_grid + index[world_home.end():]
 
 if index != original_index:
     INDEX_PATH.write_text(index, encoding='utf-8')
