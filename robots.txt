@@ -1,5 +1,9 @@
 User-agent: *
 Allow: /
 
+# Legacy Elementor/JetKit query URLs from the previous site should never be crawled.
+Disallow: /*?jkit-ajax-request=
+Disallow: /*?e-page-
+
 Sitemap: https://touchlinesport.net/sitemap.xml
 Sitemap: https://touchlinesport.net/news-sitemap.xml
