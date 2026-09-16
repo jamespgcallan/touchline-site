@@ -60,16 +60,6 @@ jobs:
           )
           james.write_text(text, encoding='utf-8')
           PY
-      - name: Remove Newcastle article bold emphasis
-        shell: bash
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          path = Path('newcastle-united-pif-transfer-spending.html')
-          text = path.read_text(encoding='utf-8')
-          text = text.replace('<strong>', '').replace('</strong>', '')
-          path.write_text(text, encoding='utf-8')
-          PY
       - name: Update Google News SEO
         run: python scripts/sync_news_seo.py
       - name: Rebuild canonical sitemap
