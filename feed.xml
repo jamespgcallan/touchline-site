@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>Touchline Sport</title>
     <link>https://touchlinesport.net/</link>
-    <description>Independent football news and analysis from Touchline Sport, covering Irish football, tactics, club strategy, recruitment and the business of the game.</description>
+    <description>Independent football journalism covering Irish football, recruitment, club strategy, ownership, academies and tactical analysis.</description>
     <language>en-ie</language>
+    <lastBuildDate>Wed, 16 Sep 2026 12:39:46 +0000</lastBuildDate>
     <atom:link href="https://touchlinesport.net/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Wed, 16 Sep 2026 12:08:00 +0100</lastBuildDate>
+    <image>
+      <url>https://touchlinesport.net/logo.png</url>
+      <title>Touchline Sport</title>
+      <link>https://touchlinesport.net/</link>
+    </image>
     <item>
       <title>Shelbourne Confirm Keith Long as New Academy Director</title>
       <link>https://touchlinesport.net/keith-long-shelbourne-academy-director.html</link>
       <guid isPermaLink="true">https://touchlinesport.net/keith-long-shelbourne-academy-director.html</guid>
       <pubDate>Wed, 16 Sep 2026 12:08:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
       <description>The former Bohemians and Waterford manager will oversee a Shelbourne academy that has already undergone major investment in facilities and staffing.</description>
       <category>Irish Football</category>
       <media:content url="https://prod-img.independent.ie/public/incoming/kuude7-bohs-boss-keith-long-is-banned-from-the-touchline-for-sundays-fai-cup-final.-photo-sportsfile/alternates/THREE_TWO_1620/Bohs%20boss%20Keith%20Long%20is%20banned%20from%20the%20touchline%20for%20Sundays%20FAI%20Cup%20final.%20Photo%20Sportsfile" medium="image" />
@@ -21,6 +27,7 @@
       <link>https://touchlinesport.net/newcastle-united-pif-transfer-spending.html</link>
       <guid isPermaLink="true">https://touchlinesport.net/newcastle-united-pif-transfer-spending.html</guid>
       <pubDate>Wed, 16 Sep 2026 09:08:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
       <description>PIF gave Newcastle access to extraordinary wealth. Five years later, the strange part is that Newcastle still have to earn enough money to spend it.</description>
       <category>World</category>
       <media:content url="https://substackcdn.com/image/fetch/$s_!rpMc!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdd90dc79-8d3b-425d-8e42-dd7ae3f20051_3000x1571.jpeg" medium="image" />
@@ -30,6 +37,7 @@
       <link>https://touchlinesport.net/ceadach-oneill-northern-ireland-squad.html</link>
       <guid isPermaLink="true">https://touchlinesport.net/ceadach-oneill-northern-ireland-squad.html</guid>
       <pubDate>Tue, 15 Sep 2026 21:31:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
       <description>The Arsenal teenager and Everton’s Braiden Graham are both in Michael O’Neill’s Nations League squad as the FAI monitor their international futures.</description>
       <category>Irish Football</category>
       <media:content url="https://assets.arsenal.com/prod/images/xl_landscape/8edca74192ed-ceadach-oneill-young-gun.webp" medium="image" />
@@ -39,6 +47,7 @@
       <link>https://touchlinesport.net/james-abankwah-first-serie-a-goal-inter.html</link>
       <guid isPermaLink="true">https://touchlinesport.net/james-abankwah-first-serie-a-goal-inter.html</guid>
       <pubDate>Mon, 14 Sep 2026 22:40:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
       <description>The Republic of Ireland defender headed Udinese in front at San Siro as his strong return to Serie A continued.</description>
       <category>Ireland</category>
       <media:content url="https://img2.thejournal.ie/article/7162766/river?version=7162768&amp;width=650" medium="image" />
@@ -48,6 +57,7 @@
       <link>https://touchlinesport.net/michael-noonan-nottingham-forest-shamrock-rovers.html</link>
       <guid isPermaLink="true">https://touchlinesport.net/michael-noonan-nottingham-forest-shamrock-rovers.html</guid>
       <pubDate>Mon, 14 Sep 2026 14:49:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
       <description>The 18-year-old could leave for compensation just months after Rovers accepted a €1.8 million bid from Hoffenheim.</description>
       <category>League of Ireland</category>
       <media:content url="https://cdn.shamrockrovers.ie/wp-content/uploads/2025/01/15115312/IMG-20250115-WA0006-scaled.jpg" medium="image" />
@@ -57,6 +67,7 @@
       <link>https://touchlinesport.net/sligo-rovers-fan-ownership-loi.html</link>
       <guid isPermaLink="true">https://touchlinesport.net/sligo-rovers-fan-ownership-loi.html</guid>
       <pubDate>Mon, 14 Sep 2026 09:08:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
       <description>The Bit O’Red have the history, the support and the structure. What they may not have is the same access to capital as everyone else.</description>
       <category>League of Ireland</category>
       <media:content url="https://substackcdn.com/image/fetch/$s_!x2Pw!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F87ef6700-03fe-42f6-9461-6fa40cefa4ad_1198x627.jpeg" medium="image" />
@@ -66,6 +77,7 @@
       <link>https://touchlinesport.net/liam-delap-ireland-shay-given.html</link>
       <guid isPermaLink="true">https://touchlinesport.net/liam-delap-ireland-shay-given.html</guid>
       <pubDate>Sun, 13 Sep 2026 16:40:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
       <description>Nottingham Forest striker tells Shay Given “I don’t know” when asked about playing for Ireland after scoring his first goal for the club.</description>
       <category>Republic of Ireland</category>
       <media:content url="https://www.thesun.ie/wp-content/uploads/sites/3/2026/09/NINTCHDBPICT001108097268.jpg?resize=1536,1024&amp;quality=90&amp;strip=all" medium="image" />
@@ -75,6 +87,7 @@
       <link>https://touchlinesport.net/fai-shamrock-rovers-noonan-transfer-investigation.html</link>
       <guid isPermaLink="true">https://touchlinesport.net/fai-shamrock-rovers-noonan-transfer-investigation.html</guid>
       <pubDate>Sun, 13 Sep 2026 11:48:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
       <description>FIFA referred agency agreements involving Michael and Alex Noonan back to the FAI for examination under third-party ownership rules.</description>
       <category>League of Ireland</category>
       <media:content url="https://touchlinesport.net/images/fai-shamrock-rovers-noonan-investigation.jpg" medium="image" />
@@ -84,6 +97,7 @@
       <link>https://touchlinesport.net/st-patricks-athletic-shamrock-rovers-ryan-sheridan.html</link>
       <guid isPermaLink="true">https://touchlinesport.net/st-patricks-athletic-shamrock-rovers-ryan-sheridan.html</guid>
       <pubDate>Sat, 12 Sep 2026 21:00:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
       <description>Stephen Kenny’s side cut the Premier Division gap to three points as Sheridan impressed on his first league start.</description>
       <category>League of Ireland</category>
       <media:content url="https://touchlinesport.net/images/ryan-sheridan-st-pats-shamrock-rovers.webp?v=20260912c" medium="image" />
@@ -93,8 +107,8 @@
       <link>https://touchlinesport.net/inside-cesc-fabregas-como-game-model.html</link>
       <guid isPermaLink="true">https://touchlinesport.net/inside-cesc-fabregas-como-game-model.html</guid>
       <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+      <dc:creator>James Callan</dc:creator>
       <description>How Como bait the press, manufacture the free player and use possession to keep asking defenders questions they don’t really want to answer.</description>
-      <category>Touchline Tactics</category>
       <media:content url="https://touchlinesport.net/images/cesc-fabregas-como-header.webp" medium="image" />
     </item>
     <item>
@@ -102,8 +116,8 @@
       <link>https://touchlinesport.net/chelsea-transfer-machine-2026.html</link>
       <guid isPermaLink="true">https://touchlinesport.net/chelsea-transfer-machine-2026.html</guid>
       <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
+      <dc:creator>James Callan</dc:creator>
       <description>Chelsea are still buying and selling at a ridiculous rate. In 2026, the question is whether all that churn is finally building a proper team.</description>
-      <category>World</category>
       <media:content url="https://touchlinesport.net/images/chelsea-transfer-machine-hero.jpeg" medium="image" />
     </item>
     <item>
@@ -111,17 +125,25 @@
       <link>https://touchlinesport.net/braywatch-the-seaside-club-bringing-young-talent-back-to-life.html</link>
       <guid isPermaLink="true">https://touchlinesport.net/braywatch-the-seaside-club-bringing-young-talent-back-to-life.html</guid>
       <pubDate>Mon, 07 Sep 2026 09:00:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
       <description>Bray were once a proper Premier Division nuisance. Their route back now runs through teenagers, second chances and a ground where young players are trusted early.</description>
-      <category>Ireland</category>
       <media:content url="https://touchlinesport.net/images/braywatch-carlisle-grounds.jpeg" medium="image" />
+    </item>
+    <item>
+      <title>James Callan Named Football Content Awards 2026 Finalist</title>
+      <link>https://touchlinesport.net/football-content-awards-2026-finalist.html</link>
+      <guid isPermaLink="true">https://touchlinesport.net/football-content-awards-2026-finalist.html</guid>
+      <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
+      <dc:creator>James Callan</dc:creator>
+      <description>Touchline Sport founder James Callan has been named a Football Content Awards 2026 finalist in the Best New Content Creator category.</description>
     </item>
     <item>
       <title>Football Needs More Boredom</title>
       <link>https://touchlinesport.net/football-needs-more-boredom.html</link>
       <guid isPermaLink="true">https://touchlinesport.net/football-needs-more-boredom.html</guid>
       <pubDate>Fri, 04 Sep 2026 09:09:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
       <description>Why the modern game is addicted to instant reaction, hot takes and permanent crisis</description>
-      <category>Everything Else</category>
       <media:content url="https://substack-post-media.s3.amazonaws.com/public/images/db76246a-add9-4b94-b77f-492453ae4636_1200x650.png" medium="image" />
     </item>
     <item>
@@ -129,8 +151,8 @@
       <link>https://touchlinesport.net/who-are-sabah-fk.html</link>
       <guid isPermaLink="true">https://touchlinesport.net/who-are-sabah-fk.html</guid>
       <pubDate>Wed, 02 Sep 2026 09:00:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
       <description>They were founded in 2017, have already dethroned Qarabağ and scored more goals than anyone in Champions League qualifying. Now Old Trafford is next.</description>
-      <category>World</category>
       <media:content url="https://touchlinesport.net/images/sabah-fk-card-v3.jpg" medium="image" />
     </item>
     <item>
@@ -138,8 +160,8 @@
       <link>https://touchlinesport.net/grow-your-own-loi-academies.html</link>
       <guid isPermaLink="true">https://touchlinesport.net/grow-your-own-loi-academies.html</guid>
       <pubDate>Mon, 31 Aug 2026 09:00:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
       <description>The League of Ireland is finally making serious money from young players. If that’s where the game is heading, why aren’t more clubs spending now to produce the next Mason Melia?</description>
-      <category>Ireland</category>
       <media:content url="https://substackcdn.com/image/fetch/$s_!EWu1!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6281a6bf-e4cd-409a-968a-862b1cf1f4a9_2560x1340.jpeg" medium="image" />
     </item>
     <item>
@@ -147,8 +169,8 @@
       <link>https://touchlinesport.net/aldershot-town-complete-rebuild.html</link>
       <guid isPermaLink="true">https://touchlinesport.net/aldershot-town-complete-rebuild.html</guid>
       <pubDate>Thu, 27 Aug 2026 09:00:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
       <description>Most clubs call five or six new players a rebuild. Scott Davies arrived at Aldershot Town and found himself replacing practically everyone except the ground keeper.</description>
-      <category>World</category>
       <media:content url="https://touchlinesport.net/images/aldershot-town.webp" medium="image" />
     </item>
   </channel>
