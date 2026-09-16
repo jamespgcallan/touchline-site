@@ -19,6 +19,8 @@ jobs:
           fetch-depth: 0
       - name: Rebuild publication discovery surfaces
         run: python scripts/sync_publication_discovery.py
+      - name: Remove duplicate related article modules
+        run: python scripts/cleanup_related_duplicates.py
       - name: Keep latest surfaces in sync
         run: python scripts/sync_latest_surface.py
       - name: Standardise site brand and search name
