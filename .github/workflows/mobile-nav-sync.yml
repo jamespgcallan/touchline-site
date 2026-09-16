@@ -27,6 +27,23 @@ jobs:
         run: python scripts/sync_site_brand.py
       - name: Standardise navigation
         run: python scripts/sync_mobile_nav.py
+      - name: Refresh article sharing asset
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          for path in Path('.').glob('*.html'):
+              text = path.read_text(encoding='utf-8')
+              updated = re.sub(
+                  r'<script src="article-share\.js(?:\?[^\"]*)?"></script>',
+                  '<script src="article-share.js?v=20260916-sharefix"></script>',
+                  text,
+              )
+              if updated != text:
+                  path.write_text(updated, encoding='utf-8')
+          PY
       - name: Strengthen search hierarchy and sitelink signals
         run: python scripts/sync_search_hierarchy.py
       - name: Apply Touchline Studios positioning
