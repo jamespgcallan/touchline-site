@@ -8,6 +8,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const style = document.createElement('style');
   style.textContent = `
     .mobile-menu-btn,.mobile-menu-panel{display:none}
+
+    /* Shared article reading layout */
+    .article-body{max-width:860px!important;margin-left:auto!important;margin-right:auto!important}
+    .article-foot-nav{max-width:860px!important;margin-left:auto!important;margin-right:auto!important}
+    .header-image{width:min(100%,1040px)!important;margin-left:auto!important;margin-right:auto!important}
+
+    @media(min-width:901px){
+      .article-body p{font-size:18.5px;line-height:1.76}
+    }
+
+    @media(max-width:900px){
+      .article-body{max-width:760px!important}
+      .article-foot-nav{max-width:760px!important}
+    }
+
     @media(max-width:600px){
       header{position:sticky;top:0;overflow:visible;z-index:100!important}
       .nav-row{flex-wrap:nowrap!important;position:relative}
@@ -27,6 +42,20 @@ document.addEventListener('DOMContentLoaded', () => {
       .mobile-menu-panel .mobile-subscribe{grid-column:1/-1;justify-content:center;margin-top:4px;background:#1c1a17;color:#fbf3e7;text-align:center}
       .mobile-menu-panel .mobile-subscribe:hover,.mobile-menu-panel .mobile-subscribe:focus{background:#e8720f;color:#1c1a17}
       body.mobile-menu-open{overflow:hidden}
+
+      .report-head{padding-top:28px!important}
+      .article-hero{padding:28px 22px!important;border-radius:18px!important}
+      .article-hero h1{font-size:clamp(30px,9.2vw,40px)!important;line-height:1.08!important}
+      .article-dek{font-size:17px!important;line-height:1.55!important;margin-bottom:20px!important}
+      .article-meta{font-size:11.5px!important;gap:8px!important;padding-top:16px!important}
+      .share-row-top{margin-top:14px!important}
+      .header-image{width:100%!important;aspect-ratio:3/2!important;object-fit:cover!important;margin-top:16px!important;border-radius:14px!important}
+      .article-body{max-width:none!important;margin:0!important;padding:34px 0 6px!important}
+      .article-body p{font-size:17px!important;line-height:1.72!important;margin-bottom:22px!important}
+      .article-body p:first-child::first-letter{font-size:46px!important;margin-top:7px!important}
+      .article-body blockquote,.article-body blockquote p{font-size:20px!important;line-height:1.48!important}
+      .article-foot-nav{max-width:none!important;margin-left:0!important;margin-right:0!important;padding-bottom:48px!important}
+      .cta-box{margin:40px 0 18px!important;padding:28px 20px!important}
     }
   `;
   document.head.appendChild(style);
