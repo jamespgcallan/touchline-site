@@ -12,7 +12,7 @@ CANONICAL_NAV = (
     '<a href="about.html">About</a>'
     '</nav>'
 )
-SCRIPT_TAG = '<script src="mobile-nav.js?v=20260913-discovery"></script>'
+SCRIPT_TAG = '<script src="mobile-nav.js?v=20260916-layout"></script>'
 
 changed = []
 for path in Path('.').glob('*.html'):
