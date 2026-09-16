@@ -67,7 +67,7 @@ LINK_NAMES = {
 }
 
 NON_ARTICLE_PAGES = {
-    'index.html', 'latest-news.html', 'archive.html', 'league-of-ireland-analysis.html', 'touchline-tactics.html',
+    '404.html', 'index.html', 'latest-news.html', 'archive.html', 'league-of-ireland-analysis.html', 'touchline-tactics.html',
     'football-club-strategy.html', 'scouting.html', 'graphics.html', 'about.html',
     'james-callan.html', 'editorial-policy.html', 'contact.html', 'work-with-me.html',
 }
