@@ -81,6 +81,8 @@ jobs:
           PY
       - name: Update Google News SEO
         run: python scripts/sync_news_seo.py
+      - name: Rebuild RSS feed
+        run: python scripts/sync_rss_feed.py
       - name: Rebuild canonical sitemap
         run: python scripts/sync_sitemap.py
       - name: Commit updates
