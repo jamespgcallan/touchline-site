@@ -53,10 +53,12 @@ for path in Path('.').glob('*.html'):
     if managed_style:
         text = text.replace('</head>', STYLE_TOKEN + '\n</head>', 1)
 
-    # Remove legacy style tags dedicated to the related component. Managed style
-    # is protected by the token above.
+    # Remove legacy style tags dedicated only to the related component. Never
+    # remove a page's main stylesheet just because it also contains tl-related rules.
     def clean_style(match):
-        return '\n' if '.tl-related' in match.group(0) else match.group(0)
+        style = match.group(0)
+        dedicated_related_style = '.tl-related' in style and ':root' not in style and '.article-body' not in style
+        return '\n' if dedicated_related_style else style
 
     text = STYLE_TAG_RE.sub(clean_style, text)
 
