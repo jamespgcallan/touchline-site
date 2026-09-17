@@ -21,6 +21,8 @@ jobs:
         run: python scripts/sync_publication_discovery.py
       - name: Remove duplicate related article modules
         run: python scripts/cleanup_related_duplicates.py
+      - name: Match recent World articles to established Touchline layout
+        run: python scripts/standardise_recent_world_articles.py
       - name: Keep latest surfaces in sync
         run: python scripts/sync_latest_surface.py
       - name: Keep World surfaces in sync
