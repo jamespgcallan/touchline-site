@@ -5,13 +5,23 @@
     <link>https://touchlinesport.net/</link>
     <description>Independent football journalism covering Irish football, recruitment, club strategy, ownership, academies and tactical analysis.</description>
     <language>en-ie</language>
-    <lastBuildDate>Thu, 17 Sep 2026 08:20:09 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2026 09:36:38 +0000</lastBuildDate>
     <atom:link href="https://touchlinesport.net/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://touchlinesport.net/logo.png</url>
       <title>Touchline Sport</title>
       <link>https://touchlinesport.net/</link>
     </image>
+    <item>
+      <title>JJ Gabriel Left Out by Man Utd After Exit Request</title>
+      <link>https://touchlinesport.net/jj-gabriel-man-utd-exit-request.html</link>
+      <guid isPermaLink="true">https://touchlinesport.net/jj-gabriel-man-utd-exit-request.html</guid>
+      <pubDate>Thu, 17 Sep 2026 10:29:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
+      <description>The 15-year-old had been lined up to make Manchester United history. Six days after a Youth League hat-trick, he wasn’t even in the squad.</description>
+      <category>World</category>
+      <media:content url="https://static.independent.co.uk/2026/09/15/14/2276277245." medium="image" />
+    </item>
     <item>
       <title>Inter’s Dario Baccin Outlines Recruitment Plan After Piero Ausilio Exit</title>
       <link>https://touchlinesport.net/inter-dario-baccin-recruitment-plan-piero-ausilio-exit.html</link>
