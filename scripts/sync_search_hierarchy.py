@@ -217,8 +217,9 @@ for path in Path('.').glob('*.html'):
     elif '</body>' in text:
         text = text.replace('</body>', EXPLORE_BLOCK + '\n</body>', 1)
 
-    # Give every article a visible hierarchy trail and BreadcrumbList structured data.
+    # Give every article exactly one visible hierarchy trail and BreadcrumbList structured data.
     text = re.sub(r'\s*<!-- TL_BREADCRUMB_START -->.*?<!-- TL_BREADCRUMB_END -->\s*', '\n', text, flags=re.S)
+    text = re.sub(r'\s*<nav\b[^>]*aria-label=["\']Breadcrumb["\'][^>]*>.*?</nav>\s*', '\n', text, flags=re.S | re.I)
     text = remove_breadcrumb_schema(text)
     if filename not in NON_ARTICLE_PAGES:
         title = article_title(text, filename)
