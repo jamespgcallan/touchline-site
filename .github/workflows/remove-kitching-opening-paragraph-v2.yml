@@ -1,0 +1,32 @@
+name: Remove Kitching opening paragraph v2
+on:
+  push:
+    paths:
+      - '.github/workflows/remove-kitching-opening-paragraph-v2.yml'
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Remove requested opening paragraph
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('liam-kitching-ireland-call-up-rocco-vata.html')
+          s = p.read_text()
+          target = '<p>Liam Kitching has earned his first Republic of Ireland call-up, Rocco Vata is back after 18 months away and Owen Elding can finally turn months of training around the senior setup into a place in the actual squad.</p>\n'
+          if target not in s:
+              raise SystemExit('Target paragraph not found')
+          p.write_text(s.replace(target, '', 1))
+          PY
+      - name: Commit change
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add liam-kitching-ireland-call-up-rocco-vata.html
+          git commit -m 'Remove Kitching article opening paragraph'
+          git push origin main
