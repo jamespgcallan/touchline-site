@@ -5,13 +5,22 @@
     <link>https://touchlinesport.net/</link>
     <description>Independent football journalism covering Irish football, recruitment, club strategy, ownership, academies and tactical analysis.</description>
     <language>en-ie</language>
-    <lastBuildDate>Fri, 18 Sep 2026 08:08:02 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2026 08:09:10 +0000</lastBuildDate>
     <atom:link href="https://touchlinesport.net/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://touchlinesport.net/logo.png</url>
       <title>Touchline Sport</title>
       <link>https://touchlinesport.net/</link>
     </image>
+    <item>
+      <title>Inside Stephen Bradley’s Successful Shamrock Rovers</title>
+      <link>https://touchlinesport.net/inside-stephen-bradley-shamrock-rovers.html</link>
+      <guid isPermaLink="true">https://touchlinesport.net/inside-stephen-bradley-shamrock-rovers.html</guid>
+      <pubDate>Fri, 18 Sep 2026 09:04:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
+      <description>Bradley’s Rovers dominate the ball, move the spare man and make opponents rethink their shape.</description>
+      <media:content url="https://substackcdn.com/image/fetch/$s_!VRVA!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc57e05ec-5655-4e1d-876a-89ddfb0df59a_1200x650.png" medium="image" />
+    </item>
     <item>
       <title>Markuss Strods Earns First Latvia Call-Up as Ireland Question Emerges</title>
       <link>https://touchlinesport.net/markuss-strods-latvia-call-up-ireland.html</link>
