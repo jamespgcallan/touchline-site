@@ -5,13 +5,23 @@
     <link>https://touchlinesport.net/</link>
     <description>Independent football journalism covering Irish football, recruitment, club strategy, ownership, academies and tactical analysis.</description>
     <language>en-ie</language>
-    <lastBuildDate>Fri, 18 Sep 2026 10:52:09 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2026 11:13:50 +0000</lastBuildDate>
     <atom:link href="https://touchlinesport.net/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://touchlinesport.net/logo.png</url>
       <title>Touchline Sport</title>
       <link>https://touchlinesport.net/</link>
     </image>
+    <item>
+      <title>Ireland U19 Squad Features Bologna, Hoffenheim and Strong LOI Core</title>
+      <link>https://touchlinesport.net/ireland-u19-squad-league-of-ireland-academies.html</link>
+      <guid isPermaLink="true">https://touchlinesport.net/ireland-u19-squad-league-of-ireland-academies.html</guid>
+      <pubDate>Fri, 18 Sep 2026 12:11:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
+      <description>Noel Hunt’s latest Ireland squad stretches from Dublin to Bologna, but League of Ireland academies have helped produce many of the players now moving abroad.</description>
+      <category>Irish Football</category>
+      <media:content url="https://d2w4iw8gs9jo14.cloudfront.net/thumbnails/xxl/4017/7401/6750/3291954.jpg" medium="image" />
+    </item>
     <item>
       <title>Lionel Messi Scores 100th Inter Miami Goal in Campeones Cup Win</title>
       <link>https://touchlinesport.net/lionel-messi-100-inter-miami-goals.html</link>
