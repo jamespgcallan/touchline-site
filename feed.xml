@@ -5,13 +5,23 @@
     <link>https://touchlinesport.net/</link>
     <description>Independent football journalism covering Irish football, recruitment, club strategy, ownership, academies and tactical analysis.</description>
     <language>en-ie</language>
-    <lastBuildDate>Fri, 18 Sep 2026 10:31:36 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2026 10:49:00 +0000</lastBuildDate>
     <atom:link href="https://touchlinesport.net/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://touchlinesport.net/logo.png</url>
       <title>Touchline Sport</title>
       <link>https://touchlinesport.net/</link>
     </image>
+    <item>
+      <title>Lionel Messi Scores 100th Inter Miami Goal in Campeones Cup Win</title>
+      <link>https://touchlinesport.net/lionel-messi-100-inter-miami-goals.html</link>
+      <guid isPermaLink="true">https://touchlinesport.net/lionel-messi-100-inter-miami-goals.html</guid>
+      <pubDate>Fri, 18 Sep 2026 11:49:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
+      <description>The 39-year-old reached 100 goals in 115 appearances as Inter Miami beat Cruz Azul 2-0, the same side he scored his first Miami goal against in 2023.</description>
+      <category>World</category>
+      <media:content url="https://sportal365images.com/process/smp-images-production/ballondor.com-en/17092026/a77b167a-7a5f-40ba-be17-825e56979b51.jpg?operations=crop(0:228:5133:3115),fit(1920:)" medium="image" />
+    </item>
     <item>
       <title>Clearlake Takes Full Control of Chelsea as Todd Boehly Exits</title>
       <link>https://touchlinesport.net/clearlake-full-control-chelsea-todd-boehly-exits.html</link>
