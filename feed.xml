@@ -5,13 +5,23 @@
     <link>https://touchlinesport.net/</link>
     <description>Independent football journalism covering Irish football, recruitment, club strategy, ownership, academies and tactical analysis.</description>
     <language>en-ie</language>
-    <lastBuildDate>Sat, 19 Sep 2026 11:35:42 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 19 Sep 2026 11:45:56 +0000</lastBuildDate>
     <atom:link href="https://touchlinesport.net/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://touchlinesport.net/logo.png</url>
       <title>Touchline Sport</title>
       <link>https://touchlinesport.net/</link>
     </image>
+    <item>
+      <title>Court Blocks Corinthians Statute Vote Before 2026 Election</title>
+      <link>https://touchlinesport.net/corinthians-statute-vote-2026-election.html</link>
+      <guid isPermaLink="true">https://touchlinesport.net/corinthians-statute-vote-2026-election.html</guid>
+      <pubDate>Sat, 19 Sep 2026 12:42:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
+      <description>Members were due to vote on electoral rules and expanded voting rights before the courts intervened for a fourth time.</description>
+      <category>World Football</category>
+      <media:content url="https://assets-us-01.kc-usercontent.com/31dbcbc6-da4c-0033-328a-d7621d0fa726/22075626-bacc-499a-8e8a-b6f0b6e58870/Corinthians%20Universidad%20Central%20Need.jpg?ver=03-06-2025?w=3840&amp;q=75" medium="image" />
+    </item>
     <item>
       <title>Alan Reynolds Questions Dawson Devoy Ireland Omission After Bohs Winner</title>
       <link>https://touchlinesport.net/alan-reynolds-dawson-devoy-ireland-omission.html</link>
