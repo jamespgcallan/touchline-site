@@ -104,45 +104,71 @@ if latest != original_latest:
 index = INDEX_PATH.read_text(encoding='utf-8')
 original_index = index
 
-# The homepage's "Read the latest" button must always point at the newest published article.
-index = re.sub(
-    r'<a class="btn-primary" href="[^"]+">Read the latest →</a>',
-    f'<a class="btn-primary" href="{escaped(href)}">Read the latest →</a>',
-    index,
-    count=1,
-    flags=re.I,
-)
+# The homepage now keeps separate latest Irish and World feature cards.
+# Preserve the neutral "Browse latest" CTA and update only the relevant card.
+is_irish_story = 'ireland' in section.lower() or 'irish' in section.lower()
+is_world_story = 'world' in section.lower()
 
-featured = (
-    '<div class="featured"><div>'
-    f'<span class="pill">Latest · {html.escape(section)}</span>'
-    f'<h2>{html.escape(title)}</h2>'
-    f'<p>{html.escape(description)}</p>'
-    f'<a class="read" href="{escaped(href)}">Read the piece '
-    '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">'
-    '<path d="M5 12h14M13 5l7 7-7 7"/></svg></a>'
-    '</div>'
-    f'<div class="featured-art" style="background-image:url(\'{escaped(image)}\');background-size:cover;background-repeat:no-repeat;background-position:center;"></div>'
-    '</div>'
-)
-
-index, replacements = re.subn(
-    r'<div class="featured"><div><span class="pill">.*?</span><h2>.*?</h2><p>.*?</p><a class="read" href="[^"]+">Read the piece.*?</a></div><div class="featured-art" style="[^"]*"></div></div>',
-    featured,
-    index,
-    count=1,
-    flags=re.S | re.I,
-)
-
-if replacements == 0:
-    raise SystemExit('Could not update homepage featured story')
+if 'class="latest-split"' in index and (is_irish_story or is_world_story):
+    feature_label = 'Irish Football' if is_irish_story else 'World Football'
+    split_featured = (
+        '<article class="featured">'
+        f'<div class="featured-art" style="background-image:url(\'{escaped(image)}\');"></div>'
+        '<div class="featured-copy">'
+        f'<span class="pill">Latest · {feature_label}</span>'
+        f'<h2>{html.escape(title)}</h2>'
+        f'<p>{html.escape(description)}</p>'
+        f'<a class="read" href="{escaped(href)}">Read the piece '
+        '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">'
+        '<path d="M5 12h14M13 5l7 7-7 7"/></svg></a>'
+        '</div></article>'
+    )
+    pattern = (
+        r'<article class="featured">\s*'
+        r'<div class="featured-art" style="[^"]*"></div>\s*'
+        r'<div class="featured-copy"><span class="pill">Latest · '
+        + re.escape(feature_label) +
+        r'</span>.*?</div>\s*</article>'
+    )
+    index, replacements = re.subn(pattern, split_featured, index, count=1, flags=re.S | re.I)
+    if replacements == 0:
+        raise SystemExit(f'Could not update homepage {feature_label} feature card')
+else:
+    # Backward-compatible fallback for the old single-feature homepage layout.
+    index = re.sub(
+        r'<a class="btn-primary" href="[^"]+">Read the latest →</a>',
+        f'<a class="btn-primary" href="{escaped(href)}">Read the latest →</a>',
+        index,
+        count=1,
+        flags=re.I,
+    )
+    featured = (
+        '<div class="featured"><div>'
+        f'<span class="pill">Latest · {html.escape(section)}</span>'
+        f'<h2>{html.escape(title)}</h2>'
+        f'<p>{html.escape(description)}</p>'
+        f'<a class="read" href="{escaped(href)}">Read the piece '
+        '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">'
+        '<path d="M5 12h14M13 5l7 7-7 7"/></svg></a>'
+        '</div>'
+        f'<div class="featured-art" style="background-image:url(\'{escaped(image)}\');background-size:cover;background-repeat:no-repeat;background-position:center;"></div>'
+        '</div>'
+    )
+    index, replacements = re.subn(
+        r'<div class="featured"><div><span class="pill">.*?</span><h2>.*?</h2><p>.*?</p><a class="read" href="[^"]+">Read the piece.*?</a></div><div class="featured-art" style="[^"]*"></div></div>',
+        featured,
+        index,
+        count=1,
+        flags=re.S | re.I,
+    )
+    if replacements == 0:
+        raise SystemExit('Could not update homepage featured story')
 
 if image:
     escaped_image = escaped(image)
     index = re.sub(r'<meta property="og:image" content="[^"]*">', f'<meta property="og:image" content="{escaped_image}">', index, count=1, flags=re.I)
     index = re.sub(r'<meta name="twitter:image" content="[^"]*">', f'<meta name="twitter:image" content="{escaped_image}">', index, count=1, flags=re.I)
 
-is_irish_story = 'ireland' in section.lower() or 'irish' in section.lower()
 irish_count = None
 
 if is_irish_story and ARCHIVE_PATH.exists():
