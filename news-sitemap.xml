@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://touchlinesport.net/barcelona-510m-camp-nou-financing.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Touchline Sport</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-20</news:publication_date>
+      <news:title>Barcelona Members Approve €510m as Camp Nou Bill Keeps Growing</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://touchlinesport.net/corinthians-statute-vote-2026-election.html</loc>
     <news:news>
       <news:publication>
@@ -75,50 +86,6 @@
       </news:publication>
       <news:publication_date>2026-09-18</news:publication_date>
       <news:title>Bohemians to Remain at Dalymount Park Until May 2027</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://touchlinesport.net/jj-gabriel-man-utd-exit-request.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Touchline Sport</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-17</news:publication_date>
-      <news:title>JJ Gabriel Left Out by Man Utd After Exit Request</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://touchlinesport.net/liam-kitching-ireland-call-up-rocco-vata.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Touchline Sport</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-17</news:publication_date>
-      <news:title>Liam Kitching Earns First Ireland Call-Up as Rocco Vata Returns</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://touchlinesport.net/inter-dario-baccin-recruitment-plan-piero-ausilio-exit.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Touchline Sport</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-17</news:publication_date>
-      <news:title>Inter’s Dario Baccin Outlines Recruitment Plan After Piero Ausilio Exit</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://touchlinesport.net/markuss-strods-latvia-call-up-ireland.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Touchline Sport</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-17</news:publication_date>
-      <news:title>Markuss Strods Earns First Latvia Call-Up as Ireland Question Emerges</news:title>
     </news:news>
   </url>
 </urlset>
