@@ -5,13 +5,23 @@
     <link>https://touchlinesport.net/</link>
     <description>Independent football journalism covering Irish football, recruitment, club strategy, ownership, academies and tactical analysis.</description>
     <language>en-ie</language>
-    <lastBuildDate>Sun, 20 Sep 2026 20:22:33 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 20 Sep 2026 21:10:57 +0000</lastBuildDate>
     <atom:link href="https://touchlinesport.net/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://touchlinesport.net/logo.png</url>
       <title>Touchline Sport</title>
       <link>https://touchlinesport.net/</link>
     </image>
+    <item>
+      <title>Ireland Midfield Injuries Could Open Door for Late LOI Call-Up</title>
+      <link>https://touchlinesport.net/ireland-midfield-injuries-loi-call-up.html</link>
+      <guid isPermaLink="true">https://touchlinesport.net/ireland-midfield-injuries-loi-call-up.html</guid>
+      <pubDate>Sun, 20 Sep 2026 22:09:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
+      <description>Bosun Lawal, Jamie McGrath and Harvey Vale are all fitness concerns before Kosovo, with Heimir Hallgrímsson already familiar with several domestic options.</description>
+      <category>Irish Football</category>
+      <media:content url="https://www.irishexaminer.com/cms_media/module_img/10462/5231026_7_org_3569632.jpg" medium="image" />
+    </item>
     <item>
       <title>Legia Warsaw Owner Nears Reported €50m Sale of 40% Stake</title>
       <link>https://touchlinesport.net/legia-warsaw-us-investor-40-percent-stake.html</link>
@@ -293,15 +303,6 @@
       <dc:creator>James Callan</dc:creator>
       <description>They were founded in 2017, have already dethroned Qarabağ and scored more goals than anyone in Champions League qualifying. Now Old Trafford is next.</description>
       <media:content url="https://touchlinesport.net/images/sabah-fk-card-v3.jpg" medium="image" />
-    </item>
-    <item>
-      <title>Grow Your Own: Why LOI Clubs Must Back The Academy</title>
-      <link>https://touchlinesport.net/grow-your-own-loi-academies.html</link>
-      <guid isPermaLink="true">https://touchlinesport.net/grow-your-own-loi-academies.html</guid>
-      <pubDate>Mon, 31 Aug 2026 09:00:00 +0100</pubDate>
-      <dc:creator>James Callan</dc:creator>
-      <description>The League of Ireland is finally making serious money from young players. If that’s where the game is heading, why aren’t more clubs spending now to produce the next Mason Melia?</description>
-      <media:content url="https://substackcdn.com/image/fetch/$s_!EWu1!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6281a6bf-e4cd-409a-968a-862b1cf1f4a9_2560x1340.jpeg" medium="image" />
     </item>
   </channel>
 </rss>
