@@ -16,6 +16,7 @@ COUNTRY_HINTS = {
     'Germany': ('bayern', 'bundesliga', 'kaiserslautern', 'dortmund', 'leverkusen'),
     'Spain': ('real madrid', 'barcelona', 'la liga', 'atletico madrid'),
     'France': ('psg', 'paris saint-germain', 'ligue 1', 'marseille', 'lyon'),
+    'Poland': ('legia warsaw', 'ekstraklasa', 'polish football', 'łazienkowska'),
 }
 
 
@@ -104,7 +105,7 @@ if not LATEST.exists() or not INDEX.exists() or not ARCHIVE.exists():
     raise SystemExit('Required publication surfaces are missing')
 
 stories = parse_stories(LATEST.read_text(encoding='utf-8'))
-world_stories = [s for s in stories if s['section'].strip().lower() == 'world']
+world_stories = [s for s in stories if s['section'].strip().lower() in {'world', 'world football'}]
 if not world_stories:
     print('World surface sync: no World stories found')
     raise SystemExit(0)
