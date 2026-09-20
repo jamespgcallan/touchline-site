@@ -133,41 +133,43 @@ if world_start >= 0 and world_end >= 0 and country:
         world_block,
         flags=re.S | re.I,
     )
-    country_title = re.search(
-        rf'<div class="country-block[^\"]*">.*?<h4 class="country-title">{re.escape(country)}</h4>.*?</div>\s*</div>\s*</div>',
-        world_block,
-        flags=re.S | re.I,
-    )
-    if country_title:
-        country_block = country_title.group(0)
-        marker = '<ul class="arch-list">'
-        if marker in country_block:
-            country_block = country_block.replace(marker, marker + archive_item(latest_world), 1)
-            country_count = len(re.findall(r'<li class="arch-item">', country_block))
-            country_block = re.sub(
-                r'<span class="country-count">\d+ pieces</span>',
-                f'<span class="country-count">{country_count} pieces</span>',
-                country_block,
-                count=1,
-            )
-            world_block = world_block[:country_title.start()] + country_block + world_block[country_title.end():]
-            world_count = len(re.findall(r'<li class="arch-item">', world_block))
-            world_block = re.sub(
-                r'<span class="category-count">\d+ pieces</span>',
-                f'<span class="category-count">{world_count} pieces</span>',
-                world_block,
-                count=1,
-            )
-            archive = archive[:world_start] + world_block + archive[world_end:]
-            total_count = len(re.findall(r'<li class="arch-item">', archive))
-            archive = re.sub(
-                r'<span class="pill">\d+ pieces and counting</span>',
-                f'<span class="pill">{total_count} pieces and counting</span>',
-                archive,
-                count=1,
-            )
-            if already_present:
-                print(f'World archive refreshed: {latest_world["title"]}')
+    country_marker = f'<h4 class="country-title">{country}</h4>'
+    marker_pos = world_block.find(country_marker)
+    if marker_pos >= 0:
+        block_start = world_block.rfind('<div class="country-block', 0, marker_pos)
+        block_end = world_block.find('<div class="country-block', marker_pos + len(country_marker))
+        if block_end < 0:
+            block_end = len(world_block)
+        if block_start >= 0:
+            country_block = world_block[block_start:block_end]
+            marker = '<ul class="arch-list">'
+            if marker in country_block:
+                country_block = country_block.replace(marker, marker + archive_item(latest_world), 1)
+                country_count = len(re.findall(r'<li class="arch-item">', country_block))
+                country_block = re.sub(
+                    r'<span class="country-count">\d+ (?:piece|pieces)</span>',
+                    f'<span class="country-count">{country_count} {"piece" if country_count == 1 else "pieces"}</span>',
+                    country_block,
+                    count=1,
+                )
+                world_block = world_block[:block_start] + country_block + world_block[block_end:]
+                world_count = len(re.findall(r'<li class="arch-item">', world_block))
+                world_block = re.sub(
+                    r'<span class="category-count">\d+ pieces</span>',
+                    f'<span class="category-count">{world_count} pieces</span>',
+                    world_block,
+                    count=1,
+                )
+                archive = archive[:world_start] + world_block + archive[world_end:]
+                total_count = len(re.findall(r'<li class="arch-item">', archive))
+                archive = re.sub(
+                    r'<span class="pill">\d+ pieces and counting</span>',
+                    f'<span class="pill">{total_count} pieces and counting</span>',
+                    archive,
+                    count=1,
+                )
+                if already_present:
+                    print(f'World archive refreshed: {latest_world["title"]}')
 
 if archive != original_archive:
     ARCHIVE.write_text(archive, encoding='utf-8')
