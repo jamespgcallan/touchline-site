@@ -38,49 +38,49 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root{--paper:#fbf3e7;--paper-soft:#f5e5cf;--ink:#1c1a17;--ink-soft:#6b5d4d;--accent:#e8720f;--accent-soft:#fbe2c4;--line:rgba(33,31,26,.10);--max:1180px;--radius:18px}
-  *{box-sizing:border-box}
-  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Inter',-apple-system,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5}
-  a{color:inherit;text-decoration:none}
-  .wrap{max-width:var(--max);margin:0 auto;padding:0 32px}
-  .pill{display:inline-flex;align-items:center;padding:5px 13px;border-radius:99px;background:var(--accent-soft);color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.03em;font-weight:500}
-  header{padding:26px 0;position:sticky;top:0;background:rgba(251,243,231,.86);backdrop-filter:blur(10px);z-index:20;border-bottom:1px solid transparent}
-  .nav-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
-  .logo{display:flex;align-items:center;gap:9px;font-family:'Manrope',sans-serif;font-weight:800;font-size:18px}
-  .logo-mark{width:30px;height:30px;object-fit:contain}
-  nav.links{display:flex;gap:26px}
-  nav.links a{font-size:14px;font-weight:500;color:var(--ink-soft);transition:color .2s}
-  nav.links a:hover{color:var(--ink)}
-  .nav-cta{background:var(--ink);color:var(--paper);padding:9px 18px;border-radius:99px;font-size:13.5px;font-weight:600;transition:background .2s}
-  .nav-cta:hover{background:var(--accent)}
-  .hero{min-height:66vh;display:flex;align-items:center;padding:80px 0}
-  .coming{max-width:760px}
-  .coming .pill{margin-bottom:22px}
-  h1{font-family:'Manrope',sans-serif;font-weight:800;font-size:clamp(40px,6vw,68px);line-height:1.02;letter-spacing:-.025em;margin:0 0 20px}
-  h1 em{font-style:normal;color:var(--accent)}
-  .lead{font-size:17px;color:var(--ink-soft);max-width:54ch;line-height:1.7;margin:0 0 34px}
-  .soon-box{background:var(--ink);color:var(--paper);border-radius:var(--radius);padding:30px 32px;display:inline-block;min-width:min(100%,420px)}
-  .soon-box .label{font-family:'IBM Plex Mono',monospace;font-size:11px;color:#c9c5b8;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
-  .soon-box strong{font-family:'Manrope',sans-serif;font-size:24px;font-weight:700}.soon-box p{color:#c9c5b8;margin:10px 0 18px;max-width:48ch}.soon-box a{display:inline-block;background:var(--accent);color:var(--ink);padding:11px 20px;border-radius:99px;font-size:14px;font-weight:700}
-  .tactics-list{margin-top:24px}
-  .tactics-list-label{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.06em;margin:0 0 12px}
-  .tactics-card{display:block;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;transition:transform .18s ease,box-shadow .18s ease}
-  .tactics-card:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(33,31,26,.08)}
-  .tactics-card .card-label{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--accent);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
-  .tactics-card h2{font-family:'Manrope',sans-serif;font-size:21px;line-height:1.25;margin:0 0 9px}
-  .tactics-card p{margin:0;color:var(--ink-soft);font-size:14.5px;line-height:1.6}
-  footer{border-top:1px solid var(--line);padding:34px 0}
-  .fine-print{font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.7;color:#928d7d;max-width:900px;margin:0 0 22px}
-  .foot-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--ink-soft)}
-  .foot-links{display:flex;gap:22px}
-  .foot-links a:hover{color:var(--accent)}
-  @media(max-width:600px){nav.links{display:none}.hero{min-height:60vh;padding:58px 0}.soon-box{padding:24px}.foot-row{flex-direction:column;align-items:flex-start}}
+:root{--paper:#fbf3e7;--paper-soft:#f5e5cf;--ink:#1c1a17;--ink-soft:#6b5d4d;--accent:#e8720f;--accent-soft:#fbe2c4;--line:rgba(33,31,26,.10);--max:1180px;--radius:18px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Inter',-apple-system,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 32px}
+.pill{display:inline-flex;align-items:center;padding:5px 13px;border-radius:99px;background:var(--accent-soft);color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.03em;font-weight:500}
+header{padding:26px 0;position:sticky;top:0;background:rgba(251,243,231,.86);backdrop-filter:blur(10px);z-index:20}
+.nav-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
+.logo{display:flex;align-items:center;gap:9px;font-family:'Manrope',sans-serif;font-weight:800;font-size:18px}
+.logo-mark{width:30px;height:30px;object-fit:contain}
+nav.links{display:flex;gap:26px}
+nav.links a{font-size:14px;font-weight:500;color:var(--ink-soft)}
+.nav-cta{background:var(--ink);color:var(--paper);padding:9px 18px;border-radius:99px;font-size:13.5px;font-weight:600}
+.page-hero{padding:50px 0 20px}
+.page-hero .pill{margin-bottom:18px}
+.page-hero h1{font-family:'Manrope',sans-serif;font-weight:800;font-size:clamp(32px,5vw,50px);letter-spacing:-.02em;margin:0 0 14px}
+.page-hero p{color:var(--ink-soft);font-size:16px;max-width:56ch;line-height:1.6;margin:0}
+.section{padding:44px 0 80px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.card{background:#fff;border-radius:var(--radius);padding:0 0 22px;overflow:hidden;box-shadow:0 1px 2px rgba(33,31,26,.04);border:1px solid var(--line);transition:transform .2s ease,box-shadow .2s ease;display:block}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(33,31,26,.10)}
+.card-art{aspect-ratio:16/10;background-size:cover;background-position:center}
+.card-body{padding:22px 22px 0}
+.card .pill{margin-bottom:14px}
+.card h3{font-family:'Manrope',sans-serif;font-weight:700;font-size:18.5px;line-height:1.28;margin:0 0 10px}
+.card p{font-size:13.8px;color:var(--ink-soft);line-height:1.6;margin:0 0 16px}
+.card .meta{font-family:'IBM Plex Mono',monospace;font-size:11px;color:#928d7d;display:flex;gap:10px;align-items:center}
+footer{border-top:1px solid var(--line);padding:34px 0}
+.fine-print{font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.7;color:#928d7d;max-width:900px;margin:0 0 22px}
+.foot-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--ink-soft)}
+.foot-links{display:flex;gap:22px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){nav.links{display:none}.grid{grid-template-columns:1fr}.foot-row{flex-direction:column;align-items:flex-start}}
 </style>
 <link rel="alternate" type="application/rss+xml" title="Touchline Sport RSS" href="https://touchlinesport.net/feed.xml">
 </head>
 <body>
 <header><div class="wrap nav-row"><a class="logo" href="index.html"><img class="logo-mark" src="logo.png" alt="Touchline Sport"> Touchline Sport</a><nav class="links" aria-label="Primary navigation"><a href="latest-news.html">Latest</a><a href="league-of-ireland-analysis.html">Irish Football</a><a href="touchline-tactics.html">Touchline Tactics</a><a href="archive.html">Archive</a><a href="about.html">About</a><a href="work-with-me.html">Work With Us</a></nav><a class="nav-cta" href="index.html#subscribe">Subscribe</a></div></header>
-<main class="hero"><div class="wrap"><div class="coming"><span class="pill">Touchline Tactics</span><h1>Touchline Tactics</h1><p class="lead">A home for detailed tactical breakdowns, shapes, pressing structures, build-up patterns and the bits that make a match look very different once you know where to look.</p><div class="soon-box"><div class="label">Latest breakdown</div><strong>Inside Stephen Bradley’s Successful Shamrock Rovers</strong><p>Bradley’s Rovers dominate the ball, move the spare man and make opponents rethink their shape.</p><a href="inside-stephen-bradley-shamrock-rovers.html">Read the piece →</a></div><div class="tactics-list"><div class="tactics-list-label">More Touchline Tactics</div><a class="tactics-card" href="inside-cesc-fabregas-como-game-model.html"><div class="card-label">Tactical breakdown</div><h2>Inside Cesc Fàbregas’ Como Game Model</h2><p>How Como bait the press, manufacture the free player and use possession to keep asking defenders questions they don’t really want to answer.</p></a></div></div></div></main>
+<section class="page-hero"><div class="wrap"><span class="pill">2 breakdowns and counting</span><h1>Touchline Tactics</h1><p>Detailed tactical breakdowns of how teams build, press, defend and create advantages, with the shapes and patterns behind what happens on the pitch.</p></div></section>
+<section class="section"><div class="wrap"><div class="grid">
+<a class="card" href="inside-stephen-bradley-shamrock-rovers.html"><div class="card-art" style="background-image:url('https://substackcdn.com/image/fetch/$s_!VRVA!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc57e05ec-5655-4e1d-876a-89ddfb0df59a_1200x650.png');background-position:center;"></div><div class="card-body"><span class="pill">Shamrock Rovers · Stephen Bradley</span><h3>Inside Stephen Bradley’s Successful Shamrock Rovers</h3><p>Bradley’s Rovers dominate the ball, move the spare man and make opponents rethink their shape.</p><div class="meta"><span>18 Sep 2026 · 13 min read</span></div></div></a>
+<a class="card" href="inside-cesc-fabregas-como-game-model.html"><div class="card-art" style="background-image:url('images/cesc-fabregas-como-header.webp');background-position:center;"></div><div class="card-body"><span class="pill">Como · Cesc Fàbregas</span><h3>Inside Cesc Fàbregas’ Como Game Model</h3><p>How Como bait the press, manufacture the free player and use possession to keep asking defenders questions they don’t really want to answer.</p><div class="meta"><span>10 Sep 2026</span></div></div></a>
+</div></div></section>
 <footer>
 <!-- TL_EXPLORE_START -->
 <nav aria-label="Explore Touchline Sport" style="max-width:1180px;margin:0 auto 26px;padding:0 32px;">
