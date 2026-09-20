@@ -5,13 +5,23 @@
     <link>https://touchlinesport.net/</link>
     <description>Independent football journalism covering Irish football, recruitment, club strategy, ownership, academies and tactical analysis.</description>
     <language>en-ie</language>
-    <lastBuildDate>Sun, 20 Sep 2026 17:46:35 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 20 Sep 2026 18:06:31 +0000</lastBuildDate>
     <atom:link href="https://touchlinesport.net/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://touchlinesport.net/logo.png</url>
       <title>Touchline Sport</title>
       <link>https://touchlinesport.net/</link>
     </image>
+    <item>
+      <title>Legia Warsaw Owner Nears Reported €50m Sale of 40% Stake</title>
+      <link>https://touchlinesport.net/legia-warsaw-us-investor-40-percent-stake.html</link>
+      <guid isPermaLink="true">https://touchlinesport.net/legia-warsaw-us-investor-40-percent-stake.html</guid>
+      <pubDate>Sun, 20 Sep 2026 19:03:57 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
+      <description>An American investor could take a major minority stake in Legia, with financial stability reportedly ahead of any spending spree.</description>
+      <category>World Football</category>
+      <media:content url="https://e0.365dm.com/16/09/1600x900/legia-warsaw-poland-violence_3787235.jpg?20160916105116" medium="image" />
+    </item>
     <item>
       <title>Hallgrímsson Questions UEFA as Ireland Strips Back Israel Fixtures</title>
       <link>https://touchlinesport.net/hallgrimsson-uefa-israel-russia-ireland.html</link>
@@ -292,15 +302,6 @@
       <dc:creator>James Callan</dc:creator>
       <description>The League of Ireland is finally making serious money from young players. If that’s where the game is heading, why aren’t more clubs spending now to produce the next Mason Melia?</description>
       <media:content url="https://substackcdn.com/image/fetch/$s_!EWu1!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6281a6bf-e4cd-409a-968a-862b1cf1f4a9_2560x1340.jpeg" medium="image" />
-    </item>
-    <item>
-      <title>Aldershot Town's Complete Rebuild: 21 Signings, 25 Departures</title>
-      <link>https://touchlinesport.net/aldershot-town-complete-rebuild.html</link>
-      <guid isPermaLink="true">https://touchlinesport.net/aldershot-town-complete-rebuild.html</guid>
-      <pubDate>Thu, 27 Aug 2026 09:00:00 +0100</pubDate>
-      <dc:creator>James Callan</dc:creator>
-      <description>Most clubs call five or six new players a rebuild. Scott Davies arrived at Aldershot Town and found himself replacing practically everyone except the ground keeper.</description>
-      <media:content url="https://touchlinesport.net/images/aldershot-town.webp" medium="image" />
     </item>
   </channel>
 </rss>
