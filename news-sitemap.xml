@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://touchlinesport.net/home-farm-dcu-league-of-ireland-return.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Touchline Sport</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-21</news:publication_date>
+      <news:title>Home Farm DCU: Could One of Irish Football’s Great Names Be Back?</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://touchlinesport.net/hallgrimsson-uefa-israel-russia-ireland.html</loc>
     <news:news>
       <news:publication>
@@ -64,61 +75,6 @@
       </news:publication>
       <news:publication_date>2026-09-19</news:publication_date>
       <news:title>Alan Reynolds Questions Dawson Devoy Ireland Omission After Bohs Winner</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://touchlinesport.net/clearlake-full-control-chelsea-todd-boehly-exits.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Touchline Sport</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-18</news:publication_date>
-      <news:title>Clearlake Takes Full Control of Chelsea as Todd Boehly Exits</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://touchlinesport.net/lionel-messi-100-inter-miami-goals.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Touchline Sport</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-18</news:publication_date>
-      <news:title>Lionel Messi Scores 100th Inter Miami Goal in Campeones Cup Win</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://touchlinesport.net/inside-stephen-bradley-shamrock-rovers.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Touchline Sport</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-18</news:publication_date>
-      <news:title>Inside Stephen Bradley’s Successful Shamrock Rovers</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://touchlinesport.net/ireland-u19-squad-league-of-ireland-academies.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Touchline Sport</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-18</news:publication_date>
-      <news:title>Ireland U19 Squad Features Bologna, Hoffenheim and Strong LOI Core</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://touchlinesport.net/bohemians-dalymount-park-may-2027.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Touchline Sport</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-18</news:publication_date>
-      <news:title>Bohemians to Remain at Dalymount Park Until May 2027</news:title>
     </news:news>
   </url>
 </urlset>

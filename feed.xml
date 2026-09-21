@@ -5,13 +5,23 @@
     <link>https://touchlinesport.net/</link>
     <description>Independent football journalism covering Irish football, recruitment, club strategy, ownership, academies and tactical analysis.</description>
     <language>en-ie</language>
-    <lastBuildDate>Sun, 20 Sep 2026 21:45:31 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 21 Sep 2026 08:07:01 +0000</lastBuildDate>
     <atom:link href="https://touchlinesport.net/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://touchlinesport.net/logo.png</url>
       <title>Touchline Sport</title>
       <link>https://touchlinesport.net/</link>
     </image>
+    <item>
+      <title>Home Farm DCU: Could One of Irish Football’s Great Names Be Back?</title>
+      <link>https://touchlinesport.net/home-farm-dcu-league-of-ireland-return.html</link>
+      <guid isPermaLink="true">https://touchlinesport.net/home-farm-dcu-league-of-ireland-return.html</guid>
+      <pubDate>Mon, 21 Sep 2026 09:04:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
+      <description>Home Farm DCU have started fast in the National League. Could the League of Ireland be next?</description>
+      <category>Irish Football</category>
+      <media:content url="https://substackcdn.com/image/fetch/$s_!0Qxz!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F668992b6-7305-4027-b7cf-2d31a749227d_960x503.jpeg" medium="image" />
+    </item>
     <item>
       <title>Ireland Midfield Injuries Could Open Door for Late LOI Call-Up</title>
       <link>https://touchlinesport.net/ireland-midfield-injuries-loi-call-up.html</link>
@@ -294,15 +304,6 @@
       <dc:creator>James Callan</dc:creator>
       <description>Why the modern game is addicted to instant reaction, hot takes and permanent crisis</description>
       <media:content url="https://substack-post-media.s3.amazonaws.com/public/images/db76246a-add9-4b94-b77f-492453ae4636_1200x650.png" medium="image" />
-    </item>
-    <item>
-      <title>Who Are Sabah FK? Meet Manchester United’s Champions League Wildcard</title>
-      <link>https://touchlinesport.net/who-are-sabah-fk.html</link>
-      <guid isPermaLink="true">https://touchlinesport.net/who-are-sabah-fk.html</guid>
-      <pubDate>Wed, 02 Sep 2026 09:00:00 +0100</pubDate>
-      <dc:creator>James Callan</dc:creator>
-      <description>They were founded in 2017, have already dethroned Qarabağ and scored more goals than anyone in Champions League qualifying. Now Old Trafford is next.</description>
-      <media:content url="https://touchlinesport.net/images/sabah-fk-card-v3.jpg" medium="image" />
     </item>
   </channel>
 </rss>
