@@ -5,13 +5,23 @@
     <link>https://touchlinesport.net/</link>
     <description>Independent football journalism covering Irish football, recruitment, club strategy, ownership, academies and tactical analysis.</description>
     <language>en-ie</language>
-    <lastBuildDate>Mon, 21 Sep 2026 08:07:01 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 21 Sep 2026 14:30:49 +0000</lastBuildDate>
     <atom:link href="https://touchlinesport.net/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://touchlinesport.net/logo.png</url>
       <title>Touchline Sport</title>
       <link>https://touchlinesport.net/</link>
     </image>
+    <item>
+      <title>Spain Extend Luis de la Fuente Contract Until 2032</title>
+      <link>https://touchlinesport.net/spain-luis-de-la-fuente-contract-2032.html</link>
+      <guid isPermaLink="true">https://touchlinesport.net/spain-luis-de-la-fuente-contract-2032.html</guid>
+      <pubDate>Mon, 21 Sep 2026 15:27:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
+      <description>Spain have handed their World Cup-winning coach another six years after a relationship with the national-team system stretching back to 2013.</description>
+      <category>World Football</category>
+      <media:content url="https://ichef.bbci.co.uk/ace/standard/819/cpsprodpb/b5f0/live/d60f2240-b11d-11f1-8ecc-07cd1cee2987.jpg" medium="image" />
+    </item>
     <item>
       <title>Home Farm DCU: Could One of Irish Football’s Great Names Be Back?</title>
       <link>https://touchlinesport.net/home-farm-dcu-league-of-ireland-return.html</link>
@@ -295,15 +305,6 @@
       <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
       <dc:creator>James Callan</dc:creator>
       <description>Touchline Sport founder James Callan has been named a Football Content Awards 2026 finalist in the Best New Content Creator category.</description>
-    </item>
-    <item>
-      <title>Football Needs More Boredom</title>
-      <link>https://touchlinesport.net/football-needs-more-boredom.html</link>
-      <guid isPermaLink="true">https://touchlinesport.net/football-needs-more-boredom.html</guid>
-      <pubDate>Fri, 04 Sep 2026 09:09:00 +0100</pubDate>
-      <dc:creator>James Callan</dc:creator>
-      <description>Why the modern game is addicted to instant reaction, hot takes and permanent crisis</description>
-      <media:content url="https://substack-post-media.s3.amazonaws.com/public/images/db76246a-add9-4b94-b77f-492453ae4636_1200x650.png" medium="image" />
     </item>
   </channel>
 </rss>
