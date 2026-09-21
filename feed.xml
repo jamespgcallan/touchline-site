@@ -5,13 +5,23 @@
     <link>https://touchlinesport.net/</link>
     <description>Independent football journalism covering Irish football, recruitment, club strategy, ownership, academies and tactical analysis.</description>
     <language>en-ie</language>
-    <lastBuildDate>Mon, 21 Sep 2026 17:37:24 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 21 Sep 2026 17:48:09 +0000</lastBuildDate>
     <atom:link href="https://touchlinesport.net/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://touchlinesport.net/logo.png</url>
       <title>Touchline Sport</title>
       <link>https://touchlinesport.net/</link>
     </image>
+    <item>
+      <title>Wrexham Exchange Contracts to Buy Historic Turf Pub</title>
+      <link>https://touchlinesport.net/wrexham-buy-turf-pub-racecourse-ground.html</link>
+      <guid isPermaLink="true">https://touchlinesport.net/wrexham-buy-turf-pub-racecourse-ground.html</guid>
+      <pubDate>Mon, 21 Sep 2026 18:47:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
+      <description>The deal would bring Wrexham AFC, the Racecourse Ground and the pub where the club was founded under common ownership.</description>
+      <category>World Football</category>
+      <media:content url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg3ykcNmnc-ADVuPzjQpaJWrOzbs9VlTPVSuOqYuxSPBLcGW7MwEBGIj4V&amp;s=10" medium="image" />
+    </item>
     <item>
       <title>160+ Irish Athletes Urge Ireland Players to Boycott Israel Games</title>
       <link>https://touchlinesport.net/irish-athletes-ireland-players-boycott-israel.html</link>
@@ -299,15 +309,6 @@
       <dc:creator>James Callan</dc:creator>
       <description>How Como bait the press, manufacture the free player and use possession to keep asking defenders questions they don’t really want to answer.</description>
       <media:content url="https://touchlinesport.net/images/cesc-fabregas-como-header.webp" medium="image" />
-    </item>
-    <item>
-      <title>Chelsea’s Transfer Machine: Will The New Model Finally Work In 2026?</title>
-      <link>https://touchlinesport.net/chelsea-transfer-machine-2026.html</link>
-      <guid isPermaLink="true">https://touchlinesport.net/chelsea-transfer-machine-2026.html</guid>
-      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
-      <dc:creator>James Callan</dc:creator>
-      <description>Chelsea are still buying and selling at a ridiculous rate. In 2026, the question is whether all that churn is finally building a proper team.</description>
-      <media:content url="https://touchlinesport.net/images/chelsea-transfer-machine-hero.jpeg" medium="image" />
     </item>
   </channel>
 </rss>
