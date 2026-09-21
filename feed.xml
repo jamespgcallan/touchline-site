@@ -5,13 +5,23 @@
     <link>https://touchlinesport.net/</link>
     <description>Independent football journalism covering Irish football, recruitment, club strategy, ownership, academies and tactical analysis.</description>
     <language>en-ie</language>
-    <lastBuildDate>Mon, 21 Sep 2026 14:33:45 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 21 Sep 2026 17:37:24 +0000</lastBuildDate>
     <atom:link href="https://touchlinesport.net/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://touchlinesport.net/logo.png</url>
       <title>Touchline Sport</title>
       <link>https://touchlinesport.net/</link>
     </image>
+    <item>
+      <title>160+ Irish Athletes Urge Ireland Players to Boycott Israel Games</title>
+      <link>https://touchlinesport.net/irish-athletes-ireland-players-boycott-israel.html</link>
+      <guid isPermaLink="true">https://touchlinesport.net/irish-athletes-ireland-players-boycott-israel.html</guid>
+      <pubDate>Mon, 21 Sep 2026 18:35:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
+      <description>The Stop The Game campaign has appealed directly to Heimir Hallgrímsson’s squad with Ireland’s first meeting with Israel six days away.</description>
+      <category>Irish Football</category>
+      <media:content url="https://www.irishexaminer.com/cms_media/module_img/10224/5112303_4_org_2.84662168.jpg.jpg" medium="image" />
+    </item>
     <item>
       <title>Brian Sørensen Confirmed as Republic of Ireland WNT Assistant</title>
       <link>https://touchlinesport.net/brian-sorensen-ireland-wnt-assistant.html</link>
@@ -298,15 +308,6 @@
       <dc:creator>James Callan</dc:creator>
       <description>Chelsea are still buying and selling at a ridiculous rate. In 2026, the question is whether all that churn is finally building a proper team.</description>
       <media:content url="https://touchlinesport.net/images/chelsea-transfer-machine-hero.jpeg" medium="image" />
-    </item>
-    <item>
-      <title>Braywatch: The Seaside Club Bringing Young Talent Back to Life</title>
-      <link>https://touchlinesport.net/braywatch-the-seaside-club-bringing-young-talent-back-to-life.html</link>
-      <guid isPermaLink="true">https://touchlinesport.net/braywatch-the-seaside-club-bringing-young-talent-back-to-life.html</guid>
-      <pubDate>Mon, 07 Sep 2026 09:00:00 +0100</pubDate>
-      <dc:creator>James Callan</dc:creator>
-      <description>Bray were once a proper Premier Division nuisance. Their route back now runs through teenagers, second chances and a ground where young players are trusted early.</description>
-      <media:content url="https://touchlinesport.net/images/braywatch-carlisle-grounds.jpeg" medium="image" />
     </item>
   </channel>
 </rss>
