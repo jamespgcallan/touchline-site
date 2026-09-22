@@ -5,13 +5,23 @@
     <link>https://touchlinesport.net/</link>
     <description>Independent football journalism covering Irish football, recruitment, club strategy, ownership, academies and tactical analysis.</description>
     <language>en-ie</language>
-    <lastBuildDate>Tue, 22 Sep 2026 13:39:41 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2026 14:33:21 +0000</lastBuildDate>
     <atom:link href="https://touchlinesport.net/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://touchlinesport.net/logo.png</url>
       <title>Touchline Sport</title>
       <link>https://touchlinesport.net/</link>
     </image>
+    <item>
+      <title>Stephen Bradley Emerges as Leading Candidate for Hibernian Job</title>
+      <link>https://touchlinesport.net/stephen-bradley-hibernian-manager.html</link>
+      <guid isPermaLink="true">https://touchlinesport.net/stephen-bradley-hibernian-manager.html</guid>
+      <pubDate>Tue, 22 Sep 2026 15:30:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
+      <description>The Shamrock Rovers boss is firmly in the running to replace David Gray, with his record developing young players helping bring him onto Hibs’ radar.</description>
+      <category>Irish Football</category>
+      <media:content url="https://www.thesun.ie/wp-content/uploads/sites/3/2025/11/crop-16080850.jpg?quality=80&amp;amp;strip=all&amp;amp;w=1920&amp;amp;h=1080&amp;amp;crop=1" medium="image" />
+    </item>
     <item>
       <title>German FA President Calls Infantino FIFA Reform Offer a ‘Ploy’</title>
       <link>https://touchlinesport.net/neuendorf-infantino-fifa-reform-re-election.html</link>
@@ -300,16 +310,6 @@
       <description>The 18-year-old could leave for compensation just months after Rovers accepted a €1.8 million bid from Hoffenheim.</description>
       <category>League of Ireland</category>
       <media:content url="https://cdn.shamrockrovers.ie/wp-content/uploads/2025/01/15115312/IMG-20250115-WA0006-scaled.jpg" medium="image" />
-    </item>
-    <item>
-      <title>Sligo Rovers: Can Fan Ownership Still Compete?</title>
-      <link>https://touchlinesport.net/sligo-rovers-fan-ownership-loi.html</link>
-      <guid isPermaLink="true">https://touchlinesport.net/sligo-rovers-fan-ownership-loi.html</guid>
-      <pubDate>Mon, 14 Sep 2026 09:08:00 +0100</pubDate>
-      <dc:creator>James Callan</dc:creator>
-      <description>The Bit O’Red have the history, the support and the structure. What they may not have is the same access to capital as everyone else.</description>
-      <category>League of Ireland</category>
-      <media:content url="https://substackcdn.com/image/fetch/$s_!x2Pw!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F87ef6700-03fe-42f6-9461-6fa40cefa4ad_1198x627.jpeg" medium="image" />
     </item>
   </channel>
 </rss>
