@@ -5,13 +5,23 @@
     <link>https://touchlinesport.net/</link>
     <description>Independent football journalism covering Irish football, recruitment, club strategy, ownership, academies and tactical analysis.</description>
     <language>en-ie</language>
-    <lastBuildDate>Tue, 22 Sep 2026 17:54:27 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2026 17:57:18 +0000</lastBuildDate>
     <atom:link href="https://touchlinesport.net/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://touchlinesport.net/logo.png</url>
       <title>Touchline Sport</title>
       <link>https://touchlinesport.net/</link>
     </image>
+    <item>
+      <title>Mikel Arteta Agrees New Arsenal Contract After Premier League Title</title>
+      <link>https://touchlinesport.net/mikel-arteta-arsenal-new-contract.html</link>
+      <guid isPermaLink="true">https://touchlinesport.net/mikel-arteta-arsenal-new-contract.html</guid>
+      <pubDate>Tue, 22 Sep 2026 18:58:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
+      <description>The Arsenal manager has agreed improved terms after ending a 22-year title wait and taking the club back to a Champions League final.</description>
+      <category>World Football</category>
+      <media:content url="https://www.thetimes.com/imageserver/image/6b25b24b-2e8d-4e0a-a50a-71ba6e7eceed.jpg?strip=all&amp;format=webp&amp;resize=2360" medium="image" />
+    </item>
     <item>
       <title>Borussia Mönchengladbach Appoint Alexander Blessin Until 2028</title>
       <link>https://touchlinesport.net/borussia-monchengladbach-alexander-blessin-manager.html</link>
@@ -300,16 +310,6 @@
       <description>The Arsenal teenager and Everton’s Braiden Graham are both in Michael O’Neill’s Nations League squad as the FAI monitor their international futures.</description>
       <category>Irish Football</category>
       <media:content url="https://assets.arsenal.com/prod/images/xl_landscape/8edca74192ed-ceadach-oneill-young-gun.webp" medium="image" />
-    </item>
-    <item>
-      <title>James Abankwah Scores First Serie A Goal for Udinese Against Inter</title>
-      <link>https://touchlinesport.net/james-abankwah-first-serie-a-goal-inter.html</link>
-      <guid isPermaLink="true">https://touchlinesport.net/james-abankwah-first-serie-a-goal-inter.html</guid>
-      <pubDate>Mon, 14 Sep 2026 22:40:00 +0100</pubDate>
-      <dc:creator>James Callan</dc:creator>
-      <description>The Republic of Ireland defender headed Udinese in front at San Siro as his strong return to Serie A continued.</description>
-      <category>Ireland</category>
-      <media:content url="https://img2.thejournal.ie/article/7162766/river?version=7162768&amp;width=650" medium="image" />
     </item>
   </channel>
 </rss>
