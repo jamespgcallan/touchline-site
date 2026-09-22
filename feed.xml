@@ -5,13 +5,23 @@
     <link>https://touchlinesport.net/</link>
     <description>Independent football journalism covering Irish football, recruitment, club strategy, ownership, academies and tactical analysis.</description>
     <language>en-ie</language>
-    <lastBuildDate>Tue, 22 Sep 2026 17:57:18 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2026 18:03:41 +0000</lastBuildDate>
     <atom:link href="https://touchlinesport.net/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://touchlinesport.net/logo.png</url>
       <title>Touchline Sport</title>
       <link>https://touchlinesport.net/</link>
     </image>
+    <item>
+      <title>Shamrock Rovers Teen Jayden Marshall Signs Three-Year Como Deal</title>
+      <link>https://touchlinesport.net/jayden-marshall-shamrock-rovers-como.html</link>
+      <guid isPermaLink="true">https://touchlinesport.net/jayden-marshall-shamrock-rovers-como.html</guid>
+      <pubDate>Tue, 22 Sep 2026 19:06:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
+      <description>The 16-year-old centre-back has joined the Serie A club after a rapid rise through Shamrock Rovers and the Republic of Ireland underage setup.</description>
+      <category>Irish Football</category>
+      <media:content url="https://d251ktlxwvtnkw.cloudfront.net/news/cover/1790075274323_desktop-cover.jpg" medium="image" />
+    </item>
     <item>
       <title>Mikel Arteta Agrees New Arsenal Contract After Premier League Title</title>
       <link>https://touchlinesport.net/mikel-arteta-arsenal-new-contract.html</link>
@@ -300,16 +310,6 @@
       <description>PIF gave Newcastle access to extraordinary wealth. Five years later, the strange part is that Newcastle still have to earn enough money to spend it.</description>
       <category>World</category>
       <media:content url="https://substackcdn.com/image/fetch/$s_!rpMc!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdd90dc79-8d3b-425d-8e42-dd7ae3f20051_3000x1571.jpeg" medium="image" />
-    </item>
-    <item>
-      <title>Céadach O’Neill Named in Northern Ireland Squad Amid Republic Interest</title>
-      <link>https://touchlinesport.net/ceadach-oneill-northern-ireland-squad.html</link>
-      <guid isPermaLink="true">https://touchlinesport.net/ceadach-oneill-northern-ireland-squad.html</guid>
-      <pubDate>Tue, 15 Sep 2026 21:31:00 +0100</pubDate>
-      <dc:creator>James Callan</dc:creator>
-      <description>The Arsenal teenager and Everton’s Braiden Graham are both in Michael O’Neill’s Nations League squad as the FAI monitor their international futures.</description>
-      <category>Irish Football</category>
-      <media:content url="https://assets.arsenal.com/prod/images/xl_landscape/8edca74192ed-ceadach-oneill-young-gun.webp" medium="image" />
     </item>
   </channel>
 </rss>
