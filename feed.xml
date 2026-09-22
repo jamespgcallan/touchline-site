@@ -5,13 +5,23 @@
     <link>https://touchlinesport.net/</link>
     <description>Independent football journalism covering Irish football, recruitment, club strategy, ownership, academies and tactical analysis.</description>
     <language>en-ie</language>
-    <lastBuildDate>Tue, 22 Sep 2026 14:34:15 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2026 17:52:16 +0000</lastBuildDate>
     <atom:link href="https://touchlinesport.net/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://touchlinesport.net/logo.png</url>
       <title>Touchline Sport</title>
       <link>https://touchlinesport.net/</link>
     </image>
+    <item>
+      <title>Borussia Mönchengladbach Appoint Alexander Blessin Until 2028</title>
+      <link>https://touchlinesport.net/borussia-monchengladbach-alexander-blessin-manager.html</link>
+      <guid isPermaLink="true">https://touchlinesport.net/borussia-monchengladbach-alexander-blessin-manager.html</guid>
+      <pubDate>Tue, 22 Sep 2026 18:48:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
+      <description>The former St Pauli coach takes over with Gladbach bottom of the Bundesliga after the worst start in the club’s history.</description>
+      <category>World Football</category>
+      <media:content url="https://www.getfootballnewsgermany.com/assets/fc-bayern-munchen-v-fc-st-pauli-bundesliga-3-scaled.jpg" medium="image" />
+    </item>
     <item>
       <title>Stephen Bradley Emerges as Leading Candidate for Hibernian Job</title>
       <link>https://touchlinesport.net/stephen-bradley-hibernian-manager.html</link>
@@ -300,16 +310,6 @@
       <description>The Republic of Ireland defender headed Udinese in front at San Siro as his strong return to Serie A continued.</description>
       <category>Ireland</category>
       <media:content url="https://img2.thejournal.ie/article/7162766/river?version=7162768&amp;width=650" medium="image" />
-    </item>
-    <item>
-      <title>Michael Noonan Set for Nottingham Forest Move From Shamrock Rovers</title>
-      <link>https://touchlinesport.net/michael-noonan-nottingham-forest-shamrock-rovers.html</link>
-      <guid isPermaLink="true">https://touchlinesport.net/michael-noonan-nottingham-forest-shamrock-rovers.html</guid>
-      <pubDate>Mon, 14 Sep 2026 14:49:00 +0100</pubDate>
-      <dc:creator>James Callan</dc:creator>
-      <description>The 18-year-old could leave for compensation just months after Rovers accepted a €1.8 million bid from Hoffenheim.</description>
-      <category>League of Ireland</category>
-      <media:content url="https://cdn.shamrockrovers.ie/wp-content/uploads/2025/01/15115312/IMG-20250115-WA0006-scaled.jpg" medium="image" />
     </item>
   </channel>
 </rss>
