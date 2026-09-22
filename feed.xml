@@ -5,13 +5,23 @@
     <link>https://touchlinesport.net/</link>
     <description>Independent football journalism covering Irish football, recruitment, club strategy, ownership, academies and tactical analysis.</description>
     <language>en-ie</language>
-    <lastBuildDate>Tue, 22 Sep 2026 11:39:35 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2026 13:33:49 +0000</lastBuildDate>
     <atom:link href="https://touchlinesport.net/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://touchlinesport.net/logo.png</url>
       <title>Touchline Sport</title>
       <link>https://touchlinesport.net/</link>
     </image>
+    <item>
+      <title>German FA President Calls Infantino FIFA Reform Offer a ‘Ploy’</title>
+      <link>https://touchlinesport.net/neuendorf-infantino-fifa-reform-re-election.html</link>
+      <guid isPermaLink="true">https://touchlinesport.net/neuendorf-infantino-fifa-reform-re-election.html</guid>
+      <pubDate>Tue, 22 Sep 2026 14:31:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
+      <description>Bernd Neuendorf says FIFA needs reform after the collapse of its private-investment plan, but Gianni Infantino should not be leading it.</description>
+      <category>World Football</category>
+      <media:content url="https://e6.365dm.de/26/09/768x432/skysport_de-neuendorf-infantino_7352363.jpg?20260915160540" medium="image" />
+    </item>
     <item>
       <title>Kerry County Council Seeks FAI-IFA Talks on All-Ireland Team</title>
       <link>https://touchlinesport.net/kerry-council-fai-ifa-all-ireland-football-team.html</link>
@@ -300,16 +310,6 @@
       <description>The Bit O’Red have the history, the support and the structure. What they may not have is the same access to capital as everyone else.</description>
       <category>League of Ireland</category>
       <media:content url="https://substackcdn.com/image/fetch/$s_!x2Pw!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F87ef6700-03fe-42f6-9461-6fa40cefa4ad_1198x627.jpeg" medium="image" />
-    </item>
-    <item>
-      <title>Liam Delap Leaves Door Open to Republic of Ireland Switch</title>
-      <link>https://touchlinesport.net/liam-delap-ireland-shay-given.html</link>
-      <guid isPermaLink="true">https://touchlinesport.net/liam-delap-ireland-shay-given.html</guid>
-      <pubDate>Sun, 13 Sep 2026 16:40:00 +0100</pubDate>
-      <dc:creator>James Callan</dc:creator>
-      <description>Nottingham Forest striker tells Shay Given “I don’t know” when asked about playing for Ireland after scoring his first goal for the club.</description>
-      <category>Republic of Ireland</category>
-      <media:content url="https://www.thesun.ie/wp-content/uploads/sites/3/2026/09/NINTCHDBPICT001108097268.jpg?resize=1536,1024&amp;quality=90&amp;strip=all" medium="image" />
     </item>
   </channel>
 </rss>
