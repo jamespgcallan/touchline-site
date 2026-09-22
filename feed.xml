@@ -5,13 +5,23 @@
     <link>https://touchlinesport.net/</link>
     <description>Independent football journalism covering Irish football, recruitment, club strategy, ownership, academies and tactical analysis.</description>
     <language>en-ie</language>
-    <lastBuildDate>Tue, 22 Sep 2026 10:44:12 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2026 11:39:35 +0000</lastBuildDate>
     <atom:link href="https://touchlinesport.net/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://touchlinesport.net/logo.png</url>
       <title>Touchline Sport</title>
       <link>https://touchlinesport.net/</link>
     </image>
+    <item>
+      <title>Kerry County Council Seeks FAI-IFA Talks on All-Ireland Team</title>
+      <link>https://touchlinesport.net/kerry-council-fai-ifa-all-ireland-football-team.html</link>
+      <guid isPermaLink="true">https://touchlinesport.net/kerry-council-fai-ifa-all-ireland-football-team.html</guid>
+      <pubDate>Tue, 22 Sep 2026 12:37:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
+      <description>More than a century after Irish football split in two, Kerry councillors want the FAI and IFA discussing whether it still has to stay that way.</description>
+      <category>Irish Football</category>
+      <media:content url="https://static.dw.com/image/44189898_6.jpg" medium="image" />
+    </item>
     <item>
       <title>Bohemians to Save Up to €400k by Staying at Dalymount Until May 2027</title>
       <link>https://touchlinesport.net/bohemians-dalymount-400k-saving.html</link>
@@ -300,16 +310,6 @@
       <description>Nottingham Forest striker tells Shay Given “I don’t know” when asked about playing for Ireland after scoring his first goal for the club.</description>
       <category>Republic of Ireland</category>
       <media:content url="https://www.thesun.ie/wp-content/uploads/sites/3/2026/09/NINTCHDBPICT001108097268.jpg?resize=1536,1024&amp;quality=90&amp;strip=all" medium="image" />
-    </item>
-    <item>
-      <title>FAI Opens Investigation Into Shamrock Rovers Over Noonan Transfers</title>
-      <link>https://touchlinesport.net/fai-shamrock-rovers-noonan-transfer-investigation.html</link>
-      <guid isPermaLink="true">https://touchlinesport.net/fai-shamrock-rovers-noonan-transfer-investigation.html</guid>
-      <pubDate>Sun, 13 Sep 2026 11:48:00 +0100</pubDate>
-      <dc:creator>James Callan</dc:creator>
-      <description>FIFA referred agency agreements involving Michael and Alex Noonan back to the FAI for examination under third-party ownership rules.</description>
-      <category>League of Ireland</category>
-      <media:content url="https://touchlinesport.net/images/fai-shamrock-rovers-noonan-investigation.jpg" medium="image" />
     </item>
   </channel>
 </rss>
