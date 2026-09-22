@@ -5,7 +5,7 @@
     <link>https://touchlinesport.net/</link>
     <description>Independent football journalism covering Irish football, recruitment, club strategy, ownership, academies and tactical analysis.</description>
     <language>en-ie</language>
-    <lastBuildDate>Tue, 22 Sep 2026 10:24:18 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2026 10:44:12 +0000</lastBuildDate>
     <atom:link href="https://touchlinesport.net/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://touchlinesport.net/logo.png</url>
@@ -21,6 +21,16 @@
       <description>Four extra months in Phibsborough will protect matchday income before Bohs begin a complicated spell across several temporary grounds.</description>
       <category>Irish Football</category>
       <media:content url="https://i2-prod.irishmirror.ie/article32118598.ece/ALTERNATES/s1200c/0_Dalymount-Park.jpg" medium="image" />
+    </item>
+    <item>
+      <title>Daniel Levy’s $1bn Tottenham Stake Deal Stalls Over Payment</title>
+      <link>https://touchlinesport.net/daniel-levy-tottenham-eight-sports-deal.html</link>
+      <guid isPermaLink="true">https://touchlinesport.net/daniel-levy-tottenham-eight-sports-deal.html</guid>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 +0000</pubDate>
+      <dc:creator>James Callan</dc:creator>
+      <description>The former Spurs chairman is still waiting to complete his ENIC exit while the Lewis family continue putting fresh money into Tottenham.</description>
+      <category>World Football</category>
+      <media:content url="https://ichef.bbci.co.uk/ace/standard/1800/cpsprodpb/3ac4/live/327a2670-89b4-11f0-98cc-8182b2586301.jpg" medium="image" />
     </item>
     <item>
       <title>Wrexham Exchange Contracts to Buy Historic Turf Pub</title>
@@ -300,16 +310,6 @@
       <description>FIFA referred agency agreements involving Michael and Alex Noonan back to the FAI for examination under third-party ownership rules.</description>
       <category>League of Ireland</category>
       <media:content url="https://touchlinesport.net/images/fai-shamrock-rovers-noonan-investigation.jpg" medium="image" />
-    </item>
-    <item>
-      <title>St Patrick’s Athletic 2-0 Shamrock Rovers: Ryan Sheridan Shines at 17</title>
-      <link>https://touchlinesport.net/st-patricks-athletic-shamrock-rovers-ryan-sheridan.html</link>
-      <guid isPermaLink="true">https://touchlinesport.net/st-patricks-athletic-shamrock-rovers-ryan-sheridan.html</guid>
-      <pubDate>Sat, 12 Sep 2026 21:00:00 +0100</pubDate>
-      <dc:creator>James Callan</dc:creator>
-      <description>Stephen Kenny’s side cut the Premier Division gap to three points as Sheridan impressed on his first league start.</description>
-      <category>League of Ireland</category>
-      <media:content url="https://touchlinesport.net/images/ryan-sheridan-st-pats-shamrock-rovers.webp?v=20260912c" medium="image" />
     </item>
   </channel>
 </rss>
