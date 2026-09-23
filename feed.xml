@@ -5,13 +5,22 @@
     <link>https://touchlinesport.net/</link>
     <description>Independent football journalism covering Irish football, recruitment, club strategy, ownership, academies and tactical analysis.</description>
     <language>en-ie</language>
-    <lastBuildDate>Tue, 22 Sep 2026 18:43:26 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 23 Sep 2026 09:35:37 +0000</lastBuildDate>
     <atom:link href="https://touchlinesport.net/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://touchlinesport.net/logo.png</url>
       <title>Touchline Sport</title>
       <link>https://touchlinesport.net/</link>
     </image>
+    <item>
+      <title>Cherries Picking: How Bournemouth Keep Finding Football’s Best Value</title>
+      <link>https://touchlinesport.net/bournemouth-transfer-recruitment-value.html</link>
+      <guid isPermaLink="true">https://touchlinesport.net/bournemouth-transfer-recruitment-value.html</guid>
+      <pubDate>Wed, 23 Sep 2026 10:34:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
+      <description>Bournemouth have gone from Steve Cook and a 17-point deduction to developing players for Real Madrid, Liverpool and PSG. It has been some upgrade.</description>
+      <media:content url="https://livesport-ott-images.ssl.cdn.cra.cz/r900xfq60/f07c768c-c044-4076-b92d-b2fdb7b4f84d.jpeg" medium="image" />
+    </item>
     <item>
       <title>Shamrock Rovers Teen Jayden Marshall Signs Three-Year Como Deal</title>
       <link>https://touchlinesport.net/jayden-marshall-shamrock-rovers-como.html</link>
@@ -300,16 +309,6 @@
       <description>The former Bohemians and Waterford manager will oversee a Shelbourne academy that has already undergone major investment in facilities and staffing.</description>
       <category>Irish Football</category>
       <media:content url="https://prod-img.independent.ie/public/incoming/kuude7-bohs-boss-keith-long-is-banned-from-the-touchline-for-sundays-fai-cup-final.-photo-sportsfile/alternates/THREE_TWO_1620/Bohs%20boss%20Keith%20Long%20is%20banned%20from%20the%20touchline%20for%20Sundays%20FAI%20Cup%20final.%20Photo%20Sportsfile" medium="image" />
-    </item>
-    <item>
-      <title>Newcastle United: Why PIF Wealth Hasn’t Led To Unlimited Transfer Spending</title>
-      <link>https://touchlinesport.net/newcastle-united-pif-transfer-spending.html</link>
-      <guid isPermaLink="true">https://touchlinesport.net/newcastle-united-pif-transfer-spending.html</guid>
-      <pubDate>Wed, 16 Sep 2026 09:08:00 +0100</pubDate>
-      <dc:creator>James Callan</dc:creator>
-      <description>PIF gave Newcastle access to extraordinary wealth. Five years later, the strange part is that Newcastle still have to earn enough money to spend it.</description>
-      <category>World</category>
-      <media:content url="https://substackcdn.com/image/fetch/$s_!rpMc!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdd90dc79-8d3b-425d-8e42-dd7ae3f20051_3000x1571.jpeg" medium="image" />
     </item>
   </channel>
 </rss>
