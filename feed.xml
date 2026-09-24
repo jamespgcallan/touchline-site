@@ -5,13 +5,23 @@
     <link>https://touchlinesport.net/</link>
     <description>Independent football journalism covering Irish football, recruitment, club strategy, ownership, academies and tactical analysis.</description>
     <language>en-ie</language>
-    <lastBuildDate>Thu, 24 Sep 2026 12:07:20 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2026 15:15:39 +0000</lastBuildDate>
     <atom:link href="https://touchlinesport.net/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://touchlinesport.net/logo.png</url>
       <title>Touchline Sport</title>
       <link>https://touchlinesport.net/</link>
     </image>
+    <item>
+      <title>Hibs Appoint Marink Reedijk After Unbeaten Belgian Title Season</title>
+      <link>https://touchlinesport.net/hibernian-marink-reedijk-manager.html</link>
+      <guid isPermaLink="true">https://touchlinesport.net/hibernian-marink-reedijk-manager.html</guid>
+      <pubDate>Thu, 24 Sep 2026 16:13:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
+      <description>The 35-year-old arrives at Easter Road after winning 28 of 32 league games with SK Beveren without losing once.</description>
+      <category>World Football</category>
+      <media:content url="https://images.gc.hibsfcservices.co.uk/fit-in/3200x3200/73a538a0-b7fe-11f1-bcf9-375e3b4d1888.png" medium="image" />
+    </item>
     <item>
       <title>Why Andy Burnham Wants Football’s 41-Year Alcohol Ban Reviewed</title>
       <link>https://touchlinesport.net/andy-burnham-football-alcohol-ban-review.html</link>
@@ -299,16 +309,6 @@
       <description>The Bohemians captain struck in the 90th minute against Drogheda after being left out of Ireland’s latest squad.</description>
       <category>Irish Football</category>
       <media:content url="https://extra.ie/wp-content/uploads/2026/08/3477517.jpg?w=1200" medium="image" />
-    </item>
-    <item>
-      <title>Bohemians to Remain at Dalymount Park Until May 2027</title>
-      <link>https://touchlinesport.net/bohemians-dalymount-park-may-2027.html</link>
-      <guid isPermaLink="true">https://touchlinesport.net/bohemians-dalymount-park-may-2027.html</guid>
-      <pubDate>Fri, 18 Sep 2026 18:11:00 +0100</pubDate>
-      <dc:creator>James Callan</dc:creator>
-      <description>Bohs will stay in Phibsborough into next season as part of a phased redevelopment designed to cut the cost of their time away.</description>
-      <category>Irish Football</category>
-      <media:content url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwU59bsO-6j8yXdfRYJwAVQ1HRvjVUX1kfgf5H-dt82OSQmGObAxlrjX8&amp;s=10" medium="image" />
     </item>
   </channel>
 </rss>
