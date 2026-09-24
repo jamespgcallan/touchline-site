@@ -109,30 +109,34 @@ original_index = index
 is_irish_story = 'ireland' in section.lower() or 'irish' in section.lower()
 is_world_story = 'world' in section.lower()
 
-if 'class="latest-split"' in index and (is_irish_story or is_world_story):
-    feature_label = 'Irish Football' if is_irish_story else 'World Football'
-    split_featured = (
-        '<article class="featured">'
-        f'<div class="featured-art" style="background-image:url(\'{escaped(image)}\');"></div>'
-        '<div class="featured-copy">'
-        f'<span class="pill">Latest · {feature_label}</span>'
-        f'<h2>{html.escape(title)}</h2>'
-        f'<p>{html.escape(description)}</p>'
-        f'<a class="read" href="{escaped(href)}">Read the piece '
-        '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">'
-        '<path d="M5 12h14M13 5l7 7-7 7"/></svg></a>'
-        '</div></article>'
-    )
-    pattern = (
-        r'<article class="featured">\s*'
-        r'<div class="featured-art" style="[^"]*"></div>\s*'
-        r'<div class="featured-copy"><span class="pill">Latest · '
-        + re.escape(feature_label) +
-        r'</span>.*?</div>\s*</article>'
-    )
-    index, replacements = re.subn(pattern, split_featured, index, count=1, flags=re.S | re.I)
-    if replacements == 0:
-        raise SystemExit(f'Could not update homepage {feature_label} feature card')
+if 'class="latest-split"' in index:
+    # The split homepage only has dedicated Irish and World feature slots.
+    # Culture, tactics, scouting and other sections should not be forced into
+    # the legacy single-feature pattern just because they are the newest story.
+    if is_irish_story or is_world_story:
+        feature_label = 'Irish Football' if is_irish_story else 'World Football'
+        split_featured = (
+            '<article class="featured">'
+            f'<div class="featured-art" style="background-image:url(\'{escaped(image)}\');"></div>'
+            '<div class="featured-copy">'
+            f'<span class="pill">Latest · {feature_label}</span>'
+            f'<h2>{html.escape(title)}</h2>'
+            f'<p>{html.escape(description)}</p>'
+            f'<a class="read" href="{escaped(href)}">Read the piece '
+            '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">'
+            '<path d="M5 12h14M13 5l7 7-7 7"/></svg></a>'
+            '</div></article>'
+        )
+        pattern = (
+            r'<article class="featured">\s*'
+            r'<div class="featured-art" style="[^"]*"></div>\s*'
+            r'<div class="featured-copy"><span class="pill">Latest · '
+            + re.escape(feature_label) +
+            r'</span>.*?</div>\s*</article>'
+        )
+        index, replacements = re.subn(pattern, split_featured, index, count=1, flags=re.S | re.I)
+        if replacements == 0:
+            raise SystemExit(f'Could not update homepage {feature_label} feature card')
 else:
     # Backward-compatible fallback for the old single-feature homepage layout.
     index = re.sub(
