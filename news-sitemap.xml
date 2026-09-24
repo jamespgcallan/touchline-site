@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://touchlinesport.net/do-national-football-styles-still-exist.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Touchline Sport</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-24</news:publication_date>
+      <news:title>Do National Football Styles Still Exist?</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://touchlinesport.net/manchester-united-record-revenue-43m-loss.html</loc>
     <news:news>
       <news:publication>
@@ -108,61 +119,6 @@
       </news:publication>
       <news:publication_date>2026-09-22</news:publication_date>
       <news:title>Borussia Mönchengladbach Appoint Alexander Blessin Until 2028</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://touchlinesport.net/brian-sorensen-ireland-wnt-assistant.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Touchline Sport</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-21</news:publication_date>
-      <news:title>Brian Sørensen Confirmed as Republic of Ireland WNT Assistant</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://touchlinesport.net/home-farm-dcu-league-of-ireland-return.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Touchline Sport</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-21</news:publication_date>
-      <news:title>Home Farm DCU: Could One of Irish Football’s Great Names Be Back?</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://touchlinesport.net/irish-athletes-ireland-players-boycott-israel.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Touchline Sport</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-21</news:publication_date>
-      <news:title>160+ Irish Athletes Urge Ireland Players to Boycott Israel Games</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://touchlinesport.net/wrexham-buy-turf-pub-racecourse-ground.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Touchline Sport</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-21</news:publication_date>
-      <news:title>Wrexham Exchange Contracts to Buy Historic Turf Pub</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://touchlinesport.net/spain-luis-de-la-fuente-contract-2032.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Touchline Sport</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-21</news:publication_date>
-      <news:title>Spain Extend Luis de la Fuente Contract Until 2032</news:title>
     </news:news>
   </url>
 </urlset>

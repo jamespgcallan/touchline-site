@@ -5,13 +5,22 @@
     <link>https://touchlinesport.net/</link>
     <description>Independent football journalism covering Irish football, recruitment, club strategy, ownership, academies and tactical analysis.</description>
     <language>en-ie</language>
-    <lastBuildDate>Wed, 23 Sep 2026 15:14:01 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2026 08:08:57 +0000</lastBuildDate>
     <atom:link href="https://touchlinesport.net/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://touchlinesport.net/logo.png</url>
       <title>Touchline Sport</title>
       <link>https://touchlinesport.net/</link>
     </image>
+    <item>
+      <title>Do National Football Styles Still Exist?</title>
+      <link>https://touchlinesport.net/do-national-football-styles-still-exist.html</link>
+      <guid isPermaLink="true">https://touchlinesport.net/do-national-football-styles-still-exist.html</guid>
+      <pubDate>Thu, 24 Sep 2026 09:05:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
+      <description>Brazil had joga bonito, Italy had catenaccio and the Netherlands had Total Football. So what happened to football’s great national styles?</description>
+      <media:content url="https://substackcdn.com/image/fetch/$s_!Z38V!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F455e3fa9-dd3f-407e-986f-725469e03b16_1280x670.jpeg" medium="image" />
+    </item>
     <item>
       <title>Manchester United Post Record £677.6m Revenue Despite £43m Loss</title>
       <link>https://touchlinesport.net/manchester-united-record-revenue-43m-loss.html</link>
@@ -299,16 +308,6 @@
       <description>The 15-year-old had been lined up to make Manchester United history. Six days after a Youth League hat-trick, he wasn’t even in the squad.</description>
       <category>World</category>
       <media:content url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDv4InWOWvijlRQiaK4FVGGCp5_cL7dbANrRAQuIo79g&amp;s=10" medium="image" />
-    </item>
-    <item>
-      <title>Inter’s Dario Baccin Outlines Recruitment Plan After Piero Ausilio Exit</title>
-      <link>https://touchlinesport.net/inter-dario-baccin-recruitment-plan-piero-ausilio-exit.html</link>
-      <guid isPermaLink="true">https://touchlinesport.net/inter-dario-baccin-recruitment-plan-piero-ausilio-exit.html</guid>
-      <pubDate>Thu, 17 Sep 2026 09:00:00 +0100</pubDate>
-      <dc:creator>James Callan</dc:creator>
-      <description>Inter’s new sporting chief wants to retain the club’s Italian core while continuing the younger recruitment model already taking shape under Oaktree.</description>
-      <category>World</category>
-      <media:content url="https://www.sport.fr/wp-content/uploads/2026/09/ICONSPORT_366308_0058.webp" medium="image" />
     </item>
   </channel>
 </rss>
