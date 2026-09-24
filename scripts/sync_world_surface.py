@@ -174,7 +174,7 @@ if world_start >= 0 and world_end >= 0 and country:
 if archive != original_archive:
     ARCHIVE.write_text(archive, encoding='utf-8')
 
-# Use the archive's real World count on the homepage and display the three newest World stories.
+# Use the archive's real World count on the homepage and display the six newest World stories.
 world_count_match = re.search(
     r'<div class="wrap category-block" id="world">.*?<span class="category-count">(\d+) pieces</span>',
     archive,
@@ -188,7 +188,7 @@ if start >= 0 and end >= 0:
         head = head_match.group(1)
         if world_count:
             head = re.sub(r'\d+ pieces · View all →', f'{world_count} pieces · View all →', head, count=1)
-        cards = ''.join(home_card(item) for item in world_stories[:3])
+        cards = ''.join(home_card(item) for item in world_stories[:6])
         index = index[:start] + head + cards + '</div></div>\n' + index[end:]
 
 if index != original_index:
