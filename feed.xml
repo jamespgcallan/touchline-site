@@ -5,13 +5,23 @@
     <link>https://touchlinesport.net/</link>
     <description>Independent football journalism covering Irish football, recruitment, club strategy, ownership, academies and tactical analysis.</description>
     <language>en-ie</language>
-    <lastBuildDate>Thu, 24 Sep 2026 10:14:26 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2026 12:07:20 +0000</lastBuildDate>
     <atom:link href="https://touchlinesport.net/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://touchlinesport.net/logo.png</url>
       <title>Touchline Sport</title>
       <link>https://touchlinesport.net/</link>
     </image>
+    <item>
+      <title>Why Andy Burnham Wants Football’s 41-Year Alcohol Ban Reviewed</title>
+      <link>https://touchlinesport.net/andy-burnham-football-alcohol-ban-review.html</link>
+      <guid isPermaLink="true">https://touchlinesport.net/andy-burnham-football-alcohol-ban-review.html</guid>
+      <pubDate>Thu, 24 Sep 2026 13:04:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
+      <description>From WSL trials to policing concerns and club revenue, the case for changing one of English football’s longest-standing matchday rules is back on the table.</description>
+      <category>World Football</category>
+      <media:content url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToSULbISAmP40DoZc8Bw3cnFADxzwQsEB18rcJx5iBaZje4zc0YNuwVcdm&amp;s=10" medium="image" />
+    </item>
     <item>
       <title>Christian Eriksen Leaves Wolfsburg After Contract Terminated Early</title>
       <link>https://touchlinesport.net/christian-eriksen-leaves-wolfsburg.html</link>
@@ -299,16 +309,6 @@
       <description>Bohs will stay in Phibsborough into next season as part of a phased redevelopment designed to cut the cost of their time away.</description>
       <category>Irish Football</category>
       <media:content url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwU59bsO-6j8yXdfRYJwAVQ1HRvjVUX1kfgf5H-dt82OSQmGObAxlrjX8&amp;s=10" medium="image" />
-    </item>
-    <item>
-      <title>Ireland U19 Squad Features Bologna, Hoffenheim and Strong LOI Core</title>
-      <link>https://touchlinesport.net/ireland-u19-squad-league-of-ireland-academies.html</link>
-      <guid isPermaLink="true">https://touchlinesport.net/ireland-u19-squad-league-of-ireland-academies.html</guid>
-      <pubDate>Fri, 18 Sep 2026 12:11:00 +0100</pubDate>
-      <dc:creator>James Callan</dc:creator>
-      <description>Noel Hunt’s latest Ireland squad stretches from Dublin to Bologna, but League of Ireland academies have helped produce many of the players now moving abroad.</description>
-      <category>Irish Football</category>
-      <media:content url="https://d2w4iw8gs9jo14.cloudfront.net/thumbnails/xxl/4017/7401/6750/3291954.jpg" medium="image" />
     </item>
   </channel>
 </rss>
