@@ -5,13 +5,23 @@
     <link>https://touchlinesport.net/</link>
     <description>Independent football journalism covering Irish football, recruitment, club strategy, ownership, academies and tactical analysis.</description>
     <language>en-ie</language>
-    <lastBuildDate>Fri, 25 Sep 2026 07:27:05 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 25 Sep 2026 07:41:40 +0000</lastBuildDate>
     <atom:link href="https://touchlinesport.net/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://touchlinesport.net/logo.png</url>
       <title>Touchline Sport</title>
       <link>https://touchlinesport.net/</link>
     </image>
+    <item>
+      <title>£1.8bn, the Carabao Cup and 3pm Blackout: Inside the Premier League's EFL Offer</title>
+      <link>https://touchlinesport.net/premier-league-efl-1-8bn-offer.html</link>
+      <guid isPermaLink="true">https://touchlinesport.net/premier-league-efl-1-8bn-offer.html</guid>
+      <pubDate>Fri, 25 Sep 2026 08:40:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
+      <description>The Premier League is offering considerably more money to the EFL, but changes to spending rules, the Carabao Cup and 3pm blackout come with it.</description>
+      <category>World Football</category>
+      <media:content url="https://e0.365dm.com/18/08/1600x900/skysports-graphic-premier-league_4377324.jpg?20180801105247" medium="image" />
+    </item>
     <item>
       <title>Sligo Rovers Members Back Restructure That Could Bring Private Investment</title>
       <link>https://touchlinesport.net/sligo-rovers-restructure-private-investment.html</link>
@@ -299,16 +309,6 @@
       <description>Ireland’s manager has questioned why Russia remains suspended as the FAI and RTÉ remove much of the usual machinery around the Israel games.</description>
       <category>Irish Football</category>
       <media:content url="https://cloudfront-eu-central-1.images.arcpublishing.com/irishtimes/KSP3IIFF6BBOBL2QTCWEAK2BGA.jpg" medium="image" />
-    </item>
-    <item>
-      <title>Barcelona Members Approve €510m as Camp Nou Bill Keeps Growing</title>
-      <link>https://touchlinesport.net/barcelona-510m-camp-nou-financing.html</link>
-      <guid isPermaLink="true">https://touchlinesport.net/barcelona-510m-camp-nou-financing.html</guid>
-      <pubDate>Sun, 20 Sep 2026 18:25:00 +0100</pubDate>
-      <dc:creator>James Callan</dc:creator>
-      <description>Barça will borrow another €300m for Spotify Camp Nou and raise €210m against future La Liga and UEFA media income.</description>
-      <category>World Football</category>
-      <media:content url="https://cdn.mos.cms.futurecdn.net/82iQcmWxvstzFxEbYrTQT9.jpg" medium="image" />
     </item>
   </channel>
 </rss>
