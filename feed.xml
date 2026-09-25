@@ -5,13 +5,23 @@
     <link>https://touchlinesport.net/</link>
     <description>Independent football journalism covering Irish football, recruitment, club strategy, ownership, academies and tactical analysis.</description>
     <language>en-ie</language>
-    <lastBuildDate>Thu, 24 Sep 2026 16:22:03 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 25 Sep 2026 07:27:05 +0000</lastBuildDate>
     <atom:link href="https://touchlinesport.net/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://touchlinesport.net/logo.png</url>
       <title>Touchline Sport</title>
       <link>https://touchlinesport.net/</link>
     </image>
+    <item>
+      <title>Sligo Rovers Members Back Restructure That Could Bring Private Investment</title>
+      <link>https://touchlinesport.net/sligo-rovers-restructure-private-investment.html</link>
+      <guid isPermaLink="true">https://touchlinesport.net/sligo-rovers-restructure-private-investment.html</guid>
+      <pubDate>Fri, 25 Sep 2026 08:25:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
+      <description>The Showgrounds will remain in member hands, while a new football company could eventually allow Sligo Rovers to bring in outside investment.</description>
+      <category>Irish Football</category>
+      <media:content url="https://prod-img.independent.ie/public/incoming/gfrj66-2975654.jpg/alternates/THREE_TWO_1620/2975654.jpg" medium="image" />
+    </item>
     <item>
       <title>David Alaba Joins Udinese Until 2027 After Real Madrid Exit</title>
       <link>https://touchlinesport.net/david-alaba-udinese-transfer.html</link>
@@ -299,16 +309,6 @@
       <description>Barça will borrow another €300m for Spotify Camp Nou and raise €210m against future La Liga and UEFA media income.</description>
       <category>World Football</category>
       <media:content url="https://cdn.mos.cms.futurecdn.net/82iQcmWxvstzFxEbYrTQT9.jpg" medium="image" />
-    </item>
-    <item>
-      <title>Court Blocks Corinthians Statute Vote Before 2026 Election</title>
-      <link>https://touchlinesport.net/corinthians-statute-vote-2026-election.html</link>
-      <guid isPermaLink="true">https://touchlinesport.net/corinthians-statute-vote-2026-election.html</guid>
-      <pubDate>Sat, 19 Sep 2026 12:42:00 +0100</pubDate>
-      <dc:creator>James Callan</dc:creator>
-      <description>Members were due to vote on electoral rules and expanded voting rights before the courts intervened for a fourth time.</description>
-      <category>World Football</category>
-      <media:content url="https://assets-us-01.kc-usercontent.com/31dbcbc6-da4c-0033-328a-d7621d0fa726/22075626-bacc-499a-8e8a-b6f0b6e58870/Corinthians%20Universidad%20Central%20Need.jpg?ver=03-06-2025?w=3840&amp;q=75" medium="image" />
     </item>
   </channel>
 </rss>
