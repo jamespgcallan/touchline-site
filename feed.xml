@@ -5,13 +5,23 @@
     <link>https://touchlinesport.net/</link>
     <description>Independent football journalism covering Irish football, recruitment, club strategy, ownership, academies and tactical analysis.</description>
     <language>en-ie</language>
-    <lastBuildDate>Mon, 28 Sep 2026 15:15:35 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 28 Sep 2026 19:29:52 +0000</lastBuildDate>
     <atom:link href="https://touchlinesport.net/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://touchlinesport.net/logo.png</url>
       <title>Touchline Sport</title>
       <link>https://touchlinesport.net/</link>
     </image>
+    <item>
+      <title>Sheffield United’s £11m Loan Adds New Twist to Ownership Dispute</title>
+      <link>https://touchlinesport.net/sheffield-united-11m-loan-ownership-dispute.html</link>
+      <guid isPermaLink="true">https://touchlinesport.net/sheffield-united-11m-loan-ownership-dispute.html</guid>
+      <pubDate>Mon, 28 Sep 2026 20:28:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
+      <description>The company used to buy Sheffield United has been wound up. The club’s accounts show it was also owed £11m by the Blades.</description>
+      <category>World Football</category>
+      <media:content url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeMpsEJamzX0QBHqlA8QA6KEmhquhlaQ310Gqu8XXByA&amp;s=10" medium="image" />
+    </item>
     <item>
       <title>Roma’s New €1bn Pietralata Stadium Gets Final Approval</title>
       <link>https://touchlinesport.net/roma-pietralata-stadium-final-approval.html</link>
@@ -298,16 +308,6 @@
       <description>The deal would bring Wrexham AFC, the Racecourse Ground and the pub where the club was founded under common ownership.</description>
       <category>World Football</category>
       <media:content url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg3ykcNmnc-ADVuPzjQpaJWrOzbs9VlTPVSuOqYuxSPBLcGW7MwEBGIj4V&amp;s=10" medium="image" />
-    </item>
-    <item>
-      <title>160+ Irish Athletes Urge Ireland Players to Boycott Israel Games</title>
-      <link>https://touchlinesport.net/irish-athletes-ireland-players-boycott-israel.html</link>
-      <guid isPermaLink="true">https://touchlinesport.net/irish-athletes-ireland-players-boycott-israel.html</guid>
-      <pubDate>Mon, 21 Sep 2026 18:35:00 +0100</pubDate>
-      <dc:creator>James Callan</dc:creator>
-      <description>The Stop The Game campaign has appealed directly to Heimir Hallgrímsson’s squad with Ireland’s first meeting with Israel six days away.</description>
-      <category>Irish Football</category>
-      <media:content url="https://www.irishexaminer.com/cms_media/module_img/10224/5112303_4_org_2.84662168.jpg.jpg" medium="image" />
     </item>
   </channel>
 </rss>
