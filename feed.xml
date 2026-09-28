@@ -5,13 +5,23 @@
     <link>https://touchlinesport.net/</link>
     <description>Independent football journalism covering Irish football, recruitment, club strategy, ownership, academies and tactical analysis.</description>
     <language>en-ie</language>
-    <lastBuildDate>Mon, 28 Sep 2026 10:27:34 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 28 Sep 2026 15:15:10 +0000</lastBuildDate>
     <atom:link href="https://touchlinesport.net/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://touchlinesport.net/logo.png</url>
       <title>Touchline Sport</title>
       <link>https://touchlinesport.net/</link>
     </image>
+    <item>
+      <title>Roma’s New €1bn Pietralata Stadium Gets Final Approval</title>
+      <link>https://touchlinesport.net/roma-pietralata-stadium-final-approval.html</link>
+      <guid isPermaLink="true">https://touchlinesport.net/roma-pietralata-stadium-final-approval.html</guid>
+      <pubDate>Mon, 28 Sep 2026 16:13:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
+      <description>The 60,605-seat stadium could give Roma something they have spent decades without: a home built around the club.</description>
+      <category>World Football</category>
+      <media:content url="https://media.asroma.com/prod/images/gm_preview/b98f447d3d75-20250306romaathletic-club-1176-1.webp" medium="image" />
+    </item>
     <item>
       <title>Bari Face €11.1m Fight for Future as €250m Stadium Plan Lands</title>
       <link>https://touchlinesport.net/bari-11m-filmauro-250m-stadium-plan.html</link>
@@ -298,16 +308,6 @@
       <description>The Stop The Game campaign has appealed directly to Heimir Hallgrímsson’s squad with Ireland’s first meeting with Israel six days away.</description>
       <category>Irish Football</category>
       <media:content url="https://www.irishexaminer.com/cms_media/module_img/10224/5112303_4_org_2.84662168.jpg.jpg" medium="image" />
-    </item>
-    <item>
-      <title>Brian Sørensen Confirmed as Republic of Ireland WNT Assistant</title>
-      <link>https://touchlinesport.net/brian-sorensen-ireland-wnt-assistant.html</link>
-      <guid isPermaLink="true">https://touchlinesport.net/brian-sorensen-ireland-wnt-assistant.html</guid>
-      <pubDate>Mon, 21 Sep 2026 15:32:28 +0100</pubDate>
-      <dc:creator>James Callan</dc:creator>
-      <description>The former Everton manager joins Carla Ward before the World Cup play-offs, with Ireland four matches away from Brazil 2027.</description>
-      <category>Irish Football</category>
-      <media:content url="https://ichef.bbci.co.uk/ace/standard/2048/cpsprodpb/3fcd/live/f0d63560-01b3-11f1-a8b8-bdd2c5f9bcad.jpg" medium="image" />
     </item>
   </channel>
 </rss>
