@@ -5,13 +5,22 @@
     <link>https://touchlinesport.net/</link>
     <description>Independent football journalism covering Irish football, recruitment, club strategy, ownership, academies and tactical analysis.</description>
     <language>en-ie</language>
-    <lastBuildDate>Sat, 26 Sep 2026 22:39:51 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 28 Sep 2026 08:25:54 +0000</lastBuildDate>
     <atom:link href="https://touchlinesport.net/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://touchlinesport.net/logo.png</url>
       <title>Touchline Sport</title>
       <link>https://touchlinesport.net/</link>
     </image>
+    <item>
+      <title>The Club With No First Team and 240 Internationals</title>
+      <link>https://touchlinesport.net/belvedere-240-internationals-schoolboy-club.html</link>
+      <guid isPermaLink="true">https://touchlinesport.net/belvedere-240-internationals-schoolboy-club.html</guid>
+      <pubDate>Mon, 28 Sep 2026 09:24:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
+      <description>From Real Betis and Atlético Madrid to a World Cup meeting with Messi, the tales of a schoolboy club with a big history.</description>
+      <media:content url="https://substackcdn.com/image/fetch/$s_!xmtf!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F30cd4623-29b7-4350-bddd-10952b0ff273_1200x650.png" medium="image" />
+    </item>
     <item>
       <title>Gavin Bazunu Explains Why He Withdrew From Ireland-Israel Games</title>
       <link>https://touchlinesport.net/gavin-bazunu-ireland-israel-withdrawal.html</link>
@@ -299,16 +308,6 @@
       <description>Home Farm DCU have started fast in the National League. Could the League of Ireland be next?</description>
       <category>Irish Football</category>
       <media:content url="https://substackcdn.com/image/fetch/$s_!0Qxz!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F668992b6-7305-4027-b7cf-2d31a749227d_960x503.jpeg" medium="image" />
-    </item>
-    <item>
-      <title>Ireland Midfield Injuries Could Open Door for Late LOI Call-Up</title>
-      <link>https://touchlinesport.net/ireland-midfield-injuries-loi-call-up.html</link>
-      <guid isPermaLink="true">https://touchlinesport.net/ireland-midfield-injuries-loi-call-up.html</guid>
-      <pubDate>Sun, 20 Sep 2026 22:09:00 +0100</pubDate>
-      <dc:creator>James Callan</dc:creator>
-      <description>Bosun Lawal, Jamie McGrath and Harvey Vale are all fitness concerns before Kosovo, with Heimir Hallgrímsson already familiar with several domestic options.</description>
-      <category>Irish Football</category>
-      <media:content url="https://www.irishexaminer.com/cms_media/module_img/10462/5231026_7_org_3569632.jpg" medium="image" />
     </item>
   </channel>
 </rss>
