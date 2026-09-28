@@ -5,13 +5,23 @@
     <link>https://touchlinesport.net/</link>
     <description>Independent football journalism covering Irish football, recruitment, club strategy, ownership, academies and tactical analysis.</description>
     <language>en-ie</language>
-    <lastBuildDate>Mon, 28 Sep 2026 08:25:54 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 28 Sep 2026 08:59:54 +0000</lastBuildDate>
     <atom:link href="https://touchlinesport.net/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://touchlinesport.net/logo.png</url>
       <title>Touchline Sport</title>
       <link>https://touchlinesport.net/</link>
     </image>
+    <item>
+      <title>Racism Allegation and Referee Response Overshadow Ireland-Israel Win</title>
+      <link>https://touchlinesport.net/ireland-israel-racism-idah-molumby-uefa.html</link>
+      <guid isPermaLink="true">https://touchlinesport.net/ireland-israel-racism-idah-molumby-uefa.html</guid>
+      <pubDate>Mon, 28 Sep 2026 09:58:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
+      <description>Apparent monkey chants towards Adam Idah were reported from the Israeli support, but Jayson Molumby's attempt to alert officials brought no intervention.</description>
+      <category>Irish Football</category>
+      <media:content url="https://ichef.bbci.co.uk/ace/standard/3840/cpsprodpb/d6a0/live/2ebf9bd0-baa7-11f1-bc1f-3f186ca4140c.jpg" medium="image" />
+    </item>
     <item>
       <title>The Club With No First Team and 240 Internationals</title>
       <link>https://touchlinesport.net/belvedere-240-internationals-schoolboy-club.html</link>
@@ -298,16 +308,6 @@
       <description>Spain have handed their World Cup-winning coach another six years after a relationship with the national-team system stretching back to 2013.</description>
       <category>World Football</category>
       <media:content url="https://ichef.bbci.co.uk/ace/standard/819/cpsprodpb/b5f0/live/d60f2240-b11d-11f1-8ecc-07cd1cee2987.jpg" medium="image" />
-    </item>
-    <item>
-      <title>Home Farm DCU: Could One of Irish Football’s Great Names Be Back?</title>
-      <link>https://touchlinesport.net/home-farm-dcu-league-of-ireland-return.html</link>
-      <guid isPermaLink="true">https://touchlinesport.net/home-farm-dcu-league-of-ireland-return.html</guid>
-      <pubDate>Mon, 21 Sep 2026 09:04:00 +0100</pubDate>
-      <dc:creator>James Callan</dc:creator>
-      <description>Home Farm DCU have started fast in the National League. Could the League of Ireland be next?</description>
-      <category>Irish Football</category>
-      <media:content url="https://substackcdn.com/image/fetch/$s_!0Qxz!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F668992b6-7305-4027-b7cf-2d31a749227d_960x503.jpeg" medium="image" />
     </item>
   </channel>
 </rss>
