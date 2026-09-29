@@ -5,13 +5,23 @@
     <link>https://touchlinesport.net/</link>
     <description>Independent football journalism covering Irish football, recruitment, club strategy, ownership, academies and tactical analysis.</description>
     <language>en-ie</language>
-    <lastBuildDate>Tue, 29 Sep 2026 07:38:54 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 29 Sep 2026 07:39:15 +0000</lastBuildDate>
     <atom:link href="https://touchlinesport.net/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://touchlinesport.net/logo.png</url>
       <title>Touchline Sport</title>
       <link>https://touchlinesport.net/</link>
     </image>
+    <item>
+      <title>FIFA Accuses UEFA of ‘Misinformation Campaign’ as Investment Row Reaches Court</title>
+      <link>https://touchlinesport.net/fifa-uefa-investment-row-court.html</link>
+      <guid isPermaLink="true">https://touchlinesport.net/fifa-uefa-investment-row-court.html</guid>
+      <pubDate>Tue, 29 Sep 2026 08:37:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
+      <description>UEFA is seeking evidence for a potential Swiss criminal complaint as FIFA’s abandoned private-investment plan continues to cause problems months after its collapse.</description>
+      <category>World Football</category>
+      <media:content url="https://images2.minutemediacdn.com/image/upload/c_crop,x_397,y_76,w_3080,h_1732/c_fill,w_720,ar_16:9,f_auto,q_auto,g_auto/images/voltaxMediaLibrary/mmsport/si/01k6x84wyt0wdmk9v9t4.jpg" medium="image" />
+    </item>
     <item>
       <title>Sheffield United’s £11m Loan Adds New Twist to Ownership Dispute</title>
       <link>https://touchlinesport.net/sheffield-united-11m-loan-ownership-dispute.html</link>
@@ -298,16 +308,6 @@
       <description>The former Spurs chairman is still waiting to complete his ENIC exit while the Lewis family continue putting fresh money into Tottenham.</description>
       <category>World Football</category>
       <media:content url="https://ichef.bbci.co.uk/ace/standard/1800/cpsprodpb/3ac4/live/327a2670-89b4-11f0-98cc-8182b2586301.jpg" medium="image" />
-    </item>
-    <item>
-      <title>Wrexham Exchange Contracts to Buy Historic Turf Pub</title>
-      <link>https://touchlinesport.net/wrexham-buy-turf-pub-racecourse-ground.html</link>
-      <guid isPermaLink="true">https://touchlinesport.net/wrexham-buy-turf-pub-racecourse-ground.html</guid>
-      <pubDate>Mon, 21 Sep 2026 18:47:00 +0100</pubDate>
-      <dc:creator>James Callan</dc:creator>
-      <description>The deal would bring Wrexham AFC, the Racecourse Ground and the pub where the club was founded under common ownership.</description>
-      <category>World Football</category>
-      <media:content url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg3ykcNmnc-ADVuPzjQpaJWrOzbs9VlTPVSuOqYuxSPBLcGW7MwEBGIj4V&amp;s=10" medium="image" />
     </item>
   </channel>
 </rss>
