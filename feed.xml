@@ -5,13 +5,23 @@
     <link>https://touchlinesport.net/</link>
     <description>Independent football journalism covering Irish football, recruitment, club strategy, ownership, academies and tactical analysis.</description>
     <language>en-ie</language>
-    <lastBuildDate>Tue, 29 Sep 2026 07:49:20 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 29 Sep 2026 17:12:14 +0000</lastBuildDate>
     <atom:link href="https://touchlinesport.net/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://touchlinesport.net/logo.png</url>
       <title>Touchline Sport</title>
       <link>https://touchlinesport.net/</link>
     </image>
+    <item>
+      <title>Nasser Al-Khelaifi Wants to Take Europe's Club Power Model Global</title>
+      <link>https://touchlinesport.net/nasser-al-khelaifi-world-football-clubs.html</link>
+      <guid isPermaLink="true">https://touchlinesport.net/nasser-al-khelaifi-world-football-clubs.html</guid>
+      <pubDate>Tue, 29 Sep 2026 18:11:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
+      <description>World Football Clubs is only a proposal for now, but EFC's rise in Europe gives a good idea of the ambition behind it.</description>
+      <category>World Football</category>
+      <media:content url="https://images.ctfassets.net/uy8bptahieya/14RiiQTVMTd7iM2yjYBDPG/c2b6f64e9f06eb8f3c2e3dec472d0761/eca_ga2025_rome_day03_plenary_A6595.jpg" medium="image" />
+    </item>
     <item>
       <title>FIFA Accuses UEFA of ‘Misinformation Campaign’ as Investment Row Reaches Court</title>
       <link>https://touchlinesport.net/fifa-uefa-investment-row-court.html</link>
@@ -298,16 +308,6 @@
       <description>Four extra months in Phibsborough will protect matchday income before Bohs begin a complicated spell across several temporary grounds.</description>
       <category>Irish Football</category>
       <media:content url="https://i2-prod.irishmirror.ie/article32118598.ece/ALTERNATES/s1200c/0_Dalymount-Park.jpg" medium="image" />
-    </item>
-    <item>
-      <title>Daniel Levy’s $1bn Tottenham Stake Deal Stalls Over Payment</title>
-      <link>https://touchlinesport.net/daniel-levy-tottenham-eight-sports-deal.html</link>
-      <guid isPermaLink="true">https://touchlinesport.net/daniel-levy-tottenham-eight-sports-deal.html</guid>
-      <pubDate>Tue, 22 Sep 2026 00:00:00 +0000</pubDate>
-      <dc:creator>James Callan</dc:creator>
-      <description>The former Spurs chairman is still waiting to complete his ENIC exit while the Lewis family continue putting fresh money into Tottenham.</description>
-      <category>World Football</category>
-      <media:content url="https://ichef.bbci.co.uk/ace/standard/1800/cpsprodpb/3ac4/live/327a2670-89b4-11f0-98cc-8182b2586301.jpg" medium="image" />
     </item>
   </channel>
 </rss>
