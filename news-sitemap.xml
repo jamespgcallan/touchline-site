@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://touchlinesport.net/cristiano-ronaldo-portugal-jorge-jesus-row.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Touchline Sport</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-01</news:publication_date>
+      <news:title>Cristiano Ronaldo Leaves Portugal Camp After Jorge Jesus Row</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://touchlinesport.net/fai-israel-oireachtas-david-courell.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Touchline Sport</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-30</news:publication_date>
+      <news:title>FAI to Defend Israel Fixture Decision Before Oireachtas Committee</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://touchlinesport.net/fifa-uefa-investment-row-court.html</loc>
     <news:news>
       <news:publication>
@@ -20,61 +42,6 @@
       </news:publication>
       <news:publication_date>2026-09-29</news:publication_date>
       <news:title>Nasser Al-Khelaifi Wants to Take Europe's Club Power Model Global</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://touchlinesport.net/belvedere-240-internationals-schoolboy-club.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Touchline Sport</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-28</news:publication_date>
-      <news:title>The Club With No First Team and 240 Internationals</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://touchlinesport.net/ireland-israel-racism-idah-molumby-uefa.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Touchline Sport</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-28</news:publication_date>
-      <news:title>Racism Allegation and Referee Response Overshadow Ireland-Israel Win</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://touchlinesport.net/bari-11m-filmauro-250m-stadium-plan.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Touchline Sport</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-28</news:publication_date>
-      <news:title>Bari Face €11.1m Fight for Future as €250m Stadium Plan Lands</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://touchlinesport.net/sheffield-united-11m-loan-ownership-dispute.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Touchline Sport</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-28</news:publication_date>
-      <news:title>Sheffield United’s £11m Loan Adds New Twist to Ownership Dispute</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://touchlinesport.net/roma-pietralata-stadium-final-approval.html</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Touchline Sport</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-28</news:publication_date>
-      <news:title>Roma’s New €1bn Pietralata Stadium Gets Final Approval</news:title>
     </news:news>
   </url>
 </urlset>

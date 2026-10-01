@@ -5,13 +5,33 @@
     <link>https://touchlinesport.net/</link>
     <description>Independent football journalism covering Irish football, recruitment, club strategy, ownership, academies and tactical analysis.</description>
     <language>en-ie</language>
-    <lastBuildDate>Tue, 29 Sep 2026 17:12:48 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 18:01:33 +0000</lastBuildDate>
     <atom:link href="https://touchlinesport.net/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://touchlinesport.net/logo.png</url>
       <title>Touchline Sport</title>
       <link>https://touchlinesport.net/</link>
     </image>
+    <item>
+      <title>Cristiano Ronaldo Leaves Portugal Camp After Jorge Jesus Row</title>
+      <link>https://touchlinesport.net/cristiano-ronaldo-portugal-jorge-jesus-row.html</link>
+      <guid isPermaLink="true">https://touchlinesport.net/cristiano-ronaldo-portugal-jorge-jesus-row.html</guid>
+      <pubDate>Thu, 01 Oct 2026 19:00:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
+      <description>The 41-year-old has walked out of Portugal’s camp after being left unused against Norway, with his role under Jorge Jesus suddenly looking far less certain.</description>
+      <category>World Football</category>
+      <media:content url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScREGjXPV-wlWEKMSGtraHq3ztN8SImeyRcVH7RYUKc5iUyqbw0FU5uYMp&amp;s=10" medium="image" />
+    </item>
+    <item>
+      <title>FAI to Defend Israel Fixture Decision Before Oireachtas Committee</title>
+      <link>https://touchlinesport.net/fai-israel-oireachtas-david-courell.html</link>
+      <guid isPermaLink="true">https://touchlinesport.net/fai-israel-oireachtas-david-courell.html</guid>
+      <pubDate>Wed, 30 Sep 2026 09:01:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
+      <description>David Courell faces questions over Gavin Bazunu, the player vote and how the FAI handled an extraordinary week around the Ireland squad.</description>
+      <category>Irish Football</category>
+      <media:content url="https://www.rte.ie/images/0025176f-1440.jpg" medium="image" />
+    </item>
     <item>
       <title>Nasser Al-Khelaifi Wants to Take Europe's Club Power Model Global</title>
       <link>https://touchlinesport.net/nasser-al-khelaifi-world-football-clubs.html</link>
@@ -288,26 +308,6 @@
       <description>Bernd Neuendorf says FIFA needs reform after the collapse of its private-investment plan, but Gianni Infantino should not be leading it.</description>
       <category>World Football</category>
       <media:content url="https://e6.365dm.de/26/09/768x432/skysport_de-neuendorf-infantino_7352363.jpg?20260915160540" medium="image" />
-    </item>
-    <item>
-      <title>Kerry County Council Seeks FAI-IFA Talks on All-Ireland Team</title>
-      <link>https://touchlinesport.net/kerry-council-fai-ifa-all-ireland-football-team.html</link>
-      <guid isPermaLink="true">https://touchlinesport.net/kerry-council-fai-ifa-all-ireland-football-team.html</guid>
-      <pubDate>Tue, 22 Sep 2026 12:37:00 +0100</pubDate>
-      <dc:creator>James Callan</dc:creator>
-      <description>More than a century after Irish football split in two, Kerry councillors want the FAI and IFA discussing whether it still has to stay that way.</description>
-      <category>Irish Football</category>
-      <media:content url="https://static.dw.com/image/44189898_6.jpg" medium="image" />
-    </item>
-    <item>
-      <title>Bohemians to Save Up to €400k by Staying at Dalymount Until May 2027</title>
-      <link>https://touchlinesport.net/bohemians-dalymount-400k-saving.html</link>
-      <guid isPermaLink="true">https://touchlinesport.net/bohemians-dalymount-400k-saving.html</guid>
-      <pubDate>Tue, 22 Sep 2026 11:21:00 +0100</pubDate>
-      <dc:creator>James Callan</dc:creator>
-      <description>Four extra months in Phibsborough will protect matchday income before Bohs begin a complicated spell across several temporary grounds.</description>
-      <category>Irish Football</category>
-      <media:content url="https://i2-prod.irishmirror.ie/article32118598.ece/ALTERNATES/s1200c/0_Dalymount-Park.jpg" medium="image" />
     </item>
   </channel>
 </rss>
