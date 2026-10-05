@@ -5,13 +5,33 @@
     <link>https://touchlinesport.net/</link>
     <description>Independent football journalism covering Irish football, recruitment, club strategy, ownership, academies and tactical analysis.</description>
     <language>en-ie</language>
-    <lastBuildDate>Thu, 01 Oct 2026 18:01:33 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 05 Oct 2026 07:23:49 +0000</lastBuildDate>
     <atom:link href="https://touchlinesport.net/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://touchlinesport.net/logo.png</url>
       <title>Touchline Sport</title>
       <link>https://touchlinesport.net/</link>
     </image>
+    <item>
+      <title>Saudi Arabia’s $2.5bn NEOM World Cup Stadium Put on Hold</title>
+      <link>https://touchlinesport.net/saudi-arabia-neom-stadium-2034-world-cup.html</link>
+      <guid isPermaLink="true">https://touchlinesport.net/saudi-arabia-neom-stadium-2034-world-cup.html</guid>
+      <pubDate>Mon, 05 Oct 2026 08:22:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
+      <description>The 46,000-seat stadium inside The Line was one of the standout venues included in Saudi Arabia’s successful 2034 World Cup bid.</description>
+      <category>World Football</category>
+      <media:content url="https://c.files.bbci.co.uk/1be6/live/972f6a20-4ffa-11ef-9233-431e413bf6b2.jpg" medium="image" />
+    </item>
+    <item>
+      <title>Athlone Town Women’s Rise to Be Captured in New Documentary Series</title>
+      <link>https://touchlinesport.net/athlone-town-womens-documentary-the-town.html</link>
+      <guid isPermaLink="true">https://touchlinesport.net/athlone-town-womens-documentary-the-town.html</guid>
+      <pubDate>Thu, 01 Oct 2026 19:10:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
+      <description>The Town will follow Ireland’s three-in-a-row champions through European football, managerial change and the part-time reality behind their success.</description>
+      <category>Irish Football</category>
+      <media:content url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNve1XSSrELcz2qcO8ArBNz2YF8KnO11BGvvYaZnjtHsr0qwO0ICCUuL0&amp;s=10" medium="image" />
+    </item>
     <item>
       <title>Cristiano Ronaldo Leaves Portugal Camp After Jorge Jesus Row</title>
       <link>https://touchlinesport.net/cristiano-ronaldo-portugal-jorge-jesus-row.html</link>
@@ -288,26 +308,6 @@
       <description>The former St Pauli coach takes over with Gladbach bottom of the Bundesliga after the worst start in the club’s history.</description>
       <category>World Football</category>
       <media:content url="https://www.getfootballnewsgermany.com/assets/fc-bayern-munchen-v-fc-st-pauli-bundesliga-3-scaled.jpg" medium="image" />
-    </item>
-    <item>
-      <title>Stephen Bradley Emerges as Leading Candidate for Hibernian Job</title>
-      <link>https://touchlinesport.net/stephen-bradley-hibernian-manager.html</link>
-      <guid isPermaLink="true">https://touchlinesport.net/stephen-bradley-hibernian-manager.html</guid>
-      <pubDate>Tue, 22 Sep 2026 15:30:00 +0100</pubDate>
-      <dc:creator>James Callan</dc:creator>
-      <description>The Shamrock Rovers boss is firmly in the running to replace David Gray, with his record developing young players helping bring him onto Hibs’ radar.</description>
-      <category>Irish Football</category>
-      <media:content url="https://www.thesun.ie/wp-content/uploads/sites/3/2025/11/crop-16080850.jpg?quality=80&amp;strip=all&amp;w=1920&amp;h=1080&amp;crop=1" medium="image" />
-    </item>
-    <item>
-      <title>German FA President Calls Infantino FIFA Reform Offer a ‘Ploy’</title>
-      <link>https://touchlinesport.net/neuendorf-infantino-fifa-reform-re-election.html</link>
-      <guid isPermaLink="true">https://touchlinesport.net/neuendorf-infantino-fifa-reform-re-election.html</guid>
-      <pubDate>Tue, 22 Sep 2026 14:31:00 +0100</pubDate>
-      <dc:creator>James Callan</dc:creator>
-      <description>Bernd Neuendorf says FIFA needs reform after the collapse of its private-investment plan, but Gianni Infantino should not be leading it.</description>
-      <category>World Football</category>
-      <media:content url="https://e6.365dm.de/26/09/768x432/skysport_de-neuendorf-infantino_7352363.jpg?20260915160540" medium="image" />
     </item>
   </channel>
 </rss>
