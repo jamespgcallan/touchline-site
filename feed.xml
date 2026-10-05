@@ -5,13 +5,23 @@
     <link>https://touchlinesport.net/</link>
     <description>Independent football journalism covering Irish football, recruitment, club strategy, ownership, academies and tactical analysis.</description>
     <language>en-ie</language>
-    <lastBuildDate>Mon, 05 Oct 2026 07:23:49 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 05 Oct 2026 07:29:38 +0000</lastBuildDate>
     <atom:link href="https://touchlinesport.net/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://touchlinesport.net/logo.png</url>
       <title>Touchline Sport</title>
       <link>https://touchlinesport.net/</link>
     </image>
+    <item>
+      <title>Greg Bolger to Retire After Almost 20 Years in League of Ireland</title>
+      <link>https://touchlinesport.net/greg-bolger-retirement-cork-city.html</link>
+      <guid isPermaLink="true">https://touchlinesport.net/greg-bolger-retirement-cork-city.html</guid>
+      <pubDate>Mon, 05 Oct 2026 08:30:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
+      <description>The 38-year-old will finish his career at Turner’s Cross on Friday, nearly 20 years after making his League of Ireland debut against Cork City.</description>
+      <category>Irish Football</category>
+      <media:content url="https://i2-prod.irishmirror.ie/article8402863.ece/ALTERNATES/s1200f/I160711_172606_1269208oTextTRMRMMGLPICT000094706323o.jpg" medium="image" />
+    </item>
     <item>
       <title>Saudi Arabia’s $2.5bn NEOM World Cup Stadium Put on Hold</title>
       <link>https://touchlinesport.net/saudi-arabia-neom-stadium-2034-world-cup.html</link>
@@ -298,16 +308,6 @@
       <description>The Arsenal manager has agreed improved terms after ending a 22-year title wait and taking the club back to a Champions League final.</description>
       <category>World Football</category>
       <media:content url="https://www.thetimes.com/imageserver/image/6b25b24b-2e8d-4e0a-a50a-71ba6e7eceed.jpg?strip=all&amp;format=webp&amp;resize=2360" medium="image" />
-    </item>
-    <item>
-      <title>Borussia Mönchengladbach Appoint Alexander Blessin Until 2028</title>
-      <link>https://touchlinesport.net/borussia-monchengladbach-alexander-blessin-manager.html</link>
-      <guid isPermaLink="true">https://touchlinesport.net/borussia-monchengladbach-alexander-blessin-manager.html</guid>
-      <pubDate>Tue, 22 Sep 2026 18:48:00 +0100</pubDate>
-      <dc:creator>James Callan</dc:creator>
-      <description>The former St Pauli coach takes over with Gladbach bottom of the Bundesliga after the worst start in the club’s history.</description>
-      <category>World Football</category>
-      <media:content url="https://www.getfootballnewsgermany.com/assets/fc-bayern-munchen-v-fc-st-pauli-bundesliga-3-scaled.jpg" medium="image" />
     </item>
   </channel>
 </rss>
