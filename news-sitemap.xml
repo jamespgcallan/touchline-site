@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://touchlinesport.net/lionel-messi-argentina-final-match-benin.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Touchline Sport</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-06</news:publication_date>
+      <news:title>Argentina Turn Messi’s Final Match Into a 12-Hour Farewell</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://touchlinesport.net/saudi-arabia-neom-stadium-2034-world-cup.html</loc>
     <news:news>
       <news:publication>

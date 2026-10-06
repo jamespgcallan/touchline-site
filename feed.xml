@@ -5,13 +5,23 @@
     <link>https://touchlinesport.net/</link>
     <description>Independent football journalism covering Irish football, recruitment, club strategy, ownership, academies and tactical analysis.</description>
     <language>en-ie</language>
-    <lastBuildDate>Mon, 05 Oct 2026 07:29:38 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Oct 2026 14:20:28 +0000</lastBuildDate>
     <atom:link href="https://touchlinesport.net/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://touchlinesport.net/logo.png</url>
       <title>Touchline Sport</title>
       <link>https://touchlinesport.net/</link>
     </image>
+    <item>
+      <title>Argentina Turn Messi’s Final Match Into a 12-Hour Farewell</title>
+      <link>https://touchlinesport.net/lionel-messi-argentina-final-match-benin.html</link>
+      <guid isPermaLink="true">https://touchlinesport.net/lionel-messi-argentina-final-match-benin.html</guid>
+      <pubDate>Tue, 06 Oct 2026 15:04:00 +0100</pubDate>
+      <dc:creator>James Callan</dc:creator>
+      <description>Lionel Messi faces Benin for the final time tonight, with Argentina turning an October friendly into an all-day goodbye to their captain.</description>
+      <category>World Football</category>
+      <media:content url="https://sportal365images.com/process/smp-images-production/ballondor.com-en/17092026/a77b167a-7a5f-40ba-be17-825e56979b51.jpg?operations=crop(0:228:5133:3115),fit(1920:)" medium="image" />
+    </item>
     <item>
       <title>Greg Bolger to Retire After Almost 20 Years in League of Ireland</title>
       <link>https://touchlinesport.net/greg-bolger-retirement-cork-city.html</link>
@@ -298,16 +308,6 @@
       <description>The 16-year-old centre-back has joined the Serie A club after a rapid rise through Shamrock Rovers and the Republic of Ireland underage setup.</description>
       <category>Irish Football</category>
       <media:content url="https://d251ktlxwvtnkw.cloudfront.net/news/cover/1790075274323_desktop-cover.jpg" medium="image" />
-    </item>
-    <item>
-      <title>Mikel Arteta Agrees New Arsenal Contract After Premier League Title</title>
-      <link>https://touchlinesport.net/mikel-arteta-arsenal-new-contract.html</link>
-      <guid isPermaLink="true">https://touchlinesport.net/mikel-arteta-arsenal-new-contract.html</guid>
-      <pubDate>Tue, 22 Sep 2026 18:58:00 +0100</pubDate>
-      <dc:creator>James Callan</dc:creator>
-      <description>The Arsenal manager has agreed improved terms after ending a 22-year title wait and taking the club back to a Champions League final.</description>
-      <category>World Football</category>
-      <media:content url="https://www.thetimes.com/imageserver/image/6b25b24b-2e8d-4e0a-a50a-71ba6e7eceed.jpg?strip=all&amp;format=webp&amp;resize=2360" medium="image" />
     </item>
   </channel>
 </rss>
